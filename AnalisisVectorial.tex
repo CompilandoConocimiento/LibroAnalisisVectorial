@@ -383,7 +383,6 @@
                         $\Derivate{\uvec{\theta}}{\theta} = -\uvec{r}$
                         
                         % ======== DEMOSTRACION ========
-                        % ======== DEMOSTRACION ========
                         \begin{SmallIndentation}[1em]
                             \textbf{Ideas}:
 
@@ -405,6 +404,52 @@
 
 
                 \end{itemize}
+
+
+
+            % ============================================
+            % ====  DERIVACION DE R CON RESPECTO A T =====
+            % ============================================
+            \clearpage
+            \subsection{Derivación con respecto al tiempo $\Derivate{\uvec{r}}{t}$}
+
+                Supongase que tenemos un vector de posición $\vec{r}$ que se mueve libremente con respecto
+                al tiempo en todas las direcciones posibles, entonces tenemos que:
+                
+                % ======== DEMOSTRACION ========
+                \begin{SmallIndentation}[1em]
+                    \textbf{Ideas}:
+
+                    Sea $\vec{r} = r \uvec{r}$ entonces podemos decir que:
+                    \begin{MultiLineEquation}{2}
+                        \Derivate{\vec{r}}{t}   &= \SemiDerivate{t} r \uvec{r}                                  \\
+                                                &= r \Derivate{\uvec{r}}{t} + \Derivate{r}{t}\uvec{r}                   
+                    \end{MultiLineEquation}
+
+                    Y ahora recuerda que:
+
+                    \begin{MultiLineEquation*}{3}
+                        \Derivate{\uvec{r}}{t}
+                                &= \SemiDerivate{t} \Wrap{\Cos{\theta} \uvec{i} + \Sin{\theta} \uvec{j}}        &&
+                                \Remember{La forma de colocar a $\uvec{r}$ en coord. rectangulares}             \\
+                                &= \Wrap{-\Sin{\theta} \uvec{i} + \Cos{\theta} \uvec{j}} \Derivate{\theta}{t}   &&
+                                \Remember{Derivamos como siempre}                                               \\
+                                &= \uvec{\theta} \Derivate{\theta}{t}                                           &&
+                                \Remember{Recuerda que ya demostramos esto}                                     \\
+                    \end{MultiLineEquation*}
+
+                    Por lo tanto tenemos que:
+                    \begin{MultiLineEquation}{2}
+                        \Derivate{\vec{r}}{t}   &= \SemiDerivate{t} r \uvec{r}                                              \\
+                                                &= r \Derivate{\uvec{r}}{t} + \Derivate{r}{t}\uvec{r}                       \\
+                                                &= r \uvec{\theta} \Derivate{\theta}{t} + \Derivate{r}{t}\uvec{r}           \\
+                                                &= \Wrap{r \Derivate{\theta}{t}} \uvec{\theta} + \Derivate{r}{t} \uvec{r}                  
+                    \end{MultiLineEquation}
+
+                    
+                \end{SmallIndentation}
+
+
 
 
 
