@@ -11,8 +11,10 @@
     \usepackage[margin=1.2in]{geometry}                             %Margins and Geometry pacakge
     \usepackage{ifthen}                                             %Allow simple programming
     \usepackage{hyperref}                                           %Create MetaData for a PDF and LINKS!
+    \usepackage{pdfpages}                                           %Create MetaData for a PDF and LINKS!
+    \hypersetup{pageanchor=false}                                   %Solve 'double page 1' warnings in build
     \setlength{\parindent}{0pt}                                     %Eliminate ugly indentation
-    \author{Oscar Andrés Rosas}                                     %Who I am
+    \author{Oscar Andrés Rosas & Alan Enrique Ontiveros Salazar}    %Who I am
 
     % *********   LANGUAJE AND UFT-8   *********
     \usepackage[spanish]{babel}                                     %Please use spanish
@@ -20,6 +22,7 @@
     \usepackage[T1]{fontenc}                                        %Please use spanish
     \usepackage{textcmds}                                           %Allow us to use quoutes
     \usepackage{changepage}                                         %Allow us to use identate paragraphs
+    \usepackage{anyfontsize}                                        %All the sizes
 
     % *********   MATH AND HIS STYLE  *********
     \usepackage{ntheorem, amsmath, amssymb, amsfonts}               %All fucking math, I want all!
@@ -33,7 +36,7 @@
     \graphicspath{ {Graphics/} }                                    %Where are the images :D
 
     % *********   LISTS AND TABLES ***********
-    \usepackage{listings}                                           %We will be using code here
+    \usepackage{listings, listingsutf8}                             %We will be using code here
     \usepackage[inline]{enumitem}                                   %We will need to enumarate
     \usepackage{tasks}                                              %Horizontal lists
     \usepackage{longtable}                                          %Lets make tables awesome
@@ -65,7 +68,7 @@
         \ifthenelse{\isodd{\value{page}}}                           %IF ODD PAGE:
             {\href{https://compilandoconocimiento.com/yo/}          %DO THIS:
                 {\footnotesize                                      %Send the page
-                    {\textsc{Oscar Andrés Rosas}}}}                 %Send the page
+                    {\textsc{Oscar Rosas y Alan Ontiveros}}}}       %Send the page
             {\href{https://compilandoconocimiento.com}              %ELSE DO THIS: 
                 {\footnotesize                                      %Send the author
                     {\textsc{Compilando Conocimiento}}}}            %Send the author
@@ -88,12 +91,13 @@
     \newenvironment{SmallIndentation}[1][0.75em]                    %Use: The same that we upper one, just 
     {\begin{adjustwidth}{#1}{}\begin{footnotesize}}                 %footnotesize size of letter by default
     {\end{footnotesize}\end{adjustwidth}}                           %that's it
-        
+
+
     % =====  GENERAL MATH  ==========
     \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
     \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
     \newcommand \Such {\MiniSpace|\MiniSpace}                       %Use: \Such like in sets
-    \newcommand \Also {\Space \text{y} \Space}                      %Use: \Also so it's look cool
+    \newcommand \Also {\MiniSpace \text{y} \MiniSpace}              %Use: \Also so it's look cool
     \newcommand \Remember[1]{\Space\text{\scriptsize{#1}}}          %Use: \Remember so it's look cool
 
     \newtheorem{Theorem}{Teorema}[section]                          %Use: \begin{Theorem}[Name]\label{Nombre}...
@@ -130,6 +134,7 @@
 
     % === LINEAL ALGEBRA & VECTORS ===
     \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
+    \newcommand{\Mag}[1]{\left| #1 \right|}                         %Use: \Mag {Info} 
 
     \newcommand{\pVector}[1]{                                       %Use: \pVector {Matrix Notation} use parentesis
         \ensuremath{\begin{pmatrix}#1\end{pmatrix}}                 %Example: \pVector{a\\b\\c} or \pVector{a&b&c} 
@@ -143,7 +148,8 @@
     \newcommand{\Vector}[1]{                                        %Use: \Vector {Matrix Notation} no parentesis
         \ensuremath{\begin{matrix}#1\end{matrix}}                   %Example: \Vector{a\\b\\c} or \Vector{a&b&c}
     }
-    \newcommand{\uvec}[1]{\boldsymbol{\hat{\textbf{$#1$}}}}         %Use: Unitary Vector
+    \newcommand{\uVec}[1]{\boldsymbol{\hat{\textbf{$#1$}}}}         %Use: Unitary Vector
+
 
     % MATRIX
     \makeatletter                                                   %Example: \begin{matrix}[cc|c]
@@ -155,54 +161,144 @@
     \makeatother                                                    %WTF! IS THIS
 
     % TRIGONOMETRIC FUNCTIONS
-    \newcommand{\Cos}[1]{\cos\Wrap{#1}}
-    \newcommand{\Sin}[1]{\sin\Wrap{#1}}
-
-    % === CALCULUS ===                               
-    \newcommand \Derivate[2] {\dfrac{d #1}{d#2}}                    %Use: Derivate Notation
-    \newcommand \Partial[2] {\dfrac{\partial #1}{\partial#2}}       %Use: Derivate Partial Notation
+    \newcommand{\Cos}[1]{\cos\Wrap{#1}}                             %Simple wrappers
+    \newcommand{\Sin}[1]{\sin\Wrap{#1}}                             %Simple wrappers
+    \newcommand{\Tan}[1]{tan\Wrap{#1}}                              %Simple wrappers
     
-    \newcommand \pDerivate[2]{\Derivate{\Wrap{#1}}{#2}}             %But with cool parentesis
-    \newcommand \pPartial[2]{\Partial{\Wrap{#1}}{#2}}               %Use: Derivate Partial
-    
-    \newcommand \SemiDerivate[1]{\Wrap{\dfrac{d}{d#1}}}             %Use: Derivate Notation
-    \newcommand \SemiPartial[1]{\Wrap{\dfrac{\partial}{\partial#1}}}%Use: Derivate Partial Notation
-
+    \newcommand{\Sec}[1]{sec\Wrap{#1}}                              %Simple wrappers
+    \newcommand{\Csc}[1]{csc\Wrap{#1}}                              %Simple wrappers
+    \newcommand{\Cot}[1]{cot\Wrap{#1}}                              %Simple wrappers
 
     % === COMPLEX ANALYSIS ===
     \newcommand \Cis[1]  {\Cos{#1} + i \Sin{#1}}                    %Use: \Cis for cos(x) + i sin(x)
     \newcommand \pCis[1] {\Wrap{\Cis{#1}}}                          %Use: \pCis for the same ut parantesis
+    \newcommand \bCis[1] {\Brackets{\Cis{#1}}}                      %Use: \bCis for the same to Brackets
+
+    % ====== TRANSFORMS =====
+    \newcommand{\FourierT}[1]{\mathscr{F} \left\{ #1 \right\} }     %Use: \FourierT {Funtion}
+    \newcommand{\InvFourierT}[1]{\mathscr{F}^{-1}\left\{#1\right\}} %Use: \InvFourierT {Funtion}
+
+
+    % === CALCULUS ===
+    \newcommand \MiniDerivate[1][x] {\dfrac{d}{d #1}}               %Use: \MiniDerivate for simple use
+    \newcommand \Derivate[2]                                        %Complete Derivate -- [f(x)][x]
+        {\dfrac{d \; #1}{d #2}}                                     %Use: \Partial for simple use
+    
+    \newcommand \MiniUpperDerivate[2]                               %Mini Derivate High Orden Derivate -- [x][1]
+        {\dfrac{d^{#2}}{d#1^{#2}}}                                  %Mini Derivate High Orden Derivate
+    \newcommand \UpperDerivate[3]                                   %Complete High Orden Derivate -- [f(x)][x][1]
+        {\dfrac{d^{#3} \; #1}{d#2^{#3}}}                            %Use: \UpperDerivate for simple use
+    
+    \newcommand \MiniPartial[1][x] {\dfrac{\partial}{\partial #1}} %Use: \MiniDerivate for simple use
+    \newcommand \Partial[2]                                        %Complete Derivate -- [f(x)][x]
+        {\dfrac{\partial \; #1}{\partial #2}}                      %Use: \Partial for simple use
+    
+    \newcommand \MiniUpperPartial[2]                                %Mini Derivate High Orden Derivate -- [x][1] 
+        {\dfrac{\partial^{#2}}{\partial #1^{#2}}}                   %Mini Derivate High Orden Derivate
+    \newcommand \UpperPartial[3]                                    %Complete High Orden Derivate -- [f(x)][x][1]
+        {\dfrac{\partial^{#3} \; #1}{\partial#2^{#3}}}              %Use: \UpperDerivate for simple use
+
+    \DeclareMathOperator \Evaluate  {\Big|}                         %Use: \Evaluate por Notation
+
+
+
+
+
+    
+    % =====  GENERAL COLOR  =========
+    \definecolor{TealMD}{HTML}{009688}                              %Use: Color :D        
+    \definecolor{IndigoMD}{HTML}{3F51B5}                            %Use: Color :D
+    \definecolor{Green100MD}{HTML}{DCEDC8}                          %Use: Color :D
+    \definecolor{Blue300MD}{HTML}{64B5F6}                           %Use: Color :D
+    \definecolor{DeepPurpleMD}{HTML}{673AB7}                        %Use: Color :D
+    \definecolor{BlueGrey100MD}{HTML}{CFD8DC}                       %Use: Color :D
+    \definecolor{BlueGrey800MD}{HTML}{37474F}                       %Use: Color :D
+    \definecolor{BlueGrey200MD}{HTML}{B0BEC5}                       %Use: Color :D
+    \definecolor{Lime300MD}{HTML}{E6EE9C}                           %Use: Color :D
+
+    \newenvironment{ColorText}[1]{                                  %Use: \begin{ColorText}
+        \leavevmode\color{#1}\ignorespaces}                         %That's is!
+
+    % =====  CODE EDITOR =========
+    \lstdefinestyle{CompilandoStyle} {                              %This is Code Style
+        backgroundcolor=\color{BlueGrey800MD},                      %Background Color  
+        basicstyle=\tiny\color{white},                              %Font color
+        commentstyle=\color{BlueGrey200MD},                         %Comment color
+        stringstyle=\color{Lime300MD},                              %String color
+        keywordstyle=\color{Blue300MD},                             %keywords color
+        numberstyle=\tiny\color{TealMD},                            %Size of a number
+        frame=shadowbox,                                            %Adds a frame around the code
+        breakatwhitespace=true,                                     %Style   
+        showstringspaces=false,                                     %Hate those spaces                  
+        breaklines=true,                                            %Style                   
+        keepspaces=true,                                            %Style                   
+        numbers=left,                                               %Style                   
+        numbersep=10pt,                                             %Style 
+        xleftmargin=\parindent,                                     %Style 
+        tabsize=4,                                                  %Style
+        inputencoding=utf8/latin1                                   %Allow me to use special chars
+    }
+ 
+    \lstset{style=CompilandoStyle}                                  %Use this style
+
 
 
 
 % =====================================================
-% ============     	  COVER PAGE	   ================
+% ============        COVER PAGE       ================
 % =====================================================
 \begin{document}
 \begin{titlepage}
+    
+    % ============ TITLE PAGE STYLE  ================
+    \definecolor{TitlePageColor}{cmyk}{1,.60,0,.40}                 %Simple colors
+    \definecolor{ColorSubtext}{cmyk}{1,.50,0,.10}                   %Simple colors
+    \newgeometry{left=0.25\textwidth}                               %Defines an Offset
+    \pagecolor{TitlePageColor}                                      %Make it this Color to page
+    \color{white}                                                   %General things should be white
+    \newcommand{\Github}{https://github.com/compilandoconocimiento} %The general Parte
 
-	\center
-	% ============ UNIVERSITY NAME AND DATA =========
-	\textbf{\textsc{\Large Proyecto Compilando Conocimiento}}\\[1.0cm] 
-	\textsc{\Large Cálculo Complejo}\\[1.0cm] 
+    % ===== MAKE SOME SPACE =========
+    \vspace                                                         %Give some space
+    \baselineskip                                                   %But we need this to up command
 
-	% ============ NAME OF THE DOCUMENT  ============
-	\rule{\linewidth}{0.5mm} \\[1.0cm]
-		{ \huge \bfseries Análisis Vectorial}\\[1.0cm] 
-	\rule{\linewidth}{0.5mm} \\[2.0cm]
-	
-	% ====== SEMI TITLE ==========
-	{\LARGE Una Pequeña (Gran) Introducción}\\[7cm] 
-	
-	% ============  MY INFORMATION  =================
-	\begin{center} \large
-	\textbf{\textsc{Autor:}}\\
-	Rosas Hernandez Oscar Andrés
-	\end{center}
+    % ============ NAME OF THE PROJECT  ============
+    \makebox[0pt][l]{\rule{1.3\textwidth}{3pt}}                     %Make a cool line
+    
+    \href{\Github}                                                  %Link to project
+    {\textbf{\textsc{\Huge Compilando Conocimiento}}}\\[2.7cm]      %Name of project   
 
-	\vfill
+    % ============ NAME OF THE BOOK  ===============
+    \href{\Github/LibroAnalisisVectorial}                           %Link to Author
+    {\fontsize{55}{66}\selectfont                                   %Set size
+        \textbf{Análisis Vectorial}}\\[0.5cm]                       %Name of the book
+    \textcolor{ColorSubtext}{\textsc{\Huge Cálculo}}                %Name of the general theme
+    
+    \vfill                                                          %Fill the space
+    
+    % ============ NAME OF THE AUTHOR  =============
+    \href{https://github.com/alaneos777}                            %Link to Author
+    {\LARGE \textsf{Alan Enrique Ontiveros Salazar}}                %Author
+
+    % ===== MAKE SOME SPACE =========
+    \vspace                                                         %Give some space
+    \baselineskip                                                   %But we need this to up command
+    
+    {\large \textsf{Enero 2018}}                                    %Date
 
 \end{titlepage}
+
+
+% =====================================================
+% ==========      RESTORE TO DOCUMENT      ============
+% =====================================================
+\restoregeometry                                                    %Restores the geometry
+\nopagecolor                                                        %Use to restore the color to white
+
+
+
+
+
 
 % =====================================================
 % ========                INDICE              =========
@@ -238,11 +334,11 @@
 
             \includegraphics[width=0.50\textwidth]{CoordenadasPolares.png}
 
-            Los vectores base, así como en coordenadas rectangulares ($\uvec{i}, \uvec{j}$) son dos
-            vectores que denotaremos como: $\uvec{r}, \uvec{\theta}$. 
+            Los vectores base, así como en coordenadas rectangulares ($\uVec{i}, \uVec{j}$) son dos
+            vectores que denotaremos como: $\uVec{r}, \uVec{\theta}$. 
 
             Podemos entonces decir que el vector de posición tiene la magnitud igual a la distancia
-            radial $r$ y tiene una dirección igual a $\uvec{r}$.
+            radial $r$ y tiene una dirección igual a $\uVec{r}$.
             Por lo tanto podemos decir que:
             \begin{equation}
                 \vec{r} = r \cdot e_r
@@ -259,7 +355,7 @@
             \subsection{Ideas sobre esos Vectores Base}
 
                 Estos vectores base son bastante diferente a lo que tu verías en los vectores
-                base de la base rectangulas, nuestros queridos amigos ($\uvec{i}, \uvec{j}$)
+                base de la base rectangulas, nuestros queridos amigos ($\uVec{i}, \uVec{j}$)
                 pues sin importar de que vector estemos hablando, los vectores base con siempre 
                 los mismo.
                 \textbf{Esto no pasa en la Base Polar}.
@@ -273,15 +369,15 @@
             \subsection{Cambio de Base con Canónicas}
                 Tenemos una propiedad muy importante que nos dice que:
                 \begin{itemize}
-                    \item $\uvec{r}      =  \Cos{\theta}\uvec{i} + \Sin{\theta} \uvec{j}$
-                    \item $\uvec{\theta} = -\Sin{\theta}\uvec{i} + \Cos{\theta} \uvec{j}$
+                    \item $\uVec{r}      =  \Cos{\theta}\uVec{i} + \Sin{\theta} \uVec{j}$
+                    \item $\uVec{\theta} = -\Sin{\theta}\uVec{i} + \Cos{\theta} \uVec{j}$
                 \end{itemize}
 
 
                 Y también que:
                 \begin{itemize}
-                    \item $\uvec{i} = \Cos{\theta}\uvec{r} - \Sin{\theta} \uvec{\theta}$
-                    \item $\uvec{j} = \Sin{\theta}\uvec{r} + \Cos{\theta} \uvec{\theta}$
+                    \item $\uVec{i} = \Cos{\theta}\uVec{r} - \Sin{\theta} \uVec{\theta}$
+                    \item $\uVec{j} = \Sin{\theta}\uVec{r} + \Cos{\theta} \uVec{\theta}$
                 \end{itemize}
 
 
@@ -319,39 +415,39 @@
                 \begin{itemize}
                     
                     \item 
-                        $\Derivate{\uvec{r}}{r} = \vec{0}$
+                        $\Derivate{\uVec{r}}{r} = \vec{0}$
                         
                         % ======== DEMOSTRACION ========
                         \begin{SmallIndentation}[1em]
                             \textbf{Ideas}:
 
                             Ahora nota que no importa cuanto cambia $r$ en el vector $(r, \theta)$, el vector
-                            unitario $\uvec{r}$ no cambia por mas que $r$ cambie, por lo tanto es el cero
+                            unitario $\uVec{r}$ no cambia por mas que $r$ cambie, por lo tanto es el cero
                             vector.
 
                             Esto también se comprueba pues:
                             \begin{equation*}
-                                \Derivate{\uvec{r}}{r}                                        =
-                                \pDerivate{\Cos{\theta}\uvec{i} + \Sin{\theta} \uvec{j}}{r}   =
+                                \Derivate{\uVec{r}}{r}                                        =
+                                \Derivate{\Cos{\theta}\uVec{i} + \Sin{\theta} \uVec{j}}{r}   =
                                 \vec{0}
                             \end{equation*}
                         \end{SmallIndentation}
 
                     \item
-                        $\Derivate{\uvec{\theta}}{r} = \vec{0}$
+                        $\Derivate{\uVec{\theta}}{r} = \vec{0}$
                         
                         % ======== DEMOSTRACION ========
                         \begin{SmallIndentation}[1em]
                             \textbf{Ideas}:
 
                             Ahora nota que no importa cuanto cambia $r$ en el vector $(r, \theta)$, el vector
-                            unitario $\uvec{\theta}$ no cambia por mas que $r$ cambie, por lo tanto es el
+                            unitario $\uVec{\theta}$ no cambia por mas que $r$ cambie, por lo tanto es el
                             cero vector.
 
                             Esto también se comprueba pues:
                             \begin{equation*}
-                                \Derivate{\uvec{r}}{r}                                        =
-                                \pDerivate{-\Sin{\theta}\uvec{i} + \Cos{\theta} \uvec{j}}{r}  =
+                                \Derivate{\uVec{r}}{r}                                        =
+                                \Derivate{-\Sin{\theta}\uVec{i} + \Cos{\theta} \uVec{j}}{r}  =
                                 \vec{0}
                             \end{equation*}
 
@@ -359,7 +455,7 @@
 
 
                     \item
-                        $\Derivate{\uvec{r}}{\theta} = \uvec{\theta}$
+                        $\Derivate{\uVec{r}}{\theta} = \uVec{\theta}$
                         
                         % ======== DEMOSTRACION ========
                         \begin{SmallIndentation}[1em]
@@ -368,19 +464,19 @@
                             Esta idea es bastante fácil de demostrar usando la base rectangular:
 
                             \begin{MultiLineEquation*}{2}
-                                \Derivate{\uvec{r}}{\theta} 
-                                        &= \pDerivate{\Cos{\theta}\uvec{i} + \Sin{\theta} \uvec{j}}{\theta}   \\
-                                        &=  \Derivate{\Cos{\theta}}{\theta}\uvec{i}
+                                \Derivate{\uVec{r}}{\theta} 
+                                        &= \Derivate{\Cos{\theta}\uVec{i} + \Sin{\theta} \uVec{j}}{\theta}   \\
+                                        &=  \Derivate{\Cos{\theta}}{\theta}\uVec{i}
                                                 +
-                                            \Derivate{\Sin{\theta}}{\theta}\uvec{j}                            \\
-                                        &= -\Sin{\theta}\uvec{i} + \Cos{\theta} \uvec{j}
-                                        &= \uvec{\theta}
+                                            \Derivate{\Sin{\theta}}{\theta}\uVec{j}                            \\
+                                        &= -\Sin{\theta}\uVec{i} + \Cos{\theta} \uVec{j}
+                                        &= \uVec{\theta}
                             \end{MultiLineEquation*}
                             
                         \end{SmallIndentation}
 
                     \item
-                        $\Derivate{\uvec{\theta}}{\theta} = -\uvec{r}$
+                        $\Derivate{\uVec{\theta}}{\theta} = -\uVec{r}$
                         
                         % ======== DEMOSTRACION ========
                         \begin{SmallIndentation}[1em]
@@ -389,13 +485,13 @@
                             Esta idea es bastante fácil de demostrar usando la base rectangular:
 
                             \begin{MultiLineEquation*}{2}
-                                \Derivate{\uvec{r}}{\theta} 
-                                        &= \pDerivate{-\Sin{\theta}\uvec{i} + \Cos{\theta} \uvec{j}}{\theta}  \\
-                                        &=  \Derivate{-\Sin{\theta}}{\theta}\uvec{i}
+                                \Derivate{\uVec{r}}{\theta} 
+                                        &= \Derivate{-\Sin{\theta}\uVec{i} + \Cos{\theta} \uVec{j}}{\theta}  \\
+                                        &=  \Derivate{-\Sin{\theta}}{\theta}\uVec{i}
                                                 +
-                                            \Derivate{\Cos{\theta}}{\theta}\uvec{j}                            \\
-                                        &= -\Cos{\theta}\uvec{i} + -\Sin{\theta} \uvec{j}                     
-                                        &= -\uvec{r}
+                                            \Derivate{\Cos{\theta}}{\theta}\uVec{j}                            \\
+                                        &= -\Cos{\theta}\uVec{i} + -\Sin{\theta} \uVec{j}                     
+                                        &= -\uVec{r}
                             \end{MultiLineEquation*}
                             
                         \end{SmallIndentation}
@@ -411,7 +507,7 @@
             % ====  DERIVACION DE R CON RESPECTO A T =====
             % ============================================
             \clearpage
-            \subsection{Derivación con respecto al tiempo $\Derivate{\uvec{r}}{t}$}
+            \subsection{Derivación con respecto al tiempo $\Derivate{\uVec{r}}{t}$}
 
                 Supongase que tenemos un vector de posición $\vec{r}$ que se mueve libremente con respecto
                 al tiempo en todas las direcciones posibles, entonces tenemos que:
@@ -420,30 +516,30 @@
                 \begin{SmallIndentation}[1em]
                     \textbf{Ideas}:
 
-                    Sea $\vec{r} = r \uvec{r}$ entonces podemos decir que:
+                    Sea $\vec{r} = r \uVec{r}$ entonces podemos decir que:
                     \begin{MultiLineEquation}{2}
-                        \Derivate{\vec{r}}{t}   &= \SemiDerivate{t} r \uvec{r}                                  \\
-                                                &= r \Derivate{\uvec{r}}{t} + \Derivate{r}{t}\uvec{r}                   
+                        \Derivate{\vec{r}}{t}   &= \MiniDerivate{t} r \uVec{r}                                  \\
+                                                &= r \Derivate{\uVec{r}}{t} + \Derivate{r}{t}\uVec{r}                   
                     \end{MultiLineEquation}
 
                     Y ahora recuerda que:
 
                     \begin{MultiLineEquation*}{3}
-                        \Derivate{\uvec{r}}{t}
-                                &= \SemiDerivate{t} \Wrap{\Cos{\theta} \uvec{i} + \Sin{\theta} \uvec{j}}        &&
-                                \Remember{La forma de colocar a $\uvec{r}$ en coord. rectangulares}             \\
-                                &= \Wrap{-\Sin{\theta} \uvec{i} + \Cos{\theta} \uvec{j}} \Derivate{\theta}{t}   &&
+                        \Derivate{\uVec{r}}{t}
+                                &= \MiniDerivate{t} \Wrap{\Cos{\theta} \uVec{i} + \Sin{\theta} \uVec{j}}        &&
+                                \Remember{La forma de colocar a $\uVec{r}$ en coord. rectangulares}             \\
+                                &= \Wrap{-\Sin{\theta} \uVec{i} + \Cos{\theta} \uVec{j}} \Derivate{\theta}{t}   &&
                                 \Remember{Derivamos como siempre}                                               \\
-                                &= \uvec{\theta} \Derivate{\theta}{t}                                           &&
+                                &= \uVec{\theta} \Derivate{\theta}{t}                                           &&
                                 \Remember{Recuerda que ya demostramos esto}                                     \\
                     \end{MultiLineEquation*}
 
                     Por lo tanto tenemos que:
                     \begin{MultiLineEquation}{2}
-                        \Derivate{\vec{r}}{t}   &= \SemiDerivate{t} r \uvec{r}                                              \\
-                                                &= r \Derivate{\uvec{r}}{t} + \Derivate{r}{t}\uvec{r}                       \\
-                                                &= r \uvec{\theta} \Derivate{\theta}{t} + \Derivate{r}{t}\uvec{r}           \\
-                                                &= \Wrap{r \Derivate{\theta}{t}} \uvec{\theta} + \Derivate{r}{t} \uvec{r}                  
+                        \Derivate{\vec{r}}{t}   &= \MiniDerivate{t} r \uVec{r}                                              \\
+                                                &= r \Derivate{\uVec{r}}{t} + \Derivate{r}{t}\uVec{r}                       \\
+                                                &= r \uVec{\theta} \Derivate{\theta}{t} + \Derivate{r}{t}\uVec{r}           \\
+                                                &= \Wrap{r \Derivate{\theta}{t}} \uVec{\theta} + \Derivate{r}{t} \uVec{r}                  
                     \end{MultiLineEquation}
 
                     
