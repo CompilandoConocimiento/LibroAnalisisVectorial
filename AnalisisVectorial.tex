@@ -99,6 +99,7 @@
     \newcommand \Such {\MiniSpace|\MiniSpace}                       %Use: \Such like in sets
     \newcommand \Also {\MiniSpace \text{y} \MiniSpace}              %Use: \Also so it's look cool
     \newcommand \Remember[1]{\Space\text{\scriptsize{#1}}}          %Use: \Remember so it's look cool
+    \newcommand{\abs}[1]{\left\lvert #1 \right\lvert}				%Use: \abs{expression}
 
     \newtheorem{Theorem}{Teorema}[section]                          %Use: \begin{Theorem}[Name]\label{Nombre}...
     \newtheorem{Corollary}{Colorario}[Theorem]                      %Use: \begin{Corollary}[Name]\label{Nombre}...
@@ -135,6 +136,8 @@
     % === LINEAL ALGEBRA & VECTORS ===
     \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
     \newcommand{\Mag}[1]{\left| #1 \right|}                         %Use: \Mag {Info} 
+    \newcommand{\ve}[1]{\overrightarrow{#1}}						%use: \ve{expression}
+    \newcommand{\nve}[1]{\mathbf{#1}}
 
     \newcommand{\pVector}[1]{                                       %Use: \pVector {Matrix Notation} use parentesis
         \ensuremath{\begin{pmatrix}#1\end{pmatrix}}                 %Example: \pVector{a\\b\\c} or \pVector{a&b&c} 
@@ -311,270 +314,295 @@
 
 
 
-% //////////////////////////////////////////////////////////////////////////////////////////////////////////
-% ///////////////////////////////////         SISTEMAS DE COORDENADAS      /////////////////////////////////
-% //////////////////////////////////////////////////////////////////////////////////////////////////////////
-\part{Sistemas de Coordenadass}
-\clearpage
-
-
-    % ===============================================================================
-    % ===================           DEFINICIONES               ======================
-    % ===============================================================================
-    \chapter{Coordenadas Polares $(r, \theta)$}
-
-        % ==============================================
-        % ========         VECTORES BASE       =========
-        % ==============================================
-        \clearpage
-        \section{Vectores Base}
-
-            Sea $\vec r$ nuestro vector que va desde el origen del plano $X-Y$ hasta el Punto $A$,
-            lo vamos a llamar un vector de posición:
-
-            \includegraphics[width=0.50\textwidth]{CoordenadasPolares.png}
-
-            Los vectores base, así como en coordenadas rectangulares ($\uVec{i}, \uVec{j}$) son dos
-            vectores que denotaremos como: $\uVec{r}, \uVec{\theta}$. 
-
-            Podemos entonces decir que el vector de posición tiene la magnitud igual a la distancia
-            radial $r$ y tiene una dirección igual a $\uVec{r}$.
-            Por lo tanto podemos decir que:
-            \begin{equation}
-                \vec{r} = r \cdot e_r
-            \end{equation}
-
-
-
-
-
-
-            % ========================================
-            % =========     COSAS - IDEAS      =======
-            % ========================================
-            \subsection{Ideas sobre esos Vectores Base}
-
-                Estos vectores base son bastante diferente a lo que tu verías en los vectores
-                base de la base rectangulas, nuestros queridos amigos ($\uVec{i}, \uVec{j}$)
-                pues sin importar de que vector estemos hablando, los vectores base con siempre 
-                los mismo.
-                \textbf{Esto no pasa en la Base Polar}.
-
-
-
-            % ========================================
-            % ====      CAMBIO A LAS CANONICAS      ==
-            % ========================================
-            \clearpage
-            \subsection{Cambio de Base con Canónicas}
-                Tenemos una propiedad muy importante que nos dice que:
-                \begin{itemize}
-                    \item $\uVec{r}      =  \Cos{\theta}\uVec{i} + \Sin{\theta} \uVec{j}$
-                    \item $\uVec{\theta} = -\Sin{\theta}\uVec{i} + \Cos{\theta} \uVec{j}$
-                \end{itemize}
-
-
-                Y también que:
-                \begin{itemize}
-                    \item $\uVec{i} = \Cos{\theta}\uVec{r} - \Sin{\theta} \uVec{\theta}$
-                    \item $\uVec{j} = \Sin{\theta}\uVec{r} + \Cos{\theta} \uVec{\theta}$
-                \end{itemize}
-
-
-            % ========================================
-            % ====      MATRIZ DE CAMBIO DE BASE    ==
-            % ========================================
-            \subsection{Matriz de Cambio de Base con Canónicas}
-                Tenemos una propiedad muy importante que nos dice que:
-                \begin{equation}
-                    \pVector{r \\ \theta} = 
-                        \pVector{
-                            \Cos{\theta} &+& \Sin{\theta} \\
-                           -\Sin{\theta} &+& \Cos{\theta} 
-                        }
-                        \pVector{x \\ y}
-                \end{equation}
-
-                Y también que:
-                \begin{equation}
-                    \pVector{x \\ y} = 
-                        \pVector{
-                            \Cos{\theta} &+& -\Sin{\theta} \\
-                            \Sin{\theta} &+& \Cos{\theta} 
-                        }
-                        \pVector{r \\ \theta}
-                \end{equation}             
-
-
-            % ========================================
-            % ====  DERIVACION VECTORES UNITARIOS   ==
-            % ========================================
-            \clearpage
-            \subsection{Derivación de Vectores Unitarios}
-
-                \begin{itemize}
-                    
-                    \item 
-                        $\Derivate{\uVec{r}}{r} = \vec{0}$
-                        
-                        % ======== DEMOSTRACION ========
-                        \begin{SmallIndentation}[1em]
-                            \textbf{Ideas}:
-
-                            Ahora nota que no importa cuanto cambia $r$ en el vector $(r, \theta)$, el vector
-                            unitario $\uVec{r}$ no cambia por mas que $r$ cambie, por lo tanto es el cero
-                            vector.
-
-                            Esto también se comprueba pues:
-                            \begin{equation*}
-                                \Derivate{\uVec{r}}{r}                                        =
-                                \Derivate{\Cos{\theta}\uVec{i} + \Sin{\theta} \uVec{j}}{r}   =
-                                \vec{0}
-                            \end{equation*}
-                        \end{SmallIndentation}
-
-                    \item
-                        $\Derivate{\uVec{\theta}}{r} = \vec{0}$
-                        
-                        % ======== DEMOSTRACION ========
-                        \begin{SmallIndentation}[1em]
-                            \textbf{Ideas}:
-
-                            Ahora nota que no importa cuanto cambia $r$ en el vector $(r, \theta)$, el vector
-                            unitario $\uVec{\theta}$ no cambia por mas que $r$ cambie, por lo tanto es el
-                            cero vector.
-
-                            Esto también se comprueba pues:
-                            \begin{equation*}
-                                \Derivate{\uVec{r}}{r}                                        =
-                                \Derivate{-\Sin{\theta}\uVec{i} + \Cos{\theta} \uVec{j}}{r}  =
-                                \vec{0}
-                            \end{equation*}
-
-                        \end{SmallIndentation}
-
-
-                    \item
-                        $\Derivate{\uVec{r}}{\theta} = \uVec{\theta}$
-                        
-                        % ======== DEMOSTRACION ========
-                        \begin{SmallIndentation}[1em]
-                            \textbf{Ideas}:
-
-                            Esta idea es bastante fácil de demostrar usando la base rectangular:
-
-                            \begin{MultiLineEquation*}{2}
-                                \Derivate{\uVec{r}}{\theta} 
-                                        &= \Derivate{\Cos{\theta}\uVec{i} + \Sin{\theta} \uVec{j}}{\theta}   \\
-                                        &=  \Derivate{\Cos{\theta}}{\theta}\uVec{i}
-                                                +
-                                            \Derivate{\Sin{\theta}}{\theta}\uVec{j}                            \\
-                                        &= -\Sin{\theta}\uVec{i} + \Cos{\theta} \uVec{j}
-                                        &= \uVec{\theta}
-                            \end{MultiLineEquation*}
-                            
-                        \end{SmallIndentation}
-
-                    \item
-                        $\Derivate{\uVec{\theta}}{\theta} = -\uVec{r}$
-                        
-                        % ======== DEMOSTRACION ========
-                        \begin{SmallIndentation}[1em]
-                            \textbf{Ideas}:
-
-                            Esta idea es bastante fácil de demostrar usando la base rectangular:
-
-                            \begin{MultiLineEquation*}{2}
-                                \Derivate{\uVec{r}}{\theta} 
-                                        &= \Derivate{-\Sin{\theta}\uVec{i} + \Cos{\theta} \uVec{j}}{\theta}  \\
-                                        &=  \Derivate{-\Sin{\theta}}{\theta}\uVec{i}
-                                                +
-                                            \Derivate{\Cos{\theta}}{\theta}\uVec{j}                            \\
-                                        &= -\Cos{\theta}\uVec{i} + -\Sin{\theta} \uVec{j}                     
-                                        &= -\uVec{r}
-                            \end{MultiLineEquation*}
-                            
-                        \end{SmallIndentation}
-                        
-
-
-
-                \end{itemize}
-
-
-
-            % ============================================
-            % ====  DERIVACION DE R CON RESPECTO A T =====
-            % ============================================
-            \clearpage
-            \subsection{Derivación con respecto al tiempo $\Derivate{\uVec{r}}{t}$}
-
-                Supongase que tenemos un vector de posición $\vec{r}$ que se mueve libremente con respecto
-                al tiempo en todas las direcciones posibles, entonces tenemos que:
-                
-                % ======== DEMOSTRACION ========
-                \begin{SmallIndentation}[1em]
-                    \textbf{Ideas}:
-
-                    Sea $\vec{r} = r \uVec{r}$ entonces podemos decir que:
-                    \begin{MultiLineEquation}{2}
-                        \Derivate{\vec{r}}{t}   &= \MiniDerivate{t} r \uVec{r}                                  \\
-                                                &= r \Derivate{\uVec{r}}{t} + \Derivate{r}{t}\uVec{r}                   
-                    \end{MultiLineEquation}
-
-                    Y ahora recuerda que:
-
-                    \begin{MultiLineEquation*}{3}
-                        \Derivate{\uVec{r}}{t}
-                                &= \MiniDerivate{t} \Wrap{\Cos{\theta} \uVec{i} + \Sin{\theta} \uVec{j}}        &&
-                                \Remember{La forma de colocar a $\uVec{r}$ en coord. rectangulares}             \\
-                                &= \Wrap{-\Sin{\theta} \uVec{i} + \Cos{\theta} \uVec{j}} \Derivate{\theta}{t}   &&
-                                \Remember{Derivamos como siempre}                                               \\
-                                &= \uVec{\theta} \Derivate{\theta}{t}                                           &&
-                                \Remember{Recuerda que ya demostramos esto}                                     \\
-                    \end{MultiLineEquation*}
-
-                    Por lo tanto tenemos que:
-                    \begin{MultiLineEquation}{2}
-                        \Derivate{\vec{r}}{t}   &= \MiniDerivate{t} r \uVec{r}                                              \\
-                                                &= r \Derivate{\uVec{r}}{t} + \Derivate{r}{t}\uVec{r}                       \\
-                                                &= r \uVec{\theta} \Derivate{\theta}{t} + \Derivate{r}{t}\uVec{r}           \\
-                                                &= \Wrap{r \Derivate{\theta}{t}} \uVec{\theta} + \Derivate{r}{t} \uVec{r}                  
-                    \end{MultiLineEquation}
-
-                    
-                \end{SmallIndentation}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\part{Introducción a los vectores}
+
+	\chapter{Conceptos básicos}
+	
+		\section{Definición de escalar}
+		
+		\section{Definición de vector}
+		
+			\subsection{Punto de vista geométrico}
+			
+			\subsection{Punto de vista algebráico}
+		
+			\subsection{Diferencia entre punto y vector}
+			
+			\subsection{Vector posición}
+			
+			\subsection{Vector desplazamiento}
+			
+	\chapter{Álgebra vectorial}
+			
+		\section{Operaciones básicas}
+		
+			\subsection{Suma y resta}
+			
+			\subsection{Multiplicación por escalar}
+			
+			\subsection{Propiedades}
+			
+		\section{Características de los vectores}
+		
+			\subsection{Magnitud}
+			
+			\subsection{Representación en vectores unitarios}
+			
+			\subsection{Dependencia e independencia lineal}
+			
+		\section{Productos entre vectores}
+		
+			\subsection{Producto punto}
+			
+				\subsubsection{Ángulo entre vectores}
+				
+				\subsubsection{Proyección de un vector sobre otro}
+				
+				\subsubsection{Desigualdad de Cauchy-Schwarz}
+				
+				\subsubsection{Desigualdad del triángulo}
+			
+			\subsection{Producto cruz}
+			
+				\subsubsection{Área de un paralelogramo}
+			
+			\subsection{Producto triple}
+			
+				\subsubsection{Volumen de un paralelepípedo}
+				
+			\subsection{Propiedades útiles}
+			
+	\chapter{Aplicaciones a la geometría}
+		
+		\section{Ecuación del plano}
+			
+		\section{Ecuación de la recta}
+		
+		\section{Ecuación de la esfera}
+			
+		\section{Distancia punto-recta y punto-plano}
+		
+		\section{Rotaciones en el espacio}
+		
+		\section{Demostraciones geométricas mediante vectores}
+			
+
+
+\part{Cálculo diferencial vectorial}
+
+	\chapter{Funciones de varias variables}
+	
+		\section{Representación como superficies}
+		
+			\subsection{Curvas de nivel y de contorno}
+			
+		\section{Límites}
+			
+			\subsection{Definición intuitiva}
+			
+			\subsection{Definición formal}
+			
+		\section{Continuidad}
+		
+		\section{Derivadas parciales}
+		
+			\subsection{Plano tangente a una superficie}
+			
+			\subsection{Diferenciabilidad}
+			
+			\subsection{Derivadas de orden superior}
+			
+				\subsubsection{Teorema de Clairaut}
+				
+		\section{Gradiente}
+				
+		\section{Regla de la cadena}
+		
+			\subsection{Diferencial total}
+			
+		\section{Derivada direccional}
+		
+		\section{Puntos críticos}
+		
+			\subsection{Máximos, mínimos y puntos silla}
+			
+			\subsection{Criterio del hessiano}
+			
+		\section{Multiplicadores de Lagrange}
+
+
+	\chapter{Funciones vectoriales}
+	
+		\section{Curvas en forma paramétrica}
+		
+			\subsection{Reglas de derivación}
+			
+			\subsection{Velocidad y aceleración}
+		
+			\subsection{Longitud de arco}
+			
+			\subsection{Parametrización por longitud de arco}
+			
+			\subsection{Geometría diferencial}
+				
+				\subsubsection{Vector tangente, normal y binormal}
+				
+				\subsubsection{Curvatura y torsión}
+				
+				\subsubsection{Velocidad y aceleración}
+				
+				\subsubsection{Ecuaciones de Frenet-Serret}
+			
+		\section{Campos vectoriales}
+		
+			\subsection{Líneas de campo}
+			
+			\subsection{Derivadas parciales}
+		
+		\section{Operador nabla}
+		
+			\subsection{Gradiente}
+			
+			\subsection{Divergencia}
+			
+			\subsection{Rotacional}
+			
+			\subsection{Laplaciano}
+			
+			\subsection{Propiedades}
+
+
+
+\part{Cálculo integral vectorial}
+
+	\chapter{Integrales multivariable}
+	
+		\section{Regiones}
+		
+			\subsection{Regiones del plano y tipos}
+			
+			\subsection{Regiones del espacio y tipos}
+		
+		\section{Integrales iteradas}
+		
+		\section{Integrales dobles}
+			
+			\subsection{Integración sobre regiones arbitrarias}
+			
+			\subsection{¿Cómo hallar los límites de integración?}
+			
+			\subsection{Teorema de Fubini}
+		
+		\section{Integrales triples}
+			
+			\subsection{Integración sobre regiones arbitrarias}
+			
+			\subsection{¿Cómo hallar los límites de integración?}
+			
+		\section{Cambio de variable en 2 y 3 dimensiones}
+		
+			\subsection{Transformación de coordenadas}
+			
+			\subsection{Jacobiano}
+			
+		\section{Aplicaciones}
+		
+			\subsection{Valor promedio}
+			
+			\subsection{Centro de masa}
+			
+			\subsection{Momento de inercia}
+		
+	\chapter{Integrales de funciones vectoriales}
+	
+		\section{Integrales de línea}
+		
+			\subsection{Función escalar}
+			
+			\subsection{Función vectorial}
+			
+			\subsection{Campos conservativos}
+			
+				\subsubsection{Potencial}
+		
+		\section{Integrales de superficie}
+		
+			\subsection{Superficies en forma paramétrica}
+			
+				\subsubsection{Vector normal}
+			
+				\subsubsection{Relación con el Jacobiano}
+				
+				\subsubsection{Cálculo a través del gradiente}
+			
+			\subsection{Función escalar}
+			
+			\subsection{Función vectorial}
+		
+		\section{Integrales de volumen}
+		
+			\subsection{Regiones del espacio en forma paramétrica}
+			
+				\subsubsection{Elemento de volumen}
+				
+				\subsubsection{Relación con el Jacobiano}
+		
+			\subsection{Función escalar}
+			
+		\section{Consejos para parametrizar y definir límites}
+	
+	\chapter{Teoremas de integración}
+	
+		\section{Teorema de Green}
+		
+			\subsection{Cálculo de áreas dado el contorno}
+		
+		\section{Teorema de Stokes}
+		
+			\subsection{Frontera de una superficie}
+		
+		\section{Teorema de la divergencia de Gauss}
+		
+			\subsection{Superficie cerrada}
+
+
+\part{Coordenadas curvilíneas}
+
+	\chapter{Coordenadas curvilíneas generalizadas}
+	
+		\section{Transformación de coordenadas}
+		
+		\section{Sistemas ortogonales}
+		
+		\section{Vectores unitarios}
+		
+			\subsection{Factores de escala}
+		
+		\section{Integración}
+		
+			\subsection{Elemento de línea}
+			
+			\subsection{Elemento de longitud de arco}
+			
+			\subsection{Elemento de área}
+			
+			\subsection{Elemento de volumen}
+			
+		\section{Operador nabla}
+		
+			\subsection{Gradiente}
+			
+			\subsection{Divergencia}
+			
+			\subsection{Rotacional}
+			
+			\subsection{Laplaciano}
+			
+		\section{Sistemas comunes de coordenadas}
+		
+			\subsection{Cilíndricas}
+			
+			\subsection{Esféricas}
             
 
 \end{document}
