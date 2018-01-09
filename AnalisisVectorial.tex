@@ -80,37 +80,18 @@
 % ===========   COMMANDS    ==============
 % ========================================
 
-    % =====  GENERAL TEXT  ==========
+    % =====  GENERAL TEXT  ====================
     \newcommand \Quote {\qq}                                        %Use: \Quote to use quotes
     \newcommand \Over {\overline}                                   %Use: \Bar to use just for short
     \newcommand \ForceNewLine {$\Space$\\}                          %Use it in theorems for example
     
+    % =====  NEW ENVIRONMENTS  ================
     \newenvironment{Indentation}[1][0.75em]                         %Use: \begin{Inde...}[Num]...\end{Inde...}
     {\begin{adjustwidth}{#1}{}}                                     %If you dont put nothing i will use 0.75 em
     {\end{adjustwidth}}                                             %This indentate a paragraph
     \newenvironment{SmallIndentation}[1][0.75em]                    %Use: The same that we upper one, just 
     {\begin{adjustwidth}{#1}{}\begin{footnotesize}}                 %footnotesize size of letter by default
     {\end{footnotesize}\end{adjustwidth}}                           %that's it
-
-
-    % =====  GENERAL MATH  ==========
-    \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
-    \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
-    \newcommand \Such {\MiniSpace|\MiniSpace}                       %Use: \Such like in sets
-    \newcommand \Also {\MiniSpace \text{y} \MiniSpace}              %Use: \Also so it's look cool
-    \newcommand \Remember[1]{\Space\text{\scriptsize{#1}}}          %Use: \Remember so it's look cool
-    \newcommand{\abs}[1]{\left\lvert #1 \right\lvert}				%Use: \abs{expression}
-    \newcommand{\Abs}[1]{\left\lVert #1 \right\lVert}				%Use: \abs{expression}
-
-    \newtheorem{Theorem}{Teorema}[section]                          %Use: \begin{Theorem}[Name]\label{Nombre}...
-    \newtheorem{Corollary}{Colorario}[Theorem]                      %Use: \begin{Corollary}[Name]\label{Nombre}...
-    \newtheorem{Lemma}[Theorem]{Lemma}                              %Use: \begin{Lemma}[Name]\label{Nombre}...
-    \newtheorem{Definition}{Definición}[section]                    %Use: \begin{Definition}[Name]\label{Nombre}...
-
-    \newcommand{\Set}[1]{\left\{ \MiniSpace #1 \MiniSpace \right\}} %Use: \Set {Info}
-    \newcommand{\Brackets}[1]{\left[ #1 \right]}                    %Use: \Brackets {Info} 
-    \newcommand{\Wrap}[1]{\left( #1 \right)}                        %Use: \Wrap {Info} 
-    \newcommand{\pfrac}[2]{\Wrap{\dfrac{#1}{#2}}}                   %Use: Put fractions in parentesis
 
     \newenvironment{MultiLineEquation}[1]                           %Use: To create MultiLine equations
         {\begin{equation}\begin{alignedat}{#1}}                     %Use: \begin{Multi..}{Num. de Columnas}
@@ -119,44 +100,59 @@
         {\begin{equation*}\begin{alignedat}{#1}}                    %Use: \begin{Multi..}{Num. de Columnas}
         {\end{alignedat}\end{equation*}}                            %And.. that's it!
 
+    % =====  GENERAL MATH  ====================
+    \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
+    \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
+    \newcommand \Such {\MiniSpace|\MiniSpace}                       %Use: \Such like in sets
+    \newcommand \Also {\MiniSpace \text{y} \MiniSpace}              %Use: \Also so it's look cool
+    \newcommand \Remember[1]{\Space\text{\scriptsize{#1}}}          %Use: \Remember so it's look cool
+    \newcommand{\abs}[1]{\left\lvert #1 \right\lvert}               %Use: \abs{expression} for |x|
+    \newcommand{\Abs}[1]{\left\lVert #1 \right\lVert}               %Use: \Abs{expression} for ||x||
 
-    % =====  LOGIC  ==================
+    \newtheorem{Theorem}{Teorema}[section]                          %Use: \begin{Theorem}[Name]\label{Nombre}...
+    \newtheorem{Corollary}{Colorario}[Theorem]                      %Use: \begin{Corollary}[Name]\label{Nombre}...
+    \newtheorem{Lemma}[Theorem]{Lemma}                              %Use: \begin{Lemma}[Name]\label{Nombre}...
+    \newtheorem{Definition}{Definición}[section]                    %Use: \begin{Definition}[Name]\label{Nombre}...
+
+    % =====  CONTAINERS   ====================
+    \newcommand{\Set}[1]{\left\{ \MiniSpace #1 \MiniSpace \right\}} %Use: \Set {Info}
+    \newcommand{\Brackets}[1]{\left[ #1 \right]}                    %Use: \Brackets {Info} 
+    \newcommand{\Wrap}[1]{\left( #1 \right)}                        %Use: \Wrap {Info} 
+    \newcommand{\pfrac}[2]{\Wrap{\dfrac{#1}{#2}}}                   %Use: Put fractions in parentesis
+
+    % =====  LOGIC  ==========================
     \DeclareMathOperator \doublearrow {\leftrightarrow}             %Use: \doublearrow for a double arrow
     \newcommand \lequal {\MiniSpace \Leftrightarrow \MiniSpace}     %Use: \lequal for a double arrow
     \newcommand \linfire {\MiniSpace \Rightarrow \MiniSpace}        %Use: \lequal for a double arrow
     \newcommand \longto {\longrightarrow}                           %Use: \longto for a long arrow
 
-    % =====  NUMBER THEORY  ==========
-    \DeclareMathOperator \Naturals  {\mathbb{N}}                     %Use: \Naturals por Notation
-    \DeclareMathOperator \Primes    {\mathbb{P}}                     %Use: \Naturals por Notation
-    \DeclareMathOperator \Integers  {\mathbb{Z}}                     %Use: \Integers por Notation
-    \DeclareMathOperator \Racionals {\mathbb{Q}}                     %Use: \Racionals por Notation
-    \DeclareMathOperator \Reals     {\mathbb{R}}                     %Use: \Reals por Notation
-    \DeclareMathOperator \Complexs  {\mathbb{C}}                     %Use: \Complex por Notation
+    % =====  FAMOUS SETS  =====================
+    \DeclareMathOperator \Naturals     {\mathbb{N}}                 %Use: \Naturals por Notation
+    \DeclareMathOperator \Primes       {\mathbb{P}}                 %Use: \Naturals por Notation
+    \DeclareMathOperator \Integers     {\mathbb{Z}}                 %Use: \Integers por Notation
+    \DeclareMathOperator \Racionals    {\mathbb{Q}}                 %Use: \Racionals por Notation
+    \DeclareMathOperator \Reals        {\mathbb{R}}                 %Use: \Reals por Notation
+    \DeclareMathOperator \Complexs     {\mathbb{C}}                 %Use: \Complex por Notation
+    \DeclareMathOperator \GenericField {\mathbb{F}}                 %Use: \Complex por Notation
 
-    % === LINEAL ALGEBRA & VECTORS ===
+    % === LINEAL ALGEBRA & VECTORS =============
     \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
     \newcommand{\Mag}[1]{\left| #1 \right|}                         %Use: \Mag {Info} 
-    \newcommand{\ve}[1]{\vec{#1}}									%use: \ve{expression}
-    \newcommand{\nve}[1]{\mathbf{#1}}
-    \newcommand{\Ve}[1]{\overrightarrow{#1}}
+    \newcommand{\bVec}[1]{\mathbf{#1}}                              %Use for bold type of vector
+    \newcommand{\lVec}[1]{\overrightarrow{#1}}                      %Use for a long arrow over a vector
+    \newcommand{\uVec}[1]{\boldsymbol{\hat{\textbf{#1}}}}           %Use: Unitary Vector Example: $\uVec{i}
 
-    \newcommand{\pVector}[1]{                                       %Use: \pVector {Matrix Notation} use parentesis
-        \ensuremath{\begin{pmatrix}#1\end{pmatrix}}                 %Example: \pVector{a\\b\\c} or \pVector{a&b&c} 
-    }
-    \newcommand{\lVector}[1]{                                       %Use: \lVector {Matrix Notation} use a abs 
-        \ensuremath{\begin{vmatrix}#1\end{vmatrix}}                 %Example: \lVector{a\\b\\c} or \lVector{a&b&c} 
-    }
-    \newcommand{\bVector}[1]{                                       %Use: \bVector {Matrix Notation} use a brackets 
-        \ensuremath{\begin{bmatrix}#1\end{bmatrix}}                 %Example: \bVector{a\\b\\c} or \bVector{a&b&c} 
-    }
-    \newcommand{\Vector}[1]{                                        %Use: \Vector {Matrix Notation} no parentesis
-        \ensuremath{\begin{matrix}#1\end{matrix}}                   %Example: \Vector{a\\b\\c} or \Vector{a&b&c}
-    }
-    \newcommand{\uVec}[1]{\boldsymbol{\hat{\textbf{$#1$}}}}         %Use: Unitary Vector
+    % === WRAPPERS FOR COLUMN VECTOR ===
+    \newcommand{\pVector}[1]                                        %Use: \pVector {Matrix Notation} use parentesis
+        { \ensuremath{\begin{pmatrix}#1\end{pmatrix}} }             %Example: \pVector{a\\b\\c} or \pVector{a&b&c} 
+    \newcommand{\lVector}[1]                                        %Use: \lVector {Matrix Notation} use a abs 
+        { \ensuremath{\begin{vmatrix}#1\end{vmatrix}} }             %Example: \lVector{a\\b\\c} or \lVector{a&b&c} 
+    \newcommand{\bVector}[1]                                        %Use: \bVector {Matrix Notation} use a brackets 
+        { \ensuremath{\begin{bmatrix}#1\end{bmatrix}} }             %Example: \bVector{a\\b\\c} or \bVector{a&b&c} 
+    \newcommand{\Vector}[1]                                         %Use: \Vector {Matrix Notation} no parentesis
+        { \ensuremath{\begin{matrix}#1\end{matrix}} }               %Example: \Vector{a\\b\\c} or \Vector{a&b&c}
 
-
-    % MATRIX
+    % === MAKE MATRIX BETTER  =========
     \makeatletter                                                   %Example: \begin{matrix}[cc|c]
     \renewcommand*\env@matrix[1][*\c@MaxMatrixCols c] {             %WTF! IS THIS
         \hskip -\arraycolsep                                        %WTF! IS THIS
@@ -165,7 +161,7 @@
     }                                                               %WTF! IS THIS
     \makeatother                                                    %WTF! IS THIS
 
-    % TRIGONOMETRIC FUNCTIONS
+    % ===== TRIGONOMETRIC FUNCTIONS  ==========
     \newcommand{\Cos}[1]{\cos\Wrap{#1}}                             %Simple wrappers
     \newcommand{\Sin}[1]{\sin\Wrap{#1}}                             %Simple wrappers
     \newcommand{\Tan}[1]{tan\Wrap{#1}}                              %Simple wrappers
@@ -204,10 +200,6 @@
         {\dfrac{\partial^{#3} \; #1}{\partial#2^{#3}}}              %Use: \UpperDerivate for simple use
 
     \DeclareMathOperator \Evaluate  {\Big|}                         %Use: \Evaluate por Notation
-
-
-
-
 
     
     % =====  GENERAL COLOR  =========
@@ -315,491 +307,560 @@
 
 
 
+% //////////////////////////////////////////////////////////////////////////////////////////////////////////
+% ////////////////////////////////         INTRODUCCION A LOS VECTORES     /////////////////////////////////
+% //////////////////////////////////////////////////////////////////////////////////////////////////////////
+\part{Introducción a los Vectores sobre $\Reals$}
 
-\part{Introducción a los vectores}
 
-	\chapter{Conceptos básicos}
-	
-		\section{Definición de escalar}
-		
-		Definiremos a los escalares como elementos de $\mathbb{R}$, es decir, cualquier número de la recta real. Son usados para describir cantidades que solo dependen de un número (y posiblemente una unidad) para ser descritas completamente, por ejemplo, masa, volumen, temperatura, longitud, etc. Reciben ese nombre porque al ser multiplicados por un vector, como veremos más adelante, lo pueden aumentar o disminuir de tamaño, es decir, los escalan.
-		
-		\section{Definición de vector}
-		
-		Probablemente el concepto de vector es el que más definiciones tiene dependiendo de qué punto de vista se estudien. Aquí solo veremos cómo definirlos sobre el plano ($\mathbb{R}^2$) y el espacio ($\mathbb{R}^3$). También existen muchas formas de escribirlos, aquí usaremos una flecha arriba de la variable: $\ve{a}$, aunque también se puede poner la variable en negritas: $\nve{a}$.
-		
-			\subsection{Punto de vista geométrico}
-			
-			Podemos extender el concepto de un punto en el espacio y definir a un vector como la flecha que apunta desde el origen hasta ese punto. De esta forma vemos que un vector tiene \textbf{magnitud} (la longitud de la flecha) y \textbf{sentido} (hacia dónde apunta la flecha).
-			
-			\subsection{Punto de vista algebráico}
-			
-			Un vector \(\vec{a}\) es un elemento de \(\mathbb{R}^2\) o de \(\mathbb{R}^3\), y escribimos \(\vec{a}=(a_1, a_2, a_3)\), donde $a_1, a_2, a_3 \in \mathbb{R}$ son sus \textbf{coordenadas} o \textbf{componentes}. Por lo tanto no es más que un simple par o terna ordenada de números. Si se cumple siempre que $a_3=0$, simplemente podemos escribir $(a_1, a_2)$ para un vector en el plano. De forma similar, casi las propiedades que se cumplan para un vector en $\ve{R}^3$ se cumplen para vectores en $\ve{R}^2$ ignorando la tercera componente.
-			
-			\begin{Definition}[Igualdad de vectores]
-				Decimos que dos vectores son iguales si y solo si sus componentes correspondientes son iguales. Es decir, si tenemos $\ve{a}=(a_1, a_2, a_3)$ y $\ve{b}=(b_1, b_2, b_3)$, entonces \boxed{\mbox{$\ve{a}=\ve{b}$ si y solo si $a_1=b_1$, $a_2=b_2$ y $a_3=b_3$}}.
-			\end{Definition}
-		
-			\subsection{Diferencia entre punto y vector}
-			
-			En esencia son lo mismo, pero un punto solo indica una posición en el espacio, mientras que un vector indica un \textbf{desplazamiento}. Lo veremos a continuación.
-			
-			\subsection{Vector posición}
-			
-			Dado un punto $P$, definimos al vector posición de $P$ respecto de un origen $O$ como el vector $\Ve{OP}$, que tendrá las mismas coordenadas del punto $P$.
-			
-			\subsection{Vector desplazamiento}
-			
-			Dados dos puntos $P$ y $Q$, definimos al vector desplazamiento de $P$ a $Q$ como el vector $\Ve{PQ}$, en donde el origen de la flecha está en $P$ y la punta en $Q$. De esta forma vemos que los vectores no necesariamente comienzan en el origen, sino en donde queramos. Es muy importante comprender esto durante todo el curso.
-			
-	\chapter{Álgebra vectorial}
-			
-		\section{Operaciones básicas}
-		
-			\subsection{Suma y resta}
-			
-			Sean los vectores $\ve{a}=(a_1, a_2, a_3) \in \mathbb{R}^3$ y $\ve{b}=(b_1, b_2, b_3) \in \mathbb{R}^3$.
-			
-			\begin{Definition}[Suma de vectores]
-				Definimos a la suma de $\ve{a}$ con $\ve{b}$ como:
-				\begin{align}
-					\ve{a}+\ve{b} &= (a_1 + b_1, a_2 + b_2, a_3 + b_3) \label{defSuma}
-				\end{align}
-				O sea, simplemente sumamos componente a componente.
-			\end{Definition}
-		
-			Geométricamente, para sumar $\ve{a}$ con $\ve{b}$ colocamos el principio de $\ve{b}$ junto a la punta de $\ve{a}$. El vector $\ve{a}+\ve{b}$ será el vector que comienza en donde comienza $\ve{a}$ y termina en donde termina $\ve{b}$.
-		
-			\begin{Definition}[Resta de vectores]
-				De forma similar, la resta de $\ve{a}$ con $\ve{b}$ es:
-				\begin{align}
-					\ve{a}-\ve{b} &= (a_1 - b_1, a_2 - b_2, a_3 - b_3) \label{defResta}
-				\end{align}
-			\end{Definition}
-		
-			Con esta definición, podemos decir que el vector desplazamiento del punto $P$ al punto $Q$ es el vector $\Ve{PQ} = \Ve{OQ} - \Ve{OP}$.
-			
-			
-			\subsection{Multiplicación por escalar}
-			
-			Sea $\ve{a}=(a_1, a_2, a_3) \in \mathbb{R}^3$ un vector y $k \in \mathbb{R}$ un escalar.
-			
-			\begin{Definition}
-				Definimos el producto del escalar $k$ por el vector $\ve{a}$ como:
-				\begin{align}
-					k\ve{a} &= (ka_1, ka_2, ka_3) \label{defMult}
-				\end{align}
-				Es decir, solo multiplicamos cada componente (que son escalares) por el escalar $k$.
-			\end{Definition}
-			El efecto geométrico de multiplicar por un escalar es de agrandarlo o reducirlo pero sin cambiar su dirección (su sentido se invierte si $k<0$, se queda igual si $k>0$ y obtenemos el cero vector si $k=0$).
-			
-			\subsection{Propiedades}
-			
-			Las operaciones anteriores cumplen con las siguientes propiedades, donde $\ve{a},\ve{b}, \ve{c} \in \mathbb{R}^3$ y $k,l \in \mathbb{R}$. Vemos que todas se heredan de las ya conocidas propiedades de los números reales:
-			\begin{itemize}\setlength\itemsep{0em}
-				\item \textbf{Conmutativa:} $\ve{a}+\ve{b} = \ve{b}+\ve{a}$.
-				
-				\begin{SmallIndentation}[1em]
-					\textbf{Demostración:}
-					Se sigue inmediatamente de la propiedad conmutativa de los números reales:
-					\begin{align*}
-						\ve{a}+\ve{b} &= (a_1, a_2, a_3) + (b_1, b_2, b_3) &\mbox{Expresar en coordenadas}\\
-						&= (a_1 + b_1, a_2 + b_2, a_3 + b_3) &\mbox{Definición de suma de vectores}\\
-						&= (b_1 + a_1, b_2 + a_2, b_3 + a_3) &\mbox{Propiedad conmutativa en los reales}\\
-						&= (b_1, b_2, b_3) + (a_1, a_2, a_3) &\mbox{Definición de suma a la inversa}\\
-						&= \ve{b} + \ve{a} &\mbox{Volvemos a armar a los vectores}
-					\end{align*}
-				\end{SmallIndentation}
-				
-				\item \textbf{Asociativa:} $\ve{a}+\left(\ve{b}+\ve{c}\right) = \left(\ve{a}+\ve{b}\right)+\ve{c}$.
-				
-				Como ambas expresiones son iguales, podemos escribir sin ambigüedad que $\ve{a}+\left(\ve{b}+\ve{c}\right) = \left(\ve{a}+\ve{b}\right)+\ve{c} = \ve{a}+\ve{b}+\ve{c}$.
-				
-				\begin{SmallIndentation}[1em]
-					\textbf{Idea de demostración:} exactamente la misma que la anterior, solo que usando la propiedad asociativa en los reales.
-				\end{SmallIndentation}
-				
-				\item \textbf{Neutro aditivo:} existe $\ve{0} \in \mathbb{R}^3$ (el cero vector) tal que $\ve{a}+\ve{0}=\ve{a}$. ¿Quién crees que sea ese cero vector? Exacto, $\ve{0}=(0,0,0)$. Este vector es el único que no tiene una dirección ni un sentido bien definidos.
-				
-				\item \textbf{Inverso aditivo:} existe $-\ve{a} \in \mathbb{R}^3$ tal que $\ve{a}+\left(-\ve{a}\right)=\ve{0}$. Y justamente las coordenadas de $-\ve{a}$ son los inversos aditivos en los reales de sus coordenadas: $-\ve{a}=(-a_1, -a_2, -a_3)$.
-				
-				\item \textbf{Distributiva sobre escalares:} $(k+l)\ve{a}=k\ve{a}+l\ve{a}$
-				
-				\begin{SmallIndentation}[1em]
-					\textbf{Demostración:}
-					\begin{align*}
-						(k+l)\ve{a} &= (k+l)(a_1, a_2, a_3) &\mbox{Expresar en coordenadas}\\
-						&= ((k+l)a_1, (k+l)a_2, (k+l)a_3) &\mbox{Definición de producto por escalar}\\
-						&= (ka_1 + la_1, ka_2 + la_2, ka_3 + la_3) &\mbox{Propiedad distributiva en los reales}\\
-						&= (ka_1, ka_2, ka_3) + (la_1, la_2, la_3) &\mbox{Definición de suma a la inversa}\\
-						&= k(a_1, a_2, a_3) + l(a_1, a_2, a_3) &\mbox{Definición de producto a la inversa}\\
-						&= k\ve{a} + l\ve{a} &\mbox{Volvemos a armar a los vectores}
-					\end{align*}
-				\end{SmallIndentation}
-				
-				\item \textbf{Distributiva sobre vectores:} $k\left(\ve{a}+\ve{b}\right)=k\ve{a}+k\ve{b}$
-				
-				\begin{SmallIndentation}[1em]
-					\textbf{Idea de demostración:} usa la definición de suma de vectores y la de multiplicación por escalar, debería de quedarte al primer intento.
-				\end{SmallIndentation}
-				
-				\item \textbf{Asociativa sobre escalares:} $k\left(l\ve{a}\right)=(kl)\ve{a}=l\left(k\ve{a}\right)$
-				
-				\begin{SmallIndentation}[1em]
-					\textbf{Idea de demostración:} las mismas técnicas que las anteriores.
-				\end{SmallIndentation}
-			\end{itemize}
-		
-			Todas las propiedades anteriores se pueden generalizar perfectamente a vectores en cualquier dimensión, es decir, que pertenezcan a $\mathbb{R}^n$.
-			
-		\section{Características de los vectores}
-		
-			\subsection{Magnitud}
-			
-			\begin{Definition}[Magnitud de un vector]
-				Sea $\ve{a} \in \mathbb{R}^3$. Definimos a la magnitud o al módulo de $\ve{a}$ como:
-				\begin{align}
-					\Abs{\ve{a}} &= \sqrt{a_1^2 + a_2^2 + a_3^2}
-				\end{align}
-			\end{Definition}
-		
-			Geométricamente es la distancia del origen a la punta del vector debido al teorema de Pitágoras. A veces se usa la notación $\abs{\ve{a}}$ o simplemente el vector sin flecha $a$ para referirse a su magnitud, pero aquí usaremos dobles barras.
-			
-			\begin{Definition}[Vector unitario]
-				Si un vector $\ve{v}$ cumple que $\Abs{\ve{v}}=1$, decimos que es un \emph{vector unitario} y usualmente se denota como $\hat{v}$.
-			\end{Definition}
-			
-			\textbf{Propiedad:} si $k \in \mathbb{R}$, se cumple que $\Abs{k\ve{a}} = \abs{k} \Abs{\ve{a}}$, es decir, la magnitud del producto de un escalar por un vector es igual al valor absoluto del escalar por la magnitud del vector, por lo que de alguna forma podemos ``sacar'' el escalar.
-			
-			\begin{SmallIndentation}[1em]
-				\textbf{Demostración:}
-				\begin{align*}
-					\Abs{k\ve{a}} &= \Abs{k(a_1, a_2, a_3)} &\mbox{Representación en coordenadas}\\
-					&= \Abs{(ka_1, ka_2, ka_3)} &\mbox{Definición de multiplicación por escalar}\\
-					&= \sqrt{(ka_1)^2 + (ka_2)^2 + (ka_3)^2} &\mbox{Definición de magnitud}\\
-					&= \sqrt{k^2a_1^2 + k^2a_2^2 + k^2a_3^2} &\mbox{Propiedad de los exponentes en los reales}\\
-					&= \sqrt{k^2(a_1^2 + a_2^2 + a_3^2)} &\mbox{Factorización}\\
-					&= \sqrt{k^2}\sqrt{a_1^2 + a_2^2 + a_3^2} &\mbox{La raíz se distribuye sobre el producto de reales}\\
-					&= \abs{k} \Abs{\ve{a}} &\mbox{Propiedad de la raíz cuadrada y definición de magnitud}
-				\end{align*}
-			\end{SmallIndentation}
-		
-			Lo anterior nos motiva a que, dado un vector cualquiera $\ve{v} \neq \ve{0}$, queramos obtener su equivalente unitario $\hat{v}$, es decir, el vector con su misma dirección y sentido pero con magnitud 1. Dicho proceso se conoce como normalización:
-			\begin{Theorem}[Normalización]
-				\begin{align}
-					\hat{v} &= \dfrac{1}{\Abs{\ve{v}}} \ve{v}
-				\end{align}
-			\end{Theorem}
-		
-			\begin{SmallIndentation}[1em]
-				\textbf{Demostración:} es fácil ver que la magnitud del vector propuesto es 1, usando la propiedad anterior:
-				\begin{align*}
-					\Abs{\hat{v}} &= \Abs{\dfrac{1}{\Abs{\ve{v}}} \ve{v}} = \abs{\dfrac{1}{\Abs{\vec{v}}}} \Abs{\ve{v}} = \dfrac{1}{\Abs{\ve{v}}} \Abs{\ve{v}} = 1
-				\end{align*}
-				Y obviamente $\hat{v}$ tiene la misma dirección y sentido que $\ve{v}$, pues $\dfrac{1}{\Abs{\ve{v}}}$ siempre es positivo y está multiplicando a $\ve{v}$.
-			\end{SmallIndentation}
-			
-			\subsection{Representación en vectores unitarios}
-			
-			\begin{Definition}[Vectores unitarios canónicos]
-				Introducimos a los siguientes vectores:
-				\begin{align}
-					\hat{i} &= (1, 0, 0) \quad , \quad \hat{j} = (0, 1, 0) \quad , \quad \hat{k} = (0, 0, 1)
-				\end{align}
-			\end{Definition}
-		
-			¿Para qué nos sirve tener a esos vectores? Simple, para poder escribir cualquier vector $\ve{a} \in \mathbb{R}$ como combinación lineal de ellos en vez de usar la tupla. Veamos cómo:
-			\begin{SmallIndentation}[1em]
-				\begin{align*}
-					\ve{a} &= (a_1, a_2, a_3) &\mbox{Representación en coordenadas}\\
-					&= (a_1 + 0 + 0, 0 + a_2 + 0, 0 + 0 + a_3) &\mbox{Sumamos ceros convenientemente}\\
-					&= (a_1, 0, 0) + (0, a_2, 0) + (0, 0, a_3) &\mbox{Definición de suma}\\
-					&= a_1(1, 0, 0) + a_2(0, 1, 0) + a_3(0, 0, 1) &\mbox{Factorización del escalar}\\
-					&= \boxed{a_1\hat{i} + a_2\hat{j} + a_3\hat{k}} &\mbox{Definición de los vectores canónicos}
-				\end{align*}
-			\end{SmallIndentation}
-		
-			Es fácil ver que los tres vectores propuestos son unitarios, y la expresión anterior quiere decir que nos estamos desplazando $a_1$ unidades en dirección al eje $\mathbf{X}$, $a_2$ unidades en dirección al eje $\mathbf{Y}$ y $a_3$ unidades en dirección al eje $\mathbf{Z}$. De esta forma, el desplazamiento total será justamente el vector $\ve{a}$.
-			
-			\subsection{Dependencia e independencia lineal}
-			
-			Este es un concepto importante antes de pasar a otras operaciones que podemos hacer con los vectores.
-			
-			\begin{Definition}
-				Sean $k_1, k_2, \ldots, k_n \in \mathbb{R}$ escalares y $\ve{v_1}, \ve{v_2}, \ldots, \ve{v_n} \in \mathbb{R}^3$ vectores. Decimos que dichos vectores son \textbf{linealmente independientes} si la igualdad $\displaystyle \sum_{i=1}^{n} k_i \ve{a_i} = \ve{0}$ implica que $k_1 = k_2 = \cdots = k_n = 0$. En caso contrario decimos que los vectores son \textbf{linealmente dependientes}.
-			\end{Definition}
-		
-			La definición anterior es realmente interesante, porque si la tomamos a la inversa, es decir, asumiendo que todos los escalares $k_1, k_2, \ldots, k_n$ valen cero, entonces la combinación lineal de los vectores siempre daría $\ve{0}$, lo cual no es de mucha utilidad.
-		
-			Ahora veamos cómo entenderla. Si tenemos $n$ vectores, que son $\ve{v_1}, \ve{v_2}, \ldots, \ve{v_n}$, son linealmente independientes (l.i. para abreviar) si la única forma de obtener el cero vector $\ve{0}$ al multiplicarlos cada uno por un escalar y luego sumar todo es que dichos escalares sean todos 0. Si somos capaces de encontrar algunos otros escalares para esta tarea y el resultado también es $\ve{0}$, los vectores son linealmente dependientes (l.d.).
-			
-			Una consecuencia de lo anterior es que si los vectores son l.d., entonces alguno de ellos se puede escribir como combinación lineal de los otros. Geométricamente, tomando dichos otros vectores multiplicados por algún escalar como suma de desplazamientos, llegaremos a obtener el vector inicial. Si los vectores fueran l.i. esto no sería posible, nunca podríamos obtener un vector como la suma de desplazamientos de los otros.
-			
-			\begin{Theorem}
-				Sean $\ve{v_1}, \ve{v_2}, \ldots, \ve{v_n} \in \mathbb{R}^3$ vectores linealmente dependientes. Entonces existe $j$ tal que $1 \leq j \leq n$ y escalares $l_1, l_2, \ldots, l_{n-1} \in \mathbb{R}$ tales que $\ve{v_j} = \displaystyle \sum_{i=1}^{n-1} l_i \ve{v_i}$.
-			\end{Theorem}
-		
-			\begin{SmallIndentation}[1em]
-				\textbf{Idea de la demostración:} como los vectores son l.d., entonces tiene que haber algún escalar tal que $k_j \neq 0$. Encuentra el vector $\ve{v_j}$ y simplemente despéjalo, eso será posible pues su escalar es distinto de cero.
-			\end{SmallIndentation}
-			
-			\subsubsection{¿Cómo saber si mi conjunto de vectores es l.i. o l.d.?}
-			
-			Sigamos la definición, propongamos los escalares $k_1, k_2, \ldots, k_n \in \mathbb{R}$ tales que $\displaystyle \sum_{i=1}^{n} k_i \ve{a_i} = \ve{0}$. Esto nos llevará a un sistema de $n$ ecuaciones lineales luego de igualar las componente del vector resultante con 0. Si logramos demostrar que dicho sistema tiene como \textbf{única} solución $k_1 = k_2 = \cdots k_n = 0$, los vectores son l.i. Si aparte de esa encontramos otra solución (de hecho si hay más que la solución trivial habrá infinitas soluciones), los vectores son l.d.
-			
-		\section{Productos entre vectores}
-		
-			\subsection{Producto punto}
-			
-				\subsubsection{Ángulo entre vectores}
-				
-				\subsubsection{Proyección de un vector sobre otro}
-				
-				\subsubsection{Desigualdad de Cauchy-Schwarz}
-				
-				\subsubsection{Desigualdad del triángulo}
-			
-			\subsection{Producto cruz}
-			
-				\subsubsection{Área de un paralelogramo}
-			
-			\subsection{Producto triple}
-			
-				\subsubsection{Volumen de un paralelepípedo}
-				
-			\subsection{Propiedades útiles}
-			
-	\chapter{Aplicaciones a la geometría}
-		
-		\section{Ecuación del plano}
-			
-		\section{Ecuación de la recta}
-		
-		\section{Ecuación de la esfera}
-			
-		\section{Distancia punto-recta y punto-plano}
-		
-		\section{Rotaciones en el espacio}
-		
-		\section{Demostraciones geométricas mediante vectores}
-			
+    % ===============================================================================
+    % ===================            CONCEPTOS BASICOS         ======================
+    % ===============================================================================
+    \chapter{Conceptos Básicos}
+    
+
+        % =========================================================
+        % ==========      DEFINICION DE ESCALAR      ==============
+        % =========================================================
+        \clearpage
+        \section{Definición de Escalar}
+
+
+            Vamos a probar algo como $\abs{x+y} = \Abs{x+y}$
+        
+            Definiremos a los escalares como elementos de $\Reals$, es decir, cualquier número de
+            la recta real.
+
+            Son usados para describir cantidades que solo dependen de un número (y posiblemente una
+            unidad en Física por ejemplo) para ser descritas completamente, por ejemplo, masa,
+            volumen, temperatura, longitud, etc.
+
+            Reciben ese nombre porque al ser multiplicados por un vector, como veremos más adelante,
+            lo pueden aumentar o disminuir de tamaño, es decir, los escalan.
+        
+
+        % =========================================================
+        % ==========      DEFINICION DE ESCALAR      ==============
+        % =========================================================
+        \vspace{2em}
+        \section{Definición de Vector}
+        
+            Probablemente el concepto de vector es el que más definiciones tiene dependiendo de qué
+            punto de vista se estudien.
+
+            Aquí solo veremos cómo definirlos sobre el plano ($\Reals^2$) y el espacio ($\Reals^3$).
+
+            También existen muchas formas de escribirlos, aquí usaremos una flecha arriba de la variable:
+            $\vec{a}$, aunque también se puede poner la variable en negritas: $\bVec{a}$.
+        
+            \subsection{Punto de vista geométrico}
+            
+            Podemos extender el concepto de un punto en el espacio y definir a un vector como la flecha que apunta desde el origen hasta ese punto. De esta forma vemos que un vector tiene \textbf{magnitud} (la longitud de la flecha) y \textbf{sentido} (hacia dónde apunta la flecha).
+            
+            \subsection{Punto de vista algebráico}
+            
+            Un vector \(\vec{a}\) es un elemento de \(\Reals^2\) o de \(\Reals^3\), y escribimos \(\vec{a}=(a_1, a_2, a_3)\), donde $a_1, a_2, a_3 \in \Reals$ son sus \textbf{coordenadas} o \textbf{componentes}. Por lo tanto no es más que un simple par o terna ordenada de números. Si se cumple siempre que $a_3=0$, simplemente podemos escribir $(a_1, a_2)$ para un vector en el plano. De forma similar, casi las propiedades que se cumplan para un vector en $\vec{R}^3$ se cumplen para vectores en $\vec{R}^2$ ignorando la tercera componente.
+            
+            \begin{Definition}[Igualdad de vectores]
+                Decimos que dos vectores son iguales si y solo si sus componentes correspondientes son iguales. Es decir, si tenemos $\vec{a}=(a_1, a_2, a_3)$ y $\vec{b}=(b_1, b_2, b_3)$, entonces \boxed{\mbox{$\vec{a}=\vec{b}$ si y solo si $a_1=b_1$, $a_2=b_2$ y $a_3=b_3$}}.
+            \end{Definition}
+        
+            \subsection{Diferencia entre punto y vector}
+            
+            En esencia son lo mismo, pero un punto solo indica una posición en el espacio, mientras que un vector indica un \textbf{desplazamiento}. Lo veremos a continuación.
+            
+            \subsection{Vector posición}
+            
+            Dado un punto $P$, definimos al vector posición de $P$ respecto de un origen $O$ como el vector $\lVec{OP}$, que tendrá las mismas coordenadas del punto $P$.
+            
+            \subsection{Vector desplazamiento}
+            
+            Dados dos puntos $P$ y $Q$, definimos al vector desplazamiento de $P$ a $Q$ como el vector $\lVec{PQ}$, en donde el origen de la flecha está en $P$ y la punta en $Q$. De esta forma vemos que los vectores no necesariamente comienzan en el origen, sino en donde queramos. Es muy importante comprender esto durante todo el curso.
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    \chapter{Álgebra vectorial}
+            
+        \section{Operaciones básicas}
+        
+            \subsection{Suma y resta}
+            
+            Sean los vectores $\vec{a}=(a_1, a_2, a_3) \in \Reals^3$ y $\vec{b}=(b_1, b_2, b_3) \in \Reals^3$.
+            
+            \begin{Definition}[Suma de vectores]
+                Definimos a la suma de $\vec{a}$ con $\vec{b}$ como:
+                \begin{align}
+                    \vec{a}+\vec{b} &= (a_1 + b_1, a_2 + b_2, a_3 + b_3) \label{defSuma}
+                \end{align}
+                O sea, simplemente sumamos componente a componente.
+            \end{Definition}
+        
+            Geométricamente, para sumar $\vec{a}$ con $\vec{b}$ colocamos el principio de $\vec{b}$ junto a la punta de $\vec{a}$. El vector $\vec{a}+\vec{b}$ será el vector que comienza en donde comienza $\vec{a}$ y termina en donde termina $\vec{b}$.
+        
+            \begin{Definition}[Resta de vectores]
+                De forma similar, la resta de $\vec{a}$ con $\vec{b}$ es:
+                \begin{align}
+                    \vec{a}-\vec{b} &= (a_1 - b_1, a_2 - b_2, a_3 - b_3) \label{defResta}
+                \end{align}
+            \end{Definition}
+        
+            Con esta definición, podemos decir que el vector desplazamiento del punto $P$ al punto $Q$ es el vector $\lVec{PQ} = \lVec{OQ} - \lVec{OP}$.
+            
+            
+            \subsection{Multiplicación por escalar}
+            
+            Sea $\vec{a}=(a_1, a_2, a_3) \in \Reals^3$ un vector y $k \in \Reals$ un escalar.
+            
+            \begin{Definition}
+                Definimos el producto del escalar $k$ por el vector $\vec{a}$ como:
+                \begin{align}
+                    k\vec{a} &= (ka_1, ka_2, ka_3) \label{defMult}
+                \end{align}
+                Es decir, solo multiplicamos cada componente (que son escalares) por el escalar $k$.
+            \end{Definition}
+            El efecto geométrico de multiplicar por un escalar es de agrandarlo o reducirlo pero sin cambiar su dirección (su sentido se invierte si $k<0$, se queda igual si $k>0$ y obtenemos el cero vector si $k=0$).
+            
+            \subsection{Propiedades}
+            
+            Las operaciones anteriores cumplen con las siguientes propiedades, donde $\vec{a},\vec{b}, \vec{c} \in \Reals^3$ y $k,l \in \Reals$. Vemos que todas se heredan de las ya conocidas propiedades de los números reales:
+            \begin{itemize}\setlength\itemsep{0em}
+                \item \textbf{Conmutativa:} $\vec{a}+\vec{b} = \vec{b}+\vec{a}$.
+                
+                \begin{SmallIndentation}[1em]
+                    \textbf{Demostración:}
+                    Se sigue inmediatamente de la propiedad conmutativa de los números reales:
+                    \begin{align*}
+                        \vec{a}+\vec{b} &= (a_1, a_2, a_3) + (b_1, b_2, b_3) &\mbox{Expresar en coordenadas}\\
+                        &= (a_1 + b_1, a_2 + b_2, a_3 + b_3) &\mbox{Definición de suma de vectores}\\
+                        &= (b_1 + a_1, b_2 + a_2, b_3 + a_3) &\mbox{Propiedad conmutativa en los reales}\\
+                        &= (b_1, b_2, b_3) + (a_1, a_2, a_3) &\mbox{Definición de suma a la inversa}\\
+                        &= \vec{b} + \vec{a} &\mbox{Volvemos a armar a los vectores}
+                    \end{align*}
+                \end{SmallIndentation}
+                
+                \item \textbf{Asociativa:} $\vec{a}+\left(\vec{b}+\vec{c}\right) = \left(\vec{a}+\vec{b}\right)+\vec{c}$.
+                
+                Como ambas expresiones son iguales, podemos escribir sin ambigüedad que $\vec{a}+\left(\vec{b}+\vec{c}\right) = \left(\vec{a}+\vec{b}\right)+\vec{c} = \vec{a}+\vec{b}+\vec{c}$.
+                
+                \begin{SmallIndentation}[1em]
+                    \textbf{Idea de demostración:} exactamente la misma que la anterior, solo que usando la propiedad asociativa en los reales.
+                \end{SmallIndentation}
+                
+                \item \textbf{Neutro aditivo:} existe $\vec{0} \in \Reals^3$ (el cero vector) tal que $\vec{a}+\vec{0}=\vec{a}$. ¿Quién crees que sea ese cero vector? Exacto, $\vec{0}=(0,0,0)$. Este vector es el único que no tiene una dirección ni un sentido bien definidos.
+                
+                \item \textbf{Inverso aditivo:} existe $-\vec{a} \in \Reals^3$ tal que $\vec{a}+\left(-\vec{a}\right)=\vec{0}$. Y justamente las coordenadas de $-\vec{a}$ son los inversos aditivos en los reales de sus coordenadas: $-\vec{a}=(-a_1, -a_2, -a_3)$.
+                
+                \item \textbf{Distributiva sobre escalares:} $(k+l)\vec{a}=k\vec{a}+l\vec{a}$
+                
+                \begin{SmallIndentation}[1em]
+                    \textbf{Demostración:}
+                    \begin{align*}
+                        (k+l)\vec{a} &= (k+l)(a_1, a_2, a_3) &\mbox{Expresar en coordenadas}\\
+                        &= ((k+l)a_1, (k+l)a_2, (k+l)a_3) &\mbox{Definición de producto por escalar}\\
+                        &= (ka_1 + la_1, ka_2 + la_2, ka_3 + la_3) &\mbox{Propiedad distributiva en los reales}\\
+                        &= (ka_1, ka_2, ka_3) + (la_1, la_2, la_3) &\mbox{Definición de suma a la inversa}\\
+                        &= k(a_1, a_2, a_3) + l(a_1, a_2, a_3) &\mbox{Definición de producto a la inversa}\\
+                        &= k\vec{a} + l\vec{a} &\mbox{Volvemos a armar a los vectores}
+                    \end{align*}
+                \end{SmallIndentation}
+                
+                \item \textbf{Distributiva sobre vectores:} $k\left(\vec{a}+\vec{b}\right)=k\vec{a}+k\vec{b}$
+                
+                \begin{SmallIndentation}[1em]
+                    \textbf{Idea de demostración:} usa la definición de suma de vectores y la de multiplicación por escalar, debería de quedarte al primer intento.
+                \end{SmallIndentation}
+                
+                \item \textbf{Asociativa sobre escalares:} $k\left(l\vec{a}\right)=(kl)\vec{a}=l\left(k\vec{a}\right)$
+                
+                \begin{SmallIndentation}[1em]
+                    \textbf{Idea de demostración:} las mismas técnicas que las anteriores.
+                \end{SmallIndentation}
+            \end{itemize}
+        
+            Todas las propiedades anteriores se pueden generalizar perfectamente a vectores en cualquier dimensión, es decir, que pertenezcan a $\Reals^n$.
+            
+        \section{Características de los vectores}
+        
+            \subsection{Magnitud}
+            
+            \begin{Definition}[Magnitud de un vector]
+                Sea $\vec{a} \in \Reals^3$. Definimos a la magnitud o al módulo de $\vec{a}$ como:
+                \begin{align}
+                    \Abs{\vec{a}} &= \sqrt{a_1^2 + a_2^2 + a_3^2}
+                \end{align}
+            \end{Definition}
+        
+            Geométricamente es la distancia del origen a la punta del vector debido al teorema de Pitágoras. A veces se usa la notación $\abs{\vec{a}}$ o simplemente el vector sin flecha $a$ para referirse a su magnitud, pero aquí usaremos dobles barras.
+            
+            \begin{Definition}[Vector unitario]
+                Si un vector $\vec{v}$ cumple que $\Abs{\vec{v}}=1$, decimos que es un \emph{vector unitario} y usualmente se denota como $\hat{v}$.
+            \end{Definition}
+            
+            \textbf{Propiedad:} si $k \in \Reals$, se cumple que $\Abs{k\vec{a}} = \abs{k} \Abs{\vec{a}}$, es decir, la magnitud del producto de un escalar por un vector es igual al valor absoluto del escalar por la magnitud del vector, por lo que de alguna forma podemos ``sacar'' el escalar.
+            
+            \begin{SmallIndentation}[1em]
+                \textbf{Demostración:}
+                \begin{align*}
+                    \Abs{k\vec{a}} &= \Abs{k(a_1, a_2, a_3)} &\mbox{Representación en coordenadas}\\
+                    &= \Abs{(ka_1, ka_2, ka_3)} &\mbox{Definición de multiplicación por escalar}\\
+                    &= \sqrt{(ka_1)^2 + (ka_2)^2 + (ka_3)^2} &\mbox{Definición de magnitud}\\
+                    &= \sqrt{k^2a_1^2 + k^2a_2^2 + k^2a_3^2} &\mbox{Propiedad de los exponentes en los reales}\\
+                    &= \sqrt{k^2(a_1^2 + a_2^2 + a_3^2)} &\mbox{Factorización}\\
+                    &= \sqrt{k^2}\sqrt{a_1^2 + a_2^2 + a_3^2} &\mbox{La raíz se distribuye sobre el producto de reales}\\
+                    &= \abs{k} \Abs{\vec{a}} &\mbox{Propiedad de la raíz cuadrada y definición de magnitud}
+                \end{align*}
+            \end{SmallIndentation}
+        
+            Lo anterior nos motiva a que, dado un vector cualquiera $\vec{v} \neq \vec{0}$, queramos obtener su equivalente unitario $\hat{v}$, es decir, el vector con su misma dirección y sentido pero con magnitud 1. Dicho proceso se conoce como normalización:
+            \begin{Theorem}[Normalización]
+                \begin{align}
+                    \hat{v} &= \dfrac{1}{\Abs{\vec{v}}} \vec{v}
+                \end{align}
+            \end{Theorem}
+        
+            \begin{SmallIndentation}[1em]
+                \textbf{Demostración:} es fácil ver que la magnitud del vector propuesto es 1, usando la propiedad anterior:
+                \begin{align*}
+                    \Abs{\hat{v}} &= \Abs{\dfrac{1}{\Abs{\vec{v}}} \vec{v}} = \abs{\dfrac{1}{\Abs{\vec{v}}}} \Abs{\vec{v}} = \dfrac{1}{\Abs{\vec{v}}} \Abs{\vec{v}} = 1
+                \end{align*}
+                Y obviamente $\hat{v}$ tiene la misma dirección y sentido que $\vec{v}$, pues $\dfrac{1}{\Abs{\vec{v}}}$ siempre es positivo y está multiplicando a $\vec{v}$.
+            \end{SmallIndentation}
+            
+            \subsection{Representación en vectores unitarios}
+            
+            \begin{Definition}[Vectores unitarios canónicos]
+                Introducimos a los siguientes vectores:
+                \begin{align}
+                    \hat{i} &= (1, 0, 0) \quad , \quad \hat{j} = (0, 1, 0) \quad , \quad \hat{k} = (0, 0, 1)
+                \end{align}
+            \end{Definition}
+        
+            ¿Para qué nos sirve tener a esos vectores? Simple, para poder escribir cualquier vector $\vec{a} \in \Reals$ como combinación lineal de ellos en vez de usar la tupla. Veamos cómo:
+            \begin{SmallIndentation}[1em]
+                \begin{align*}
+                    \vec{a} &= (a_1, a_2, a_3) &\mbox{Representación en coordenadas}\\
+                    &= (a_1 + 0 + 0, 0 + a_2 + 0, 0 + 0 + a_3) &\mbox{Sumamos ceros convenientemente}\\
+                    &= (a_1, 0, 0) + (0, a_2, 0) + (0, 0, a_3) &\mbox{Definición de suma}\\
+                    &= a_1(1, 0, 0) + a_2(0, 1, 0) + a_3(0, 0, 1) &\mbox{Factorización del escalar}\\
+                    &= \boxed{a_1\hat{i} + a_2\hat{j} + a_3\hat{k}} &\mbox{Definición de los vectores canónicos}
+                \end{align*}
+            \end{SmallIndentation}
+        
+            Es fácil ver que los tres vectores propuestos son unitarios, y la expresión anterior quiere decir que nos estamos desplazando $a_1$ unidades en dirección al eje $\mathbf{X}$, $a_2$ unidades en dirección al eje $\mathbf{Y}$ y $a_3$ unidades en dirección al eje $\mathbf{Z}$. De esta forma, el desplazamiento total será justamente el vector $\vec{a}$.
+            
+            \subsection{Dependencia e independencia lineal}
+            
+            Este es un concepto importante antes de pasar a otras operaciones que podemos hacer con los vectores.
+            
+            \begin{Definition}
+                Sean $k_1, k_2, \ldots, k_n \in \Reals$ escalares y $\vec{v_1}, \vec{v_2}, \ldots, \vec{v_n} \in \Reals^3$ vectores. Decimos que dichos vectores son \textbf{linealmente independientes} si la igualdad $\displaystyle \sum_{i=1}^{n} k_i \vec{a_i} = \vec{0}$ implica que $k_1 = k_2 = \cdots = k_n = 0$. En caso contrario decimos que los vectores son \textbf{linealmente dependientes}.
+            \end{Definition}
+        
+            La definición anterior es realmente interesante, porque si la tomamos a la inversa, es decir, asumiendo que todos los escalares $k_1, k_2, \ldots, k_n$ valen cero, entonces la combinación lineal de los vectores siempre daría $\vec{0}$, lo cual no es de mucha utilidad.
+        
+            Ahora veamos cómo entenderla. Si tenemos $n$ vectores, que son $\vec{v_1}, \vec{v_2}, \ldots, \vec{v_n}$, son linealmente independientes (l.i. para abreviar) si la única forma de obtener el cero vector $\vec{0}$ al multiplicarlos cada uno por un escalar y luego sumar todo es que dichos escalares sean todos 0. Si somos capaces de encontrar algunos otros escalares para esta tarea y el resultado también es $\vec{0}$, los vectores son linealmente dependientes (l.d.).
+            
+            Una consecuencia de lo anterior es que si los vectores son l.d., entonces alguno de ellos se puede escribir como combinación lineal de los otros. Geométricamente, tomando dichos otros vectores multiplicados por algún escalar como suma de desplazamientos, llegaremos a obtener el vector inicial. Si los vectores fueran l.i. esto no sería posible, nunca podríamos obtener un vector como la suma de desplazamientos de los otros.
+            
+            \begin{Theorem}
+                Sean $\vec{v_1}, \vec{v_2}, \ldots, \vec{v_n} \in \Reals^3$ vectores linealmente dependientes. Entonces existe $j$ tal que $1 \leq j \leq n$ y escalares $l_1, l_2, \ldots, l_{n-1} \in \Reals$ tales que $\vec{v_j} = \displaystyle \sum_{i=1}^{n-1} l_i \vec{v_i}$.
+            \end{Theorem}
+        
+            \begin{SmallIndentation}[1em]
+                \textbf{Idea de la demostración:} como los vectores son l.d., entonces tiene que haber algún escalar tal que $k_j \neq 0$. Encuentra el vector $\vec{v_j}$ y simplemente despéjalo, eso será posible pues su escalar es distinto de cero.
+            \end{SmallIndentation}
+            
+            \subsubsection{¿Cómo saber si mi conjunto de vectores es l.i. o l.d.?}
+            
+            Sigamos la definición, propongamos los escalares $k_1, k_2, \ldots, k_n \in \Reals$ tales que $\displaystyle \sum_{i=1}^{n} k_i \vec{a_i} = \vec{0}$. Esto nos llevará a un sistema de $n$ ecuaciones lineales luego de igualar las componente del vector resultante con 0. Si logramos demostrar que dicho sistema tiene como \textbf{única} solución $k_1 = k_2 = \cdots k_n = 0$, los vectores son l.i. Si aparte de esa encontramos otra solución (de hecho si hay más que la solución trivial habrá infinitas soluciones), los vectores son l.d.
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        \section{Productos entre vectores}
+        
+            \subsection{Producto punto}
+            
+                \subsubsection{Ángulo entre vectores}
+                
+                \subsubsection{Proyección de un vector sobre otro}
+                
+                \subsubsection{Desigualdad de Cauchy-Schwarz}
+                
+                \subsubsection{Desigualdad del triángulo}
+            
+            \subsection{Producto cruz}
+            
+                \subsubsection{Área de un paralelogramo}
+            
+            \subsection{Producto triple}
+            
+                \subsubsection{Volumen de un paralelepípedo}
+                
+            \subsection{Propiedades útiles}
+            
+    \chapter{Aplicaciones a la geometría}
+        
+        \section{Ecuación del plano}
+            
+        \section{Ecuación de la recta}
+        
+        \section{Ecuación de la esfera}
+            
+        \section{Distancia punto-recta y punto-plano}
+        
+        \section{Rotaciones en el espacio}
+        
+        \section{Demostraciones geométricas mediante vectores}
+            
 
 
 \part{Cálculo diferencial vectorial}
 
-	\chapter{Funciones de varias variables}
-	
-		\section{Representación como superficies}
-		
-			\subsection{Curvas de nivel y de contorno}
-			
-		\section{Límites}
-			
-			\subsection{Definición intuitiva}
-			
-			\subsection{Definición formal}
-			
-		\section{Continuidad}
-		
-		\section{Derivadas parciales}
-		
-			\subsection{Plano tangente a una superficie}
-			
-			\subsection{Diferenciabilidad}
-			
-			\subsection{Derivadas de orden superior}
-			
-				\subsubsection{Teorema de Clairaut}
-				
-		\section{Gradiente}
-				
-		\section{Regla de la cadena}
-		
-			\subsection{Diferencial total}
-			
-		\section{Derivada direccional}
-		
-		\section{Puntos críticos}
-		
-			\subsection{Máximos, mínimos y puntos silla}
-			
-			\subsection{Criterio del hessiano}
-			
-		\section{Multiplicadores de Lagrange}
+    \chapter{Funciones de varias variables}
+    
+        \section{Representación como superficies}
+        
+            \subsection{Curvas de nivel y de contorno}
+            
+        \section{Límites}
+            
+            \subsection{Definición intuitiva}
+            
+            \subsection{Definición formal}
+            
+        \section{Continuidad}
+        
+        \section{Derivadas parciales}
+        
+            \subsection{Plano tangente a una superficie}
+            
+            \subsection{Diferenciabilidad}
+            
+            \subsection{Derivadas de orden superior}
+            
+                \subsubsection{Teorema de Clairaut}
+                
+        \section{Gradiente}
+                
+        \section{Regla de la cadena}
+        
+            \subsection{Diferencial total}
+            
+        \section{Derivada direccional}
+        
+        \section{Puntos críticos}
+        
+            \subsection{Máximos, mínimos y puntos silla}
+            
+            \subsection{Criterio del hessiano}
+            
+        \section{Multiplicadores de Lagrange}
 
 
-	\chapter{Funciones vectoriales}
-	
-		\section{Curvas en forma paramétrica}
-		
-			\subsection{Reglas de derivación}
-			
-			\subsection{Velocidad y aceleración}
-		
-			\subsection{Longitud de arco}
-			
-			\subsection{Parametrización por longitud de arco}
-			
-			\subsection{Geometría diferencial}
-				
-				\subsubsection{Vector tangente, normal y binormal}
-				
-				\subsubsection{Curvatura y torsión}
-				
-				\subsubsection{Velocidad y aceleración}
-				
-				\subsubsection{Ecuaciones de Frenet-Serret}
-			
-		\section{Campos vectoriales}
-		
-			\subsection{Líneas de campo}
-			
-			\subsection{Derivadas parciales}
-		
-		\section{Operador nabla}
-		
-			\subsection{Gradiente}
-			
-			\subsection{Divergencia}
-			
-			\subsection{Rotacional}
-			
-			\subsection{Laplaciano}
-			
-			\subsection{Propiedades}
+    \chapter{Funciones vectoriales}
+    
+        \section{Curvas en forma paramétrica}
+        
+            \subsection{Reglas de derivación}
+            
+            \subsection{Velocidad y aceleración}
+        
+            \subsection{Longitud de arco}
+            
+            \subsection{Parametrización por longitud de arco}
+            
+            \subsection{Geometría diferencial}
+                
+                \subsubsection{Vector tangente, normal y binormal}
+                
+                \subsubsection{Curvatura y torsión}
+                
+                \subsubsection{Velocidad y aceleración}
+                
+                \subsubsection{Ecuaciones de Frenet-Serret}
+            
+        \section{Campos vectoriales}
+        
+            \subsection{Líneas de campo}
+            
+            \subsection{Derivadas parciales}
+        
+        \section{Operador nabla}
+        
+            \subsection{Gradiente}
+            
+            \subsection{Divergencia}
+            
+            \subsection{Rotacional}
+            
+            \subsection{Laplaciano}
+            
+            \subsection{Propiedades}
 
 
 
 \part{Cálculo integral vectorial}
 
-	\chapter{Integrales multivariable}
-	
-		\section{Regiones}
-		
-			\subsection{Regiones del plano y tipos}
-			
-			\subsection{Regiones del espacio y tipos}
-		
-		\section{Integrales iteradas}
-		
-		\section{Integrales dobles}
-			
-			\subsection{Integración sobre regiones arbitrarias}
-			
-			\subsection{¿Cómo hallar los límites de integración?}
-			
-			\subsection{Teorema de Fubini}
-		
-		\section{Integrales triples}
-			
-			\subsection{Integración sobre regiones arbitrarias}
-			
-			\subsection{¿Cómo hallar los límites de integración?}
-			
-		\section{Cambio de variable en 2 y 3 dimensiones}
-		
-			\subsection{Transformación de coordenadas}
-			
-			\subsection{Jacobiano}
-			
-		\section{Aplicaciones}
-		
-			\subsection{Valor promedio}
-			
-			\subsection{Centro de masa}
-			
-			\subsection{Momento de inercia}
-		
-	\chapter{Integrales de funciones vectoriales}
-	
-		\section{Integrales de línea}
-		
-			\subsection{Función escalar}
-			
-			\subsection{Función vectorial}
-			
-			\subsection{Campos conservativos}
-			
-				\subsubsection{Potencial}
-		
-		\section{Integrales de superficie}
-		
-			\subsection{Superficies en forma paramétrica}
-			
-				\subsubsection{Vector normal}
-			
-				\subsubsection{Relación con el Jacobiano}
-				
-				\subsubsection{Cálculo a través del gradiente}
-			
-			\subsection{Función escalar}
-			
-			\subsection{Función vectorial}
-		
-		\section{Integrales de volumen}
-		
-			\subsection{Regiones del espacio en forma paramétrica}
-			
-				\subsubsection{Elemento de volumen}
-				
-				\subsubsection{Relación con el Jacobiano}
-		
-			\subsection{Función escalar}
-			
-		\section{Consejos para parametrizar y definir límites}
-	
-	\chapter{Teoremas de integración}
-	
-		\section{Teorema de Green}
-		
-			\subsection{Cálculo de áreas dado el contorno}
-		
-		\section{Teorema de Stokes}
-		
-			\subsection{Frontera de una superficie}
-		
-		\section{Teorema de la divergencia de Gauss}
-		
-			\subsection{Superficie cerrada}
+    \chapter{Integrales multivariable}
+    
+        \section{Regiones}
+        
+            \subsection{Regiones del plano y tipos}
+            
+            \subsection{Regiones del espacio y tipos}
+        
+        \section{Integrales iteradas}
+        
+        \section{Integrales dobles}
+            
+            \subsection{Integración sobre regiones arbitrarias}
+            
+            \subsection{¿Cómo hallar los límites de integración?}
+            
+            \subsection{Teorema de Fubini}
+        
+        \section{Integrales triples}
+            
+            \subsection{Integración sobre regiones arbitrarias}
+            
+            \subsection{¿Cómo hallar los límites de integración?}
+            
+        \section{Cambio de variable en 2 y 3 dimensiones}
+        
+            \subsection{Transformación de coordenadas}
+            
+            \subsection{Jacobiano}
+            
+        \section{Aplicaciones}
+        
+            \subsection{Valor promedio}
+            
+            \subsection{Centro de masa}
+            
+            \subsection{Momento de inercia}
+        
+    \chapter{Integrales de funciones vectoriales}
+    
+        \section{Integrales de línea}
+        
+            \subsection{Función escalar}
+            
+            \subsection{Función vectorial}
+            
+            \subsection{Campos conservativos}
+            
+                \subsubsection{Potencial}
+        
+        \section{Integrales de superficie}
+        
+            \subsection{Superficies en forma paramétrica}
+            
+                \subsubsection{Vector normal}
+            
+                \subsubsection{Relación con el Jacobiano}
+                
+                \subsubsection{Cálculo a través del gradiente}
+            
+            \subsection{Función escalar}
+            
+            \subsection{Función vectorial}
+        
+        \section{Integrales de volumen}
+        
+            \subsection{Regiones del espacio en forma paramétrica}
+            
+                \subsubsection{Elemento de volumen}
+                
+                \subsubsection{Relación con el Jacobiano}
+        
+            \subsection{Función escalar}
+            
+        \section{Consejos para parametrizar y definir límites}
+    
+    \chapter{Teoremas de integración}
+    
+        \section{Teorema de Green}
+        
+            \subsection{Cálculo de áreas dado el contorno}
+        
+        \section{Teorema de Stokes}
+        
+            \subsection{Frontera de una superficie}
+        
+        \section{Teorema de la divergencia de Gauss}
+        
+            \subsection{Superficie cerrada}
 
 
 \part{Coordenadas curvilíneas}
 
-	\chapter{Coordenadas curvilíneas generalizadas}
-	
-		\section{Transformación de coordenadas}
-		
-		\section{Sistemas ortogonales}
-		
-		\section{Vectores unitarios}
-		
-			\subsection{Factores de escala}
-		
-		\section{Integración}
-		
-			\subsection{Elemento de línea}
-			
-			\subsection{Elemento de longitud de arco}
-			
-			\subsection{Elemento de área}
-			
-			\subsection{Elemento de volumen}
-			
-		\section{Operador nabla}
-		
-			\subsection{Gradiente}
-			
-			\subsection{Divergencia}
-			
-			\subsection{Rotacional}
-			
-			\subsection{Laplaciano}
-			
-		\section{Sistemas comunes de coordenadas}
-		
-			\subsection{Cilíndricas}
-			
-			\subsection{Esféricas}
+    \chapter{Coordenadas curvilíneas generalizadas}
+    
+        \section{Transformación de coordenadas}
+        
+        \section{Sistemas ortogonales}
+        
+        \section{Vectores unitarios}
+        
+            \subsection{Factores de escala}
+        
+        \section{Integración}
+        
+            \subsection{Elemento de línea}
+            
+            \subsection{Elemento de longitud de arco}
+            
+            \subsection{Elemento de área}
+            
+            \subsection{Elemento de volumen}
+            
+        \section{Operador nabla}
+        
+            \subsection{Gradiente}
+            
+            \subsection{Divergencia}
+            
+            \subsection{Rotacional}
+            
+            \subsection{Laplaciano}
+            
+        \section{Sistemas comunes de coordenadas}
+        
+            \subsection{Cilíndricas}
+            
+            \subsection{Esféricas}
             
 
 \end{document}
