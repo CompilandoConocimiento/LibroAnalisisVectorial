@@ -170,17 +170,19 @@
     \newcommand{\Csc}[1]{csc\Wrap{#1}}                              %Simple wrappers
     \newcommand{\Cot}[1]{cot\Wrap{#1}}                              %Simple wrappers
 
-    % === COMPLEX ANALYSIS ===
+    % === COMPLEX ANALYSIS TRIG ===
     \newcommand \Cis[1]  {\Cos{#1} + i \Sin{#1}}                    %Use: \Cis for cos(x) + i sin(x)
     \newcommand \pCis[1] {\Wrap{\Cis{#1}}}                          %Use: \pCis for the same ut parantesis
     \newcommand \bCis[1] {\Brackets{\Cis{#1}}}                      %Use: \bCis for the same to Brackets
 
+
+    % === CALCULUS ==========================
+    
     % ====== TRANSFORMS =====
     \newcommand{\FourierT}[1]{\mathscr{F} \left\{ #1 \right\} }     %Use: \FourierT {Funtion}
     \newcommand{\InvFourierT}[1]{\mathscr{F}^{-1}\left\{#1\right\}} %Use: \InvFourierT {Funtion}
 
-
-    % === CALCULUS ===
+    % ====== DERIVATE ======
     \newcommand \MiniDerivate[1][x] {\dfrac{d}{d #1}}               %Use: \MiniDerivate for simple use
     \newcommand \Derivate[2]                                        %Complete Derivate -- [f(x)][x]
         {\dfrac{d \; #1}{d #2}}                                     %Use: \Partial for simple use
@@ -202,7 +204,7 @@
     \DeclareMathOperator \Evaluate  {\Big|}                         %Use: \Evaluate por Notation
 
     
-    % =====  GENERAL COLOR  =========
+    % =====  GENERAL COLOR  ==================
     \definecolor{TealMD}{HTML}{009688}                              %Use: Color :D        
     \definecolor{IndigoMD}{HTML}{3F51B5}                            %Use: Color :D
     \definecolor{Green100MD}{HTML}{DCEDC8}                          %Use: Color :D
@@ -325,133 +327,237 @@
         \clearpage
         \section{Definición de Escalar}
 
-
-            Vamos a probar algo como $\abs{x+y} = \Abs{x+y}$
-        
             Definiremos a los escalares como elementos de $\Reals$, es decir, cualquier número de
             la recta real.
+            Reciben ese nombre porque al ser multiplicados por un vector, como veremos más adelante,
+            lo pueden aumentar o disminuir de tamaño, es decir, los escalan.
 
             Son usados para describir cantidades que solo dependen de un número (y posiblemente una
             unidad en Física por ejemplo) para ser descritas completamente, por ejemplo, masa,
             volumen, temperatura, longitud, etc.
 
-            Reciben ese nombre porque al ser multiplicados por un vector, como veremos más adelante,
-            lo pueden aumentar o disminuir de tamaño, es decir, los escalan.
-        
 
         % =========================================================
         % ==========      DEFINICION DE ESCALAR      ==============
         % =========================================================
-        \vspace{2em}
+        \vspace{1em}
         \section{Definición de Vector}
         
             Probablemente el concepto de vector es el que más definiciones tiene dependiendo de qué
             punto de vista se estudien.
 
-            Aquí solo veremos cómo definirlos sobre el plano ($\Reals^2$) y el espacio ($\Reals^3$).
+            \textbf{Aquí solo veremos cómo definirlos sobre el plano de $\Reals^2$ y el espacio de $\Reals^3$}.
 
-            También existen muchas formas de escribirlos, aquí usaremos una flecha arriba de la variable:
-            $\vec{a}$, aunque también se puede poner la variable en negritas: $\bVec{a}$.
-        
-            \subsection{Punto de vista geométrico}
-            
-            Podemos extender el concepto de un punto en el espacio y definir a un vector como la flecha que apunta desde el origen hasta ese punto. De esta forma vemos que un vector tiene \textbf{magnitud} (la longitud de la flecha) y \textbf{sentido} (hacia dónde apunta la flecha).
-            
-            \subsection{Punto de vista algebráico}
-            
-            Un vector \(\vec{a}\) es un elemento de \(\Reals^2\) o de \(\Reals^3\), y escribimos \(\vec{a}=(a_1, a_2, a_3)\), donde $a_1, a_2, a_3 \in \Reals$ son sus \textbf{coordenadas} o \textbf{componentes}. Por lo tanto no es más que un simple par o terna ordenada de números. Si se cumple siempre que $a_3=0$, simplemente podemos escribir $(a_1, a_2)$ para un vector en el plano. De forma similar, casi las propiedades que se cumplan para un vector en $\vec{R}^3$ se cumplen para vectores en $\vec{R}^2$ ignorando la tercera componente.
-            
-            \begin{Definition}[Igualdad de vectores]
-                Decimos que dos vectores son iguales si y solo si sus componentes correspondientes son iguales. Es decir, si tenemos $\vec{a}=(a_1, a_2, a_3)$ y $\vec{b}=(b_1, b_2, b_3)$, entonces \boxed{\mbox{$\vec{a}=\vec{b}$ si y solo si $a_1=b_1$, $a_2=b_2$ y $a_3=b_3$}}.
-            \end{Definition}
-        
-            \subsection{Diferencia entre punto y vector}
-            
-            En esencia son lo mismo, pero un punto solo indica una posición en el espacio, mientras que un vector indica un \textbf{desplazamiento}. Lo veremos a continuación.
-            
-            \subsection{Vector posición}
-            
-            Dado un punto $P$, definimos al vector posición de $P$ respecto de un origen $O$ como el vector $\lVec{OP}$, que tendrá las mismas coordenadas del punto $P$.
-            
-            \subsection{Vector desplazamiento}
-            
-            Dados dos puntos $P$ y $Q$, definimos al vector desplazamiento de $P$ a $Q$ como el vector $\lVec{PQ}$, en donde el origen de la flecha está en $P$ y la punta en $Q$. De esta forma vemos que los vectores no necesariamente comienzan en el origen, sino en donde queramos. Es muy importante comprender esto durante todo el curso.
-            
+            También existen muchas formas de escribirlos, aquí usaremos de manera general una flecha
+            arriba de la variable: $\vec{a}$, aunque también nos dará la gana y podemos poner la
+            variable en negritas: $\bVec{a}$
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    \chapter{Álgebra vectorial}
+            % =========================================================
+            % ==========     PUNTO DE VISTA GEOMETRICO     ============
+            % =========================================================
+            \subsection{Punto de Vista Geométrico}
             
-        \section{Operaciones básicas}
-        
-            \subsection{Suma y resta}
-            
-            Sean los vectores $\vec{a}=(a_1, a_2, a_3) \in \Reals^3$ y $\vec{b}=(b_1, b_2, b_3) \in \Reals^3$.
-            
-            \begin{Definition}[Suma de vectores]
-                Definimos a la suma de $\vec{a}$ con $\vec{b}$ como:
-                \begin{align}
-                    \vec{a}+\vec{b} &= (a_1 + b_1, a_2 + b_2, a_3 + b_3) \label{defSuma}
-                \end{align}
-                O sea, simplemente sumamos componente a componente.
-            \end{Definition}
-        
-            Geométricamente, para sumar $\vec{a}$ con $\vec{b}$ colocamos el principio de $\vec{b}$ junto a la punta de $\vec{a}$. El vector $\vec{a}+\vec{b}$ será el vector que comienza en donde comienza $\vec{a}$ y termina en donde termina $\vec{b}$.
-        
-            \begin{Definition}[Resta de vectores]
-                De forma similar, la resta de $\vec{a}$ con $\vec{b}$ es:
-                \begin{align}
-                    \vec{a}-\vec{b} &= (a_1 - b_1, a_2 - b_2, a_3 - b_3) \label{defResta}
-                \end{align}
-            \end{Definition}
-        
-            Con esta definición, podemos decir que el vector desplazamiento del punto $P$ al punto $Q$ es el vector $\lVec{PQ} = \lVec{OQ} - \lVec{OP}$.
-            
-            
-            \subsection{Multiplicación por escalar}
-            
-            Sea $\vec{a}=(a_1, a_2, a_3) \in \Reals^3$ un vector y $k \in \Reals$ un escalar.
-            
-            \begin{Definition}
-                Definimos el producto del escalar $k$ por el vector $\vec{a}$ como:
-                \begin{align}
-                    k\vec{a} &= (ka_1, ka_2, ka_3) \label{defMult}
-                \end{align}
-                Es decir, solo multiplicamos cada componente (que son escalares) por el escalar $k$.
-            \end{Definition}
-            El efecto geométrico de multiplicar por un escalar es de agrandarlo o reducirlo pero sin cambiar su dirección (su sentido se invierte si $k<0$, se queda igual si $k>0$ y obtenemos el cero vector si $k=0$).
-            
-            \subsection{Propiedades}
-            
-            Las operaciones anteriores cumplen con las siguientes propiedades, donde $\vec{a},\vec{b}, \vec{c} \in \Reals^3$ y $k,l \in \Reals$. Vemos que todas se heredan de las ya conocidas propiedades de los números reales:
-            \begin{itemize}\setlength\itemsep{0em}
-                \item \textbf{Conmutativa:} $\vec{a}+\vec{b} = \vec{b}+\vec{a}$.
+                Podemos extender el concepto de un punto en el espacio y definir a un vector
+                como la flecha que apunta desde el origen hasta ese punto.
+
+                De esta forma vemos que un vector tiene \textbf{magnitud} (la longitud desde
+                el origen hasta el punto), \textbf{dirección} (es decir la recta que pasa por
+                el origen y ese punto) y \textbf{sentido} (hacia dónde apunta la flecha).
                 
-                \begin{SmallIndentation}[1em]
-                    \textbf{Demostración:}
-                    Se sigue inmediatamente de la propiedad conmutativa de los números reales:
-                    \begin{align*}
-                        \vec{a}+\vec{b} &= (a_1, a_2, a_3) + (b_1, b_2, b_3) &\mbox{Expresar en coordenadas}\\
-                        &= (a_1 + b_1, a_2 + b_2, a_3 + b_3) &\mbox{Definición de suma de vectores}\\
-                        &= (b_1 + a_1, b_2 + a_2, b_3 + a_3) &\mbox{Propiedad conmutativa en los reales}\\
-                        &= (b_1, b_2, b_3) + (a_1, a_2, a_3) &\mbox{Definición de suma a la inversa}\\
-                        &= \vec{b} + \vec{a} &\mbox{Volvemos a armar a los vectores}
-                    \end{align*}
-                \end{SmallIndentation}
+            % =========================================================
+            % ==========     PUNTO DE VISTA ALGEBRAICO     ============
+            % =========================================================
+            \subsection{Punto de Vista Algebráico}
+            
+                Un vector $\vec{a}$ es un elemento de $\Reals^2$ o de $\Reals^3$, y escribimos
+                $\vec{a} = (a_1, a_2, a_3)$, donde $a_1, a_2, a_3 \in \Reals$ son sus
+                \textbf{coordenadas} o \textbf{componentes}.
+
+                Por lo tanto no es más que un simple par o terna ordenada de números. 
+                De una manera similiar (aunque no lo veremos ahora, podemos ampliar la idea de vectores
+                sobre $\Reals$ (o sobre cualquier campo) como un tupla de n-reales).
+
+                Si pasa que $a_3 = 0$, simplemente podemos escribir $(a_1, a_2)$ para un vector en el plano.
+                De forma similar, las propiedades que se cumplan para un vector en $\Reals^3$ se
+                cumplen para vectores en $\Reals^2$ ignorando la tercera componente.
+
+            
+        % =========================================================
+        % =======  DIFERENCIA ENTRE PUNTO Y VECTOR     ============
+        % =========================================================
+        \clearpage
+        \section{Relaciones entre Puntos y Vectores}
+        
+            En esencia un vector y un punto son lo mismo, pero un punto solo indica una posición
+            en el espacio, mientras que un vector indica un \textbf{desplazamiento}.
+            Lo veremos a continuación.
+            
+            % ========================================
+            % =======  VECTOR POSICION    ============
+            % ========================================
+            \subsection{Vector Posición}
+            
+                Dado un punto $P$, definimos al vector posición de $P$ respecto de un origen $O$ como
+                el vector $\lVec{OP}$, que tendrá las mismas coordenadas del punto $P$.
+            
+            % ========================================
+            % =======  VECTOR DESPLAZAMIENTO    ======
+            % ========================================
+            \subsection{Vector Desplazamiento}
+            
+                Dados dos puntos $P$ y $Q$, definimos al vector desplazamiento de $P$ a $Q$ como el
+                vector $\lVec{PQ}$, en donde el origen de la flecha está en $P$ y la punta en $Q$.
+                De esta forma vemos que los vectores no necesariamente comienzan en el origen,
+                sino en donde queramos. Es muy importante comprender y recordar esto a lo largo
+                de este librito.
+
+                Ahora, supón 2 puntos $P = (x_1, y_1, z_2) \in \Reals^2$ y $Q = (x_1, y_1, z_2) \in \Reals^3$.
+
+                Entonces tenemos que las coordenadas del vector $\lVec{PQ}$ se puede ver como:\\
+                $PQ = (x_2 - x_1, y_2 - y_1, z_2 - z_1)$
+
+
+
+
+
+
+
+
+
+    % ===============================================================================
+    % ===================            ALGEBRA VECTORIAL         ======================
+    % ===============================================================================
+    \chapter{Álgebra Vectorial}
+            
+        
+
+        % =========================================================
+        % ============   OPERACIONES BASICAS     ==================
+        % =========================================================
+        \clearpage
+        \section{Operaciones Básicas}
+            
+            % ==============================================
+            % ========   IGUALDAD DE VECTORES    ===========
+            % ==============================================
+            \subsection{Igualdad de Vectores}
+
+                \begin{Definition}[Igualdad de 2 Vectores]
+                    \label{DefIgualdadVectores}
+                    Decimos que dos vectores son iguales si y solo si sus componentes
+                    correspondientes son iguales.
+                \end{Definition}
+
+                Es decir, si tenemos $\vec{a} = (a_1, a_2, a_3)$ y $\vec{b} = (b_1, b_2, b_3)$,
+                entonces $\vec{a} = \vec{b}$ si y solo si $a_1 = b_1$, $a_2 = b_2$ y $a_3 = b_3$.
+
+            
+            % ==============================================
+            % ========       SUMA Y RESTA        ===========
+            % ==============================================
+            \subsection{Suma y Resta}
+            
+                \begin{Definition}[Suma de Vectores]
+                    \label{DefSumaVectores}
+
+                    Decimos que $\vec{a}+\vec{b}$ es la suma de $\vec{a}$ con $\vec{b}$ si y solo si 
+                    cada componente de $\vec{a}+\vec{b}$ es la suma de los correspondientes componentes
+                    de $\vec{a}$ y $\vec{b}$.
+                    O sea, simplemente sumamos componente a componente.
+
+                \end{Definition}
+
+                Sean $\vec{a} = (a_1, a_2, a_3) \in \Reals^3$ y $\vec{b}=(b_1, b_2, b_3) \in \Reals^3$.
+
+                Entonces decimos que:
+                \begin{equation*}
+                    \vec{a} + \vec{b} := (a_1 + b_1, a_2 + b_2, a_3 + b_3)
+                \end{equation*}
+            
+                \textbf{Geométricamente}, para sumar $\vec{a}$ con $\vec{b}$ colocamos el principio de
+                $\vec{b}$ junto a la punta de $\vec{a}$. El vector $\vec{a} + \vec{b}$ será el vector
+                que comienza en donde comienza $\vec{a}$ y termina en donde termina $\vec{b}$.
+                
+                \vspace{2em}
+
+                \begin{Definition}[Resta de Vectores]
+                    \label{DefRestaVectores}
+
+                    Decimos que $\vec{a}-\vec{b}$ es la resta de $\vec{a}$ menos $\vec{b}$ si y solo si 
+                    cada componente de $\vec{a}-\vec{b}$ es la resta de los correspondientes componentes
+                    de $\vec{a}$ y $\vec{b}$.
+                    O sea, simplemente restamos componente a componente.
+                    
+                \end{Definition}
+
+                Sean $\vec{a} = (a_1, a_2, a_3) \in \Reals^3$ y $\vec{b}=(b_1, b_2, b_3) \in \Reals^3$.
+
+                Entonces decimos que:
+                \begin{equation*}
+                    \vec{a} - \vec{b} := (a_1 - b_1, a_2 - b_2, a_3 - b_3)
+                \end{equation*}
+            
+                Con esta definición, podemos decir que el vector desplazamiento del punto $P$ al punto $Q$
+                es el vector $\lVec{PQ} = \lVec{OQ} - \lVec{OP}$.
+                
+            % ==============================================
+            % ===     MULTIPLICACION POR ESCALAR       =====
+            % ==============================================
+            \clearpage
+            \subsection{Multiplicación por Escalar y Propiedades}
+
+                \begin{Definition}[Producto de un Vector por un Escalar]
+                    \label{DefProductoVectorEscalar}
+
+                    Decimos que $k \vec{a}$ es el producto escalar de $a$ con $k$
+                    si y solo si cada componente de $k \vec{a}$ es la el producto del correspondiente componente
+                    de $\vec{a}$ multiplicada por $k$.
+
+                    Es decir, solo multiplicamos cada componente (que son escalares) por el escalar $k$.
+
+                \end{Definition}
+
+                Sea $\vec{a}=(a_1, a_2, a_3) \in \Reals^3$ un vector y $k \in \Reals$ un escalar.
+                
+                Entonces decimos que:
+                \begin{equation*}
+                    k\vec{a} = (ka_1, ka_2, ka_3)
+                \end{equation*}
+
+                \textbf{Geométricamente}, multiplicar un vector por un escalar es de agrandarlo o reducirlo pero
+                sin cambiar su dirección (su sentido se invierte si $k < 0$, se queda igual si $k > 0$ y
+                obtenemos el cero vector si $k = 0$).
+
+
+        % =========================================================
+        % ====    PROPIEDADES DE LAS OPERACIONES BASICAS     ======
+        % =========================================================
+        \clearpage
+        \section{Propiedades de Operaciones}
+        
+            Las operaciones anteriores cumplen con las siguientes propiedades, donde
+            $\vec{a},\vec{b}, \vec{c} \in \Reals^3$ y $k,l \in \Reals$.
+            Vemos que todas se heredan de las ya conocidas propiedades de los números reales:
+
+            \begin{itemize}
+                
+                \item \textbf{Conmutativa:} 
+                    $\vec{a}+\vec{b} = \vec{b}+\vec{a}$.
+                
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración:}
+
+                        Se sigue inmediatamente de la propiedad conmutativa de los números reales:
+                        \begin{align*}
+                            \vec{a} + \vec{b} 
+                                &= (a_1, a_2, a_3) + (b_1, b_2, b_3)    &\mbox{Expresar en coordenadas}            \\
+                                &= (a_1 + b_1, a_2 + b_2, a_3 + b_3)    &\mbox{Definición de suma de vectores}     \\
+                                &= (b_1 + a_1, b_2 + a_2, b_3 + a_3)    &\mbox{Propiedad conmutativa de los reales}\\
+                                &= (b_1, b_2, b_3) + (a_1, a_2, a_3)    &\mbox{Definición de suma a la inversa}    \\
+                                &= \vec{b} + \vec{a}                    &\mbox{Volvemos a armar a los vectores}
+                        \end{align*}
+
+                    \end{SmallIndentation}
                 
                 \item \textbf{Asociativa:} $\vec{a}+\left(\vec{b}+\vec{c}\right) = \left(\vec{a}+\vec{b}\right)+\vec{c}$.
                 
@@ -494,6 +600,18 @@
         
             Todas las propiedades anteriores se pueden generalizar perfectamente a vectores en cualquier dimensión, es decir, que pertenezcan a $\Reals^n$.
             
+
+
+
+
+
+
+
+
+
+
+
+        \clearpage
         \section{Características de los vectores}
         
             \subsection{Magnitud}
