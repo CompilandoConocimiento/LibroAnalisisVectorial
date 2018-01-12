@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.10.17)  10 JAN 2018 03:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.10.17)  12 JAN 2018 02:08
 entering extended mode
 **./AnalisisVectorial.tex
 (AnalisisVectorial.tex
@@ -1438,10 +1438,10 @@ LaTeX Info: Redefining \. on input line 96.
 LaTeX Info: Redefining \% on input line 96.
 
 [3]
-LaTeX Info: Redefining \. on input line 131.
-LaTeX Info: Redefining \% on input line 131.
-LaTeX Info: Redefining \. on input line 131.
-LaTeX Info: Redefining \% on input line 131.
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
  [4])
 \tf@toc=\write4
 \openout4 = `AnalisisVectorial.toc'.
@@ -1652,7 +1652,7 @@ LaTeX Info: Redefining \% on input line 1073.
 LaTeX Info: Redefining \. on input line 1073.
 LaTeX Info: Redefining \% on input line 1073.
  [23]
-<Graphics/angleBetweenVectors.png, id=860, 269.808pt x 215.3646pt>
+<Graphics/angleBetweenVectors.png, id=885, 269.808pt x 215.3646pt>
 File: Graphics/angleBetweenVectors.png Graphic file (type png)
 <use Graphics/angleBetweenVectors.png>
 Package pdftex.def Info: Graphics/angleBetweenVectors.png  used on input line 1
@@ -1671,7 +1671,7 @@ LaTeX Info: Redefining \% on input line 1142.
 LaTeX Info: Redefining \. on input line 1142.
 LaTeX Info: Redefining \% on input line 1142.
  [25]
-<Graphics/vectorProyection.png, id=890, 256.5585pt x 215.3646pt>
+<Graphics/vectorProyection.png, id=915, 256.5585pt x 215.3646pt>
 File: Graphics/vectorProyection.png Graphic file (type png)
 <use Graphics/vectorProyection.png>
 Package pdftex.def Info: Graphics/vectorProyection.png  used on input line 1149
@@ -1695,7 +1695,7 @@ LaTeX Info: Redefining \% on input line 1252.
 LaTeX Info: Redefining \. on input line 1252.
 LaTeX Info: Redefining \% on input line 1252.
  [28]
-<Graphics/triangleInequality.png, id=929, 222.8325pt x 215.3646pt>
+<Graphics/triangleInequality.png, id=954, 222.8325pt x 215.3646pt>
 File: Graphics/triangleInequality.png Graphic file (type png)
 <use Graphics/triangleInequality.png>
 Package pdftex.def Info: Graphics/triangleInequality.png  used on input line 12
@@ -1714,14 +1714,14 @@ LaTeX Info: Redefining \% on input line 1290.
 LaTeX Info: Redefining \. on input line 1290.
 LaTeX Info: Redefining \% on input line 1290.
  [30]
-<Graphics/parallelogram.png, id=949, 165.7392pt x 215.3646pt>
+<Graphics/parallelogram.png, id=974, 165.7392pt x 215.3646pt>
 File: Graphics/parallelogram.png Graphic file (type png)
 <use Graphics/parallelogram.png>
 Package pdftex.def Info: Graphics/parallelogram.png  used on input line 1315. o
 n input line 1315.
 Package pdftex.def Info: Requested size: 198.88602pt x 258.4362pt on input line
  1315.
-<Graphics/rightHandRule.png, id=950, 1204.5pt x 1090.0725pt>
+<Graphics/rightHandRule.png, id=975, 1204.5pt x 1090.0725pt>
 File: Graphics/rightHandRule.png Graphic file (type png)
 <use Graphics/rightHandRule.png>
 Package pdftex.def Info: Graphics/rightHandRule.png  used on input line 1322. o
@@ -1736,7 +1736,7 @@ LaTeX Info: Redefining \% on input line 1324.
 [31
 
  <./Graphics/parallelogram.png>]
-<Graphics/unitVectors.png, id=961, 527.72156pt x 377.15906pt>
+<Graphics/unitVectors.png, id=986, 527.72156pt x 377.15906pt>
 File: Graphics/unitVectors.png Graphic file (type png)
 <use Graphics/unitVectors.png>
 Package pdftex.def Info: Graphics/unitVectors.png  used on input line 1332. on 
@@ -1767,7 +1767,7 @@ LaTeX Info: Redefining \% on input line 1489.
 LaTeX Info: Redefining \. on input line 1489.
 LaTeX Info: Redefining \% on input line 1489.
  [35]
-<Graphics/triangle.png, id=1000, 263.5446pt x 197.2971pt>
+<Graphics/triangle.png, id=1025, 263.5446pt x 197.2971pt>
 File: Graphics/triangle.png Graphic file (type png)
 <use Graphics/triangle.png>
 Package pdftex.def Info: Graphics/triangle.png  used on input line 1499. on inp
@@ -1781,7 +1781,7 @@ LaTeX Info: Redefining \% on input line 1504.
  [36
 
  <./Graphics/triangle.png>]
-<Graphics/parallelogram2.png, id=1011, 332.6829pt x 198.9834pt>
+<Graphics/parallelogram2.png, id=1036, 332.6829pt x 198.9834pt>
 File: Graphics/parallelogram2.png Graphic file (type png)
 <use Graphics/parallelogram2.png>
 Package pdftex.def Info: Graphics/parallelogram2.png  used on input line 1512. 
@@ -1804,7 +1804,7 @@ LaTeX Info: Redefining \% on input line 1560.
 LaTeX Info: Redefining \. on input line 1560.
 LaTeX Info: Redefining \% on input line 1560.
 [38]
-<Graphics/parallelepiped.png, id=1030, 543.02875pt x 325.215pt>
+<Graphics/parallelepiped.png, id=1055, 543.02875pt x 325.215pt>
 File: Graphics/parallelepiped.png Graphic file (type png)
 <use Graphics/parallelepiped.png>
 Package pdftex.def Info: Graphics/parallelepiped.png  used on input line 1568. 
@@ -1824,106 +1824,188 @@ LaTeX Info: Redefining \% on input line 1587.
 [39
 
  <./Graphics/parallelepiped.png>]
-LaTeX Info: Redefining \. on input line 1607.
-LaTeX Info: Redefining \% on input line 1607.
-LaTeX Info: Redefining \. on input line 1607.
-LaTeX Info: Redefining \% on input line 1607.
+LaTeX Info: Redefining \. on input line 1611.
+LaTeX Info: Redefining \% on input line 1611.
+LaTeX Info: Redefining \. on input line 1611.
+LaTeX Info: Redefining \% on input line 1611.
  [40]
 Cap\'{\i }tulo 3.
 [41
 
-] [42
+]
+<Graphics/plane.png, id=1077, 615.80063pt x 436.63126pt>
+File: Graphics/plane.png Graphic file (type png)
+<use Graphics/plane.png>
+Package pdftex.def Info: Graphics/plane.png  used on input line 1639. on input 
+line 1639.
+Package pdftex.def Info: Requested size: 400.26566pt x 283.80695pt on input lin
+e 1639.
+<Graphics/plane2.png, id=1078, 620.3175pt x 512.66531pt>
+File: Graphics/plane2.png Graphic file (type png)
+<use Graphics/plane2.png>
+Package pdftex.def Info: Graphics/plane2.png  used on input line 1666. on input
+ line 1666.
+Package pdftex.def Info: Requested size: 403.2016pt x 333.2285pt on input line 
+1666.
+LaTeX Info: Redefining \. on input line 1667.
+LaTeX Info: Redefining \% on input line 1667.
+LaTeX Info: Redefining \. on input line 1667.
+LaTeX Info: Redefining \% on input line 1667.
+ [42
+
+ <./Graphics/plane.png>]
+LaTeX Info: Redefining \. on input line 1684.
+LaTeX Info: Redefining \% on input line 1684.
+LaTeX Info: Redefining \. on input line 1684.
+LaTeX Info: Redefining \% on input line 1684.
+ [43 <./Graphics/plane2.png>]
+<Graphics/plane3.png, id=1100, 546.54187pt x 512.66531pt>
+File: Graphics/plane3.png Graphic file (type png)
+<use Graphics/plane3.png>
+Package pdftex.def Info: Graphics/plane3.png  used on input line 1687. on input
+ line 1687.
+Package pdftex.def Info: Requested size: 355.248pt x 333.2285pt on input line 1
+687.
+LaTeX Info: Redefining \. on input line 1698.
+LaTeX Info: Redefining \% on input line 1698.
+LaTeX Info: Redefining \. on input line 1698.
+LaTeX Info: Redefining \% on input line 1698.
+ [44 <./Graphics/plane3.png>]
+LaTeX Info: Redefining \. on input line 1703.
+LaTeX Info: Redefining \% on input line 1703.
+LaTeX Info: Redefining \. on input line 1703.
+LaTeX Info: Redefining \% on input line 1703.
+ [45]
+LaTeX Info: Redefining \. on input line 1716.
+LaTeX Info: Redefining \% on input line 1716.
+LaTeX Info: Redefining \. on input line 1716.
+LaTeX Info: Redefining \% on input line 1716.
+ [46
+
+]
+<Graphics/line.png, id=1124, 225.4824pt x 203.3196pt>
+File: Graphics/line.png Graphic file (type png)
+<use Graphics/line.png>
+Package pdftex.def Info: Graphics/line.png  used on input line 1724. on input l
+ine 1724.
+Package pdftex.def Info: Requested size: 270.57751pt x 243.98228pt on input lin
+e 1724.
+LaTeX Info: Redefining \. on input line 1747.
+LaTeX Info: Redefining \% on input line 1747.
+LaTeX Info: Redefining \. on input line 1747.
+LaTeX Info: Redefining \% on input line 1747.
+ [47
+
+ <./Graphics/line.png>]
+<Graphics/line2.png, id=1134, 224.037pt x 198.9834pt>
+File: Graphics/line2.png Graphic file (type png)
+<use Graphics/line2.png>
+Package pdftex.def Info: Graphics/line2.png  used on input line 1761. on input 
+line 1761.
+Package pdftex.def Info: Requested size: 268.84303pt x 238.77888pt on input lin
+e 1761.
+LaTeX Info: Redefining \. on input line 1778.
+LaTeX Info: Redefining \% on input line 1778.
+LaTeX Info: Redefining \. on input line 1778.
+LaTeX Info: Redefining \% on input line 1778.
+ [48 <./Graphics/line2.png>]
+LaTeX Info: Redefining \. on input line 1788.
+LaTeX Info: Redefining \% on input line 1788.
+LaTeX Info: Redefining \. on input line 1788.
+LaTeX Info: Redefining \% on input line 1788.
+
+[49] [50
 
 ]
 Cap\'{\i }tulo 4.
-[43
+[51
 
 ]
 Overfull \vbox (242.72754pt too high) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 1666.
-LaTeX Info: Redefining \% on input line 1666.
-LaTeX Info: Redefining \. on input line 1666.
-LaTeX Info: Redefining \% on input line 1666.
+LaTeX Info: Redefining \. on input line 1831.
+LaTeX Info: Redefining \% on input line 1831.
+LaTeX Info: Redefining \. on input line 1831.
+LaTeX Info: Redefining \% on input line 1831.
 
-[44]
+[52]
 Cap\'{\i }tulo 5.
-[45
+[53
 
 ]
 Overfull \vbox (183.4335pt too high) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 1708.
-LaTeX Info: Redefining \% on input line 1708.
-LaTeX Info: Redefining \. on input line 1708.
-LaTeX Info: Redefining \% on input line 1708.
+LaTeX Info: Redefining \. on input line 1873.
+LaTeX Info: Redefining \% on input line 1873.
+LaTeX Info: Redefining \. on input line 1873.
+LaTeX Info: Redefining \% on input line 1873.
 
-[46] [47
+[54] [55
 
 ]
 Cap\'{\i }tulo 6.
-[48
+[56
 
 ]
 Overfull \vbox (190.20885pt too high) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 1748.
-LaTeX Info: Redefining \% on input line 1748.
-LaTeX Info: Redefining \. on input line 1748.
-LaTeX Info: Redefining \% on input line 1748.
+LaTeX Info: Redefining \. on input line 1913.
+LaTeX Info: Redefining \% on input line 1913.
+LaTeX Info: Redefining \. on input line 1913.
+LaTeX Info: Redefining \% on input line 1913.
 
-[49]
+[57]
 Cap\'{\i }tulo 7.
-[50
+[58
 
 ]
 Overfull \vbox (152.94417pt too high) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 1786.
-LaTeX Info: Redefining \% on input line 1786.
-LaTeX Info: Redefining \. on input line 1786.
-LaTeX Info: Redefining \% on input line 1786.
+LaTeX Info: Redefining \. on input line 1951.
+LaTeX Info: Redefining \% on input line 1951.
+LaTeX Info: Redefining \. on input line 1951.
+LaTeX Info: Redefining \% on input line 1951.
 
-[51]
+[59]
 Cap\'{\i }tulo 8.
-[52
+[60
 
-] [53
+] [61
 
 ]
 Cap\'{\i }tulo 9.
 \tf@thm=\write5
 \openout5 = `AnalisisVectorial.thm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1840.
-[54
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2005.
+[62
 
 ]
 Overfull \vbox (158.58717pt too high) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 1840.
-LaTeX Info: Redefining \% on input line 1840.
-LaTeX Info: Redefining \. on input line 1840.
-LaTeX Info: Redefining \% on input line 1840.
+LaTeX Info: Redefining \. on input line 2005.
+LaTeX Info: Redefining \% on input line 2005.
+LaTeX Info: Redefining \. on input line 2005.
+LaTeX Info: Redefining \% on input line 2005.
 
-[55]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1840.
+[63]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2005.
  (AnalisisVectorial.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1840.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1840.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2005.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2005.
 
 Package rerunfilecheck Info: File `AnalisisVectorial.out' has not changed.
-(rerunfilecheck)             Checksum: E23426A7F8A02D66590D692F60AB1B55;9564.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1840.
+(rerunfilecheck)             Checksum: C2DA61B3090D27AE53A13EAD8F7B1A6A;9939.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2005.
  ) 
 Here is how much of TeX's memory you used:
- 22810 strings out of 493352
- 395506 string characters out of 3137107
- 511013 words of memory out of 3000000
- 25777 multiletter control sequences out of 15000+200000
+ 22861 strings out of 493352
+ 396439 string characters out of 3137107
+ 511416 words of memory out of 3000000
+ 25810 multiletter control sequences out of 15000+200000
  571026 words of font info for 125 fonts, out of 3000000 for 9000
  1127 hyphenation exceptions out of 8191
  61i,20n,52p,10442b,823s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1970,9 +2052,9 @@ C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb>
-Output written on AnalisisVectorial.pdf (56 pages, 914684 bytes).
+Output written on AnalisisVectorial.pdf (64 pages, 1172272 bytes).
 PDF statistics:
- 1930 PDF objects out of 2073 (max. 8388607)
- 215 named destinations out of 1000 (max. 500000)
- 1070 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2040 PDF objects out of 2073 (max. 8388607)
+ 229 named destinations out of 1000 (max. 500000)
+ 1135 words of extra memory for PDF output out of 10000 (max. 10000000)
 
