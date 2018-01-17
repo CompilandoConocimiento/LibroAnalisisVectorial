@@ -574,6 +574,7 @@
                 obtenemos el cero vector si $k = 0$).
 
 
+  
 
         % =========================================================
         % ====    PROPIEDADES DE LAS OPERACIONES BASICAS     ======
@@ -704,6 +705,7 @@
                     \end{SmallIndentation}
 
             \end{itemize}
+
 
 
 
@@ -950,6 +952,7 @@
 
 
 
+
         % =========================================================
         % =====   DEPENDENCIA E INDEPENDENCIAL LINEAL      ========
         % =========================================================
@@ -1038,6 +1041,8 @@
 
 
 
+
+
     % ===============================================================================
     % ===================         PRODUCTO ENTRE VECTORES      ======================
     % ===============================================================================
@@ -1076,7 +1081,6 @@
                 
                 El hecho de que esté definido así es para que cumpla varias propiedades padres y útiles que veremos
                 a continuación.
-
 
 
 
@@ -1173,8 +1177,6 @@
                 
 
 
-
-
             % =========================================================
             % ====    PROPIEDADES EXTRA DEL PRODUCTO INTERNO      =====
             % =========================================================
@@ -1238,233 +1240,321 @@
 
                 \end{itemize}
 
+    
 
             % =========================================================
             % =============     ANGULO ENTRE VECTORES   ===============
             % =========================================================
             \clearpage
-            \subsection{Ángulo entre Vectores}
+            \subsection{Ángulo entre Vectores y Definición Alterna de P. Punto}
             
                 Consideremos el siguiente triángulo $\triangle ABC$ formado por los vectores $\vec{a}$, $\vec{b}$ y
                 $\vec{a}-\vec{b}$, donde $\theta$ es el ángulo que forman los vectores $\vec{a}$ y $\vec{b}$:
                 
-                \begin{figure}[H]
+                % =====================================================
+                % ============    ANGULO ENTRE VECTORES    ============
+                % =====================================================
+                \begin{figure}[h]
                     \centering
-                    \includegraphics[scale=1.2]{angleBetweenVectors.png}
+                    \includegraphics[width=0.45\textwidth]{angleBetweenVectors}
                 \end{figure}
+
+                % ======== DEMOSTRACION ========
+                \begin{SmallIndentation}[1em]
+                    
+                    Ve la foto, y vamos a ver qué pasa:
+                    \begin{MultiLineEquation*}{3}
+                        \Abs{\vec a - \vec b}^2 
+                            &= \Abs{\vec a }^2 + \Abs{\vec b}^2 - 2 \Abs{\vec a } \Abs{\vec b } \cos\theta
+                                && \Remember{Al aplicar la Ley de Cosenos tenemos esto}                                     \\
+                        \Wrap{\vec a - \vec b } \dotP \Wrap{\vec a - \vec b } 
+                            &= \vec a  \dotP \vec a + \vec b \dotP \vec b - 2\Abs{\vec a}\Abs{\vec b}\cos\theta
+                                && \Remember{Definición alterna de magnitud (producto punto)}                               \\
+                        \vec a \dotP \Wrap{\vec a-\vec b} - \vec b \dotP \Wrap{\vec a-\vec b} 
+                            &= \vec a \dotP \vec a + \vec b \dotP \vec b - 2\Abs{\vec a}\Abs{\vec b}\cos\theta        
+                                && \Remember{Aplicamos la propiedad de linearidad}                                          \\
+                        \vec a \dotP \vec a - 2\vec a \dotP \vec b + \vec b \dotP \vec b 
+                            &= \vec a \dotP \vec a + \vec b \dotP \vec b - 2\Abs{\vec a}\Abs{\vec b}\cos\theta        
+                                && \Remember{Aplicamos la propiedad de linearidad y conmutativa}                                         \\
+                        - 2\vec a \dotP \vec b 
+                            &= - 2\Abs{\vec a}\Abs{\vec b}\cos\theta
+                                && \Remember{Cancelamos términos comunes}                                                        
+                    \end{MultiLineEquation*}
+
+                \end{SmallIndentation}
+            
+            	\begin{Definition}[Definición Alterna del Producto Punto con Magnitud]
+            		\begin{align}
+            			\vec a \dotP \vec b = \Abs{\vec a} \Abs{\vec b} \cos\theta \label{defDot2}
+            		\end{align}
+            	\end{Definition}
+
+                La ecuación anterior es una de las más importantes que involucran al producto punto,
+                pues ahora lo relaciona con las magnitudes de los vectores y el ángulo entre ellos.
                 
-                Al aplicar ley de cosenos, tenemos que:
+                \textbf{A veces es común encontrar dicha ecuación como definición de producto punto
+                y la que nosotros propusimos como consecuencia, ambas formas son correctas, pero
+                creemos que es más fácil definirla de forma algebráica y luego deducir la forma
+                geométrica}.
+
+
+                    
+            % =========================================================
+            % =============    VECTORES ORTOGONALES     ===============
+            % =========================================================
+            \clearpage
+            \subsection{Definición de los Vectores Ortogonales por P. Punto}
+                    
+                Ahora, usando la ecuación $\vec a \dotP \vec b = \Abs{\vec a} \Abs{\vec b} \cos\theta$
+                simplemente podemos despejar el coseno del ángulo y obtenemos esta linda fórmula:
                 \begin{align}
-                    \Abs{\vec{a} - \vec{b}}^2 &= \Abs{\vec{a}}^2 + \Abs{\vec{b}}^2 - 2\Abs{\vec{a}}\Abs{\vec{b}}\cos\theta
+                    \cos \theta &= \dfrac{\vec a \dotP \vec b}{\Abs{\vec a} \Abs{\vec b}}
                 \end{align}
                 
-                Usamos la definición anterior para pasar de magnitud a producto punto:
-                \begin{align*}
-                    \Wrap{\vec{a}-\vec{b}} \dotP \Wrap{\vec{a}-\vec{b}} &= \vec{a} \dotP \vec{a} + \vec{b} \dotP \vec{b} - 2\Abs{\vec{a}}\Abs{\vec{b}}\cos\theta
-                \end{align*}
-                
-                Ahora usamos la propiedad de linearidad dos veces y la conmutativa:
-                \begin{align*}
-                    \vec{a} \dotP \Wrap{\vec{a}-\vec{b}} - \vec{b} \dotP \Wrap{\vec{a}-\vec{b}} &= \vec{a} \dotP \vec{a} + \vec{b} \dotP \vec{b} - 2\Abs{\vec{a}}\Abs{\vec{b}}\cos\theta\\
-                    \vec{a} \dotP \vec{a} - 2\vec{a} \dotP \vec{b} + \vec{b} \dotP \vec{b} &= \vec{a} \dotP \vec{a} + \vec{b} \dotP \vec{b} - 2\Abs{\vec{a}}\Abs{\vec{b}}\cos\theta
-                \end{align*}
-                
-                Cancelamos términos comunes y simplificamos:
-                \begin{align}
-                    - 2\vec{a} \dotP \vec{b} = - 2\Abs{\vec{a}}\Abs{\vec{b}}\cos\theta \nonumber \\
-                    \vec{a} \dotP \vec{b} = \Abs{\vec{a}}\Abs{\vec{b}}\cos\theta \label{defDot2}
-                \end{align}
-                
-                La ecuación (\ref{defDot2}) es una de las más importantes que involucran al producto punto, pues ahora lo relaciona con las magnitudes de los vectores y el ángulo entre ellos. A veces es común encontrar dicha ecuación como definición de producto punto y la que nosotros propusimos como consecuencia, ambas formas son correctas, pero creemos que es más fácil definirla de forma algebráica y luego deducir la forma geométrica.
-                
-                Ahora simplemente podemos despejar el coseno ángulo y obtenemos esta linda fórmula:
-                \begin{align}
-                    \cos \theta &= \dfrac{\vec{a} \dotP \vec{b}}{\Abs{\vec{a}} \Abs{\vec{b}}}
-                \end{align}
-                
-                Como el rango de $\arccos$ va de $0$ a $\pi$, usando esta fórmula siempre obtendremos el ángulo correcto. Más aún, si $\theta=90^\circ$, entonces $\vec{a} \dotP \vec{b} = 0$. Esto nos motiva a definir lo siguiente, pues estos vectores recibirán un nombre especial:
-                
+                Como el rango de $\arccos$ va de $0$ a $\pi$, usando esta fórmula siempre obtendremos
+                el ángulo correcto.
+
+                Más aún, si $\theta = 90^\circ$, entonces $\vec a \dotP \vec b = 0$.
+                Esto nos motiva a definir lo siguiente, pues estos vectores recibirán un nombre especial:
+    
                 \begin{Definition}[Vectores ortogonales]
-                    Sean $\vec{a}, \vec{b} \in \Reals^3$. Decimos que $\vec{a}$ y $\vec{b}$ son \textbf{ortogonales} si y solo si $\vec{a} \cdot \vec{b} = 0$.
+                    \ForceNewLine
+                    Sean $\vec{a}, \vec{b} \in \Reals^3$. Decimos que $\vec{a}$ y $\vec{b}$ son 
+                    \textbf{ortogonales} si y solo si $\vec{a} \cdot \vec{b} = 0$.
                 \end{Definition}
-            
-            	Nota que el cero vector $\vec{0}$ es ortogonal a cualquier otro vector.
+
+				Nota que el cero vector $\vec{0}$ es ortogonal a cualquier otro vector.
 
 
-            
+
             % =========================================================
             % =============     PROYECCION DE VECTORES   ==============
             % =========================================================
-            
             \clearpage
-            \subsection{Proyección de un vector sobre otro}
+            \subsection{Proyección de un Vector sobre Otro}
             
-            Ahora consideremos la siguiente situación:
-            
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale=1.1]{vectorProyection.png}
-            \end{figure}
-        
-            Tenemos un vector cualquiera $\vec{a}$ y un vector unitario $\hat{v}$ que forman entre ellos un ángulo $\theta$. Queremos hallar la \emph{proyección} de $\vec{a}$ sobre la línea que genera la dirección de $\hat{v}$.
-            
-            Es decir, supongamos que extendemos el vector $\hat{v}$ para que forme un \Quote{piso}. Luego, colocamos al vector $\vec{a}$ en el mismo origen que $\hat{v}$, esta proyección nos dice la sombra que generaría $\vec{a}$ sobre el piso.
-            
-            Llamemos a la proyección $\vec{p}$, y al vector que resulta de unir la punta de $\vec{p}$ con la punta de $\vec{a}$ el vector $\vec{n}$ (al que llamaremos \emph{componente normal de $\vec{a}$ sobre $\hat{v}$}).
-            
-            Resulta claro que el ángulo que forma la punta de $\vec{p}$ con el inicio de $\vec{n}$ tiene que ser de $90^\circ$ por definición. De esa forma, aplicamos la definición del coseno para saber la magnitud de $\vec{p}$:
-            \begin{align}
-                {\Abs{\vec{p}}} &= \Abs{\vec{a}} \cos \theta
-            \end{align}
-        
-            Pero sabemos de la sección anterior que $\cos \theta = \dfrac{\vec{a} \dotP \hat{v}}{\Abs{\vec{a}} \Abs{\hat{v}}}=\dfrac{\vec{a} \dotP \hat{v}}{\Abs{\vec{a}}}$, entonces:
-            \begin{align}
-                {\Abs{\vec{p}}} &= \cancel{\Abs{\vec{a}}} \dfrac{\vec{a} \dotP \hat{v}}{\cancel{\Abs{\vec{a}}}} = \vec{a} \dotP \hat{v}
-            \end{align}
-            
-            Ya tenemos la magnitud de $\vec{p}$, para determinarlo completamente solo nos hace falta su dirección, pero es claro que tiene que ser la misma de $\hat{v}$, y como $\hat{v}$ es unitario, simplemente multiplicamos:
-            \begin{align}
-                \vec{p} = \Abs{\vec{p}} \hat{v} \implies \vec{p} = \Wrap{\vec{a} \dotP \hat{v}} \hat{v}
-            \end{align}
-            
-            Finalmente, vemos de la figura que $\vec{p}+\vec{n}=\vec{a}$, entonces $\vec{n}=\vec{a}-\vec{p}$:
-            \begin{align}
-                \vec{n} = \vec{a} - \Wrap{\vec{a} \dotP \hat{v}} \hat{v}
-            \end{align}
-            
-            Los dos vectores anteriores son muy importantes que conviene \emph{definirlos}:
+                Ahora consideremos la siguiente situación:
 
-            % =========================================================
-            % =================     DEFINICION   ======================
-            % =========================================================
-            
-            \begin{Definition}[Proyección de vectores] \label{vectorProjection}
-                Sean $\vec{a}, \hat{v} \in \Reals^3$ con $\hat{v}$ unitario.
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[scale=1]{vectorProyection}
+                \end{figure}
+
+                Tenemos un vector cualquiera $\vec{a}$ y un vector unitario $\hat{v}$ que forman
+                entre ellos un ángulo $\theta$.
+                Queremos hallar la \emph{proyección} de $\vec{a}$ sobre la línea que genera la
+                dirección de $\hat{v}$.
                 
-                Definimos a la \textbf{proyección de $\vec{a}$ sobre $\hat{v}$} como:
-                \begin{align}
-                    proy_{\hat{v}}(\vec{a}) := \Wrap{\vec{a} \dotP \hat{v}} \hat{v} \label{defProj1}
-                \end{align}
+                Es decir, supongamos que extendemos el vector $\hat{v}$ para que forme un \Quote{piso}.
+                Luego, colocamos al vector $\vec{a}$ en el mismo origen que $\hat{v}$, esta proyección
+                nos dice la sombra que generaría $\vec{a}$ sobre el piso.
                 
-                Y a la \textbf{componente normal de $\vec{a}$ sobre $\hat{v}$} como:
-                \begin{align}
-                \vec{n} := \vec{a} - \Wrap{\vec{a} \dotP \hat{v}} \hat{v} \label{defProj2}
-                \end{align}
-            \end{Definition}
-        
-            Si $\vec{v}$ no fuera unitario, simplemente lo normalizamos, además de que la fórmula se ve bonita asumiendo que es unitario. Si no lo fuera, tendríamos que $proy_{\vec{v}}(\vec{a}) := \dfrac{\Wrap{\vec{a} \dotP \vec{v}}\vec{v}}{\Abs{\vec{v}}^2}$.
+                Llamemos a la proyección $\vec{p}$, y al vector que resulta de unir la punta de $\vec{p}$
+                con la punta de $\vec{a}$ el vector $\vec{n}$ (al que llamaremos \emph{componente normal
+                de $\vec{a}$ sobre $\hat{v}$}).
+                
+                Resulta claro que el ángulo que forma la punta de $\vec{p}$ con el inicio de $\vec{n}$
+                tiene que ser de $90^\circ$ por definición.
+
+                De esa forma, aplicamos la definición del coseno para saber la magnitud de $\vec{p}$:
+                \begin{align*}
+                    \Abs{ \vec p } 
+                        &= \Abs{ \vec a } \cos \theta
+                            && \Remember{Definición del coseno para saber $\Abs{\vec p }$}                          \\
+                        &= \Abs{ \vec a } \dfrac{\vec{a} \dotP \hat{v}}{\Abs{\vec{a}} \Abs{\hat{v}}}
+                            && \Remember{Sabemos que...}                                                            \\
+                         &= \Abs{ \vec a } \dfrac{\vec{a} \dotP \hat{v}}{\Abs{\vec{a}}}
+                            && \Remember{Recuerda que es un vector unitario}                                        \\
+                        &= \cancel{\Abs{\vec a }} \dfrac{\vec a \dotP \hat v }{\cancel{\Abs{\vec a }}} 
+                            && \Remember{Cancelamos cosas}                                                          \\
+                        &= \vec{a} \dotP \hat{v}
+                            && \Remember{¡Bingo!}
+                \end{align*}
             
+                Ya tenemos la magnitud de $\vec{p}$, para determinarlo completamente solo nos hace falta su
+                dirección, pero es claro que tiene que ser la misma de $\hat{v}$, y como $\hat{v}$ es unitario,
+                simplemente multiplicamos:
+                \begin{align*}
+                    \vec{p} = \Abs{\vec{p}} \hat{v} 
+                        \implies
+                    \vec{p} = \Wrap{\vec{a} \dotP \hat{v}} \hat{v}
+                \end{align*}
+                
+                Finalmente, vemos de la figura que $\vec{p} + \vec{n} = \vec{a}$, entonces $\vec{n} = \vec{a} - \vec{p}$:
+                \begin{align*}
+                    \vec{n} = \vec{a} - \Wrap{\vec{a} \dotP \hat{v}} \hat{v}
+                \end{align*}
+                
+                Los dos vectores anteriores son muy importantes que conviene \emph{definirlos}.
 
 
 
+                % =========================================================
+                % =================     DEFINICION   ======================
+                % =========================================================
 
+                    \begin{Definition}[Proyección de Vectores]
+                        \ForceNewLine
+                        Sean $\vec{a}, \hat{v} \in \Reals^3$ con $\hat{v}$ unitario.
+                        
+                        Definimos a la \textbf{Proyección de $\vec{a}$ sobre $\hat{v}$} como:
+                        \begin{align}
+                            proy_{\hat{v}}(\vec{a}) := \Wrap{\vec{a} \dotP \hat{v}} \hat{v} \label{defProj1}
+                        \end{align}
+                        
+                        Y a la \textbf{componente normal de $\vec{a}$ sobre $\hat{v}$} como:
+                        \begin{align}
+                            \vec{n} := \vec{a} - \Wrap{\vec{a} \dotP \hat{v}} \hat{v} \label{defProj2}
+                        \end{align}
+
+                    \end{Definition}
+                
+                    Si $\vec{v}$ no fuera unitario, simplemente lo normalizamos, además de que la fórmula
+                    se ve bonita asumiendo que es unitario.
+
+                    Si no lo fuera, tendríamos que:
+                    \begin{align}
+                        proy_{\vec{v}}(\vec{a}) := \dfrac{\Wrap{\vec{a} \dotP \vec{v}}\vec{v}}{\Abs{\vec{v}}^2}
+                    \end{align}
 
 
 
             % =========================================================
             % ==============     COSENOS DIRECTORES   =================
             % =========================================================
-            
-            \subsection{Cosenos directores}
-            
-            Esta es una sección sencilla, se refiere a que dado un vector $\vec{a}=(a_1, a_2, a_3)$, lo proyectemos sobre los tres ejes $\mathbf{x}$, $\mathbf{y}$, $\mathbf{z}$ y obtengamos los tres ángulos.
-            
-            Para proyectarlo sobre el eje $\mathbf{x}$, tenemos que proyectar $\vec{a}$ sobre el vector unitario $\hat{i}$. Nombremos $\alpha$ al ángulo que forman, entonces:
-            \begin{align}
-                \cos \alpha &= \dfrac{\vec{a} \dotP \hat{i}}{\Abs{\vec{a}} \Abs{\hat{i}}} = \dfrac{a_1}{\Abs{\vec{a}}}
-            \end{align}
-            
-            Hacemos lo mismo con los otros ejes (el ángulo $\beta$ para el eje $\mathbf{y}$, $\gamma$ para el eje $\mathbf{z}$) y obtenemos:
-            \begin{align}
-                \cos \beta &= \dfrac{a_2}{\Abs{\vec{a}}} \\
-                \cos \gamma &= \dfrac{a_3}{\Abs{\vec{a}}}
-            \end{align}
-            
-            De esta forma, podemos escribir al vector unitario de $\vec{a}$ como $\hat{a} = (\cos \alpha)\hat{i}+(\cos \beta)\hat{j}+(\cos \gamma)\hat{k}$. Se queda como ejercicio que demuestres que $\hat{a}$ es realmente unitario.
-            
+            \clearpage
+            \subsection{Cosenos Directores}
+                
+                Esta es una sección sencilla, se refiere a que dado un vector $\vec{a} = (a_1, a_2, a_3)$,
+                lo proyectemos sobre los tres ejes $\mathbf{x}$, $\mathbf{y}$, $\mathbf{z}$ y obtengamos
+                los tres ángulos.
+                
+                Para proyectarlo sobre el eje $\mathbf{x}$, tenemos que proyectar $\vec{a}$ sobre el vector
+                unitario $\hat{i}$. Nombremos $\alpha$ al ángulo que forman, entonces:
+                \begin{align}
+                    \cos \alpha 
+                        = \dfrac{\vec{a} \dotP \hat{i}}{\Abs{\vec{a}} \Abs{\hat{i}}}
+                        = \dfrac{a_1}{\Abs{\vec{a}}}
+                \end{align}
+                
+                Hacemos lo mismo con los otros ejes (el ángulo $\beta$ para el eje $\mathbf{y}$, $\gamma$
+                para el eje $\mathbf{z}$) y obtenemos:
+                \begin{align}
+                    \cos \beta  &= \dfrac{a_2}{\Abs{\vec{a}}}           \\
+                    \cos \gamma &= \dfrac{a_3}{\Abs{\vec{a}}}
+                \end{align}
+                
+                De esta forma, podemos escribir al vector unitario de $\vec{a}$ como:
+                \begin{equation*}
+                    \hat{a} = (\cos \alpha)\hat{i} + (\cos \beta)\hat{j} + (\cos \gamma)\hat{k}
+                \end{equation*}
 
-
-
-
+                Se queda como ejercicio que demuestres que $\hat{a}$ es realmente unitario :p
+                
 
 
             % =========================================================
             % ================     CAUCHY-SCHWARZ   ===================
             % =========================================================
-            
+            \clearpage
+
             \subsection{Desigualdad de Cauchy-Schwarz}
             
-            Esta es una de las desigualdades más poderosas, tanto que es muy usada en álgebra lineal.
-            
-            \begin{Theorem}[Desigualdad de Cauchy-Schwarz]
-                Sean $\vec{a}, \vec{b} \in \Reals^3$. Entonces:
-                \begin{align}
-                    \abs{\vec{a} \dotP \vec{b}} \leq \Abs{\vec{a}} \Abs{\vec{b}} \label{CS-Inequality}
-                \end{align}
-            \end{Theorem}
-        
-            Es decir, el valor absoluto del producto punto de dos vectores siempre será menor o igual al producto de sus magnitudes.
-            
-            \begin{SmallIndentation}[1em]
-                \textbf{Demostración:} en este librito es suficiente con demostrarla para el espacio $\Reals^3$. Aunque también es válida para cualquier tipo de vectores de cualquier espacio vectorial con un producto interno.
+                Esta es una de las desigualdades más poderosas, tanto que es muy usada en álgebra lineal.
                 
-                Supongamos que ningún vector es el cero vector. Si alguno lo fuera su magnitud sería cero y la desigualdad de Cauchy-Schwarz se cumple trivialmente.
-                
-                Sea $\theta$ el ángulo que forman $\vec{a}$ y $\vec{b}$. De trigonometría sabemos que $-1 \leq \cos \theta \leq 1$, entonces $\abs{\cos \theta} \leq 1$. Pero anteriormente deducimos que $\cos \theta = \dfrac{\vec{a} \cdot \vec{b}}{\Abs{\vec{a}} \Abs{\vec{b}}}$, entonces $\abs{\dfrac{\vec{a} \cdot \vec{b}}{\Abs{\vec{a}} \Abs{\vec{b}}}} \leq 1$, lo que implica que $\abs{\vec{a} \dotP \vec{b}} \leq \Abs{\vec{a}} \Abs{\vec{b}}$.
-            \end{SmallIndentation}
-        
-            Una forma alternativa de esta desigualdad es usando la definición de valor absoluto (similar al coseno anteriormente): $-\Abs{\vec{a}} \Abs{\vec{b}} \leq \vec{a} \dotP \vec{b} \leq \Abs{\vec{a}} \Abs{\vec{b}}$.
+                \begin{Theorem}[Desigualdad de Cauchy-Schwarz]
+                    \ForceNewLine
+                    Sean $\vec{a}, \vec{b} \in \Reals^3$. Entonces:
+                    \begin{align}
+                        \abs{\vec{a} \dotP \vec{b}} \leq \Abs{\vec{a}} \Abs{\vec{b}} \label{CS-Inequality}
+                    \end{align}
+                \end{Theorem}
             
+            	Es decir, el valor absoluto del producto punto de dos vectores siempre será menor o igual al producto de sus magnitudes.
+            
+                % ======== DEMOSTRACION ========
+                \begin{SmallIndentation}[1em]
+                    \textbf{Demostración}:
+                    
+                    En este librito es suficiente con demostrarla para el espacio $\Reals^3$.
+                    Aunque también es válida para cualquier tipo de vectores de cualquier espacio vectorial
+                    con un producto interno.
+                    
+                    Supongamos que ningún vector es el cero vector. Si alguno lo fuera su magnitud sería cero
+                    y la desigualdad de Cauchy-Schwarz se cumple trivialmente.
+                    
+                    Sea $\theta$ el ángulo que forman $\vec{a}$ y $\vec{b}$. De trigonometría sabemos que 
+                    $-1 \leq \cos \theta \leq 1$, entonces $\abs{\cos \theta} \leq 1$.
 
-
-
-
-
+                    Pero anteriormente deducimos que $\cos \theta = \frac{\vec{a} \cdot \vec{b}}{\Abs{\vec{a}} \Abs{\vec{b}}}$,
+                    entonces $\abs{\frac{\vec{a} \cdot \vec{b}}{\Abs{\vec{a}} \Abs{\vec{b}}}} \leq 1$, lo que implica que
+                    $\Abs{\vec{a} \dotP \vec{b}} \leq \Abs{\vec{a}} \Abs{\vec{b}}$.
+                
+                \end{SmallIndentation}
+            
+            	Una forma alternativa de esta desigualdad es usando la definición de valor absoluto (similar al coseno anteriormente):
+            	\begin{equation*}
+	            	-\Abs{\vec{a}} \Abs{\vec{b}} 
+	            	\leq 
+	            	\vec{a} \dotP \vec{b}
+	            	\leq
+	            	\Abs{\vec{a}} \Abs{\vec{b}}   
+            	\end{equation*}
 
 
 
             % =========================================================
             % ==========     DESIGUALDAD DEL TRIÁNGULO   ==============
             % =========================================================
-            
             \clearpage
-            
-            \subsection{Desigualdad del triángulo}
-            
-            Es muy intuitiva de comprender, dice que la magnitud de la suma de dos vectores es menor o igual a la suma de sus magnitudes. Formalmente:
-            
-            \begin{Theorem}[Desigualdad del triángulo]
-                Sean $\vec{a}, \vec{b} \in \Reals^3$. Entonces:
-                \begin{align}
-                    \Abs{\vec{a}+\vec{b}} \leq \Abs{\vec{a}} + \Abs{\vec{b}} \label{triangleInequality}
-                \end{align}
-            \end{Theorem}
-        
-            Con dibujitos:
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale=1]{triangleInequality.png}
-            \end{figure}
-        
-            Vemos que la distancia más corta entre el origen $O$ y el punto $B$ tiene que ser un segmento de recta, justamente $\Abs{\vec{a}+\vec{b}}$. Si en vez de irnos directamente a $B$ nos vamos primero a $A$ y de ahí a $B$, habremos recorrido una mayor distancia, que es $\Abs{\vec{a}}+\Abs{\vec{b}}$. Pero claro, eso no es una demostración formal. Aquí viene la chida:
-            
-            % =========================================================
-            % =================     DEMOSTRACION   ====================
-            % =========================================================
-            
-            \begin{SmallIndentation}[1em]
-                \textbf{Demostración:} tratemos de usar todo lo aprendido hasta ahora, en especial el producto punto y la desigualdad de Cauchy-Schwarz. Comencemos del lado de $\Abs{\vec{a}+\vec{b}}$, pero elevado al cuadrado para poder pasar a producto punto sin que haya raíces:
-                \begin{align*}
-                    \Abs{\vec{a}+\vec{b}}^2 &= \Wrap{\vec{a}+\vec{b}} \dotP \Wrap{\vec{a}+\vec{b}} &&\mbox{Definición de magnitud}\\
-                    &= \vec{a} \dotP \vec{a} + 2\textcolor{blue}{\vec{a} \dotP \vec{b}} + \vec{b} \dotP \vec{b} &&\mbox{Propiedad distributiva}\\
-                    &\textcolor{blue}{\leq} \;\; \vec{a} \dotP \vec{a} + 2\textcolor{blue}{\Abs{\vec{a}}\Abs{\vec{b}}} + \vec{b} \dotP \vec{b} &&\textcolor{blue}{\mbox{Desigualdad de Cauchy-Schwarz}}\\
-                    &= \Abs{\vec{a}}^2 + 2\Abs{\vec{a}}\Abs{\vec{b}} + \Abs{\vec{b}}^2 &&\mbox{Definición de magnitud a la inversa}\\
-                    &= \Wrap{\Abs{\vec{a}} + \Abs{\vec{b}}}^2 &&\mbox{Factorizamos}
-                \end{align*}
+            \subsection{Desigualdad del Triángulo}
+
+                Es muy intuitiva de comprender, dice que la magnitud de la suma de dos vectores es menor o
+                igual a la suma de sus magnitudes. Formalmente:
                 
-                De esa forma obtenemos $\Abs{\vec{a}+\vec{b}}^2 \leq \Wrap{\Abs{\vec{a}} + \Abs{\vec{b}}}^2$. Como todas las magnitudes son no negativas, podemos sacar raíz cuadrada a ambos lados y concluir que $\Abs{\vec{a}+\vec{b}} \leq \Abs{\vec{a}} + \Abs{\vec{b}}$.
-            \end{SmallIndentation}
-        
+                \begin{Theorem}[Desigualdad del Triángulo]
+                    \ForceNewLine
+                    Sean $\vec{a}, \vec{b} \in \Reals^3$. Entonces:
+                    \begin{align*}
+                        \Abs{\vec{a}+\vec{b}} \leq \Abs{\vec{a}} + \Abs{\vec{b}}
+                    \end{align*}
+                \end{Theorem}
+            
+            	\begin{figure}[H]
+            		\centering
+            		\includegraphics[scale=1]{triangleInequality.png}
+            	\end{figure}
+            
+                Vemos que la distancia más corta entre el origen $O$ y el punto $B$ tiene que ser
+                un segmento de recta, justamente $\Abs{\vec{a} + \vec{b}}$.
+
+                Si en vez de irnos directamente a $B$ nos vamos primero a $A$ y de ahí a $B$, habremos
+                recorrido una mayor distancia, que es $\Abs{\vec{a}} + \Abs{\vec{b}}$
+
+                Pero claro, eso no es una demostración formal. Aquí viene la chida:
+                
+                
+                % ======== DEMOSTRACION ========
+                \begin{SmallIndentation}[1em]
+                    \textbf{Demostración:}
+
+                    Tratemos de usar todo lo aprendido hasta ahora, en especial el producto punto y la
+                    desigualdad de Cauchy-Schwarz.
+
+                    Comencemos del lado de $\Abs{\vec{a} + \vec{b}}$, pero elevado al cuadrado para poder
+                    pasar a producto punto sin que haya raíces:
+                    \begin{align*}
+                        \Abs{\vec{a}+\vec{b}}^2
+                        &= \Wrap{\vec{a}+\vec{b}} \dotP \Wrap{\vec{a}+\vec{b}} &&\mbox{Definición de magnitud}\\
+                        &= \vec{a} \dotP \vec{a} + 2\textcolor{blue}{\vec{a} \dotP \vec{b}} + \vec{b} \dotP \vec{b} &&\mbox{Propiedad distributiva}\\
+                        &\textcolor{blue}{\leq} \;\; \vec{a} \dotP \vec{a} + 2\textcolor{blue}{\Abs{\vec{a}}\Abs{\vec{b}}} + \vec{b} \dotP \vec{b} &&\textcolor{blue}{\mbox{Desigualdad de Cauchy-Schwarz}}\\
+                        &= \Abs{\vec{a}}^2 + 2\Abs{\vec{a}}\Abs{\vec{b}} + \Abs{\vec{b}}^2 &&\mbox{Definición de magnitud a la inversa}\\
+                        &= \Wrap{\Abs{\vec{a}} + \Abs{\vec{b}}}^2 &&\mbox{Factorizamos}
+                    \end{align*}
+                    
+                    De esa forma obtenemos $\Abs{\vec{a}+\vec{b}}^2 \leq \Wrap{\Abs{\vec{a}} + \Abs{\vec{b}}}^2$. Como todas las magnitudes son no negativas, podemos sacar raíz cuadrada a ambos lados y concluir que $\Abs{\vec{a}+\vec{b}} \leq \Abs{\vec{a}} + \Abs{\vec{b}}$.
+                \end{SmallIndentation}
+            
 
 
 
