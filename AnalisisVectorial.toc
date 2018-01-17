@@ -1,0 +1,168 @@
+\select@language {spanish}
+\contentsline {part}{I\hspace {1em}Introducci\IeC {\'o}n a los Vectores sobre $\Reals $}{7}{part.1}
+\contentsline {chapter}{\numberline {1}Conceptos B\IeC {\'a}sicos}{8}{chapter.1}
+\contentsline {section}{\numberline {1.1}Definici\IeC {\'o}n de Escalar}{9}{section.1.1}
+\contentsline {section}{\numberline {1.2}Definici\IeC {\'o}n de Vector}{9}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Punto de Vista Geom\IeC {\'e}trico}{9}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Punto de Vista Algebr\IeC {\'a}ico}{9}{subsection.1.2.2}
+\contentsline {section}{\numberline {1.3}Relaciones entre Puntos y Vectores}{11}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Vector Posici\IeC {\'o}n}{11}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Vector Desplazamiento}{11}{subsection.1.3.2}
+\contentsline {chapter}{\numberline {2}\IeC {\'A}lgebra B\IeC {\'a}sica Vectorial}{12}{chapter.2}
+\contentsline {section}{\numberline {2.1}Operaciones B\IeC {\'a}sicas}{13}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Igualdad de Vectores}{13}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Suma y Resta}{13}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Multiplicaci\IeC {\'o}n por Escalar y Propiedades}{14}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Propiedades de Operaciones}{15}{section.2.2}
+\contentsline {section}{\numberline {2.3}Hablando sobre este Espacio Vectorial}{17}{section.2.3}
+\contentsline {section}{\numberline {2.4}Magnitud}{19}{section.2.4}
+\contentsline {subsubsection}{Propiedades}{19}{section*.2}
+\contentsline {section}{\numberline {2.5}Vector Unitario}{20}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Normalizaci\IeC {\'o}n}{20}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Representaci\IeC {\'o}n en Vectores Unitarios}{21}{subsection.2.5.2}
+\contentsline {subsubsection}{\IeC {\textquestiondown }Para qu\IeC {\'e} nos sirve tener a esos vectores?}{21}{section*.3}
+\contentsline {section}{\numberline {2.6}Dependencia e Independencia Lineal}{22}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Ideas Importantes}{22}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}\IeC {\textquestiondown }C\IeC {\'o}mo saber si mi Conjunto de Vectores es L.I. o L.D.?}{23}{subsection.2.6.2}
+\contentsline {chapter}{\numberline {3}Producto entre Vectores}{24}{chapter.3}
+\contentsline {section}{\numberline {3.1}Producto Punto}{25}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Definici\IeC {\'o}n e Ideas}{25}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Propiedades de Producto Punto}{26}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Propiedades Extra e Interesantes del Producto Punto}{27}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}\IeC {\'A}ngulo entre Vectores}{28}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Proyecci\IeC {\'o}n de un vector sobre otro}{30}{subsection.3.1.5}
+\contentsline {subsection}{\numberline {3.1.6}Cosenos directores}{31}{subsection.3.1.6}
+\contentsline {subsection}{\numberline {3.1.7}Desigualdad de Cauchy-Schwarz}{32}{subsection.3.1.7}
+\contentsline {subsection}{\numberline {3.1.8}Desigualdad del tri\IeC {\'a}ngulo}{33}{subsection.3.1.8}
+\contentsline {section}{\numberline {3.2}Producto cruz}{35}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Definici\IeC {\'o}n e ideas}{35}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}\IeC {\'A}rea de un tri\IeC {\'a}ngulo}{40}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}\IeC {\'A}rea de un paralelogramo en t\IeC {\'e}rminos de sus diagonales}{41}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Demostraci\IeC {\'o}n de la ley de senos}{42}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Producto triple}{43}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Volumen de un paralelep\IeC {\'\i }pedo}{44}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Identidades de productos}{45}{section.3.4}
+\contentsline {chapter}{\numberline {4}Aplicaciones a la geometr\IeC {\'\i }a}{47}{chapter.4}
+\contentsline {section}{\numberline {4.1}Ecuaci\IeC {\'o}n del plano}{47}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Punto y vector normal}{48}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Tres puntos}{49}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Punto y dos vectores paralelos}{50}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Ecuaci\IeC {\'o}n de la recta}{52}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Punto y vector paralelo}{53}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Dos puntos}{54}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Ecuaci\IeC {\'o}n de la esfera}{55}{section.4.3}
+\contentsline {section}{\numberline {4.4}Distancia punto-recta}{57}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}M\IeC {\'e}todo 1}{57}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}M\IeC {\'e}todo 2}{58}{subsection.4.4.2}
+\contentsline {subsubsection}{Caso particular: l\IeC {\'\i }nea en el plano xy}{59}{section*.4}
+\contentsline {subsection}{\numberline {4.4.3}Extra: reflexi\IeC {\'o}n de un punto sobre una recta}{60}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}Distancia punto-plano}{62}{section.4.5}
+\contentsline {subsubsection}{Caso particular: f\IeC {\'o}rmula en forma cartesiana}{63}{section*.5}
+\contentsline {section}{\numberline {4.6}Rotaciones en el espacio}{64}{section.4.6}
+\contentsline {section}{\numberline {4.7}Demostraciones geom\IeC {\'e}tricas mediante vectores}{64}{section.4.7}
+\contentsline {part}{II\hspace {1em}C\IeC {\'a}lculo diferencial vectorial}{65}{part.2}
+\contentsline {chapter}{\numberline {5}Funciones de varias variables}{66}{chapter.5}
+\contentsline {section}{\numberline {5.1}Representaci\IeC {\'o}n como superficies}{67}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Curvas de nivel y de contorno}{67}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}L\IeC {\'\i }mites}{67}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Definici\IeC {\'o}n intuitiva}{67}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Definici\IeC {\'o}n formal}{67}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Continuidad}{67}{section.5.3}
+\contentsline {section}{\numberline {5.4}Derivadas parciales}{67}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Plano tangente a una superficie}{67}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Diferenciabilidad}{67}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Derivadas de orden superior}{67}{subsection.5.4.3}
+\contentsline {subsubsection}{Teorema de Clairaut}{67}{section*.6}
+\contentsline {section}{\numberline {5.5}Gradiente}{67}{section.5.5}
+\contentsline {section}{\numberline {5.6}Regla de la cadena}{67}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Diferencial total}{67}{subsection.5.6.1}
+\contentsline {section}{\numberline {5.7}Derivada direccional}{67}{section.5.7}
+\contentsline {section}{\numberline {5.8}Puntos cr\IeC {\'\i }ticos}{67}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}M\IeC {\'a}ximos, m\IeC {\'\i }nimos y puntos silla}{67}{subsection.5.8.1}
+\contentsline {subsection}{\numberline {5.8.2}Criterio del hessiano}{67}{subsection.5.8.2}
+\contentsline {section}{\numberline {5.9}Multiplicadores de Lagrange}{67}{section.5.9}
+\contentsline {chapter}{\numberline {6}Funciones vectoriales}{68}{chapter.6}
+\contentsline {section}{\numberline {6.1}Curvas en forma param\IeC {\'e}trica}{69}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Reglas de derivaci\IeC {\'o}n}{69}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Velocidad y aceleraci\IeC {\'o}n}{69}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Longitud de arco}{69}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Parametrizaci\IeC {\'o}n por longitud de arco}{69}{subsection.6.1.4}
+\contentsline {subsection}{\numberline {6.1.5}Geometr\IeC {\'\i }a diferencial}{69}{subsection.6.1.5}
+\contentsline {subsubsection}{Vector tangente, normal y binormal}{69}{section*.7}
+\contentsline {subsubsection}{Curvatura y torsi\IeC {\'o}n}{69}{section*.8}
+\contentsline {subsubsection}{Velocidad y aceleraci\IeC {\'o}n}{69}{section*.9}
+\contentsline {subsubsection}{Ecuaciones de Frenet-Serret}{69}{section*.10}
+\contentsline {section}{\numberline {6.2}Campos vectoriales}{69}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}L\IeC {\'\i }neas de campo}{69}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Derivadas parciales}{69}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Operador nabla}{69}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Gradiente}{69}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Divergencia}{69}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Rotacional}{69}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Laplaciano}{69}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.5}Propiedades}{69}{subsection.6.3.5}
+\contentsline {part}{III\hspace {1em}C\IeC {\'a}lculo integral vectorial}{70}{part.3}
+\contentsline {chapter}{\numberline {7}Integrales multivariable}{71}{chapter.7}
+\contentsline {section}{\numberline {7.1}Regiones}{72}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Regiones del plano y tipos}{72}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Regiones del espacio y tipos}{72}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}Integrales iteradas}{72}{section.7.2}
+\contentsline {section}{\numberline {7.3}Integrales dobles}{72}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Integraci\IeC {\'o}n sobre regiones arbitrarias}{72}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}\IeC {\textquestiondown }C\IeC {\'o}mo hallar los l\IeC {\'\i }mites de integraci\IeC {\'o}n?}{72}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.3}Teorema de Fubini}{72}{subsection.7.3.3}
+\contentsline {section}{\numberline {7.4}Integrales triples}{72}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Integraci\IeC {\'o}n sobre regiones arbitrarias}{72}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}\IeC {\textquestiondown }C\IeC {\'o}mo hallar los l\IeC {\'\i }mites de integraci\IeC {\'o}n?}{72}{subsection.7.4.2}
+\contentsline {section}{\numberline {7.5}Cambio de variable en 2 y 3 dimensiones}{72}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Transformaci\IeC {\'o}n de coordenadas}{72}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.2}Jacobiano}{72}{subsection.7.5.2}
+\contentsline {section}{\numberline {7.6}Aplicaciones}{72}{section.7.6}
+\contentsline {subsection}{\numberline {7.6.1}Valor promedio}{72}{subsection.7.6.1}
+\contentsline {subsection}{\numberline {7.6.2}Centro de masa}{72}{subsection.7.6.2}
+\contentsline {subsection}{\numberline {7.6.3}Momento de inercia}{72}{subsection.7.6.3}
+\contentsline {chapter}{\numberline {8}Integrales de funciones vectoriales}{73}{chapter.8}
+\contentsline {section}{\numberline {8.1}Integrales de l\IeC {\'\i }nea}{74}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Funci\IeC {\'o}n escalar}{74}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Funci\IeC {\'o}n vectorial}{74}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}Campos conservativos}{74}{subsection.8.1.3}
+\contentsline {subsubsection}{Potencial}{74}{section*.11}
+\contentsline {section}{\numberline {8.2}Integrales de superficie}{74}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Superficies en forma param\IeC {\'e}trica}{74}{subsection.8.2.1}
+\contentsline {subsubsection}{Vector normal}{74}{section*.12}
+\contentsline {subsubsection}{Relaci\IeC {\'o}n con el Jacobiano}{74}{section*.13}
+\contentsline {subsubsection}{C\IeC {\'a}lculo a trav\IeC {\'e}s del gradiente}{74}{section*.14}
+\contentsline {subsection}{\numberline {8.2.2}Funci\IeC {\'o}n escalar}{74}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3}Funci\IeC {\'o}n vectorial}{74}{subsection.8.2.3}
+\contentsline {section}{\numberline {8.3}Integrales de volumen}{74}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Regiones del espacio en forma param\IeC {\'e}trica}{74}{subsection.8.3.1}
+\contentsline {subsubsection}{Elemento de volumen}{74}{section*.15}
+\contentsline {subsubsection}{Relaci\IeC {\'o}n con el Jacobiano}{74}{section*.16}
+\contentsline {subsection}{\numberline {8.3.2}Funci\IeC {\'o}n escalar}{74}{subsection.8.3.2}
+\contentsline {section}{\numberline {8.4}Consejos para parametrizar y definir l\IeC {\'\i }mites}{74}{section.8.4}
+\contentsline {chapter}{\numberline {9}Teoremas de integraci\IeC {\'o}n}{75}{chapter.9}
+\contentsline {section}{\numberline {9.1}Teorema de Green}{75}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}C\IeC {\'a}lculo de \IeC {\'a}reas dado el contorno}{75}{subsection.9.1.1}
+\contentsline {section}{\numberline {9.2}Teorema de Stokes}{75}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Frontera de una superficie}{75}{subsection.9.2.1}
+\contentsline {section}{\numberline {9.3}Teorema de la divergencia de Gauss}{75}{section.9.3}
+\contentsline {subsection}{\numberline {9.3.1}Superficie cerrada}{75}{subsection.9.3.1}
+\contentsline {part}{IV\hspace {1em}Coordenadas curvil\IeC {\'\i }neas}{76}{part.4}
+\contentsline {chapter}{\numberline {10}Coordenadas curvil\IeC {\'\i }neas generalizadas}{77}{chapter.10}
+\contentsline {section}{\numberline {10.1}Transformaci\IeC {\'o}n de coordenadas}{78}{section.10.1}
+\contentsline {section}{\numberline {10.2}Sistemas ortogonales}{78}{section.10.2}
+\contentsline {section}{\numberline {10.3}Vectores unitarios}{78}{section.10.3}
+\contentsline {subsection}{\numberline {10.3.1}Factores de escala}{78}{subsection.10.3.1}
+\contentsline {section}{\numberline {10.4}Integraci\IeC {\'o}n}{78}{section.10.4}
+\contentsline {subsection}{\numberline {10.4.1}Elemento de l\IeC {\'\i }nea}{78}{subsection.10.4.1}
+\contentsline {subsection}{\numberline {10.4.2}Elemento de longitud de arco}{78}{subsection.10.4.2}
+\contentsline {subsection}{\numberline {10.4.3}Elemento de \IeC {\'a}rea}{78}{subsection.10.4.3}
+\contentsline {subsection}{\numberline {10.4.4}Elemento de volumen}{78}{subsection.10.4.4}
+\contentsline {section}{\numberline {10.5}Operador nabla}{78}{section.10.5}
+\contentsline {subsection}{\numberline {10.5.1}Gradiente}{78}{subsection.10.5.1}
+\contentsline {subsection}{\numberline {10.5.2}Divergencia}{78}{subsection.10.5.2}
+\contentsline {subsection}{\numberline {10.5.3}Rotacional}{78}{subsection.10.5.3}
+\contentsline {subsection}{\numberline {10.5.4}Laplaciano}{78}{subsection.10.5.4}
+\contentsline {section}{\numberline {10.6}Sistemas comunes de coordenadas}{78}{section.10.6}
+\contentsline {subsection}{\numberline {10.6.1}Cil\IeC {\'\i }ndricas}{78}{subsection.10.6.1}
+\contentsline {subsection}{\numberline {10.6.2}Esf\IeC {\'e}ricas}{78}{subsection.10.6.2}
