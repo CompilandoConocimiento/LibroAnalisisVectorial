@@ -355,6 +355,7 @@
 
 
 
+
 % //////////////////////////////////////////////////////////////////////////////////////////////////////////
 % ////////////////////////////////         INTRODUCCION A LOS VECTORES     /////////////////////////////////
 % //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1039,10 +1040,6 @@
 
 
 
-
-
-
-
     % ===============================================================================
     % ===================         PRODUCTO ENTRE VECTORES      ======================
     % ===============================================================================
@@ -1066,7 +1063,7 @@
                     Sean $\vec{a}=(a_1,a_2,a_3)$ y $\vec{b}=(b_1,b_2,b_3)$.
                     Definimos al \textbf{producto punto} o \textbf{producto escalar} de $\vec{a}$ con $\vec{b}$ como:
                     \begin{align}
-                        \vec{a} \dotP \vec{b} &:= a_1b_1 + a_2b_2 + a_3b_3 \label{defDot}
+                        \vec{a} \dotP \vec{b} &:= a_1b_1 + a_2b_2 + a_3b_3
                     \end{align} 
                 \end{Definition}
             
@@ -1088,7 +1085,7 @@
             % =====      PROPIEDADES DE PRODUCTO INTERNO     ==========
             % =========================================================
             \clearpage
-            \subsection{Propiedades de Producto Punto}
+            \subsection{Propiedades de Producto Interno}
 
                 Tenemos las siguientes propiedades, donde $\vec{c} = (c_1, c_2, c_3)$ y $\alpha, \beta \in \Reals$:
                 \begin{itemize}
@@ -1177,6 +1174,7 @@
                 
 
 
+
             % =========================================================
             % ====    PROPIEDADES EXTRA DEL PRODUCTO INTERNO      =====
             % =========================================================
@@ -1234,13 +1232,12 @@
                                 \end{equation*}
                         
                         \end{SmallIndentation}
-                        
-                        En muchas demostraciones, usaremos dicha definición como $\Abs{\vec{a}}^2 = \vec{a} \dotP \vec{a}$.    
                             
+                        En muchas demostraciones, usaremos dicha definición como $\Abs{\vec{a}}^2 = \vec{a} \dotP \vec{a}$.    
 
                 \end{itemize}
 
-    
+   
 
             % =========================================================
             % =============     ANGULO ENTRE VECTORES   ===============
@@ -1257,12 +1254,13 @@
                 \begin{figure}[h]
                     \centering
                     \includegraphics[width=0.45\textwidth]{angleBetweenVectors}
+                    \caption{Ángulo entre Vectores}
                 \end{figure}
 
                 % ======== DEMOSTRACION ========
                 \begin{SmallIndentation}[1em]
                     
-                    Ve la foto, y vamos a ver qué pasa:
+                    Ve la foto, y vamos a ver que pasa:
                     \begin{MultiLineEquation*}{3}
                         \Abs{\vec a - \vec b}^2 
                             &= \Abs{\vec a }^2 + \Abs{\vec b}^2 - 2 \Abs{\vec a } \Abs{\vec b } \cos\theta
@@ -1275,19 +1273,19 @@
                                 && \Remember{Aplicamos la propiedad de linearidad}                                          \\
                         \vec a \dotP \vec a - 2\vec a \dotP \vec b + \vec b \dotP \vec b 
                             &= \vec a \dotP \vec a + \vec b \dotP \vec b - 2\Abs{\vec a}\Abs{\vec b}\cos\theta        
-                                && \Remember{Aplicamos la propiedad de linearidad y conmutativa}                                         \\
+                                && \Remember{Aplicamos la propiedad de conmutativa}                                         \\
                         - 2\vec a \dotP \vec b 
                             &= - 2\Abs{\vec a}\Abs{\vec b}\cos\theta
                                 && \Remember{Cancelamos términos comunes}                                                        
                     \end{MultiLineEquation*}
 
+                    \begin{Definition}[Definición Alterna del Producto Punto con Magnitud]
+                        \begin{equation}
+                            \vec a \dotP \vec b = \Abs{\vec a} \Abs{\vec b} \cos\theta
+                        \end{equation}
+                    \end{Definition}
+
                 \end{SmallIndentation}
-            
-            	\begin{Definition}[Definición Alterna del Producto Punto con Magnitud]
-            		\begin{align}
-            			\vec a \dotP \vec b = \Abs{\vec a} \Abs{\vec b} \cos\theta \label{defDot2}
-            		\end{align}
-            	\end{Definition}
 
                 La ecuación anterior es una de las más importantes que involucran al producto punto,
                 pues ahora lo relaciona con las magnitudes de los vectores y el ángulo entre ellos.
@@ -1296,6 +1294,7 @@
                 y la que nosotros propusimos como consecuencia, ambas formas son correctas, pero
                 creemos que es más fácil definirla de forma algebráica y luego deducir la forma
                 geométrica}.
+
 
 
                     
@@ -1335,10 +1334,10 @@
             
                 Ahora consideremos la siguiente situación:
 
-                \begin{figure}[H]
+                \begin{wrapfigure}{r}{0.45\textwidth}
                     \centering
-                    \includegraphics[scale=1]{vectorProyection}
-                \end{figure}
+                    \includegraphics[width=0.42\textwidth]{vectorProyection}
+                \end{wrapfigure}
 
                 Tenemos un vector cualquiera $\vec{a}$ y un vector unitario $\hat{v}$ que forman
                 entre ellos un ángulo $\theta$.
@@ -1389,9 +1388,11 @@
 
 
 
+                
                 % =========================================================
                 % =================     DEFINICION   ======================
                 % =========================================================
+                \clearpage
 
                     \begin{Definition}[Proyección de Vectores]
                         \ForceNewLine
@@ -1399,12 +1400,12 @@
                         
                         Definimos a la \textbf{Proyección de $\vec{a}$ sobre $\hat{v}$} como:
                         \begin{align}
-                            proy_{\hat{v}}(\vec{a}) := \Wrap{\vec{a} \dotP \hat{v}} \hat{v} \label{defProj1}
+                            proy_{\hat{v}}(\vec{a}) := \Wrap{\vec{a} \dotP \hat{v}} \hat{v}
                         \end{align}
                         
                         Y a la \textbf{componente normal de $\vec{a}$ sobre $\hat{v}$} como:
                         \begin{align}
-                            \vec{n} := \vec{a} - \Wrap{\vec{a} \dotP \hat{v}} \hat{v} \label{defProj2}
+                            \vec{n} := \vec{a} - \Wrap{\vec{a} \dotP \hat{v}} \hat{v}
                         \end{align}
 
                     \end{Definition}
@@ -1416,6 +1417,7 @@
                     \begin{align}
                         proy_{\vec{v}}(\vec{a}) := \dfrac{\Wrap{\vec{a} \dotP \vec{v}}\vec{v}}{\Abs{\vec{v}}^2}
                     \end{align}
+
 
 
 
@@ -1451,13 +1453,13 @@
 
                 Se queda como ejercicio que demuestres que $\hat{a}$ es realmente unitario :p
                 
+        
 
 
             % =========================================================
             % ================     CAUCHY-SCHWARZ   ===================
             % =========================================================
             \clearpage
-
             \subsection{Desigualdad de Cauchy-Schwarz}
             
                 Esta es una de las desigualdades más poderosas, tanto que es muy usada en álgebra lineal.
@@ -1469,9 +1471,10 @@
                         \abs{\vec{a} \dotP \vec{b}} \leq \Abs{\vec{a}} \Abs{\vec{b}} \label{CS-Inequality}
                     \end{align}
                 \end{Theorem}
-            
-            	Es decir, el valor absoluto del producto punto de dos vectores siempre será menor o igual al producto de sus magnitudes.
-            
+
+                Es decir, el valor absoluto del producto punto de dos vectores siempre será menor o igual al producto
+                de sus magnitudes.
+
                 % ======== DEMOSTRACION ========
                 \begin{SmallIndentation}[1em]
                     \textbf{Demostración}:
@@ -1489,17 +1492,18 @@
                     Pero anteriormente deducimos que $\cos \theta = \frac{\vec{a} \cdot \vec{b}}{\Abs{\vec{a}} \Abs{\vec{b}}}$,
                     entonces $\abs{\frac{\vec{a} \cdot \vec{b}}{\Abs{\vec{a}} \Abs{\vec{b}}}} \leq 1$, lo que implica que
                     $\Abs{\vec{a} \dotP \vec{b}} \leq \Abs{\vec{a}} \Abs{\vec{b}}$.
+
+                    Una forma alternativa de esta desigualdad es usando la definición de valor absoluto
+                    (similar al coseno anteriormente):
+                    \begin{equation*}
+                        -\Abs{\vec{a}} \Abs{\vec{b}} 
+                            \leq 
+                                \vec{a} \dotP \vec{b}
+                                    \leq
+                                        \Abs{\vec{a}} \Abs{\vec{b}}   
+                    \end{equation*}
                 
                 \end{SmallIndentation}
-            
-            	Una forma alternativa de esta desigualdad es usando la definición de valor absoluto (similar al coseno anteriormente):
-            	\begin{equation*}
-	            	-\Abs{\vec{a}} \Abs{\vec{b}} 
-	            	\leq 
-	            	\vec{a} \dotP \vec{b}
-	            	\leq
-	            	\Abs{\vec{a}} \Abs{\vec{b}}   
-            	\end{equation*}
 
 
 
@@ -1509,6 +1513,12 @@
             \clearpage
             \subsection{Desigualdad del Triángulo}
 
+                \begin{wrapfigure}{r}{0.30\textwidth}
+                    \centering
+                    \includegraphics[width=0.25\textwidth]{triangleInequality.png}
+                    \label{Con dibujitos :3}
+                \end{wrapfigure}
+            
                 Es muy intuitiva de comprender, dice que la magnitud de la suma de dos vectores es menor o
                 igual a la suma de sus magnitudes. Formalmente:
                 
@@ -1520,11 +1530,6 @@
                     \end{align*}
                 \end{Theorem}
             
-            	\begin{figure}[H]
-            		\centering
-            		\includegraphics[scale=1]{triangleInequality.png}
-            	\end{figure}
-            
                 Vemos que la distancia más corta entre el origen $O$ y el punto $B$ tiene que ser
                 un segmento de recta, justamente $\Abs{\vec{a} + \vec{b}}$.
 
@@ -1532,8 +1537,7 @@
                 recorrido una mayor distancia, que es $\Abs{\vec{a}} + \Abs{\vec{b}}$
 
                 Pero claro, eso no es una demostración formal. Aquí viene la chida:
-                
-                
+
                 % ======== DEMOSTRACION ========
                 \begin{SmallIndentation}[1em]
                     \textbf{Demostración:}
@@ -1545,14 +1549,27 @@
                     pasar a producto punto sin que haya raíces:
                     \begin{align*}
                         \Abs{\vec{a}+\vec{b}}^2
-                        &= \Wrap{\vec{a}+\vec{b}} \dotP \Wrap{\vec{a}+\vec{b}} &&\mbox{Definición de magnitud}\\
-                        &= \vec{a} \dotP \vec{a} + 2\textcolor{blue}{\vec{a} \dotP \vec{b}} + \vec{b} \dotP \vec{b} &&\mbox{Propiedad distributiva}\\
-                        &\textcolor{blue}{\leq} \;\; \vec{a} \dotP \vec{a} + 2\textcolor{blue}{\Abs{\vec{a}}\Abs{\vec{b}}} + \vec{b} \dotP \vec{b} &&\textcolor{blue}{\mbox{Desigualdad de Cauchy-Schwarz}}\\
-                        &= \Abs{\vec{a}}^2 + 2\Abs{\vec{a}}\Abs{\vec{b}} + \Abs{\vec{b}}^2 &&\mbox{Definición de magnitud a la inversa}\\
-                        &= \Wrap{\Abs{\vec{a}} + \Abs{\vec{b}}}^2 &&\mbox{Factorizamos}
+                            &= \Wrap{\vec{a} + \vec{b}} \dotP \Wrap{\vec{a} + \vec{b}}
+                                &&\Remember{Definición de magnitud}                                     \\
+                            &= \vec{a} \dotP \vec{a} 
+                              + 2 \textcolor{DeepPurpleMD}{\vec{a} \dotP \vec{b}}
+                              + \vec{b} \dotP \vec{b} 
+                                &&\Remember{Propiedad distributiva}                                     \\
+                            &\textcolor{DeepPurpleMD}{\leq} \;\; \vec{a} \dotP \vec{a}
+                              + 2\textcolor{DeepPurpleMD}{\Abs{\vec{a}}\Abs{\vec{b}}} 
+                              + \vec{b} \dotP \vec{b}
+                                &&\textcolor{DeepPurpleMD}{\Remember{Desigualdad de Cauchy-Schwarz}}    \\
+                            &= \Abs{\vec{a}}^2 + 2\Abs{\vec{a}} \Abs{\vec{b}} + \Abs{\vec{b}}^2 
+                                &&\Remember{Definición de magnitud a la inversa}                        \\
+                            &= \Wrap{\Abs{\vec{a}} + \Abs{\vec{b}}}^2 
+                                &&\Remember{Factorizamos}
                     \end{align*}
                     
-                    De esa forma obtenemos $\Abs{\vec{a}+\vec{b}}^2 \leq \Wrap{\Abs{\vec{a}} + \Abs{\vec{b}}}^2$. Como todas las magnitudes son no negativas, podemos sacar raíz cuadrada a ambos lados y concluir que $\Abs{\vec{a}+\vec{b}} \leq \Abs{\vec{a}} + \Abs{\vec{b}}$.
+                    De esa forma obtenemos $\Abs{\vec{a}+\vec{b}}^2 \leq \Wrap{\Abs{\vec{a}} + \Abs{\vec{b}}}^2$.
+
+                    Como todas las magnitudes son no negativas, podemos sacar raíz cuadrada a ambos lados y
+                    concluir que $\Abs{\vec{a}+\vec{b}} \leq \Abs{\vec{a}} + \Abs{\vec{b}}$.
+
                 \end{SmallIndentation}
             
 
