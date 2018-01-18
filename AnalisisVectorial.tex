@@ -440,7 +440,7 @@
         \section{Relaciones entre Puntos y Vectores}
         
             En esencia un vector y un punto son lo mismo, pero un punto solo indica una posición
-            en el espacio, mientras que un vector indica un \textbf{desplazamiento}.
+            en el espacio, mientras que un vector indica un \textbf{desplazamiento} entre dos puntos, además de que podemos hacer más operaciones con un vector que con un punto.
             Lo veremos a continuación.
             
             % ========================================
@@ -466,6 +466,10 @@
 
                 Entonces tenemos que las coordenadas del vector $\lVec{PQ}$ se puede ver como:\\
                 $\lVec{PQ} = (x_2 - x_1, y_2 - y_1, z_2 - z_1)$
+                
+            \subsection{Ejemplo}
+            
+            	Para entender lo anterior veamos un ejemplo de la vida real. Supongamos que representamos a las ciudades con puntos. El enunciado \Quote{¿cuánto obtenemos si sumamos la ciudad de México con la ciudad de Nueva York?} no tiene sentido, pues no podemos sumar dos puntos. Sin embargo, sí podemos decir \Quote{¿cuánto obtenemos si sumamos la ubicación de la ciudad de México con 350 km al noreste?}, pues sí podemos sumar vectores (en este caso una posición y un desplazamiento) y obtener nueva información.
 
 
 
@@ -1077,7 +1081,7 @@
                 productos de las coordenadas correspondientes como si fuera una suma.
 
                 También nota que no está definido el producto escalar de un vector con un escalar, es decir,
-                la expresión $\Wrap{\vec{a} \dotP \vec{b}} \dotP \vec{c}$ no tiene sentido.
+                la expresión $\Wrap{\vec{a} \dotP \vec{b}} \dotP \vec{c}$ no tiene sentido; y mucho menos podemos hablar de asociatividad aquí.
                 
                 El hecho de que esté definido así es para que cumpla varias propiedades padres y útiles que veremos
                 a continuación.
@@ -1393,7 +1397,7 @@
                 % =================     DEFINICION   ======================
                 % =========================================================
 
-                    \begin{Definition}[Proyección de Vectores]
+                    \begin{Definition}[Proyección de Vectores] \label{vectorProjection}
                         \ForceNewLine
                         Sean $\vec{a}, \hat{v} \in \Reals^3$ con $\hat{v}$ unitario.
                         
@@ -1631,13 +1635,13 @@
                 \begin{itemize}\setlength\itemsep{0em}
                     \item \textbf{Anticonmutatividad:} $\vec{a} \times \vec{b} = -\vec{b} \times \vec{a}$.
                     
-                    \item \textbf{Distributiva por la izquierda:} $\vec{a} \times \Wrap{\vec{b}+\vec{c}} = \vec{a} \times \vec{b} + \vec{a} \times \vec{c}$.
+                    \item $\vec{a} \times \vec{a} = \vec{0} \times \vec{a} = \vec{0}$.
                     
-                    \item \textbf{Distributiva por la derecha:} $\Wrap{\vec{a}+\vec{b}} \times \vec{c} = \vec{a} \times \vec{c} + \vec{b} \times \vec{c}$.
+                    \item \textbf{Distributiva por la izquierda:} $\vec{a} \times \Wrap{\vec{b}+\vec{c}} = \vec{a} \times \vec{b} + \vec{a} \times \vec{c}$.
                     
                     \item $k\Wrap{\vec{a} \times \vec{b}} = \Wrap{k \vec{a}} \times \vec{b} = \vec{a} \times \Wrap{k \vec{b}}$.
                     
-                    \item $\vec{a} \times \vec{a} = \vec{0}$
+                    \item \textbf{Distributiva por la derecha:} $\Wrap{\vec{a}+\vec{b}} \times \vec{c} = \vec{a} \times \vec{c} + \vec{b} \times \vec{c}$.
                 \end{itemize}
             \end{Theorem}
         
@@ -1654,9 +1658,11 @@
                     
                     Concluyendo, $\vec{a} \times \vec{b} = -\vec{b} \times \vec{a}$.
                     
-                    \item Pendiente.
+                    \item El ángulo que forma un vector con él mismo obviamente es de $0^\circ$. Por lo tanto $\Abs{\vec{a} \times \vec{a}} = \Abs{\vec{a}}^2 \sen 0^\circ = 0$, y $\vec{a} \times \vec{a} = \vec{0}$.
                     
-                    \item Misma idea que el inciso anterior.
+                    También tenemos que $\Abs{\vec{0} \times \vec{a}} = \Abs{\vec{0}} \Abs{\vec{a}} \sen \theta=0$, por lo tanto $\vec{0} \times \vec{a} = \vec{0}$.
+                    
+                    \item A pesar de su simplicidad para entender, la demostración no es tan sencilla, pues involucra el uso de planos y proyecciones en ellos. Supongamos que $\vec{a} \neq \vec{0}$, pues si lo fuera la igualdad se cumple trivialmente.
                     
                     \item Veamos que $\Wrap{k \vec{a}} \times \vec{b} = k\Wrap{\vec{a} \times \vec{b}}$. Si $k=0$, ambos lados de la ecuación son el cero vector. En caso contrario, sea $\theta$ el ángulo entre $\vec{a}$ y $\vec{b}$.
                     
@@ -1680,6 +1686,14 @@
                     Por lo tanto, también en este caso $\Wrap{k\vec{a}} \times \vec{b} = k\Wrap{\vec{a} \times \vec{b}}$.
                     
                     Se queda como ejercicio ver que $k\Wrap{\vec{a} \times \vec{b}} = \vec{a} \times \Wrap{k \vec{b}}$.
+                    
+                    \item Tenemos que:
+                    \begin{align*}
+	                    \Wrap{\vec{a} + \vec{b}} \times \vec{c} &= -\vec{c} \times \Wrap{\vec{a} + \vec{b}} &&\mbox{Anticonmutatividad}\\
+	                    &= -\Wrap{\vec{c} \times \vec{a} + \vec{c} \times \vec{b}} &&\mbox{Distributiva por la izquierda}\\
+	                    &= -\Wrap{-\vec{a} \times \vec{c} - \vec{b} \times \vec{c}} &&\mbox{Anticonmutatividad}\\
+	                    &= \vec{a} \times \vec{c} + \vec{b} \times \vec{c}
+                    \end{align*}
                 \end{itemize}
             \end{SmallIndentation}
         
@@ -1949,20 +1963,88 @@
 			\item $\vec{a} \times \Wrap{\vec{b} \times \vec{c}} = \Wrap{\vec{a} \dotP \vec{c}}\vec{b} - \Wrap{\vec{a} \dotP \vec{b}}\vec{c}$
 			
 			\begin{SmallIndentation}[1em]
-				\textbf{Demostración:} 
+				\textbf{Demostración:} Para esta identidad usaremos algunas propiedades del plano, las cuales puedes consultar en el capítulo que sigue. Sea $\vec{n}=\vec{b} \times \vec{c}$ el vector normal al plano que generan los vectores $\vec{b}$ y $\vec{c}$. Luego, $\vec{v} = \vec{a} \times \vec{n}$ será perpendicular al vector normal $\vec{n}$, por lo que también pertenecerá al plano.
+				
+				Entonces, podemos escribir a $\vec{v}$ como una combinación lineal de $\vec{b}$ y $\vec{c}$, es decir, existen $r, s \in \Reals$ tales que $\vec{v} = r\vec{b} + s\vec{c}$. Aplicamos producto punto con $\vec{a}$ a ambos lados:
+				\begin{align*}
+					\vec{a} \dotP \vec{v} &= \vec{a} \dotP \Wrap{r\vec{b} + s\vec{c}} &&\Remember{Sabemos que} \\
+					0 &= r\Wrap{\vec{a} \dotP \vec{b}} + s\Wrap{\vec{a} \dotP \vec{c}} &&\Remember{$\vec{a}$ es perpendicular a $\vec{v}$}\\
+					\dfrac{r}{s} &= -\dfrac{\vec{a} \dotP \vec{c}}{\vec{a} \dotP \vec{b}} &&\Remember{Reacomodamos}
+				\end{align*}
+				
+				Proponemos que $r = m\Wrap{\vec{a} \dotP \vec{c}}$ y $s = -m\Wrap{\vec{a} \dotP \vec{b}}$, donde $m \in \Reals$ es la constante de proporcionalidad. De esta forma la ecuación anterior siempre se cumple y ahora solo tenemos una variable. Por lo tanto:
+				\begin{align*}
+					\vec{v} &= m\Wrap{\vec{a} \dotP \vec{c}} \vec{b} - m\Wrap{\vec{a} \dotP \vec{b}} \vec{c} &&\Remember{Sustituimos} \\
+					\vec{a} \times \Wrap{\vec{b} \times \vec{c}} &= m\Wrap{\Wrap{\vec{a} \dotP \vec{c}} \vec{b} - \Wrap{\vec{a} \dotP \vec{b}} \vec{c}} &&\Remember{Recuerda que $\vec{v}=\vec{a} \times \vec{n}$ y $\vec{n} = \vec{b} \times \vec{c}$}
+				\end{align*}
+				
+				Ya solo nos queda hallar $m$. Como la ecuación anterior se cumple para todos los vectores $\vec{a}, \vec{b}, \vec{c}$, podemos sustituir $\vec{a}=\hat{j}$, $\vec{b}=\hat{i}$, $\vec{c}=\hat{j}$ de tal forma que el lado izquierdo no sea el cero vector. Obtenemos:
+				\begin{align*}
+					\hat{j} \times \Wrap{\hat{i} \times \hat{j}} &= m\Wrap{\Wrap{\hat{j} \dotP \hat{j}}\hat{i} - \cancel{\Wrap{\hat{j} \dotP \hat{i}}\hat{j}}} &&\Remember{Sustituimos}\\
+					\hat{j} \times \hat{k} &= m\hat{i} &&\Remember{Recuerda los productos punto y cruz entre vectores canónicos} \\
+					\hat{i} &= m\hat{i} \\
+					m &= 1
+				\end{align*}
+				
+				Finalmente, concluimos que $\vec{a} \times \Wrap{\vec{b} \times \vec{c}} = \Wrap{\vec{a} \dotP \vec{c}}\vec{b} - \Wrap{\vec{a} \dotP \vec{b}}\vec{c}$.
 			\end{SmallIndentation}
 			
 			
 			\item $\Wrap{\vec{a} \times \vec{b}} \times \Wrap{\vec{a} \times \vec{c}} = \Wrap{\vec{a} \dotP \Wrap{\vec{b} \times \vec{c}}}\vec{a}$
 			
+			\begin{SmallIndentation}[1em]
+				\textbf{Demostración:} Usamos la propiedad anterior:
+				\begin{align*}
+					\textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}} \times \Wrap{\textcolor{red}{\vec{a}} \times \vec{c}} &= \Wrap{\textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}} \dotP \vec{c}} \textcolor{red}{\vec{a}} - \cancel{\Wrap{\textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}} \dotP \textcolor{red}{\vec{a}}} \vec{c}} &&\Remember{Sustituimos con cuidado}\\
+					&= \Wrap{\Wrap{\vec{a} \times \vec{b}} \dotP \vec{c}} \vec{a} &&\Remember{$\vec{a}$ es perpendicular a $\vec{a} \times \vec{b}$}\\
+					&= \Wrap{\vec{c} \dotP \Wrap{\vec{a} \times \vec{b}}} \vec{a} &&\Remember{Conmutativa}\\
+					&= \Wrap{\vec{a} \dotP \Wrap{\vec{b} \times \vec{c}}} \vec{a} &&\Remember{Permutación circular}
+				\end{align*}
+			\end{SmallIndentation}
+			
 			
 			\item $\Wrap{\vec{a} \times \vec{b}} \dotP \Wrap{\vec{c} \times \vec{d}} = \Wrap{\vec{a} \dotP \vec{c}} \Wrap{\vec{b} \dotP \vec{d}} - \Wrap{\vec{a} \dotP \vec{d}} \Wrap{\vec{b} \dotP \vec{c}}$
+			
+			\begin{SmallIndentation}[1em]
+				\textbf{Demostración:}
+				\begin{align*}
+					\textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}} \dotP \Wrap{\textcolor{red}{\vec{c}} \times \vec{d}} &= \textcolor{red}{\vec{c}} \dotP \Wrap{\vec{d} \times \textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}}} &&\Remember{Permutación circular}\\
+					&= \vec{c} \dotP \Wrap{\Wrap{\vec{d} \dotP \vec{b}}\vec{a} - \Wrap{\vec{d} \dotP \vec{a}}\vec{b}} &&\Remember{Propiedad 3}\\
+					&= \vec{c} \dotP \Wrap{\Wrap{\vec{d} \dotP \vec{b}}\vec{a}} - \vec{c} \dotP \Wrap{\Wrap{\vec{d} \dotP \vec{a}}\vec{b}} &&\Remember{Distributiva}\\
+					&= \Wrap{\vec{d} \dotP \vec{b}} \Wrap{\vec{c} \dotP \vec{a}} - \Wrap{\vec{d} \dotP \vec{a}} \Wrap{\vec{c} \dotP \vec{b}} &&\Remember{Sacamos el escalar del producto punto (linearidad)}\\
+					&= \Wrap{\vec{a} \dotP \vec{c}} \Wrap{\vec{b} \dotP \vec{d}} - \Wrap{\vec{a} \dotP \vec{d}} \Wrap{\vec{b} \dotP \vec{c}} &&\Remember{Conmutativa}
+				\end{align*}
+			\end{SmallIndentation}
 			
 			
 			\item $\Wrap{\vec{a} \times \vec{b}} \dotP \Wrap{\vec{c} \times \vec{d}} + \Wrap{\vec{b} \times \vec{c}} \dotP \Wrap{\vec{a} \times \vec{d}} + \Wrap{\vec{c} \times \vec{a}} \dotP \Wrap{\vec{b} \times \vec{d}} = 0$
 			
+			\begin{SmallIndentation}[1em]
+				\textbf{Demostración:} Usamos la propiedad anterior:
+				
+				\begin{tabular}{crcl}
+					& $\Wrap{\vec{a} \times \vec{b}} \dotP \Wrap{\vec{c} \times \vec{d}}$ & $=$ & $\quad \textcolor{blue}{\cancel{\Wrap{\vec{a} \dotP \vec{c}} \Wrap{\vec{b} \dotP \vec{d}}}} - \textcolor{red}{\cancel{\Wrap{\vec{a} \dotP \vec{d}} \Wrap{\vec{b} \dotP \vec{c}}}}$\\
+					$+$ & $\Wrap{\vec{b} \times \vec{c}} \dotP \Wrap{\vec{a} \times \vec{d}}$ & $=$ & $+\cancel{\Wrap{\vec{b} \dotP \vec{a}} \Wrap{\vec{c} \dotP \vec{d}}} - \textcolor{blue}{\cancel{\Wrap{\vec{b} \dotP \vec{d}} \Wrap{\vec{c} \dotP \vec{a}}}}$\\
+					$+$ & $\Wrap{\vec{c} \times \vec{a}} \dotP \Wrap{\vec{b} \times \vec{d}}$ & $=$ & $+\textcolor{red}{\cancel{\Wrap{\vec{c} \dotP \vec{b}} \Wrap{\vec{a} \dotP \vec{d}}}} - \cancel{\Wrap{\vec{c} \dotP \vec{d}} \Wrap{\vec{a} \dotP \vec{b}}}$\\
+					\hline
+					& & $=$ & $0$
+				\end{tabular}
+			\end{SmallIndentation}
 			
 			\item $\vec{a} \times \Wrap{\vec{b} \times \vec{c}} + \vec{b} \times \Wrap{\vec{c} \times \vec{a}} + \vec{c} \times \Wrap{\vec{a} \times \vec{b}} = \vec{0}$
+			
+			\begin{SmallIndentation}[1em]
+				\textbf{Demostración:} Usamos la propiedad 3:
+				
+				\begin{tabular}{crcl}
+					& $\vec{a} \times \Wrap{\vec{b} \times \vec{c}}$ & $=$ & $\quad \textcolor{blue}{\cancel{\Wrap{\vec{a} \dotP \vec{c}}\vec{b}}} - \textcolor{red}{\cancel{\Wrap{\vec{a} \dotP \vec{b}}\vec{c}}}$\\
+					$+$ & $\vec{b} \times \Wrap{\vec{c} \times \vec{a}}$ & $=$ & $+\textcolor{red}{\cancel{\Wrap{\vec{b} \dotP \vec{a}}\vec{c}}} - \cancel{\Wrap{\vec{b} \dotP \vec{c}}\vec{a}}$\\
+					$+$ & $\vec{c} \times \Wrap{\vec{a} \times \vec{b}}$ & $=$ & $+\cancel{\Wrap{\vec{c} \dotP \vec{b}}\vec{a}} - \textcolor{blue}{\cancel{\Wrap{\vec{c} \dotP \vec{a}}\vec{b}}}$\\
+					\hline
+					& & $=$ & $\vec{0}$
+				\end{tabular}
+			\end{SmallIndentation}
+		
 		\end{enumerate}
 
 
@@ -2053,7 +2135,7 @@
                 \includegraphics[scale=0.65]{plane3.png}
             \end{figure}
         
-            Como el plano tiene dos dimensiones, intuitivamente podemos decir que tenemos dos \Quote{grados de libertad} de movimiento, es decir, que podemos movernos lo que queramos en la dirección de $\lVec{e_1}$ y lo que queramos en la dirección de $\lVec{e_2}$. El efecto de \Quote{movernos} no es más que multiplicar a esos vectores por un escalar. Lo que significa que cualquier punto en el plano puede ser expresado como:
+            Como el plano tiene dos dimensiones, intuitivamente podemos decir que tenemos dos \Quote{grados de libertad} de movimiento, es decir, que podemos movernos lo que queramos en la dirección de $\lVec{e_1}$ y lo que queramos en la dirección de $\lVec{e_2}$. El efecto de \Quote{movernos} no es más que multiplicar a esos vectores por un escalar. Lo que significa que cualquier punto en el plano puede ser expresado como la combinación lineal de $\lVec{e_1}$ y $\lVec{e_2}$ más el vector $\vec{A}$:
             \begin{align}
                 \vec{r} &= \vec{A} + s\lVec{e_1} + t\lVec{e_2} \label{planeEquation3}
             \end{align}
@@ -2303,9 +2385,87 @@
         
         \section{Rotaciones en el espacio}
         
-        Este es una aplicación muy interesante y padre a la vez. Supongamos que tenemos una línea en el espacio y un punto, nuestro objetivo será rotarlo usando a la línea como eje mediante un ángulo determinado.
+        Este es una aplicación muy interesante y padre a la vez. Supongamos que tenemos una línea en el espacio y un punto, nuestro objetivo será rotarlo usando a la línea como eje mediante un ángulo determinado en sentido antihorario.
         
+        Usaremos lo aprendido de ecuación de la línea en forma paramétrica, ecuación del plano dados dos vectores paralelos a él y proyecciones ortogonales.
         
+        Observa con cuidado la siguiente figura:
+        \begin{figure}[H]
+        	\centering
+        	\includegraphics[scale=0.8]{rotation.png}
+        \end{figure}
+    
+    	Veamos todos los elementos con los que vamos a trabajar:
+    	\begin{itemize}\setlength\itemsep{0em}
+    		\item El eje de rotación estará dado por la ecuación de la línea $\vec{r} = \lVec{a_0} + t\hat{v}$. Supondremos que el vector paralelo $\hat{v}$ será unitario para simplificar.
+    		\item El punto a rotar $P$ está indicado por su vector de posición $\vec{P}$.
+    		\item Obtendremos el nuevo punto $\vec{P'}$ al rotar $\vec{P}$ sobre el eje con un ángulo de rotación $\theta$.
+    	\end{itemize}
+    
+    	Primero vamos a proyectar el vector $\vec{P} - \lVec{a_0}$ sobre el eje. Llamaremos $\vec{u}$ a la proyección y $\vec{n}$ a la componente normal. Ya sabemos cómo calcularlos:
+    	\begin{align}
+    		\vec{u} &= \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} \\
+    		\vec{n} &= \vec{P} - \lVec{a_0} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}
+    	\end{align}
+    	
+    	De esa forma descompusimos al vector $\vec{P} - \lVec{a_0}$ tal que $\vec{P} - \lVec{a_0} = \vec{u} + \vec{n}$. Suena razonable suponer que el nuevo vector $\vec{P'} - \lVec{a_0}$ también será la suma de dos vectores, y lo es, porque vemos que al girar el punto $\vec{P}$ el vector $\vec{u}$ no cambia pues es paralelo al eje, mientras que el vector $\vec{n}$ gira el mismo ángulo. Llamemos $\vec{n'}$ a este nuevo vector, entonces:
+    	\begin{align}
+	    	\vec{P'} - \lVec{a_0} &= \vec{u} + \vec{n'} \implies \vec{P'} = \lVec{a_0} + \vec{u} + \vec{n'} \label{rotatedPoint}
+    	\end{align}
+    	
+    	Ahora el problema es obtener $\vec{n'}$. Para ello nos conviene definir un plano en donde la rotación se va a llevar a cabo. Un vector normal a él que apunta hacia afuera es justamente $\hat{v}$.
+    	
+    	Nota que al girar la punta de $\vec{n}$ hasta la punta de $\vec{n'}$ estamos dibujando un círculo contenido en el plano, cuyo centro es la punta del vector $\vec{u}$ y su radio es $\Abs{\vec{n}}$.
+        
+        Para hallar la ecuación de ese círculo, aparte de necesitar los dos vectores paralelos al plano, requerimos que estos sean ortogonales y sean unitarios para que se dibuje correctamente el círculo (es decir, barriendo la misma longitud en ambas direcciones conforme $\theta$ aumenta). Llamémoslos $\hat{e_1}$ y $\hat{e_2}$.
+        
+        $\hat{e_1}$ va en la dirección de $\vec{n}$, por lo tanto:
+        \begin{align}
+	        \hat{e_1} &= \dfrac{\vec{n}}{\Abs{\vec{n}}}
+        \end{align}
+        
+        $\hat{e_2}$ es perpendicular a $\hat{v}$ y a $\vec{n}$, y por la regla de mano derecha, debemos de hacer producto cruz de $\hat{v}$ con $\vec{n}$. De esa forma tenemos:
+        \begin{align}
+	        \hat{e_2} &= \dfrac{\hat{v} \times \vec{n}}{\Abs{\hat{v} \times \vec{n}}} \nonumber \\
+	        &= \dfrac{\hat{v} \times \Brackets{\vec{P} - \lVec{a_0} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}}}{\Abs{\hat{v}} \Abs{\vec{n}} \sen 90^\circ} \nonumber \\
+	        &= \dfrac{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}{\Abs{\vec{n}}}
+        \end{align}
+        
+        Por lo tanto, el círculo, que está dibujado por la punta de $\vec{n'}$, es:
+        \begin{align}
+	        \vec{n'} &= \Abs{\vec{n}} \Wrap{\cos \theta \hat{e_1} + \sen \theta \hat{e_2}} = \Wrap{\cos \theta} \vec{n} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}
+        \end{align}
+        
+        Finalmente, el punto $\vec{P'}$ corresponde con un específico ángulo de $\theta$, por lo tanto, sustituyendo todo en la ecuación \ref{rotatedPoint}:
+        \small
+        \begin{align*}
+	        \vec{P'} &= \lVec{a_0} + \vec{u} + \Wrap{\cos \theta} \vec{n} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}} \\
+	        &= \lVec{a_0} + \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} + \Wrap{\cos \theta} \Brackets{\vec{P} - \lVec{a_0} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}} \\
+	        &= \lVec{a_0} + \Wrap{\cos \theta} \Wrap{\vec{P} - \lVec{a_0}} + \Wrap{1 - \cos \theta} \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}
+        \end{align*}
+        \normalsize
+        
+        Si hacemos que $\vec{q} = \vec{P} - \lVec{a_0}$, tenemos la fórmula un poco más simple:
+        \begin{align}
+	        \vec{P'} &= \lVec{a_0} + \Wrap{\cos \theta} \vec{q} + \Wrap{1 - \cos \theta} \Wrap{\vec{q} \dotP \hat{v}} \hat{v} + \Wrap{\sen \theta} \Wrap{\hat{v} \times \vec{q}} \label{formulaRotation3D}
+        \end{align}
+        
+        	\subsection{Caso particular: rotación en el plano xy}
+        	Si queremos rotar un punto $\vec{P} = x\hat{i} + y\hat{j}$ respecto al origen del plano xy un ángulo $\theta$, vemos que el eje de rotación es el eje $\mathbf{z}$, es decir, $\hat{v} = \hat{k}$; también vemos que $\lVec{a_0}=\vec{0}$. Entonces, sustituimos en la ecuación anterior:
+        	\small
+        	\begin{align}
+	        	\vec{P'} &= \vec{0} + \Wrap{\cos \theta} \Wrap{x\hat{i} + y\hat{j}} + \cancel{\Wrap{1 - \cos \theta} \Wrap{\Wrap{x\hat{i} + y\hat{j}} \dotP \hat{k}} \hat{k}} + \Wrap{\sen \theta} \Wrap{\hat{k} \times \Wrap{x\hat{i} + y\hat{j}}} \nonumber \\
+	        	&= \Wrap{\cos \theta} \Wrap{x\hat{i} + y\hat{j}} + \Wrap{\sen \theta} \Wrap{x\hat{j} - y\hat{i}} \nonumber\\
+	        	&= \Wrap{x \cos \theta - y \sen \theta}\hat{i} + \Wrap{x \sen \theta + y \cos \theta}\hat{j}
+        	\end{align}
+        	\normalsize
+        	
+        	Probablemente ya conocías la ecuación anterior, y en forma matricial se ve más bonita, donde $\vec{P'}=(x', y')$:
+        	\begin{align}
+	        	\pVector{x' \\ y'} &= \pVector{\cos \theta && -\sen \theta \\ \sen \theta && \cos \theta} \pVector{x \\ y}
+        	\end{align}
+        
+        \clearpage
         
         % =========================================================
         % ============    DEMOSTRACIONES GEOMETRICAS   ============
