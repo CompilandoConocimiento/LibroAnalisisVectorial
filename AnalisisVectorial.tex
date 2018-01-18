@@ -523,10 +523,19 @@
 
                 Entonces tenemos que las coordenadas del vector $\lVec{PQ}$ se puede ver como:\\
                 $\lVec{PQ} = (x_2 - x_1, y_2 - y_1, z_2 - z_1)$
-                
+            
+            % ========================================
+            % =======         EJEMPLO           ======
+            % ========================================  
             \subsection{Ejemplo}
             
-                Para entender lo anterior veamos un ejemplo de la vida real. Supongamos que representamos a las ciudades con puntos. El enunciado \Quote{¿cuánto obtenemos si sumamos la ciudad de México con la ciudad de Nueva York?} no tiene sentido, pues no podemos sumar dos puntos. Sin embargo, sí podemos decir \Quote{¿cuánto obtenemos si sumamos la ubicación de la ciudad de México con 350 km al noreste?}, pues sí podemos sumar vectores (en este caso una posición y un desplazamiento) y obtener nueva información.
+                Para entender lo anterior veamos un ejemplo de la vida real. Supongamos que representamos a
+                las ciudades con puntos. El enunciado \Quote{¿cuánto obtenemos si sumamos la ciudad de México
+                con la ciudad de Nueva York?} no tiene sentido, pues no podemos sumar dos puntos.
+
+                Sin embargo, sí podemos decir \Quote{¿cuánto obtenemos si sumamos la ubicación de la ciudad
+                de México con 350 km al noreste?}, pues sí podemos sumar vectores (en este caso una posición
+                y un desplazamiento) y obtener nueva información.
 
 
 
@@ -630,7 +639,7 @@
                     k\vec{a} := (ka_1, ka_2, ka_3)
                 \end{align}
 
-                \textbf{Geométricamente}, multiplicar un vector por un escalar es de agrandarlo o reducirlo pero
+                \textbf{Geométricamente}, multiplicar un vector por un escalar es de agrandarlo o RedMDucirlo pero
                 sin cambiar su dirección (su sentido se invierte si $k < 0$, se queda igual si $k > 0$ y
                 obtenemos el cero vector si $k = 0$).
 
@@ -645,7 +654,7 @@
         
             Las operaciones anteriores cumplen con las siguientes propiedades, donde
             $\vec{a},\vec{b}, \vec{c} \in \Reals^3$ y $\alpha, \beta \in \Reals$.
-            Vemos que todas se heredan de las ya conocidas propiedades de los números reales:
+            Vemos que todas se heRedMDan de las ya conocidas propiedades de los números reales:
 
             \begin{itemize}
                 
@@ -1127,7 +1136,7 @@
                     Sean $\vec{a}=(a_1,a_2,a_3)$ y $\vec{b}=(b_1,b_2,b_3)$.
                     Definimos al \textbf{producto punto} o \textbf{producto escalar} de $\vec{a}$ con $\vec{b}$ como:
                     \begin{align}
-                        \vec{a} \dotP \vec{b} &:= a_1b_1 + a_2b_2 + a_3b_3 \label{defDot}
+                        \vec{a} \dotP \vec{b} &:= a_1b_1 + a_2b_2 + a_3b_3
                     \end{align} 
                 \end{Definition}
             
@@ -1138,7 +1147,7 @@
                 productos de las coordenadas correspondientes como si fuera una suma.
 
                 También nota que no está definido el producto escalar de un vector con un escalar, es decir,
-                la expresión $\Wrap{\vec{a} \dotP \vec{b}} \dotP \vec{c}$ no tiene sentido; y mucho menos podemos hablar de asociatividad aquí.
+                la expresión $\Wrap{\vec{a} \dotP \vec{b}} \dotP \vec{c}$ no tiene sentido.
                 
                 El hecho de que esté definido así es para que cumpla varias propiedades padres y útiles que veremos
                 a continuación.
@@ -1149,7 +1158,7 @@
             % =====      PROPIEDADES DE PRODUCTO INTERNO     ==========
             % =========================================================
             \clearpage
-            \subsection{Propiedades de Producto Punto}
+            \subsection{Propiedades de Producto Interno}
 
                 Tenemos las siguientes propiedades, donde $\vec{c} = (c_1, c_2, c_3)$ y $\alpha, \beta \in \Reals$:
                 \begin{itemize}
@@ -1161,7 +1170,7 @@
                         \begin{SmallIndentation}[1em]
                             \textbf{Demostración}:
                             
-                            Esta es fácil, también se hereda de la propiedad conmutativa definida los números reales:
+                            Esta es fácil, también se heRedMDa de la propiedad conmutativa definida los números reales:
                             \begin{align*}
                                 \vec{a} \dotP \vec{b} 
                                     &= a_1b_1 + a_2b_2 + a_3b_3         \\
@@ -1190,7 +1199,7 @@
                                     &= \alpha a_1c_1 + \beta b_1c_1 + \alpha a_2c_2 + \beta b_2c_2 + \alpha a_3c_3 + \beta b_3c_3           \\
                                     &= \alpha a_1c_1 + \alpha a_2c_2 + \alpha a_3c_3 + \beta b_1c_1 + \beta b_2c_2 + \beta b_3c_3           \\
                                     &= \alpha (a_1c_1 + a_2c_2 + a_3c_3) + \beta (b_1c_1 + b_2c_2 + b_3c_3)                                 \\
-                                    &= \alpha \Wrap{\vec{a} \dotP \vec{c}} + \beta \Wrap{\vec{b} \dotP \vec{c}}
+                                    &= \alpha \BigWrap{\vec{a} \dotP \vec{c}} + \beta \Wrap{\vec{b} \dotP \vec{c}}
                             \end{align*}
                         
                         \end{SmallIndentation}
@@ -1238,6 +1247,7 @@
                 
 
 
+
             % =========================================================
             % ====    PROPIEDADES EXTRA DEL PRODUCTO INTERNO      =====
             % =========================================================
@@ -1282,7 +1292,7 @@
                             Si $\vec{v}$ es un vector particular únicamente, el teorema no es válido.
                         \end{SmallIndentation}
 
-                    \item Podemos redefinir (o dar una definición alterna) a la magnitud de un vector como:
+                    \item Podemos RedMDefinir (o dar una definición alterna) a la magnitud de un vector como:
                         $\Abs{\vec{a}} = \sqrt{\vec{a} \dotP \vec{a}}$
 
                         % ======== DEMOSTRACION ========
@@ -1295,13 +1305,12 @@
                                 \end{equation*}
                         
                         \end{SmallIndentation}
-                        
-                        En muchas demostraciones, usaremos dicha definición como $\Abs{\vec{a}}^2 = \vec{a} \dotP \vec{a}$.    
                             
+                        En muchas demostraciones, usaremos dicha definición como $\Abs{\vec{a}}^2 = \vec{a} \dotP \vec{a}$.    
 
                 \end{itemize}
 
-    
+   
 
             % =========================================================
             % =============     ANGULO ENTRE VECTORES   ===============
@@ -1318,12 +1327,13 @@
                 \begin{figure}[h]
                     \centering
                     \includegraphics[width=0.45\textwidth]{angleBetweenVectors}
+                    \caption{Ángulo entre Vectores}
                 \end{figure}
 
                 % ======== DEMOSTRACION ========
                 \begin{SmallIndentation}[1em]
                     
-                    Ve la foto, y vamos a ver qué pasa:
+                    Ve la foto, y vamos a ver que pasa:
                     \begin{MultiLineEquation*}{3}
                         \Abs{\vec a - \vec b}^2 
                             &= \Abs{\vec a }^2 + \Abs{\vec b}^2 - 2 \Abs{\vec a } \Abs{\vec b } \cos\theta
@@ -1336,19 +1346,19 @@
                                 && \Remember{Aplicamos la propiedad de linearidad}                                          \\
                         \vec a \dotP \vec a - 2\vec a \dotP \vec b + \vec b \dotP \vec b 
                             &= \vec a \dotP \vec a + \vec b \dotP \vec b - 2\Abs{\vec a}\Abs{\vec b}\cos\theta        
-                                && \Remember{Aplicamos la propiedad de linearidad y conmutativa}                                         \\
+                                && \Remember{Aplicamos la propiedad de conmutativa}                                         \\
                         - 2\vec a \dotP \vec b 
                             &= - 2\Abs{\vec a}\Abs{\vec b}\cos\theta
                                 && \Remember{Cancelamos términos comunes}                                                        
                     \end{MultiLineEquation*}
 
+                    \begin{Definition}[Definición Alterna del Producto Punto con Magnitud]
+                        \begin{equation}
+                            \vec a \dotP \vec b = \Abs{\vec a} \Abs{\vec b} \cos\theta
+                        \end{equation}
+                    \end{Definition}
+
                 \end{SmallIndentation}
-            
-                \begin{Definition}[Definición Alterna del Producto Punto con Magnitud]
-                    \begin{align}
-                        \vec a \dotP \vec b = \Abs{\vec a} \Abs{\vec b} \cos\theta \label{defDot2}
-                    \end{align}
-                \end{Definition}
 
                 La ecuación anterior es una de las más importantes que involucran al producto punto,
                 pues ahora lo relaciona con las magnitudes de los vectores y el ángulo entre ellos.
@@ -1357,6 +1367,7 @@
                 y la que nosotros propusimos como consecuencia, ambas formas son correctas, pero
                 creemos que es más fácil definirla de forma algebráica y luego deducir la forma
                 geométrica}.
+
 
 
                     
@@ -1396,10 +1407,10 @@
             
                 Ahora consideremos la siguiente situación:
 
-                \begin{figure}[H]
+                \begin{wrapfigure}{r}{0.45\textwidth}
                     \centering
-                    \includegraphics[scale=1]{vectorProyection}
-                \end{figure}
+                    \includegraphics[width=0.42\textwidth]{vectorProyection}
+                \end{wrapfigure}
 
                 Tenemos un vector cualquiera $\vec{a}$ y un vector unitario $\hat{v}$ que forman
                 entre ellos un ángulo $\theta$.
@@ -1450,22 +1461,24 @@
 
 
 
+                
                 % =========================================================
                 % =================     DEFINICION   ======================
                 % =========================================================
+                \clearpage
 
-                    \begin{Definition}[Proyección de Vectores] \label{vectorProjection}
+                    \begin{Definition}[Proyección de Vectores]
                         \ForceNewLine
                         Sean $\vec{a}, \hat{v} \in \Reals^3$ con $\hat{v}$ unitario.
                         
                         Definimos a la \textbf{Proyección de $\vec{a}$ sobre $\hat{v}$} como:
                         \begin{align}
-                            proy_{\hat{v}}(\vec{a}) := \Wrap{\vec{a} \dotP \hat{v}} \hat{v} \label{defProj1}
+                            proy_{\hat{v}}(\vec{a}) := \Wrap{\vec{a} \dotP \hat{v}} \hat{v}
                         \end{align}
                         
                         Y a la \textbf{componente normal de $\vec{a}$ sobre $\hat{v}$} como:
                         \begin{align}
-                            \vec{n} := \vec{a} - \Wrap{\vec{a} \dotP \hat{v}} \hat{v} \label{defProj2}
+                            \vec{n} := \vec{a} - \Wrap{\vec{a} \dotP \hat{v}} \hat{v}
                         \end{align}
 
                     \end{Definition}
@@ -1477,6 +1490,7 @@
                     \begin{align}
                         proy_{\vec{v}}(\vec{a}) := \dfrac{\Wrap{\vec{a} \dotP \vec{v}}\vec{v}}{\Abs{\vec{v}}^2}
                     \end{align}
+
 
 
 
@@ -1512,13 +1526,13 @@
 
                 Se queda como ejercicio que demuestres que $\hat{a}$ es realmente unitario :p
                 
+        
 
 
             % =========================================================
             % ================     CAUCHY-SCHWARZ   ===================
             % =========================================================
             \clearpage
-
             \subsection{Desigualdad de Cauchy-Schwarz}
             
                 Esta es una de las desigualdades más poderosas, tanto que es muy usada en álgebra lineal.
@@ -1530,9 +1544,10 @@
                         \abs{\vec{a} \dotP \vec{b}} \leq \Abs{\vec{a}} \Abs{\vec{b}} \label{CS-Inequality}
                     \end{align}
                 \end{Theorem}
-            
-                Es decir, el valor absoluto del producto punto de dos vectores siempre será menor o igual al producto de sus magnitudes.
-            
+
+                Es decir, el valor absoluto del producto punto de dos vectores siempre será menor o igual al producto
+                de sus magnitudes.
+
                 % ======== DEMOSTRACION ========
                 \begin{SmallIndentation}[1em]
                     \textbf{Demostración}:
@@ -1550,17 +1565,18 @@
                     Pero anteriormente deducimos que $\cos \theta = \frac{\vec{a} \cdot \vec{b}}{\Abs{\vec{a}} \Abs{\vec{b}}}$,
                     entonces $\abs{\frac{\vec{a} \cdot \vec{b}}{\Abs{\vec{a}} \Abs{\vec{b}}}} \leq 1$, lo que implica que
                     $\Abs{\vec{a} \dotP \vec{b}} \leq \Abs{\vec{a}} \Abs{\vec{b}}$.
+
+                    Una forma alternativa de esta desigualdad es usando la definición de valor absoluto
+                    (similar al coseno anteriormente):
+                    \begin{equation*}
+                        -\Abs{\vec{a}} \Abs{\vec{b}} 
+                            \leq 
+                                \vec{a} \dotP \vec{b}
+                                    \leq
+                                        \Abs{\vec{a}} \Abs{\vec{b}}   
+                    \end{equation*}
                 
                 \end{SmallIndentation}
-            
-                Una forma alternativa de esta desigualdad es usando la definición de valor absoluto (similar al coseno anteriormente):
-                \begin{equation*}
-                    -\Abs{\vec{a}} \Abs{\vec{b}} 
-                    \leq 
-                    \vec{a} \dotP \vec{b}
-                    \leq
-                    \Abs{\vec{a}} \Abs{\vec{b}}   
-                \end{equation*}
 
 
 
@@ -1570,6 +1586,12 @@
             \clearpage
             \subsection{Desigualdad del Triángulo}
 
+                \begin{wrapfigure}{r}{0.30\textwidth}
+                    \centering
+                    \includegraphics[width=0.25\textwidth]{triangleInequality.png}
+                    \label{Con dibujitos :3}
+                \end{wrapfigure}
+            
                 Es muy intuitiva de comprender, dice que la magnitud de la suma de dos vectores es menor o
                 igual a la suma de sus magnitudes. Formalmente:
                 
@@ -1581,11 +1603,6 @@
                     \end{align*}
                 \end{Theorem}
             
-                \begin{figure}[H]
-                    \centering
-                    \includegraphics[scale=1]{triangleInequality.png}
-                \end{figure}
-            
                 Vemos que la distancia más corta entre el origen $O$ y el punto $B$ tiene que ser
                 un segmento de recta, justamente $\Abs{\vec{a} + \vec{b}}$.
 
@@ -1593,8 +1610,7 @@
                 recorrido una mayor distancia, que es $\Abs{\vec{a}} + \Abs{\vec{b}}$
 
                 Pero claro, eso no es una demostración formal. Aquí viene la chida:
-                
-                
+
                 % ======== DEMOSTRACION ========
                 \begin{SmallIndentation}[1em]
                     \textbf{Demostración:}
@@ -1606,236 +1622,763 @@
                     pasar a producto punto sin que haya raíces:
                     \begin{align*}
                         \Abs{\vec{a}+\vec{b}}^2
-                        &= \Wrap{\vec{a}+\vec{b}} \dotP \Wrap{\vec{a}+\vec{b}} &&\mbox{Definición de magnitud}\\
-                        &= \vec{a} \dotP \vec{a} + 2\textcolor{blue}{\vec{a} \dotP \vec{b}} + \vec{b} \dotP \vec{b} &&\mbox{Propiedad distributiva}\\
-                        &\textcolor{blue}{\leq} \;\; \vec{a} \dotP \vec{a} + 2\textcolor{blue}{\Abs{\vec{a}}\Abs{\vec{b}}} + \vec{b} \dotP \vec{b} &&\textcolor{blue}{\mbox{Desigualdad de Cauchy-Schwarz}}\\
-                        &= \Abs{\vec{a}}^2 + 2\Abs{\vec{a}}\Abs{\vec{b}} + \Abs{\vec{b}}^2 &&\mbox{Definición de magnitud a la inversa}\\
-                        &= \Wrap{\Abs{\vec{a}} + \Abs{\vec{b}}}^2 &&\mbox{Factorizamos}
+                            &= \Wrap{\vec{a} + \vec{b}} \dotP \Wrap{\vec{a} + \vec{b}}
+                                &&\Remember{Definición de magnitud}                                     \\
+                            &= \vec{a} \dotP \vec{a} 
+                              + 2 \textcolor{DeepPurpleMD}{\vec{a} \dotP \vec{b}}
+                              + \vec{b} \dotP \vec{b} 
+                                &&\Remember{Propiedad distributiva}                                     \\
+                            &\textcolor{DeepPurpleMD}{\leq} \;\; \vec{a} \dotP \vec{a}
+                              + 2\textcolor{DeepPurpleMD}{\Abs{\vec{a}}\Abs{\vec{b}}} 
+                              + \vec{b} \dotP \vec{b}
+                                &&\textcolor{DeepPurpleMD}{\Remember{Desigualdad de Cauchy-Schwarz}}    \\
+                            &= \Abs{\vec{a}}^2 + 2\Abs{\vec{a}} \Abs{\vec{b}} + \Abs{\vec{b}}^2 
+                                &&\Remember{Definición de magnitud a la inversa}                        \\
+                            &= \Wrap{\Abs{\vec{a}} + \Abs{\vec{b}}}^2 
+                                &&\Remember{Factorizamos}
                     \end{align*}
                     
-                    De esa forma obtenemos $\Abs{\vec{a}+\vec{b}}^2 \leq \Wrap{\Abs{\vec{a}} + \Abs{\vec{b}}}^2$. Como todas las magnitudes son no negativas, podemos sacar raíz cuadrada a ambos lados y concluir que $\Abs{\vec{a}+\vec{b}} \leq \Abs{\vec{a}} + \Abs{\vec{b}}$.
+                    De esa forma obtenemos $\Abs{\vec{a}+\vec{b}}^2 \leq \Wrap{\Abs{\vec{a}} + \Abs{\vec{b}}}^2$.
+
+                    Como todas las magnitudes son no negativas, podemos sacar raíz cuadrada a ambos lados y
+                    concluir que $\Abs{\vec{a}+\vec{b}} \leq \Abs{\vec{a}} + \Abs{\vec{b}}$.
+
                 \end{SmallIndentation}
             
-
-
-
-
-
-
-
-
         
         % =========================================================
         % =================     PRODUCTO CRUZ   ===================
         % =========================================================
         \clearpage
-        \section{Producto cruz}
+        \section{Producto Cruz}
         
-            \subsection{Definición e ideas}
-        
-            Es el segundo tipo de producto que existe entre los vectores. Este sí es un producto \Quote{genuino} de vectores, porque el resultado ahora sí es otro vector. Sin embargo es un poco raro en comparación al producto punto, pues definirlo directamente de forma algebráica sería complicado y poco intuitivo. Además de que es obligatorio que trabajemos en $\Reals^3$ (porque está muy arraigado al espacio en 3D), pues en $\Reals^2$ no tiene sentido y en dimensiones superiores es bastante complicado generalizarlo.
+            Es el segundo tipo de producto que existe entre los vectores.
+
+            Este sí es un producto \Quote{genuino} de vectores, porque el resultado ahora sí es otro vector. 
+            Sin embargo es un poco raro en comparación al producto punto, pues definirlo directamente de forma
+            algebráica sería complicado y poco intuitivo.
+
+            Además de que es obligatorio que trabajemos en $\Reals^3$ (porque está muy arraigado al espacio en 3D),
+            pues en $\Reals^2$ no tiene sentido y en dimensiones superiores es bastante complicado generalizarlo.
             
             Dicho lo anterior, tratemos de definirlo primero de forma geométrica:
             
             % =========================================================
             % ===================     DEFINICION   ====================
             % =========================================================
-            
-            \begin{Definition}[Producto cruz]
-                Sean $\vec{a}, \vec{b} \in \Reals^3$. Definimos al \textbf{producto cruz} o \textbf{producto vectorial} de $\vec{a}$ con $\vec{b}$ como:
+            \subsection{Definición Geometríca}
+
+                \ForceNewLine
+                Sean $\vec{a}, \vec{b} \in \Reals^3$. Definimos al \textbf{producto cruz} o
+                \textbf{producto vectorial} de $\vec{a}$ con $\vec{b}$ como:
                 \begin{align}
                     \vec{c} &= \vec{a} \times \vec{b} \label{defCross}
                 \end{align}
-                Donde: \begin{itemize}\setlength\itemsep{0em}
-                    \item $\Abs{\vec{c}}$ es el área del paralelogramo formado por los vectores $\vec{a}$ y $\vec{b}$:
-                    \begin{figure}[H]
-                        \centering
-                        \includegraphics[scale=1.2]{parallelogram.png}
-                    \end{figure}
-                    De geometría y trigonometría sabemos que dicha área es $\Abs{\vec{c}}=\Abs{\vec{a}} \Abs{\vec{b}} \sen \theta$, donde $0 \leq \theta \leq \pi$.
-                    
-                    \item La dirección de $\vec{c}$, es decir, $\hat{c}$, es perpendicular tanto a $\vec{a}$ como a $\vec{b}$, y de forma arbitraria vamos a proponer que se siga la famosa \textbf{regla de la mano derecha}, porque justamente si en tu mano derecha el índice lo apuntas en dirección de $\vec{a}$ y el dedo medio en dirección de $\vec{b}$, tu pulgar apuntará en la dirección de $\hat{c}$.
-                    \begin{figure}[H]
-                        \centering
-                        \includegraphics[scale=0.2]{rightHandRule.png}
-                    \end{figure}
-                \end{itemize}
-            \end{Definition}
+
+                Donde: 
+
+                \begin{minipage}{0.30\textwidth}
+                    \includegraphics[width=0.60\textwidth]{parallelogram}
+                \end{minipage}
+                \begin{minipage}[t]{.65\textwidth}
+
+                    $\Abs{\vec{c}}$ es el área del paralelogramo formado por los vectores $\vec{a}$ y $\vec{b}$.
+                    De geometría y trigonometría sabemos que dicha área es 
+                    $\Abs{\vec{c}} = \Abs{\vec{a}} \Abs{\vec{b}} \sin \theta$, donde $0 \leq \theta \leq \pi$.
+
+                \end{minipage}
+
+                \vspace{2em}
+                
+                \begin{minipage}{0.30\textwidth}
+                    \includegraphics[width=0.80\textwidth]{rightHandRule}
+                \end{minipage}
+                \begin{minipage}[t]{0.65\textwidth}
+                    La dirección de $\vec{c}$, es decir, $\hat{c}$, es perpendicular tanto a $\vec{a}$ como a $\vec{b}$,
+                    y de forma arbitraria vamos a proponer que se siga la famosa \textbf{regla de la mano derecha},
+                    porque justamente en tu mano derecha el índice lo apuntas en dirección de $\vec{a}$ y el dedo medio
+                    en dirección de $\vec{b}$, tu pulgar apuntará en la dirección de $\hat{c}$.
+                \end{minipage}
         
-            Para hacer que la definición anterior sea verdaderamente útil, calculemos los productos cruz de los vectores unitarios canónicos $\hati, \hatj, \hatk$:
-            
-            Si dibujamos los vectores $\hati$ y $\hatj$, vemos que el paralelogramo que forman es justamente un cuadrado de área 1, pues el lado mide 1:
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale=0.6]{unitVectors.png}
-            \end{figure}
-        
-            De esta forma, $\Abs{\hati \times \hatj} = 1$. También vemos que cualquier dirección perpendicular a $\hati$ y a $\hatj$ simultáneamente tiene que apuntar a fuerzas hacia $\pm \hatk$. Pero por la regla de la mano derecha, nos quedamos con la positiva. Por lo tanto: $\hati \times \hatj = \hatk$. De forma similar tomando los otros posibles pares de vectores unitarios canónicos, obtenemos las siguientes relaciones:
-            \begin{align}
-                \hati \times \hatj = \hatk \MegaSpace , \MegaSpace \hatj \times \hatk = \hati \MegaSpace , \MegaSpace \hatk \times \hati = \hatj
-            \end{align}
-            
-            Y también tenemos que:
-            \begin{align}
-                \hatj \times \hati = -\hatk \MegaSpace &, \MegaSpace \hatk \times \hatj = -\hati \MegaSpace &, \MegaSpace \hati \times \hatk = -\hatj\\
-                \hati \times \hati = \vec{0} \MegaSpace &, \MegaSpace \hatj \times \hatj = \vec{0} \MegaSpace &, \MegaSpace \hatk \times \hatk = \vec{0}
-            \end{align}
-            
-            Ahora veamos algunas propiedades básicas del producto cruz para poder deducir una fórmula en términos de las componentes de los vectores:
-            
+
             % =========================================================
-            % =================     PROPIEDADES   =====================
+            % ===========    VECTORES UNITARIOS    ====================
             % =========================================================
-            
-            \begin{Theorem}
-                Tenemos las siguientes propiedades, donde $\vec{a}, \vec{b}, \vec{c} \in \Reals^3$ y $k \in \Reals$:
-                \begin{itemize}\setlength\itemsep{0em}
-                    \item \textbf{Anticonmutatividad:} $\vec{a} \times \vec{b} = -\vec{b} \times \vec{a}$.
-                    
-                    \item $\vec{a} \times \vec{a} = \vec{0} \times \vec{a} = \vec{0}$.
-                    
-                    \item \textbf{Distributiva por la izquierda:} $\vec{a} \times \Wrap{\vec{b}+\vec{c}} = \vec{a} \times \vec{b} + \vec{a} \times \vec{c}$.
-                    
-                    \item $k\Wrap{\vec{a} \times \vec{b}} = \Wrap{k \vec{a}} \times \vec{b} = \vec{a} \times \Wrap{k \vec{b}}$.
-                    
-                    \item \textbf{Distributiva por la derecha:} $\Wrap{\vec{a}+\vec{b}} \times \vec{c} = \vec{a} \times \vec{c} + \vec{b} \times \vec{c}$.
-                \end{itemize}
-            \end{Theorem}
-        
-            % =========================================================
-            % =================     DEMOSTRACION   ====================
-            % =========================================================
-        
-            \begin{SmallIndentation}[1em]
-                \textbf{Demostración:}
-                \begin{itemize}\setlength\itemsep{0em}
-                    \item Por definición, $\Abs{\vec{a} \times \vec{b}} = \Abs{\vec{a}} \Abs{\vec{b}} \sen \theta$. Como $\theta$ es en ángulo tanto \emph{entre $\vec{a}$ y $\vec{b}$} como \emph{entre $\vec{b}$ y $\vec{a}$}, entonces $\Abs{\vec{a} \times \vec{b}} = \Abs{\vec{b} \times \vec{a}}$.
-                    
-                    Ahora, usando regla de la mano derecha, si el dedo índice apunta en dirección de $\hat{a}$ y el medio en dirección de $\hat{b}$, el pulgar apuntará en dirección de $\vec{a} \times \vec{b}$. Por lo que si ahora el dedo índice apunta en dirección de $\hat{b}$ y el medio en dirección de $\hat{a}$, es obvio que el pulgar apuntará en dirección contraria a la que apuntaba antes.
-                    
-                    Concluyendo, $\vec{a} \times \vec{b} = -\vec{b} \times \vec{a}$.
-                    
-                    \item El ángulo que forma un vector con él mismo obviamente es de $0^\circ$. Por lo tanto $\Abs{\vec{a} \times \vec{a}} = \Abs{\vec{a}}^2 \sen 0^\circ = 0$, y $\vec{a} \times \vec{a} = \vec{0}$.
-                    
-                    También tenemos que $\Abs{\vec{0} \times \vec{a}} = \Abs{\vec{0}} \Abs{\vec{a}} \sen \theta=0$, por lo tanto $\vec{0} \times \vec{a} = \vec{0}$.
-                    
-                    \item A pesar de su simplicidad para entender, la demostración no es tan sencilla, pues involucra el uso de planos y proyecciones en ellos. Supongamos que $\vec{a} \neq \vec{0}$, pues si lo fuera la igualdad se cumple trivialmente.
-                    
-                    \item Veamos que $\Wrap{k \vec{a}} \times \vec{b} = k\Wrap{\vec{a} \times \vec{b}}$. Si $k=0$, ambos lados de la ecuación son el cero vector. En caso contrario, sea $\theta$ el ángulo entre $\vec{a}$ y $\vec{b}$.
-                    
-                    Si $k>0$, la dirección de $\Wrap{k \vec{a}} \times \vec{b}$ es la misma que la de $\vec{a} \times \vec{b}$ y la de $k\Wrap{\vec{a} \times \vec{b}}$. El ángulo entre $k\vec{a}$ y $\vec{b}$ también es el mismo que entre $\vec{a}$ y $\vec{b}$. Entonces:
-                    \begin{align*}
-                        \Abs{(k\vec{a}) \times \vec{b}} &= \Abs{k\vec{a}} \Abs{\vec{b}} \sen \theta &&\mbox{Definición de producto cruz}\\
-                        &= k \Abs{\vec{a}} \Abs{\vec{b}} \sen \theta &&\mbox{Propiedad de la magnitud}\\
-                        &= k \Abs{\vec{a} \times \vec{b}} &&\mbox{Definición de producto cruz}\\
-                        &= \Abs{k\Wrap{\vec{a} \times \vec{b}}} && \mbox{Propiedad de la magnitud}
-                    \end{align*}
-                    Por lo tanto, en este caso $\Wrap{k\vec{a}} \times \vec{b} = k\Wrap{\vec{a} \times \vec{b}}$.
-                    
-                    Si $k<0$, la dirección de $\Wrap{k\vec{a}} \times \vec{b}$ es igual que la de $\Wrap{-\vec{a}} \times \vec{b}$ y que la de $-\Wrap{\vec{a} \times \vec{b}}$, por ello es la misma que la de $k\Wrap{\vec{a} \times \vec{b}}$. Entonces el ángulo entre $k\vec{a}$ y $\vec{b}$ es el suplementario del que existe entre $\vec{a}$ y $\vec{b}$, es decir, $\pi-\theta$. Por lo tanto:
-                    \begin{align*}
-                        \Abs{(k\vec{a}) \times \vec{b}} &= \Abs{k\vec{a}} \Abs{\vec{b}} \sen(\pi-\theta) &&\mbox{Definición de producto cruz}\\
-                        &= \abs{k} \Abs{\vec{a}} \Abs{\vec{b}} \sen(\pi-\theta) &&\mbox{Propiedad de la magnitud}\\
-                        &= \abs{k} \Abs{\vec{a}} \Abs{\vec{b}} \sen \theta &&\mbox{Identidad trigonométrica}\\
-                        &= \abs{k} \Abs{\vec{a} \times \vec{b}} && \mbox{Definición de producto cruz}\\
-                        &= \Abs{k\Wrap{\vec{a} \times \vec{b}}} && \mbox{Propiedad de la magnitud}
-                    \end{align*}
-                    Por lo tanto, también en este caso $\Wrap{k\vec{a}} \times \vec{b} = k\Wrap{\vec{a} \times \vec{b}}$.
-                    
-                    Se queda como ejercicio ver que $k\Wrap{\vec{a} \times \vec{b}} = \vec{a} \times \Wrap{k \vec{b}}$.
-                    
-                    \item Tenemos que:
-                    \begin{align*}
-                        \Wrap{\vec{a} + \vec{b}} \times \vec{c} &= -\vec{c} \times \Wrap{\vec{a} + \vec{b}} &&\mbox{Anticonmutatividad}\\
-                        &= -\Wrap{\vec{c} \times \vec{a} + \vec{c} \times \vec{b}} &&\mbox{Distributiva por la izquierda}\\
-                        &= -\Wrap{-\vec{a} \times \vec{c} - \vec{b} \times \vec{c}} &&\mbox{Anticonmutatividad}\\
-                        &= \vec{a} \times \vec{c} + \vec{b} \times \vec{c}
-                    \end{align*}
-                \end{itemize}
-            \end{SmallIndentation}
-        
-            Hay que tener cuidado, porque por lo general el producto cruz \textbf{no es asociativo}, es decir, $\vec{a} \times \Wrap{\vec{b} \times \vec{c}} \neq \Wrap{\vec{a} \times \Vector{b}} \times \vec{c}$; por lo tanto, la expresión $\vec{a} \times \vec{b} \times \vec{c}$ es ambigua si no se especifica en qué orden se deben evaluar.
-            
-            Ya con eso podemos dar la definición algebráica del producto cruz (la presentaremos como un teorema):
-            
-            % =========================================================
-            % ===================     DEFINICION   ====================
-            % =========================================================
-            
-            \begin{Theorem}[Definición algebráica de producto cruz]
-                Sean $\vec{a}, \vec{b} \in \Reals^3$ dados por sus coordenadas: $\vec{a}=a_1\hati + a_2\hatj + a_3\hatk$ y $\vec{b}=b_1\hati + b_2\hatj + b_3\hatk$. Entonces:
-                \begin{align}
-                    \vec{a} \times \vec{b} &=
-                    \begin{vmatrix}
-                        \hati & \hatj & \hatk\\
-                        a_1 & a_2 & a_3\\
-                        b_1 & b_2 & b_3
-                    \end{vmatrix}
-                    = \begin{vmatrix}
-                        a_2 & a_3\\
-                        b_2 & b_3
-                    \end{vmatrix}\hati - 
-                    \begin{vmatrix}
-                        a_1 & a_3\\
-                        b_1 & b_3
-                    \end{vmatrix}\hatj + 
-                    \begin{vmatrix}
-                        a_1 & a_2\\
-                        b_1 & b_2
-                    \end{vmatrix}\hatk\\
-                    &= (a_2b_3-a_3b_2)\hati + (a_3b_1-a_1b_3)\hatj + (a_1b_2-a_2b_1)\hatk
-                \end{align}
-            \end{Theorem}
-        
-            % =========================================================
-            % ==================     DEMOSTRACION   ===================
-            % =========================================================
-            
-            \begin{SmallIndentation}
-                \textbf{Demostración:} usando todas las propiedades anteriores, tenemos que (esto se pone intenso):
-                \begin{align*}
-                    \vec{a} \times \vec{b} &= \Wrap{a_1\hati + a_2\hatj + a_3\hatk} \times \Wrap{b_1\hati + b_2\hatj + b_3\hatk}\\
-                    &= \textcolor{blue}{\Wrap{a_1\hati + a_2\hatj + a_3\hatk} \times \Wrap{b_1\hati}}
-                    + \textcolor{red}{\Wrap{a_1\hati + a_2\hatj + a_3\hatk} \times \Wrap{b_2\hatj}}
-                    + \textcolor{brown}{\Wrap{a_1\hati + a_2\hatj + a_3\hatk} \times \Wrap{b_3\hatk}}\\
-                    &= \textcolor{blue}{\cancel{a_1b_1\hati\times\hati} + a_2b_1\hatj\times\hati + a_3b_1\hatk\times\hati}
-                    + \textcolor{red}{a_1b_2\hati\times\hatj + \cancel{a_2b_2\hatj\times\hatj} + a_3b_2\hatk\times\hatj}
-                    + \textcolor{brown}{a_1b_3\hati\times\hatk + a_2b_3\hatj\times\hatk + \cancel{a_3b_3\hatk\times\hatk}}\\
-                    &= -a_2b_1\hatk + a_3b_1\hatj + a_1b_2\hatk - a_3b_2\hati - a_1b_3\hatj + a_2b_3\hati\\
-                    &= (a_2b_3 - a_3b_2)\hati - (a_1b_3 - a_3b_1)\hatj + (a_1b_2 - a_2b_1)\hatk\\
-                    &= \begin{vmatrix}
-                        a_2 & a_3\\
-                        b_2 & b_3
-                    \end{vmatrix}\hati - 
-                    \begin{vmatrix}
-                        a_1 & a_3\\
-                        b_1 & b_3
-                    \end{vmatrix}\hatj + 
-                    \begin{vmatrix}
-                        a_1 & a_2\\
-                        b_1 & b_2
-                    \end{vmatrix}\hatk\\
-                    &= \begin{vmatrix}
-                        \hati & \hatj & \hatk\\
-                        a_1 & a_2 & a_3\\
-                        b_1 & b_2 & b_3
-                    \end{vmatrix}
-                \end{align*}
-            \end{SmallIndentation}
-        
-            Lo ideal es simplemente memorizar la definición con el determinante, ya que las coordenadas de forma explícita no están muy sencillas. ¿Y ya viste por qué fue mejor comenzar con la definición geométrica? Haber definido al producto cruz por medio de sus coordenadas no hubiera sido nada intuitivo.
-            
-            Vemos también que el producto cruz nos permite calcular el ángulo entre vectores, pues:
-            \begin{align}
-                \sen \theta &= \dfrac{\Abs{\vec{a} \times \vec{b}}}{\Abs{\vec{a}} \Abs{\vec{b}}} \label{angleBetweenVectorsCross}
-            \end{align}
-            
-            Sin embargo, puede que no obtengamos el ángulo correcto, porque el rango de $\arcsen$ cuando su argumento es positivo es de $0$ a $\frac{\pi}{2}$. Por eso es un poco más conveniente usar el producto punto para esto.
-            
-            Aunque podemos decir que $\vec{a} \times \vec{b} = \vec{0}$ si y solo si $\vec{a}$ es paralelo a $\Vector{b}$, es decir, forman un ángulo de $0^\circ$.
-        
             \clearpage
+            \subsection{Vectores Unitarios y P. Cruz}
+
+                Para hacer que la definición anterior sea verdaderamente útil, calculemos los
+                productos cruz de los vectores unitarios canónicos $\hati, \hatj, \hatk$.
+                
+                Si dibujamos los vectores $\hati$ y $\hatj$, vemos que el paralelogramo que
+                forman es justamente un cuadrado de área 1, pues el lado mide 1:
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.60\textwidth]{unitVectors}
+                \end{figure}
+            
+                De esta forma, $\abs{\hati \times \hatj} = 1$. También vemos que cualquier
+                dirección perpendicular a $\hati$ y a $\hatj$ simultáneamente tiene que apuntar
+                a fuerzas hacia $\pm \hatk$. Pero por la regla de la mano derecha, nos quedamos con
+                la positiva.
+
+                Por lo tanto: $\hati \times \hatj = \hatk$. De forma similar tomando los otros
+                posibles pares de vectores unitarios canónicos, obtenemos las siguientes relaciones:
+
+                % ==================================================
+                % ===========    FORMULAS UTILES    ================
+                % ==================================================
+                \vspace{1.5em}
+                \textbf{Definiciones usando Producto Cruz}
+                    \begin{align*}
+                        \textcolor{Teal700MD}
+                        {\hati = \hatj \times \hatk}
+                            \MegaSpace \MegaSpace \Space
+                        \textcolor{Indigo700MD}
+                        {\hatj = \hatk \times \hati}
+                            \MegaSpace \MegaSpace \Space
+                        \textcolor{Amber900MD}
+                        {\hatk = \hati \times \hatj}
+                    \end{align*}
+
+                % ==================================================
+                % ===========    CREANDO VECTORES CERO     =========
+                % ==================================================
+                \textbf{Creando Vectores Cero}
+                    \begin{align*}
+                        \textcolor{RedMD}
+                            {\hat{0}}
+                            \;
+                        \textcolor{Teal700MD}
+                            { = \hati \times \hati}
+                            \;
+                        \textcolor{Indigo700MD}
+                            { = \hatj \times \hatj}
+                            \;
+                        \textcolor{Amber900MD}
+                            { = \hatk \times \hatk}
+                    \end{align*}
+
+                % ==================================================
+                % ===========      COSAS RARAS      ================
+                % ==================================================
+                \textbf{Cosas Raras}
+                    \begin{align*}
+                        \textcolor{Teal700MD}
+                        {-\hati = \hatk \times \hatj}
+                            \MegaSpace \MegaSpace
+                        \textcolor{Indigo700MD}
+                        {-\hatj = \hati \times \hatk}
+                            \MegaSpace \MegaSpace
+                        \textcolor{Amber900MD}
+                        {-\hatk = \hatj \times \hati}
+                    \end{align*}
+                    
+
+
+            % =========================================================
+            % ===========    PROPIEDADES GENERALES   ==================
+            % =========================================================
+            \clearpage
+            \subsection{Propiedades Generales}
+
+                Ahora veamos algunas propiedades básicas del producto cruz para poder deducir una fórmula
+                en términos de las componentes de los vectores:
+                
+                Tenemos las siguientes propiedades, donde $\vec{a}, \vec{b}, \vec{c} \in \Reals^3$ y $k \in \Reals$:
+                \begin{itemize}
+
+                    \item
+                        \textbf{Anticonmutatividad:}
+                            $\vec{a} \times \vec{b} = -\vec{b} \times \vec{a}$
+
+                            % ======== DEMOSTRACION ========
+                            \begin{SmallIndentation}[1em]
+                                \textbf{Demostración}:
+
+                                \begin{SmallIndentation}[0.5em]
+                                    
+                                    \textbf{Magnitud:}
+
+                                    Por definición, $\Abs{\vec{a} \times \vec{b}} = \Abs{\vec{a}} \Abs{\vec{b}} \sin \theta$.
+                                    Como $\theta$ es en ángulo tanto \emph{entre $\vec{a}$ y $\vec{b}$} como 
+                                    \emph{entre $\vec{b}$ y $\vec{a}$}, entonces 
+                                    $\Abs{\vec{a} \times \vec{b}} = \Abs{\vec{b} \times \vec{a}}$.
+                            
+                                    \textbf{Sentido:}
+
+                                    Ahora, usando regla de la mano derecha, si el dedo índice apunta en dirección
+                                    de $\hat{a}$ y el medio en dirección de $\hat{b}$, el pulgar apuntará en dirección
+                                    de $\vec{a} \times \vec{b}$.
+                                    Por lo que si ahora el dedo índice apunta en dirección de $\hat{b}$ y el medio en
+                                    dirección de $\hat{a}$, es obvio que el pulgar apuntará en dirección contraria a la
+                                    que apuntaba antes.
+                                
+                                \end{SmallIndentation}
+                        
+                                Concluyendo, $\vec{a} \times \vec{b} = -\vec{b} \times \vec{a}$.
+                            
+                            \end{SmallIndentation}
+                                
+                    
+                    \item \textbf{Distributiva por la Izquierda:} 
+                        $\vec{a} \times \Wrap{\vec{b}+\vec{c}} = \vec{a} \times \vec{b} + \vec{a} \times \vec{c}$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+                            
+                            El ángulo que forma un vector con él mismo obviamente es de $0^\circ$.
+                            Por lo tanto $\Abs{\vec{a} \times \vec{a}} = \Abs{\vec{a}}^2 \sen 0^\circ = 0$,
+                            y $\vec{a} \times \vec{a} = \vec{0}$.
+                    
+                            También tenemos que $\Abs{\vec{0} \times \vec{a}} 
+                            = \Abs{\vec{0}} \Abs{\vec{a}} \sen \theta=0$,
+                            por lo tanto $\vec{0} \times \vec{a} = \vec{0}$.
+                        
+                        \end{SmallIndentation}
+                            
+                    
+                    \item \textbf{Distributiva por la Derecha:}
+                        $\Wrap{\vec{a}+\vec{b}} \times \vec{c} = \vec{a} \times \vec{c} + \vec{b} \times \vec{c}$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+                            
+                            A pesar de su simplicidad para entender, la demostración no es tan sencilla,
+                            pues involucra el uso de planos y proyecciones en ellos. Supongamos que
+                            $\vec{a} \neq \vec{0}$, pues si lo fuera la igualdad se cumple trivialmente.
+                        
+                        \end{SmallIndentation}
+
+                    \clearpage
+                    
+                    \item $k\Wrap{\vec{a} \times \vec{b}} = \Wrap{k \vec{a}} \times \vec{b} = \vec{a} \times \Wrap{k \vec{b}}$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+                            
+                            Veamos que $\Wrap{k \vec{a}} \times \vec{b} = k\Wrap{\vec{a} \times \vec{b}}$.
+                            Si $k = 0$, ambos lados de la ecuación son el cero vector.
+                            En caso contrario, sea $\theta$ el ángulo entre $\vec{a}$ y $\vec{b}$.
+                        
+                            Si $k>0$, la dirección de $\Wrap{k \vec{a}} \times \vec{b}$ es la misma que la de
+                            $\vec{a} \times \vec{b}$ y la de $k\Wrap{\vec{a} \times \vec{b}}$.
+                            El ángulo entre $k\vec{a}$ y $\vec{b}$ también es el mismo que entre $\vec{a}$ y $\vec{b}$.
+
+                            Entonces:
+                            \begin{align*}
+                                \Abs{(k\vec{a}) \times \vec{b}} 
+                                    &= \Abs{k\vec{a}} \Abs{\vec{b}}  \sin \theta    && \Remember{Definición de producto cruz}   \\
+                                    &= k \Abs{\vec{a}} \Abs{\vec{b}} \sin \theta    && \Remember{Propiedad de la magnitud}      \\
+                                    &= k \Abs{\vec{a} \times \vec{b}}               && \Remember{Definición de producto cruz}   \\
+                                    &= \Abs{k\Wrap{\vec{a} \times \vec{b}}}         && \Remember{Propiedad de la magnitud}
+                            \end{align*}
+                            Por lo tanto, en este caso $\Wrap{k\vec{a}} \times \vec{b} = k\Wrap{\vec{a} \times \vec{b}}$.
+                            
+                            Si $k < 0$, la dirección de $\Wrap{k\vec{a}} \times \vec{b}$ es igual que la de 
+                            $\Wrap{-\vec{a}} \times \vec{b}$ y que la de $-\Wrap{\vec{a} \times \vec{b}}$, por ello
+                            es la misma que la de $k\Wrap{\vec{a} \times \vec{b}}$.
+
+                            Entonces el ángulo entre $k\vec{a}$ y $\vec{b}$ es el suplementario del que existe entre
+                            $\vec{a}$ y $\vec{b}$, es decir, $\pi-\theta$.
+
+                            Por lo tanto:
+                            \begin{align*}
+                                \Abs{(k\vec{a}) \times \vec{b}} 
+                                    &= \Abs{k\vec{a}} \Abs{\vec{b}} \Sin{\pi-\theta}        &&\Remember{Definición de producto cruz}    \\
+                                    &= \abs{k} \Abs{\vec{a}} \Abs{\vec{b}} \Sin{\pi-\theta} &&\Remember{Propiedad de la magnitud}       \\
+                                    &= \abs{k} \Abs{\vec{a}} \Abs{\vec{b}} \sin \theta      &&\Remember{Identidad trigonométrica}       \\
+                                    &= \abs{k} \Abs{\vec{a} \times \vec{b}}                 &&\Remember{Definición de producto cruz}    \\
+                                    &= \Abs{k\Wrap{\vec{a} \times \vec{b}}}                 &&\Remember{Propiedad de la magnitud}
+                            \end{align*}
+                            Por lo tanto, también en este caso tenemos que:
+                            $\Wrap{k\vec{a}} \times \vec{b} = k\Wrap{\vec{a} \times \vec{b}}$.
+                            
+                            Se queda como ejercicio ver que $k\Wrap{\vec{a} \times \vec{b}} = \vec{a} \times \Wrap{k \vec{b}}$
+                                
+                        \end{SmallIndentation}
+                    
+                    \item $\vec{a} \times \vec{a} = \vec{0}$
+
+                \end{itemize}
+            
+                Hay que tener cuidado, porque por lo general el producto cruz \textbf{no es asociativo},
+                es decir, $\vec{a} \times \Wrap{\vec{b} \times \vec{c}} \neq \Wrap{\vec{a} \times \Vector{b}} \times \vec{c}$;
+                por lo tanto, la expresión $\vec{a} \times \vec{b} \times \vec{c}$ es ambigua si no se especifica en qué orden
+                se deben evaluar.
+                
+
+
+
+
+            % =========================================================
+            % ===========    DEFINICION ALGEBRAICA   ==================
+            % =========================================================
+            \clearpage
+            \subsection{Definición Algebráica}
+
+
+                Ya con todo lo que hemos visto podemos dar la definición algebráica del producto
+                cruz (la presentaremos como un teorema):
+
+                % =========================================================
+                % ===================     DEFINICION   ====================
+                % =========================================================
+                \vspace{1em}
+                \begin{Theorem}[Definición Algebráica del Producto Cruz]
+                    \ForceNewLine
+                    Sean $\vec{a}, \vec{b} \in \Reals^3$ dados por sus coordenadas:
+                    $\vec{a}=a_1\hati + a_2\hatj + a_3\hatk$ y $\vec{b} = b_1\hati + b_2\hatj + b_3\hatk$.
+
+                    Entonces:
+                    \begin{align}
+                        \vec{a} \times \vec{b} 
+                            &= 
+                                \lVector{\hati & \hatj & \hatk \\ a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3}           \\
+                            &= 
+                                + \lVector{a_2 & a_3 \\ b_2 & b_3} \hati
+                                - \lVector{a_1 & a_3 \\ b_1 & b_3} \hatj
+                                + \lVector{a_1 & a_2 \\ b_1 & b_2} \hatk                                        \\
+                            &= 
+                                (a_2b_3 - a_3b_2)\hati + (a_3b_1 - a_1b_3)\hatj + (a_1b_2 - a_2b_1)\hatk
+                    \end{align}
+                \end{Theorem}
+            
+                    % ============================================
+                    % =============     DEMOSTRACION   ===========
+                    % ============================================
+                    \begin{SmallIndentation}
+                        \textbf{Demostración:}
+
+                        Usando todas las propiedades anteriores, tenemos que (esto se pone intenso):
+                        \begin{align*}
+                            \vec{a} \times \vec{b} 
+                                &= \Wrap{a_1\hati + a_2\hatj + a_3\hatk} \times \Wrap{b_1\hati + b_2\hatj + b_3\hatk}                       \\
+                                &= 
+                                      \textcolor{Blue700MD} {\Wrap{a_1\hati + a_2\hatj + a_3\hatk} \times \Wrap{b_1\hati}}
+                                    + \textcolor{Red700MD}  {\Wrap{a_1\hati + a_2\hatj + a_3\hatk} \times \Wrap{b_2\hatj}}
+                                    + \textcolor{Amber700MD}{\Wrap{a_1\hati + a_2\hatj + a_3\hatk} \times \Wrap{b_3\hatk}}                  \\
+                                &= 
+                                      \textcolor{Blue700MD} {\Wrap{a_1\hati + (a_2\hatj + a_3\hatk)} \times \Wrap{b_1\hati}}
+                                    + \textcolor{Red700MD}  {\Wrap{a_2\hati + (a_1\hat1 + a_3\hatk)} \times \Wrap{b_2\hatj}}
+                                    + \textcolor{Amber700MD}{\Wrap{a_3\hati + (a_1\hat1 + a_2\hatj)} \times \Wrap{b_3\hatk}}                \\
+                                &= 
+                                            \textcolor{Blue700MD} {\cancel{a_1b_1\hati\times\hati} + (a_2\hatj + a_3\hatk) \times b_1\hati}
+                                    \; + \; \textcolor{Red700MD}  {\cancel{a_2b_2\hatj\times\hatj} + (a_1\hati + a_3\hatk) \times b_2\hatj}
+                                    \; + \; \textcolor{Amber700MD}{\cancel{a_3b_3\hatk\times\hatk} + (a_1\hati + a_2\hatj) \times b_3\hatk} \\
+                                &=  
+                                            (a_2\hatj + a_3\hatk) \times b_1\hati 
+                                    \; + \; (a_1\hati + a_3\hatk) \times b_2\hatj 
+                                    \; + \; (a_1\hati + a_2\hatj) \times b_3\hatk                                                           \\
+                                &=  
+                                      a_2b_1(\hatj \times \hati) +  a_3b_1(\hatk \times \hati) 
+                                    + a_1b_2(\hati \times \hatj) +  a_3b_2(\hatk \times \hatj) 
+                                    + a_1b_3(\hati \times \hatk) +  a_2b_3(\hatj \times \hatk)                                              \\
+                                &=  -a_2b_1\hatk + a_3b_1\hatj + a_1b_2\hatk - a_3b_2\hati - a_1b_3\hatj + a_2b_3\hati                      \\
+                                &= (a_2b_3 - a_3b_2)\hati - (a_1b_3 - a_3b_1)\hatj + (a_1b_2 - a_2b_1)\hatk                                 \\
+                                &= 
+                                    + \lVector{a_2 & a_3 \\ b_2 & b_3} \hati
+                                    - \lVector{a_1 & a_3 \\ b_1 & b_3} \hatj
+                                    + \lVector{a_1 & a_2 \\ b_1 & b_2} \hatk                                                                \\
+                                &= \lVector{\hati & \hatj & \hatk \\ a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3}
+                        \end{align*}
+                    \end{SmallIndentation}
+            
+                Lo ideal es simplemente memorizar la definición con el determinante, ya que las coordenadas de forma
+                explícita no están muy sencillas. ¿Y ya viste por qué fue mejor comenzar con la definición geométrica?
+                Haber definido al producto cruz por medio de sus coordenadas no hubiera sido nada intuitivo.
+
+
+
+            % =========================================================
+            % ===========    DEFINICION ALGEBRAICA   ==================
+            % =========================================================
+            \clearpage
+            \subsection{Usando Producto Cruz para Ángulo}
+
+                Vemos también que el producto cruz nos permite calcular el ángulo entre vectores, pues:
+                \begin{align}
+                    \Sin{\theta} 
+                        &= \dfrac{\Abs{\vec{a} \times \vec{b}}}{\Abs{\vec{a}} \Abs{\vec{b}}} \label{angleBetweenVectorsCross}
+                \end{align}
+                
+                Sin embargo, puede que no obtengamos el ángulo correcto, porque el rango de $arcsin(\theta)$ cuando
+                su argumento es positivo es de $0$ a $\frac{\pi}{2}$. Por eso es un poco más conveniente usar
+                el producto punto para esto.
+                
+                Aunque podemos decir que $\vec{a} \times \vec{b} = \vec{0}$ si y solo si $\vec{a}$ es paralelo
+                a $\Vector{b}$, es decir, forman un ángulo de $0^\circ$.
+
+
+
+        % =========================================================
+        % =================     PRODUCTO TRIPLE   =================
+        % =========================================================
+        \clearpage
+        \section{Producto Triple}
         
+            Este no es un nuevo producto, sino más bien una combinación de los dos anteriores, te lo digo
+            antes de que te asustes.
+            
+            \begin{Definition}[Producto Triple Escalar]
+                \ForceNewLine
+                Sean $\vec{a}, \vec{b}, \vec{c} \in \Reals^3$.
+                Definimos al \textbf{producto triple escalar} como $\vec{a} \dotP (\vec{b} \times \vec{c})$.
+
+                Nota que de nuevo el resultado es un escalar y no un vector.
+
+                También se suele usar la notación: $[\vec{a}, \vec{b}, \vec{c}] = \vec{a} \dotP (\vec{b} \times \vec{c})$.
+            \end{Definition}
+
+            % =========================================================
+            % =================     PROPIEDADES       =================
+            % =========================================================
+            \subsection{Propiedades}
+
+                \begin{itemize}
+                    \item \textbf{Permutación Circular}: 
+                        $\vec{a} \dotP \Wrap{\vec{b} \times \vec{c}} 
+                            = \vec{b} \dotP \BigWrap{\vec{c} \times \vec{a}}
+                            = \vec{c} \dotP \Wrap{\vec{a} \times \vec{b}}$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+                            
+                            Vemos que los vectores $\vec{a} + \vec{b}$ y $\Wrap{\vec{a}+\vec{b}} \times \vec{c}$
+                            son perpendiculares por definición. Es decir, forman un ángulo de $90^\circ$.
+
+                            Por lo tanto:
+                            \begin{align*}
+                                \Wrap{\vec{a} + \vec{b}} \dotP \Wrap{\Wrap{\vec{a} + \vec{b}} \times \vec{c}} 
+                                    &= 0 
+                                    &&\Remember{Los vectores son ortogonales}                                           \\
+                                \Wrap{\vec{a} + \vec{b}} \dotP \Wrap{\vec{a} \times \vec{c} + \vec{b} \times \vec{c}}
+                                    &= 0
+                                    &&\Remember{Propiedad distributiva}                                                 \\
+                                  \cancel{\vec{a} \dotP \BigWrap{\vec{a} \times \vec{c}}}
+                                + \vec{a} \dotP \Wrap{\vec{b} \times \vec{c}}
+                                + \vec{b} \dotP \BigWrap{\vec{a} \times \vec{c}}
+                                + \cancel{\vec{b} \dotP \Wrap{\vec{b} \times \vec{c}}}
+                                    &= 0
+                                    &&\Remember{Propiedad distributiva}                                                 \\
+                                \vec{a} \dotP \Wrap{\vec{b} \times \vec{c}}
+                                    &= -\vec{b} \dotP \BigWrap{\vec{a} \times \vec{c}}
+                                    &&\Remember{Reacomodamos}                                                           \\
+                                \vec{a} \dotP \Wrap{\vec{b} \times \vec{c}}
+                                    &= \vec{b} \dotP \BigWrap{\vec{c} \times \vec{a}}
+                                    &&\Remember{Anticonmutatividad}
+                            \end{align*}
+
+                            La segunda parte de la igualdad se sigue inmediatamente, haciendo que
+                            $\vec{a} \to \vec{b}$, $\vec{b} \to \vec{c}$ y $\vec{c} \to \vec{a}$,
+                            por eso recibe el nombre de permutación circular, pues las variables se
+                            van permutando cíclicamente.
+                                
+                        \end{SmallIndentation}
+
+                    \item 
+                        $\vec{a} \dotP \Wrap{\vec{b} \times \vec{c}} 
+                            = \bVector{a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3 \\ c_1 & c_2 & c_3}$
+
+                            % ======== DEMOSTRACION ========
+                            \begin{SmallIndentation}[1em]
+                                \textbf{Demostración}:
+                                
+                                Esto nos facilita mucho el cálculo del producto triple escalar, pues se RedMDuce a
+                                que calculemos un determinante de dimensión 3, el cual es muy sencillo.
+                                
+                                Para la demostración simplemente calcula ambos lados de la ecuación y comprueba que sean iguales.
+
+                                Es fácil pero tedioso.
+                            \end{SmallIndentation}
+
+                \end{itemize}
+                            
+
+
+
+
+        % =========================================================
+        % =================     IDENTIDADES   =====================
+        % =========================================================
+        \clearpage
+        \section{Identidades de los Productos}
+
+            Existen bastantes identidades que involucran a los productos de vectores.
+            Aquí te muestro algunas e ideas para sus demostraciones, con el fin de que
+            seas capaz de desarrollar las tuyas propias.
+            
+            \begin{itemize}
+                
+                \item 
+                    $\Abs{\vec{a} \times \vec{b}}^2 + \Wrap{\vec{a} \dotP \vec{b}}^2 = \Abs{\vec{a}}^2 \Abs{\vec{b}}^2$
+                    
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración:}
+
+                        Usamos las definiciones geométricas del producto punto y cruz:
+                        \begin{align*}
+                            \Abs{\vec{a} \times \vec{b}}^2 + \Wrap{\vec{a} \dotP \vec{b}}^2 
+                                &=  \Wrap{\Abs{\vec{a}} \Abs{\vec{b}} \sin \theta}^2 
+                                    +
+                                    \Wrap{\Abs{\vec{a}} \Abs{\vec{b}} \cos \theta}^2
+                                    &&\Remember{Definición geométrica}                                      \\
+                                &= \Abs{\vec{a}}^2 \Abs{\vec{b}}^2 \Wrap{\sin^2 \theta + \cos^2 \theta} 
+                                    &&\Remember{Factorizamos}                                               \\
+                                &= \Abs{\vec{a}}^2 \Abs{\vec{b}}^2 
+                                    &&\Remember{Identidad trigonométrica}
+                        \end{align*}
+                    \end{SmallIndentation}
+            
+                \item
+                    $\abs{\abs{\vec{a}} - \abs{\vec{b}}} \leq \Abs{\vec{a} - \vec{b}}$
+                    
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración:}
+
+                        A esta desigualdad se le conoce como la \emph{desigualdad de triángulo en reversa}.
+                        Apliquemos la desigualdad del triángulo a los vectores $\vec{a}$ y $\vec{b} - \vec{a}$:
+                        \begin{align*}
+                            \Abs{\vec{a} + \Wrap{\vec{b} - \vec{a}}} \leq \Abs{\vec{a}} + \Abs{\vec{b} - \vec{a}}   
+                                &\implies \Abs{\vec{b}} \leq \Abs{\vec{a}} + \Abs{\vec{b} - \vec{a}}                \\
+                                &\implies \Abs{\vec{b}} - \Abs{\vec{a}} \leq \Abs{\vec{b} - \vec{a}}                \\
+                                &\implies -\Abs{\vec{b}-\vec{a}} \leq \Abs{\vec{a}} - \Abs{\vec{b}}
+                        \end{align*}
+                        
+                        Ahora a los vectores $\vec{b}$ y $\vec{a} - \vec{b}$:
+                        \begin{align*}
+                            \Abs{\vec{b} + \Wrap{\vec{a}-\vec{b}}} \leq \Abs{\vec{b}} + \Abs{\vec{a}-\vec{b}}
+                                \implies
+                            \Abs{\vec{a}} \leq \Abs{\vec{b}} + \Abs{\vec{a}-\vec{b}}
+                                \implies
+                            \Abs{\vec{a}} - \Abs{\vec{b}} \leq \Abs{\vec{a}-\vec{b}}
+                        \end{align*}
+                        
+                        Pero $\Abs{\vec{b}-\vec{a}} = \Abs{\vec{a}-\vec{b}}$, entonces podemos combinar las dos
+                        desigualdades anteriores como:
+                        $-\Abs{\vec{a}-\vec{b}} \leq \Abs{\vec{a}} - \Abs{\vec{b}} \leq \Abs{\vec{a}-\vec{b}}$,
+                        y por definición de valor absoluto en los reales, la conclusión se sigue.
+                        
+                    \end{SmallIndentation}
+
+
+                \clearpage
+                
+
+                \item 
+                    $\vec{a} \times \Wrap{\vec{b} \times \vec{c}} 
+                        = \BigWrap{\vec{a} \dotP \vec{c}}\vec{b} - \Wrap{\vec{a} \dotP \vec{b}}\vec{c}$
+            
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración:} 
+
+                        Para esta identidad usaremos algunas propiedades del plano, las cuales puedes consultar en
+                        el capítulo que sigue. Sea $\vec{n} = \vec{b} \times \vec{c}$ el vector normal al plano que
+                        generan los vectores $\vec{b}$ y $\vec{c}$. Luego, $\vec{v} = \vec{a} \times \vec{n}$ será
+                        perpendicular al vector normal $\vec{n}$, por lo que también pertenecerá al plano.
+                        
+                        Entonces, podemos escribir a $\vec{v}$ como una combinación lineal de $\vec{b}$ y $\vec{c}$, 
+                        es decir, existen $r, s \in \Reals$ tales que $\vec{v} = r\vec{b} + s\vec{c}$.
+
+                        Aplicamos producto punto con $\vec{a}$ a ambos lados:
+                        \begin{align*}
+                            \vec{a} \dotP \vec{v} 
+                                &= \vec{a} \dotP \Wrap{r\vec{b} + s\vec{c}} 
+                                    &&\Remember{Sabemos que}                                            \\
+                            0   &= r\Wrap{\vec{a} \dotP \vec{b}} + s\BigWrap{\vec{a} \dotP \vec{c}} 
+                                    &&\Remember{$\vec{a}$ es perpendicular a $\vec{v}$}                 \\
+                            \dfrac{r}{s} 
+                                &= -\dfrac{\vec{a} \dotP \vec{c}}{\vec{a} \dotP \vec{b}} 
+                                    &&\Remember{Reacomodamos}
+                        \end{align*}
+                        
+                        Proponemos que $r = m\BigWrap{\vec{a} \dotP \vec{c}}$ y $s = -m\Wrap{\vec{a} \dotP \vec{b}}$,
+                        donde $m \in \Reals$ es la constante de proporcionalidad. De esta forma la ecuación anterior
+                        siempre se cumple y ahora solo tenemos una variable.
+
+                        Por lo tanto:
+                        \begin{align*}
+                            \vec{v} 
+                                &= m\BigWrap{\vec{a} \dotP \vec{c}} \vec{b} - m\Wrap{\vec{a} \dotP \vec{b}} \vec{c} 
+                                    &&\Remember{Sustituimos}                                                                        \\
+                            \vec{a} \times \Wrap{\vec{b} \times \vec{c}} 
+                                &= m\Wrap{\BigWrap{\vec{a} \dotP \vec{c}} \vec{b} - \Wrap{\vec{a} \dotP \vec{b}} \vec{c}} 
+                                    &&\Remember{Recuerda que $\vec{v}=\vec{a} \times \vec{n}$ y $\vec{n} = \vec{b} \times \vec{c}$}
+                        \end{align*}
+                        
+                        Ya solo nos queda hallar $m$. Como la ecuación anterior se cumple para todos los vectores 
+                        $\vec{a}, \vec{b}, \vec{c}$, podemos sustituir $\vec{a} = \hatj$, $\vec{b} = \hati$, $\vec{c} = \hatj$
+                        de tal forma que el lado izquierdo no sea el cero vector.
+
+                        Obtenemos:
+                        \begin{align*}
+                            \hatj \times \Wrap{\hati \times \hatj} 
+                                &= m\Wrap{\Wrap{\hatj \dotP \hatj}\hati - \cancel{\Wrap{\hatj \dotP \hati}\hatj}} 
+                                    &&\Remember{Sustituimos}                                                            \\
+                            \hatj \times \hatk 
+                                &= m\hati 
+                                    &&\Remember{Recuerda los productos punto y cruz entre vectores canónicos}           \\
+                            \hati 
+                                &= m\hati                                                                               \\
+                            m &= 1
+                        \end{align*}
+                        
+                        Finalmente, concluimos que: 
+                            $\vec{a} \times \Wrap{\vec{b} \times \vec{c}} 
+                                = \BigWrap{\vec{a} \dotP \vec{c}}\vec{b} - \Wrap{\vec{a} \dotP \vec{b}}\vec{c}$.
+                    \end{SmallIndentation}
+
+
+                \clearpage
+                    
+            
+                \item 
+                    $\Wrap{\vec{a} \times \vec{b}} \times \BigWrap{\vec{a} \times \vec{c}} 
+                        = \Wrap{\vec{a} \dotP \Wrap{\vec{b} \times \vec{c}}}\vec{a}$
+                
+                \begin{SmallIndentation}[1em]
+                    \textbf{Demostración:}
+
+                    Usamos la propiedad anterior:
+                    \begin{align*}
+                        \textcolor{Blue700MD}{\Wrap{\vec{a} \times \vec{b}}} 
+                            \times
+                        \Wrap{\textcolor{RedMD}{\vec{a}} \times \vec{c}} 
+                            &= \Wrap{\textcolor{Blue700MD}{\Wrap{\vec{a} \times \vec{b}}} \dotP \vec{c}} \textcolor{RedMD}{\vec{a}} 
+                                -
+                                \cancel{\Wrap{\textcolor{Blue700MD}{\Wrap{\vec{a} \times \vec{b}}} \dotP \textcolor{RedMD}{\vec{a}}} \vec{c}} 
+                                &&\Remember{Sustituimos con cuidado}                                                                            \\
+                            &= \Wrap{\Wrap{\vec{a} \times \vec{b}} \dotP \vec{c}} \vec{a} 
+                                &&\Remember{$\vec{a}$ es perpendicular a $\vec{a} \times \vec{b}$}                                              \\
+                            &= \Wrap{\vec{c} \dotP \Wrap{\vec{a} \times \vec{b}}} \vec{a} 
+                                &&\Remember{Conmutativa}                                                                                        \\
+                            &= \Wrap{\vec{a} \dotP \Wrap{\vec{b} \times \vec{c}}} \vec{a}
+                                &&\Remember{Permutación circular}
+                    \end{align*}
+                \end{SmallIndentation}
+            
+            
+            \item $\Wrap{\vec{a} \times \vec{b}} \dotP \Wrap{\vec{c} \times \vec{d}} 
+                = 
+                \BigWrap{\vec{a} \dotP \vec{c}} \Wrap{\vec{b} \dotP \vec{d}} 
+                - 
+                \Wrap{\vec{a} \dotP \vec{d}} \Wrap{\vec{b} \dotP \vec{c}}$
+            
+                \begin{SmallIndentation}[1em]
+                    \textbf{Demostración:}
+                    \begin{align*}
+                        \textcolor{Blue700MD}{\Wrap{\vec{a} \times \vec{b}}} 
+                        \dotP
+                        \Wrap{\textcolor{RedMD}{\vec{c}} \times \vec{d}} 
+                            &= \textcolor{RedMD}{\vec{c}} \dotP \Wrap{\vec{d} \times \textcolor{Blue700MD}{\Wrap{\vec{a} \times \vec{b}}}} 
+                                &&\Remember{Permutación circular}                                                                                       \\
+                            &= \vec{c} \dotP \Wrap{\Wrap{\vec{d} \dotP \vec{b}}\vec{a} - \Wrap{\vec{d} \dotP \vec{a}}\vec{b}}
+                                &&\Remember{Propiedad que ya vimos}                                                                                     \\
+                            &= \vec{c} \dotP \Wrap{\Wrap{\vec{d} \dotP \vec{b}}\vec{a}} - \vec{c} \dotP \Wrap{\Wrap{\vec{d} \dotP \vec{a}}\vec{b}}
+                                &&\Remember{Distributiva}                                                                                               \\
+                            &= \Wrap{\vec{d} \dotP \vec{b}} \BigWrap{\vec{c} \dotP \vec{a}} - \Wrap{\vec{d} \dotP \vec{a}} \Wrap{\vec{c} \dotP \vec{b}}
+                                &&\Remember{Sacamos el escalar del producto punto (linearidad)}                                                         \\
+                            &= \BigWrap{\vec{a} \dotP \vec{c}} \Wrap{\vec{b} \dotP \vec{d}} - \Wrap{\vec{a} \dotP \vec{d}} \Wrap{\vec{b} \dotP \vec{c}}
+                                &&\Remember{Conmutativa}
+                    \end{align*}
+                \end{SmallIndentation}
+            
+            
+            \item $   \Wrap{\vec{a}     \times \vec{b}} \dotP \Wrap{\vec{c} \times \vec{d}} 
+                    + \Wrap{\vec{b}     \times \vec{c}} \dotP \Wrap{\vec{a} \times \vec{d}}
+                    + \BigWrap{\vec{c}  \times \vec{a}} \dotP \Wrap{\vec{b} \times \vec{d}} = 0$
+            
+                \begin{SmallIndentation}[1em]
+                    \textbf{Demostración:}
+
+                    \begin{tabular}{crcl}
+                        & $\Wrap{\vec{a} \times \vec{b}} \dotP \Wrap{\vec{c} \times \vec{d}}$ 
+                            & $=$ & 
+                        $\quad \textcolor{Blue700MD}{\cancel{\BigWrap{\vec{a} \dotP \vec{c}} \Wrap{\vec{b} \dotP \vec{d}}}} 
+                        -
+                        \textcolor{RedMD}{\cancel{\Wrap{\vec{a} \dotP \vec{d}} \Wrap{\vec{b} \dotP \vec{c}}}}$                  \\
+                        $+$ &
+                        $\Wrap{\vec{b} \times \vec{c}} \dotP \Wrap{\vec{a} \times \vec{d}}$ 
+                            & $=$ &
+                        $+\cancel{\Wrap{\vec{b} \dotP \vec{a}} \Wrap{\vec{c} \dotP \vec{d}}}
+                        -
+                        \textcolor{Blue700MD}{\cancel{\Wrap{\vec{b} \dotP \vec{d}} \BigWrap{\vec{c} \dotP \vec{a}}}}$              \\
+                        $+$ &
+                        $\BigWrap{\vec{c} \times \vec{a}} \dotP \Wrap{\vec{b} \times \vec{d}}$ 
+                            & $=$ &
+                        $+\textcolor{RedMD}{\cancel{\Wrap{\vec{c} \dotP \vec{b}} \Wrap{\vec{a} \dotP \vec{d}}}} 
+                        -
+                        \cancel{\Wrap{\vec{c} \dotP \vec{d}} \Wrap{\vec{a} \dotP \vec{b}}}$                                     \\
+                        \hline
+                        & & 
+                            $=$
+                        & $0$
+                    \end{tabular}
+                \end{SmallIndentation}
+            
+            \item $   \vec{a} \times \Wrap{\vec{b} \times \vec{c}} 
+                    + \vec{b} \times \BigWrap{\vec{c} \times \vec{a}}
+                    + \vec{c} \times \Wrap{\vec{a} \times \vec{b}} = \vec{0}$
+            
+                \begin{SmallIndentation}[1em]
+                    \textbf{Demostración:} 
+
+                    \begin{tabular}{crcl}
+                        & $\vec{a} \times \Wrap{\vec{b} \times \vec{c}}$ 
+                            & $=$ & 
+                        $\quad \textcolor{Blue700MD}{\cancel{\BigWrap{\vec{a} \dotP \vec{c}}\vec{b}}}
+                        -
+                        \textcolor{RedMD}{\cancel{\Wrap{\vec{a} \dotP \vec{b}}\vec{c}}}$                \\
+                        $+$ 
+                        & $\vec{b} \times \BigWrap{\vec{c} \times \vec{a}}$
+                            & $=$ &
+                        $+\textcolor{RedMD}{\cancel{\Wrap{\vec{b} \dotP \vec{a}}\vec{c}}}
+                        -
+                        \cancel{\Wrap{\vec{b} \dotP \vec{c}}\vec{a}}$                                   \\
+                        $+$ 
+                        & $\vec{c} \times \Wrap{\vec{a} \times \vec{b}}$ 
+                            & $=$ &
+                        $+\cancel{\Wrap{\vec{c} \dotP \vec{b}}\vec{a}} 
+                        -
+                        \textcolor{Blue700MD}{\cancel{\BigWrap{\vec{c} \dotP \vec{a}}\vec{b}}}$            \\
+                        \hline
+                        & & 
+                            $=$
+                        & $\vec{0}$
+                    \end{tabular}
+                \end{SmallIndentation}
+
+            \end{itemize}
+
+
+
+    
+
+
+
+
+
+
+
+    
+    % ===============================================================================
+    % ==============            APLICACIONES A LA GEOMETRIA         =================
+    % ===============================================================================        
+    \chapter{Aplicaciones a la Geometría}
+
+
+
+        \section{Aplicaciones con el Producto Cruz}
+
+            % =========================================================
+            % ===========    DEFINICION ALGEBRAICA   ==================
+            % =========================================================
             \subsection{Área de un triángulo}
             
             Si tenemos un triángulo con vértices $A$, $B$ y $C$, podemos calcular su área de una forma muy sencilla usando el producto cruz.
@@ -1899,44 +2442,19 @@
             
             Combinamos las dos ecuaciones anteriores y obtenemos que $\vec{a} \times \vec{b} = \vec{b} \times \vec{c} = \vec{c} \times \vec{a}$. Tomamos magnitud y obtenemos:
             \begin{align}
-                \Abs{\vec{a}} \Abs{\vec{b}} \sen C = \Abs{\vec{b}} \Abs{\vec{c}} \sen A = \Abs{\vec{c}} \Abs{\vec{a}} \sen B
+                \Abs{\vec{a}} \Abs{\vec{b}} \sin C = \Abs{\vec{b}} \Abs{\vec{c}} \sin A = \Abs{\vec{c}} \Abs{\vec{a}} \sin B
             \end{align}
             
             Reacomodamos y terminamos:
             \begin{align}
-                \dfrac{\Abs{\vec{a}}}{\sen A} = \dfrac{\Abs{\vec{b}}}{\sen B} = \dfrac{\Abs{\vec{c}}}{\sen C} \label{sinesLaw}
+                \dfrac{\Abs{\vec{a}}}{\sin A} = \dfrac{\Abs{\vec{b}}}{\sin B} = \dfrac{\Abs{\vec{c}}}{\sin C} \label{sinesLaw}
             \end{align}
-            
-        % =========================================================
-        % =================     PRODUCTO TRIPLE   =================
-        % =========================================================
-        \clearpage
-        \section{Producto triple}
-        
-            Este no es un nuevo producto, sino más bien una combinación de los dos anteriores.
-            
-            \begin{Definition}[Producto triple escalar]
-                Sean $\vec{a}, \vec{b}, \vec{c} \in \Reals^3$. Definimos al \textbf{producto triple escalar} como $\vec{a} \dotP \Wrap{\vec{b} \times \vec{c}}$. Nota que de nuevo el resultado es un escalar y no un vector. También se suele usar la notación $\Brackets{\vec{a}, \vec{b}, \vec{c}} = \vec{a} \dotP \Wrap{\vec{b} \times \vec{c}}$.
-            \end{Definition}
-        
-            Tenemos la siguiente propiedad:
-            
-            \begin{Theorem}[Permutación circular]
-                $\vec{a} \dotP \Wrap{\vec{b} \times \vec{c}} = \vec{b} \dotP \Wrap{\vec{c} \times \vec{a}} = \vec{c} \dotP \Wrap{\vec{a} \times \vec{b}}$
-            \end{Theorem}
-        
-            \begin{SmallIndentation}[1em]
-                \textbf{Demostración:} vemos que los vectores $\vec{a}+\vec{b}$ y $\Wrap{\vec{a}+\vec{b}} \times \vec{c}$ son perpendiculares por definición. Es decir, forman un ángulo de $90^\circ$. Por lo tanto:
-                \begin{align*}
-                    \Wrap{\vec{a}+\vec{b}} \dotP \Wrap{\Wrap{\vec{a}+\vec{b}} \times \vec{c}} &= 0 &&\mbox{Los vectores son ortogonales}\\
-                    \Wrap{\vec{a}+\vec{b}} \dotP \Wrap{\vec{a} \times \vec{c} + \vec{b} \times \vec{c}} &= 0 &&\mbox{Propiedad distributiva}\\
-                    \cancel{\vec{a} \dotP \Wrap{\vec{a} \times \vec{c}}} + \vec{a} \dotP \Wrap{\vec{b} \times \vec{c}} + \vec{b} \dotP \Wrap{\vec{a} \times \vec{c}} + \cancel{\vec{b} \dotP \Wrap{\vec{b} \times \vec{c}}} &= 0 &&\mbox{Propiedad distributiva}\\
-                    \vec{a} \dotP \Wrap{\vec{b} \times \vec{c}} &= -\vec{b} \dotP \Wrap{\vec{a} \times \vec{c}} &&\mbox{Reacomodamos}\\
-                    \vec{a} \dotP \Wrap{\vec{b} \times \vec{c}} &= \vec{b} \dotP \Wrap{\vec{c} \times \vec{a}} &&\mbox{Anticonmutatividad}
-                \end{align*}
-                La segunda parte de la igualdad se sigue inmediatamente, haciendo que $\vec{a} \to \vec{b}$, $\vec{b} \to \vec{c}$ y $\vec{c} \to \vec{a}$, por eso recibe el nombre de permutación circular, pues las variables se van permutando cíclicamente.
-            \end{SmallIndentation}
-        
+
+
+
+
+
+        \section{Aplicaciones con el Producto Caja}
             \clearpage
         
             \subsection{Volumen de un paralelepípedo}
@@ -1960,161 +2478,17 @@
             
             La expresión \emph{producto triple} puede hacer referencia a otras combinaciones donde estén involucrados tres vectores y sus productos, como $\vec{a} \times \Wrap{\vec{b} \times \vec{c}}$, $\Wrap{\vec{a} \dotP \vec{b}}\vec{c}$, etc.
             
-            Antes de terminar con esta parte, veamos un último teorema:
             
-            \begin{Theorem}
-                Sean $\vec{a}=a_1\hati+a_2\hatj+a_3\hatk$, $\vec{b}=b_1\hati+b_2\hatj+b_3\hatk$ y $\vec{c}=c_1\hati+c_2\hatj+c_3\hatk$. Entonces:
-                \begin{align}
-                    \vec{a} \dotP \Wrap{\vec{b} \times \vec{c}} &= \begin{vmatrix}
-                        a_1 & a_2 & a_3\\
-                        b_1 & b_2 & b_3\\
-                        c_1 & c_2 & c_3
-                    \end{vmatrix} \label{tripleProduct}
-                \end{align}
-                Esto nos facilita mucho el cálculo del producto triple escalar, pues se reduce a que calculemos un determinante de dimensión 3, el cual es muy sencillo.
-            \end{Theorem}
-            
-            \begin{SmallIndentation}[1em]
-                \textbf{Idea de la demostración:} simplemente calcula ambos lados de la ecuación y comprueba que sean iguales. Es fácil pero tedioso.
-            \end{SmallIndentation}
-        
-        % =========================================================
-        % =================     IDENTIDADES   =====================
-        % =========================================================
-        
-        \section{Identidades de productos}
-        Existen bastantes identidades que involucran a los productos de vectores. Aquí te muestro algunas e ideas para sus demostraciones, con el fin de que seas capaz de desarrollar las tuyas propias.
-        
-        \begin{enumerate}\setlength\itemsep{0em}
-            \item $\Abs{\vec{a} \times \vec{b}}^2 + \Wrap{\vec{a} \dotP \vec{b}}^2 = \Abs{\vec{a}}^2 \Abs{\vec{b}}^2$
-            
-            \begin{SmallIndentation}[1em]
-                \textbf{Demostración:} Usamos las definiciones geométricas del producto punto y cruz:
-                \begin{align*}
-                    \Abs{\vec{a} \times \vec{b}}^2 + \Wrap{\vec{a} \dotP \vec{b}}^2 &= \Wrap{\Abs{\vec{a}} \Abs{\vec{b}} \sen \theta}^2 + \Wrap{\Abs{\vec{a}} \Abs{\vec{b}} \cos \theta}^2 &&\Remember{Definición geométrica} \\
-                    &= \Abs{\vec{a}}^2 \Abs{\vec{b}}^2 \Wrap{\sen^2 \theta + \cos^2 \theta} &&\Remember{Factorizamos} \\
-                    &= \Abs{\vec{a}}^2 \Abs{\vec{b}}^2 &&\Remember{Identidad trigonométrica}
-                \end{align*}
-            \end{SmallIndentation}
-        
-        
-            \item $\abs{\Abs{\vec{a}} - \Abs{\vec{b}}} \leq \Abs{\vec{a} - \vec{b}}$
-            
-            \begin{SmallIndentation}[1em]
-                \textbf{Demostración:} A esta desigualdad se le conoce como la \emph{desigualdad de triángulo en reversa}. Apliquemos la desigualdad del triángulo a los vectores $\vec{a}$ y $\vec{b}-\vec{a}$:
-                \begin{align*}
-                    &\Abs{\vec{a} + \Wrap{\vec{b}-\vec{a}}} \leq \Abs{\vec{a}} + \Abs{\vec{b}-\vec{a}} \implies \Abs{\vec{b}} \leq \Abs{\vec{a}} + \Abs{\vec{b}-\vec{a}} \implies \Abs{\vec{b}} - \Abs{\vec{a}} \leq \Abs{\vec{b}-\vec{a}} \\
-                    &\implies -\Abs{\vec{b}-\vec{a}} \leq \Abs{\vec{a}} - \Abs{\vec{b}}
-                \end{align*}
-                
-                Ahora a los vectores $\vec{b}$ y $\vec{a}-\vec{b}$:
-                \begin{align*}
-                    &\Abs{\vec{b} + \Wrap{\vec{a}-\vec{b}}} \leq \Abs{\vec{b}} + \Abs{\vec{a}-\vec{b}} \implies \Abs{\vec{a}} \leq \Abs{\vec{b}} + \Abs{\vec{a}-\vec{b}} \implies \Abs{\vec{a}} - \Abs{\vec{b}} \leq \Abs{\vec{a}-\vec{b}}
-                \end{align*}
-                
-                Pero $\Abs{\vec{b}-\vec{a}} = \Abs{\vec{a}-\vec{b}}$, entonces podemos combinar las dos desigualdades anteriores como $-\Abs{\vec{a}-\vec{b}} \leq \Abs{\vec{a}} - \Abs{\vec{b}} \leq \Abs{\vec{a}-\vec{b}}$, y por definición de valor absoluto en los reales, la conclusión se sigue.
-                
-            \end{SmallIndentation}
-            
-            
-            \item $\vec{a} \times \Wrap{\vec{b} \times \vec{c}} = \Wrap{\vec{a} \dotP \vec{c}}\vec{b} - \Wrap{\vec{a} \dotP \vec{b}}\vec{c}$
-            
-            \begin{SmallIndentation}[1em]
-                \textbf{Demostración:} Para esta identidad usaremos algunas propiedades del plano, las cuales puedes consultar en el capítulo que sigue. Sea $\vec{n}=\vec{b} \times \vec{c}$ el vector normal al plano que generan los vectores $\vec{b}$ y $\vec{c}$. Luego, $\vec{v} = \vec{a} \times \vec{n}$ será perpendicular al vector normal $\vec{n}$, por lo que también pertenecerá al plano.
-                
-                Entonces, podemos escribir a $\vec{v}$ como una combinación lineal de $\vec{b}$ y $\vec{c}$, es decir, existen $r, s \in \Reals$ tales que $\vec{v} = r\vec{b} + s\vec{c}$. Aplicamos producto punto con $\vec{a}$ a ambos lados:
-                \begin{align*}
-                    \vec{a} \dotP \vec{v} &= \vec{a} \dotP \Wrap{r\vec{b} + s\vec{c}} &&\Remember{Sabemos que} \\
-                    0 &= r\Wrap{\vec{a} \dotP \vec{b}} + s\Wrap{\vec{a} \dotP \vec{c}} &&\Remember{$\vec{a}$ es perpendicular a $\vec{v}$}\\
-                    \dfrac{r}{s} &= -\dfrac{\vec{a} \dotP \vec{c}}{\vec{a} \dotP \vec{b}} &&\Remember{Reacomodamos}
-                \end{align*}
-                
-                Proponemos que $r = m\Wrap{\vec{a} \dotP \vec{c}}$ y $s = -m\Wrap{\vec{a} \dotP \vec{b}}$, donde $m \in \Reals$ es la constante de proporcionalidad. De esta forma la ecuación anterior siempre se cumple y ahora solo tenemos una variable. Por lo tanto:
-                \begin{align*}
-                    \vec{v} &= m\Wrap{\vec{a} \dotP \vec{c}} \vec{b} - m\Wrap{\vec{a} \dotP \vec{b}} \vec{c} &&\Remember{Sustituimos} \\
-                    \vec{a} \times \Wrap{\vec{b} \times \vec{c}} &= m\Wrap{\Wrap{\vec{a} \dotP \vec{c}} \vec{b} - \Wrap{\vec{a} \dotP \vec{b}} \vec{c}} &&\Remember{Recuerda que $\vec{v}=\vec{a} \times \vec{n}$ y $\vec{n} = \vec{b} \times \vec{c}$}
-                \end{align*}
-                
-                Ya solo nos queda hallar $m$. Como la ecuación anterior se cumple para todos los vectores $\vec{a}, \vec{b}, \vec{c}$, podemos sustituir $\vec{a}=\hatj$, $\vec{b}=\hati$, $\vec{c}=\hatj$ de tal forma que el lado izquierdo no sea el cero vector. Obtenemos:
-                \begin{align*}
-                    \hatj \times \Wrap{\hati \times \hatj} &= m\Wrap{\Wrap{\hatj \dotP \hatj}\hati - \cancel{\Wrap{\hatj \dotP \hati}\hatj}} &&\Remember{Sustituimos}\\
-                    \hatj \times \hatk &= m\hati &&\Remember{Recuerda los productos punto y cruz entre vectores canónicos} \\
-                    \hati &= m\hati \\
-                    m &= 1
-                \end{align*}
-                
-                Finalmente, concluimos que $\vec{a} \times \Wrap{\vec{b} \times \vec{c}} = \Wrap{\vec{a} \dotP \vec{c}}\vec{b} - \Wrap{\vec{a} \dotP \vec{b}}\vec{c}$.
-            \end{SmallIndentation}
-            
-            
-            \item $\Wrap{\vec{a} \times \vec{b}} \times \Wrap{\vec{a} \times \vec{c}} = \Wrap{\vec{a} \dotP \Wrap{\vec{b} \times \vec{c}}}\vec{a}$
-            
-            \begin{SmallIndentation}[1em]
-                \textbf{Demostración:} Usamos la propiedad anterior:
-                \begin{align*}
-                    \textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}} \times \Wrap{\textcolor{red}{\vec{a}} \times \vec{c}} &= \Wrap{\textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}} \dotP \vec{c}} \textcolor{red}{\vec{a}} - \cancel{\Wrap{\textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}} \dotP \textcolor{red}{\vec{a}}} \vec{c}} &&\Remember{Sustituimos con cuidado}\\
-                    &= \Wrap{\Wrap{\vec{a} \times \vec{b}} \dotP \vec{c}} \vec{a} &&\Remember{$\vec{a}$ es perpendicular a $\vec{a} \times \vec{b}$}\\
-                    &= \Wrap{\vec{c} \dotP \Wrap{\vec{a} \times \vec{b}}} \vec{a} &&\Remember{Conmutativa}\\
-                    &= \Wrap{\vec{a} \dotP \Wrap{\vec{b} \times \vec{c}}} \vec{a} &&\Remember{Permutación circular}
-                \end{align*}
-            \end{SmallIndentation}
-            
-            
-            \item $\Wrap{\vec{a} \times \vec{b}} \dotP \Wrap{\vec{c} \times \vec{d}} = \Wrap{\vec{a} \dotP \vec{c}} \Wrap{\vec{b} \dotP \vec{d}} - \Wrap{\vec{a} \dotP \vec{d}} \Wrap{\vec{b} \dotP \vec{c}}$
-            
-            \begin{SmallIndentation}[1em]
-                \textbf{Demostración:}
-                \begin{align*}
-                    \textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}} \dotP \Wrap{\textcolor{red}{\vec{c}} \times \vec{d}} &= \textcolor{red}{\vec{c}} \dotP \Wrap{\vec{d} \times \textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}}} &&\Remember{Permutación circular}\\
-                    &= \vec{c} \dotP \Wrap{\Wrap{\vec{d} \dotP \vec{b}}\vec{a} - \Wrap{\vec{d} \dotP \vec{a}}\vec{b}} &&\Remember{Propiedad 3}\\
-                    &= \vec{c} \dotP \Wrap{\Wrap{\vec{d} \dotP \vec{b}}\vec{a}} - \vec{c} \dotP \Wrap{\Wrap{\vec{d} \dotP \vec{a}}\vec{b}} &&\Remember{Distributiva}\\
-                    &= \Wrap{\vec{d} \dotP \vec{b}} \Wrap{\vec{c} \dotP \vec{a}} - \Wrap{\vec{d} \dotP \vec{a}} \Wrap{\vec{c} \dotP \vec{b}} &&\Remember{Sacamos el escalar del producto punto (linearidad)}\\
-                    &= \Wrap{\vec{a} \dotP \vec{c}} \Wrap{\vec{b} \dotP \vec{d}} - \Wrap{\vec{a} \dotP \vec{d}} \Wrap{\vec{b} \dotP \vec{c}} &&\Remember{Conmutativa}
-                \end{align*}
-            \end{SmallIndentation}
-            
-            
-            \item $\Wrap{\vec{a} \times \vec{b}} \dotP \Wrap{\vec{c} \times \vec{d}} + \Wrap{\vec{b} \times \vec{c}} \dotP \Wrap{\vec{a} \times \vec{d}} + \Wrap{\vec{c} \times \vec{a}} \dotP \Wrap{\vec{b} \times \vec{d}} = 0$
-            
-            \begin{SmallIndentation}[1em]
-                \textbf{Demostración:} Usamos la propiedad anterior:
-                
-                \begin{tabular}{crcl}
-                    & $\Wrap{\vec{a} \times \vec{b}} \dotP \Wrap{\vec{c} \times \vec{d}}$ & $=$ & $\quad \textcolor{blue}{\cancel{\Wrap{\vec{a} \dotP \vec{c}} \Wrap{\vec{b} \dotP \vec{d}}}} - \textcolor{red}{\cancel{\Wrap{\vec{a} \dotP \vec{d}} \Wrap{\vec{b} \dotP \vec{c}}}}$\\
-                    $+$ & $\Wrap{\vec{b} \times \vec{c}} \dotP \Wrap{\vec{a} \times \vec{d}}$ & $=$ & $+\cancel{\Wrap{\vec{b} \dotP \vec{a}} \Wrap{\vec{c} \dotP \vec{d}}} - \textcolor{blue}{\cancel{\Wrap{\vec{b} \dotP \vec{d}} \Wrap{\vec{c} \dotP \vec{a}}}}$\\
-                    $+$ & $\Wrap{\vec{c} \times \vec{a}} \dotP \Wrap{\vec{b} \times \vec{d}}$ & $=$ & $+\textcolor{red}{\cancel{\Wrap{\vec{c} \dotP \vec{b}} \Wrap{\vec{a} \dotP \vec{d}}}} - \cancel{\Wrap{\vec{c} \dotP \vec{d}} \Wrap{\vec{a} \dotP \vec{b}}}$\\
-                    \hline
-                    & & $=$ & $0$
-                \end{tabular}
-            \end{SmallIndentation}
-            
-            \item $\vec{a} \times \Wrap{\vec{b} \times \vec{c}} + \vec{b} \times \Wrap{\vec{c} \times \vec{a}} + \vec{c} \times \Wrap{\vec{a} \times \vec{b}} = \vec{0}$
-            
-            \begin{SmallIndentation}[1em]
-                \textbf{Demostración:} Usamos la propiedad 3:
-                
-                \begin{tabular}{crcl}
-                    & $\vec{a} \times \Wrap{\vec{b} \times \vec{c}}$ & $=$ & $\quad \textcolor{blue}{\cancel{\Wrap{\vec{a} \dotP \vec{c}}\vec{b}}} - \textcolor{red}{\cancel{\Wrap{\vec{a} \dotP \vec{b}}\vec{c}}}$\\
-                    $+$ & $\vec{b} \times \Wrap{\vec{c} \times \vec{a}}$ & $=$ & $+\textcolor{red}{\cancel{\Wrap{\vec{b} \dotP \vec{a}}\vec{c}}} - \cancel{\Wrap{\vec{b} \dotP \vec{c}}\vec{a}}$\\
-                    $+$ & $\vec{c} \times \Wrap{\vec{a} \times \vec{b}}$ & $=$ & $+\cancel{\Wrap{\vec{c} \dotP \vec{b}}\vec{a}} - \textcolor{blue}{\cancel{\Wrap{\vec{c} \dotP \vec{a}}\vec{b}}}$\\
-                    \hline
-                    & & $=$ & $\vec{0}$
-                \end{tabular}
-            \end{SmallIndentation}
-        
-        \end{enumerate}
 
 
 
-    
-    
-    % ===============================================================================
-    % ==============            APLICACIONES A LA GEOMETRIA         =================
-    % ===============================================================================        
-            
-            
-    \chapter{Aplicaciones a la geometría}
-    
+
+
+
+
+
+
+
         % =========================================================
         % ====================     PLANOS   =======================
         % =========================================================
