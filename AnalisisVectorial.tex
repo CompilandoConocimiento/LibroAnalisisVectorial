@@ -1,4 +1,4 @@
-﻿% ****************************************************************************************
+% ****************************************************************************************
 % ************************      ANALISIS VECTORIAL            ****************************
 % ****************************************************************************************
 
@@ -167,6 +167,11 @@
     % ====   LINEAL ALGEBRA & VECTORS    ======
     % =========================================
 
+    % ===== UNIT VECTORS  ================
+    \newcommand{\hati} {\hat{\imath}}                               %Use: \hati for unit vector    
+    \newcommand{\hatj} {\hat{\jmath}}                               %Use: \hatj for unit vector    
+    \newcommand{\hatk} {\hat{k}}                                    %Use: \hatk for unit vector
+
     % ===== MAGNITUDE  ===================
     \newcommand{\abs}[1]{\left\lvert #1 \right\lvert}               %Use: \abs{expression} for |x|
     \newcommand{\Abs}[1]{\left\lVert #1 \right\lVert}               %Use: \Abs{expression} for ||x||
@@ -251,15 +256,67 @@
     % =========================================
     
     % =====  COLORS ==================
+    \definecolor{RedMD}{HTML}{F44336}                               %Use: Color :D        
+    \definecolor{Red100MD}{HTML}{FFCDD2}                            %Use: Color :D        
+    \definecolor{Red200MD}{HTML}{EF9A9A}                            %Use: Color :D        
+    \definecolor{Red300MD}{HTML}{E57373}                            %Use: Color :D        
+    \definecolor{Red700MD}{HTML}{D32F2F}                            %Use: Color :D 
+
+    \definecolor{PurpleMD}{HTML}{9C27B0}                            %Use: Color :D        
+    \definecolor{Purple100MD}{HTML}{E1BEE7}                         %Use: Color :D        
+    \definecolor{Purple200MD}{HTML}{EF9A9A}                         %Use: Color :D        
+    \definecolor{Purple300MD}{HTML}{BA68C8}                         %Use: Color :D        
+    \definecolor{Purple700MD}{HTML}{7B1FA2}                         %Use: Color :D 
+
+    \definecolor{IndigoMD}{HTML}{3F51B5}                            %Use: Color :D        
+    \definecolor{Indigo100MD}{HTML}{C5CAE9}                         %Use: Color :D        
+    \definecolor{Indigo200MD}{HTML}{9FA8DA}                         %Use: Color :D        
+    \definecolor{Indigo300MD}{HTML}{7986CB}                         %Use: Color :D        
+    \definecolor{Indigo700MD}{HTML}{303F9F}                         %Use: Color :D 
+
+    \definecolor{BlueMD}{HTML}{2196F3}                              %Use: Color :D        
+    \definecolor{Blue100MD}{HTML}{BBDEFB}                           %Use: Color :D        
+    \definecolor{Blue200MD}{HTML}{90CAF9}                           %Use: Color :D        
+    \definecolor{Blue300MD}{HTML}{64B5F6}                           %Use: Color :D        
+    \definecolor{Blue700MD}{HTML}{1976D2}                           %Use: Color :D        
+    \definecolor{Blue900MD}{HTML}{0D47A1}                           %Use: Color :D  
+
+    \definecolor{CyanMD}{HTML}{00BCD4}                              %Use: Color :D        
+    \definecolor{Cyan100MD}{HTML}{B2EBF2}                           %Use: Color :D        
+    \definecolor{Cyan200MD}{HTML}{80DEEA}                           %Use: Color :D        
+    \definecolor{Cyan300MD}{HTML}{4DD0E1}                           %Use: Color :D        
+    \definecolor{Cyan700MD}{HTML}{0097A7}                           %Use: Color :D        
+    \definecolor{Cyan900MD}{HTML}{006064}                           %Use: Color :D 
+
     \definecolor{TealMD}{HTML}{009688}                              %Use: Color :D        
-    \definecolor{IndigoMD}{HTML}{3F51B5}                            %Use: Color :D
-    \definecolor{Green100MD}{HTML}{DCEDC8}                          %Use: Color :D
-    \definecolor{Blue300MD}{HTML}{64B5F6}                           %Use: Color :D
+    \definecolor{Teal100MD}{HTML}{B2DFDB}                           %Use: Color :D        
+    \definecolor{Teal200MD}{HTML}{80CBC4}                           %Use: Color :D        
+    \definecolor{Teal300MD}{HTML}{4DB6AC}                           %Use: Color :D        
+    \definecolor{Teal700MD}{HTML}{00796B}                           %Use: Color :D        
+    \definecolor{Teal900MD}{HTML}{004D40}                           %Use: Color :D 
+
+    \definecolor{GreenMD}{HTML}{4CAF50}                             %Use: Color :D        
+    \definecolor{Green100MD}{HTML}{C8E6C9}                          %Use: Color :D        
+    \definecolor{Green200MD}{HTML}{A5D6A7}                          %Use: Color :D        
+    \definecolor{Green300MD}{HTML}{81C784}                          %Use: Color :D        
+    \definecolor{Green700MD}{HTML}{388E3C}                          %Use: Color :D        
+    \definecolor{Green900MD}{HTML}{1B5E20}                          %Use: Color :D
+
+    \definecolor{AmberMD}{HTML}{FFC107}                             %Use: Color :D        
+    \definecolor{Amber100MD}{HTML}{FFECB3}                          %Use: Color :D        
+    \definecolor{Amber200MD}{HTML}{FFE082}                          %Use: Color :D        
+    \definecolor{Amber300MD}{HTML}{FFD54F}                          %Use: Color :D        
+    \definecolor{Amber700MD}{HTML}{FFA000}                          %Use: Color :D        
+    \definecolor{Amber900MD}{HTML}{FF6F00}                          %Use: Color :D
+
+    \definecolor{BlueGreyMD}{HTML}{607D8B}                          %Use: Color :D        
+    \definecolor{BlueGrey100MD}{HTML}{CFD8DC}                       %Use: Color :D        
+    \definecolor{BlueGrey200MD}{HTML}{B0BEC5}                       %Use: Color :D        
+    \definecolor{BlueGrey300MD}{HTML}{90A4AE}                       %Use: Color :D        
+    \definecolor{BlueGrey700MD}{HTML}{455A64}                       %Use: Color :D        
+    \definecolor{BlueGrey900MD}{HTML}{263238}                       %Use: Color :D        
+
     \definecolor{DeepPurpleMD}{HTML}{673AB7}                        %Use: Color :D
-    \definecolor{BlueGrey100MD}{HTML}{CFD8DC}                       %Use: Color :D
-    \definecolor{BlueGrey800MD}{HTML}{37474F}                       %Use: Color :D
-    \definecolor{BlueGrey200MD}{HTML}{B0BEC5}                       %Use: Color :D
-    \definecolor{Lime300MD}{HTML}{E6EE9C}                           %Use: Color :D
 
     \newenvironment{ColorText}[1]                                   %Use: \begin{ColorText}
         { \leavevmode\color{#1}\ignorespaces }                      %That's is!
@@ -269,7 +326,7 @@
         backgroundcolor=\color{BlueGrey800MD},                      %Background Color  
         basicstyle=\tiny\color{white},                              %Font color
         commentstyle=\color{BlueGrey200MD},                         %Comment color
-        stringstyle=\color{Lime300MD},                              %String color
+        stringstyle=\color{Green300MD},                             %String color
         keywordstyle=\color{Blue300MD},                             %keywords color
         numberstyle=\tiny\color{TealMD},                            %Size of a number
         frame=shadowbox,                                            %Adds a frame around the code
@@ -469,7 +526,7 @@
                 
             \subsection{Ejemplo}
             
-            	Para entender lo anterior veamos un ejemplo de la vida real. Supongamos que representamos a las ciudades con puntos. El enunciado \Quote{¿cuánto obtenemos si sumamos la ciudad de México con la ciudad de Nueva York?} no tiene sentido, pues no podemos sumar dos puntos. Sin embargo, sí podemos decir \Quote{¿cuánto obtenemos si sumamos la ubicación de la ciudad de México con 350 km al noreste?}, pues sí podemos sumar vectores (en este caso una posición y un desplazamiento) y obtener nueva información.
+                Para entender lo anterior veamos un ejemplo de la vida real. Supongamos que representamos a las ciudades con puntos. El enunciado \Quote{¿cuánto obtenemos si sumamos la ciudad de México con la ciudad de Nueva York?} no tiene sentido, pues no podemos sumar dos puntos. Sin embargo, sí podemos decir \Quote{¿cuánto obtenemos si sumamos la ubicación de la ciudad de México con 350 km al noreste?}, pues sí podemos sumar vectores (en este caso una posición y un desplazamiento) y obtener nueva información.
 
 
 
@@ -923,7 +980,7 @@
                     
                     Introducimos a los siguientes vectores:
                     \begin{align}
-                        \hat{i} &= (1, 0, 0) \MegaSpace \hat{j} = (0, 1, 0) \MegaSpace \hat{k} = (0, 0, 1)
+                        \hati &= (1, 0, 0) \MegaSpace \hatj = (0, 1, 0) \MegaSpace \hatk = (0, 0, 1)
                     \end{align}
 
                 \end{Definition}
@@ -940,7 +997,7 @@
                                 &= (a_1 + 0 + 0, 0 + a_2 + 0, 0 + 0 + a_3)       &&\mbox{Sumamos ceros convenientemente}       \\
                                 &= (a_1, 0, 0) + (0, a_2, 0) + (0, 0, a_3)       &&\mbox{Definición de suma}                   \\
                                 &= a_1(1, 0, 0) + a_2(0, 1, 0) + a_3(0, 0, 1)    &&\mbox{Factorización del escalar}            \\
-                                &= a_1\hat{i} + a_2\hat{j} + a_3\hat{k}          &&\mbox{Definición de los vectores canónicos}
+                                &= a_1\hati + a_2\hatj + a_3\hatk          &&\mbox{Definición de los vectores canónicos}
                         \end{align*}
                     \end{SmallIndentation}
                 
@@ -952,7 +1009,7 @@
                     De esta forma, el desplazamiento total será justamente el vector $\vec{a}$.
                     
                     Es bastante común usar esta notación para representar a los vectores, así que acostúmbrate a usar ambas. 
-                    Incluso algunas fuentes también usan $\uVec{x} = \hat{i}$, $\uVec{y} = \hat{j}$, $\uVec{z} = \hat{k}$.
+                    Incluso algunas fuentes también usan $\uVec{x} = \hati$, $\uVec{y} = \hatj$, $\uVec{z} = \hatk$.
 
 
 
@@ -1192,8 +1249,8 @@
                     \item 
                         \textbf{Producto Punto entre Vectores Unitarios Canónicos:}
                         \begin{align*}
-                            \hat{i} \dotP \hat{i} = \hat{j} \dotP \hat{j} = \hat{k} \dotP \hat{k} = 1   \\
-                            \hat{i} \dotP \hat{j} = \hat{j} \dotP \hat{k} = \hat{k} \dotP \hat{i} = 0
+                            \hati \dotP \hati = \hatj \dotP \hatj = \hatk \dotP \hatk = 1   \\
+                            \hati \dotP \hatj = \hatj \dotP \hatk = \hatk \dotP \hati = 0
                         \end{align*}
 
                     \item
@@ -1287,11 +1344,11 @@
 
                 \end{SmallIndentation}
             
-            	\begin{Definition}[Definición Alterna del Producto Punto con Magnitud]
-            		\begin{align}
-            			\vec a \dotP \vec b = \Abs{\vec a} \Abs{\vec b} \cos\theta \label{defDot2}
-            		\end{align}
-            	\end{Definition}
+                \begin{Definition}[Definición Alterna del Producto Punto con Magnitud]
+                    \begin{align}
+                        \vec a \dotP \vec b = \Abs{\vec a} \Abs{\vec b} \cos\theta \label{defDot2}
+                    \end{align}
+                \end{Definition}
 
                 La ecuación anterior es una de las más importantes que involucran al producto punto,
                 pues ahora lo relaciona con las magnitudes de los vectores y el ángulo entre ellos.
@@ -1327,7 +1384,7 @@
                     \textbf{ortogonales} si y solo si $\vec{a} \cdot \vec{b} = 0$.
                 \end{Definition}
 
-				Nota que el cero vector $\vec{0}$ es ortogonal a cualquier otro vector.
+                Nota que el cero vector $\vec{0}$ es ortogonal a cualquier otro vector.
 
 
 
@@ -1434,10 +1491,10 @@
                 los tres ángulos.
                 
                 Para proyectarlo sobre el eje $\mathbf{x}$, tenemos que proyectar $\vec{a}$ sobre el vector
-                unitario $\hat{i}$. Nombremos $\alpha$ al ángulo que forman, entonces:
+                unitario $\hati$. Nombremos $\alpha$ al ángulo que forman, entonces:
                 \begin{align}
                     \cos \alpha 
-                        = \dfrac{\vec{a} \dotP \hat{i}}{\Abs{\vec{a}} \Abs{\hat{i}}}
+                        = \dfrac{\vec{a} \dotP \hati}{\Abs{\vec{a}} \Abs{\hati}}
                         = \dfrac{a_1}{\Abs{\vec{a}}}
                 \end{align}
                 
@@ -1450,7 +1507,7 @@
                 
                 De esta forma, podemos escribir al vector unitario de $\vec{a}$ como:
                 \begin{equation*}
-                    \hat{a} = (\cos \alpha)\hat{i} + (\cos \beta)\hat{j} + (\cos \gamma)\hat{k}
+                    \hat{a} = (\cos \alpha)\hati + (\cos \beta)\hatj + (\cos \gamma)\hatk
                 \end{equation*}
 
                 Se queda como ejercicio que demuestres que $\hat{a}$ es realmente unitario :p
@@ -1474,7 +1531,7 @@
                     \end{align}
                 \end{Theorem}
             
-            	Es decir, el valor absoluto del producto punto de dos vectores siempre será menor o igual al producto de sus magnitudes.
+                Es decir, el valor absoluto del producto punto de dos vectores siempre será menor o igual al producto de sus magnitudes.
             
                 % ======== DEMOSTRACION ========
                 \begin{SmallIndentation}[1em]
@@ -1496,14 +1553,14 @@
                 
                 \end{SmallIndentation}
             
-            	Una forma alternativa de esta desigualdad es usando la definición de valor absoluto (similar al coseno anteriormente):
-            	\begin{equation*}
-	            	-\Abs{\vec{a}} \Abs{\vec{b}} 
-	            	\leq 
-	            	\vec{a} \dotP \vec{b}
-	            	\leq
-	            	\Abs{\vec{a}} \Abs{\vec{b}}   
-            	\end{equation*}
+                Una forma alternativa de esta desigualdad es usando la definición de valor absoluto (similar al coseno anteriormente):
+                \begin{equation*}
+                    -\Abs{\vec{a}} \Abs{\vec{b}} 
+                    \leq 
+                    \vec{a} \dotP \vec{b}
+                    \leq
+                    \Abs{\vec{a}} \Abs{\vec{b}}   
+                \end{equation*}
 
 
 
@@ -1524,10 +1581,10 @@
                     \end{align*}
                 \end{Theorem}
             
-            	\begin{figure}[H]
-            		\centering
-            		\includegraphics[scale=1]{triangleInequality.png}
-            	\end{figure}
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[scale=1]{triangleInequality.png}
+                \end{figure}
             
                 Vemos que la distancia más corta entre el origen $O$ y el punto $B$ tiene que ser
                 un segmento de recta, justamente $\Abs{\vec{a} + \vec{b}}$.
@@ -1574,7 +1631,7 @@
         \clearpage
         \section{Producto cruz}
         
-        	\subsection{Definición e ideas}
+            \subsection{Definición e ideas}
         
             Es el segundo tipo de producto que existe entre los vectores. Este sí es un producto \Quote{genuino} de vectores, porque el resultado ahora sí es otro vector. Sin embargo es un poco raro en comparación al producto punto, pues definirlo directamente de forma algebráica sería complicado y poco intuitivo. Además de que es obligatorio que trabajemos en $\Reals^3$ (porque está muy arraigado al espacio en 3D), pues en $\Reals^2$ no tiene sentido y en dimensiones superiores es bastante complicado generalizarlo.
             
@@ -1605,23 +1662,23 @@
                 \end{itemize}
             \end{Definition}
         
-            Para hacer que la definición anterior sea verdaderamente útil, calculemos los productos cruz de los vectores unitarios canónicos $\hat{i}, \hat{j}, \hat{k}$:
+            Para hacer que la definición anterior sea verdaderamente útil, calculemos los productos cruz de los vectores unitarios canónicos $\hati, \hatj, \hatk$:
             
-            Si dibujamos los vectores $\hat{i}$ y $\hat{j}$, vemos que el paralelogramo que forman es justamente un cuadrado de área 1, pues el lado mide 1:
+            Si dibujamos los vectores $\hati$ y $\hatj$, vemos que el paralelogramo que forman es justamente un cuadrado de área 1, pues el lado mide 1:
             \begin{figure}[H]
                 \centering
                 \includegraphics[scale=0.6]{unitVectors.png}
             \end{figure}
         
-            De esta forma, $\Abs{\hat{i} \times \hat{j}} = 1$. También vemos que cualquier dirección perpendicular a $\hat{i}$ y a $\hat{j}$ simultáneamente tiene que apuntar a fuerzas hacia $\pm \hat{k}$. Pero por la regla de la mano derecha, nos quedamos con la positiva. Por lo tanto: $\hat{i} \times \hat{j} = \hat{k}$. De forma similar tomando los otros posibles pares de vectores unitarios canónicos, obtenemos las siguientes relaciones:
+            De esta forma, $\Abs{\hati \times \hatj} = 1$. También vemos que cualquier dirección perpendicular a $\hati$ y a $\hatj$ simultáneamente tiene que apuntar a fuerzas hacia $\pm \hatk$. Pero por la regla de la mano derecha, nos quedamos con la positiva. Por lo tanto: $\hati \times \hatj = \hatk$. De forma similar tomando los otros posibles pares de vectores unitarios canónicos, obtenemos las siguientes relaciones:
             \begin{align}
-                \hat{i} \times \hat{j} = \hat{k} \MegaSpace , \MegaSpace \hat{j} \times \hat{k} = \hat{i} \MegaSpace , \MegaSpace \hat{k} \times \hat{i} = \hat{j}
+                \hati \times \hatj = \hatk \MegaSpace , \MegaSpace \hatj \times \hatk = \hati \MegaSpace , \MegaSpace \hatk \times \hati = \hatj
             \end{align}
             
             Y también tenemos que:
             \begin{align}
-                \hat{j} \times \hat{i} = -\hat{k} \MegaSpace &, \MegaSpace \hat{k} \times \hat{j} = -\hat{i} \MegaSpace &, \MegaSpace \hat{i} \times \hat{k} = -\hat{j}\\
-                \hat{i} \times \hat{i} = \vec{0} \MegaSpace &, \MegaSpace \hat{j} \times \hat{j} = \vec{0} \MegaSpace &, \MegaSpace \hat{k} \times \hat{k} = \vec{0}
+                \hatj \times \hati = -\hatk \MegaSpace &, \MegaSpace \hatk \times \hatj = -\hati \MegaSpace &, \MegaSpace \hati \times \hatk = -\hatj\\
+                \hati \times \hati = \vec{0} \MegaSpace &, \MegaSpace \hatj \times \hatj = \vec{0} \MegaSpace &, \MegaSpace \hatk \times \hatk = \vec{0}
             \end{align}
             
             Ahora veamos algunas propiedades básicas del producto cruz para poder deducir una fórmula en términos de las componentes de los vectores:
@@ -1689,10 +1746,10 @@
                     
                     \item Tenemos que:
                     \begin{align*}
-	                    \Wrap{\vec{a} + \vec{b}} \times \vec{c} &= -\vec{c} \times \Wrap{\vec{a} + \vec{b}} &&\mbox{Anticonmutatividad}\\
-	                    &= -\Wrap{\vec{c} \times \vec{a} + \vec{c} \times \vec{b}} &&\mbox{Distributiva por la izquierda}\\
-	                    &= -\Wrap{-\vec{a} \times \vec{c} - \vec{b} \times \vec{c}} &&\mbox{Anticonmutatividad}\\
-	                    &= \vec{a} \times \vec{c} + \vec{b} \times \vec{c}
+                        \Wrap{\vec{a} + \vec{b}} \times \vec{c} &= -\vec{c} \times \Wrap{\vec{a} + \vec{b}} &&\mbox{Anticonmutatividad}\\
+                        &= -\Wrap{\vec{c} \times \vec{a} + \vec{c} \times \vec{b}} &&\mbox{Distributiva por la izquierda}\\
+                        &= -\Wrap{-\vec{a} \times \vec{c} - \vec{b} \times \vec{c}} &&\mbox{Anticonmutatividad}\\
+                        &= \vec{a} \times \vec{c} + \vec{b} \times \vec{c}
                     \end{align*}
                 \end{itemize}
             \end{SmallIndentation}
@@ -1706,27 +1763,27 @@
             % =========================================================
             
             \begin{Theorem}[Definición algebráica de producto cruz]
-                Sean $\vec{a}, \vec{b} \in \Reals^3$ dados por sus coordenadas: $\vec{a}=a_1\hat{i} + a_2\hat{j} + a_3\hat{k}$ y $\vec{b}=b_1\hat{i} + b_2\hat{j} + b_3\hat{k}$. Entonces:
+                Sean $\vec{a}, \vec{b} \in \Reals^3$ dados por sus coordenadas: $\vec{a}=a_1\hati + a_2\hatj + a_3\hatk$ y $\vec{b}=b_1\hati + b_2\hatj + b_3\hatk$. Entonces:
                 \begin{align}
                     \vec{a} \times \vec{b} &=
                     \begin{vmatrix}
-                        \hat{i} & \hat{j} & \hat{k}\\
+                        \hati & \hatj & \hatk\\
                         a_1 & a_2 & a_3\\
                         b_1 & b_2 & b_3
                     \end{vmatrix}
                     = \begin{vmatrix}
                         a_2 & a_3\\
                         b_2 & b_3
-                    \end{vmatrix}\hat{i} - 
+                    \end{vmatrix}\hati - 
                     \begin{vmatrix}
                         a_1 & a_3\\
                         b_1 & b_3
-                    \end{vmatrix}\hat{j} + 
+                    \end{vmatrix}\hatj + 
                     \begin{vmatrix}
                         a_1 & a_2\\
                         b_1 & b_2
-                    \end{vmatrix}\hat{k}\\
-                    &= (a_2b_3-a_3b_2)\hat{i} + (a_3b_1-a_1b_3)\hat{j} + (a_1b_2-a_2b_1)\hat{k}
+                    \end{vmatrix}\hatk\\
+                    &= (a_2b_3-a_3b_2)\hati + (a_3b_1-a_1b_3)\hatj + (a_1b_2-a_2b_1)\hatk
                 \end{align}
             \end{Theorem}
         
@@ -1737,29 +1794,29 @@
             \begin{SmallIndentation}
                 \textbf{Demostración:} usando todas las propiedades anteriores, tenemos que (esto se pone intenso):
                 \begin{align*}
-                    \vec{a} \times \vec{b} &= \Wrap{a_1\hat{i} + a_2\hat{j} + a_3\hat{k}} \times \Wrap{b_1\hat{i} + b_2\hat{j} + b_3\hat{k}}\\
-                    &= \textcolor{blue}{\Wrap{a_1\hat{i} + a_2\hat{j} + a_3\hat{k}} \times \Wrap{b_1\hat{i}}}
-                    + \textcolor{red}{\Wrap{a_1\hat{i} + a_2\hat{j} + a_3\hat{k}} \times \Wrap{b_2\hat{j}}}
-                    + \textcolor{brown}{\Wrap{a_1\hat{i} + a_2\hat{j} + a_3\hat{k}} \times \Wrap{b_3\hat{k}}}\\
-                    &= \textcolor{blue}{\cancel{a_1b_1\hat{i}\times\hat{i}} + a_2b_1\hat{j}\times\hat{i} + a_3b_1\hat{k}\times\hat{i}}
-                    + \textcolor{red}{a_1b_2\hat{i}\times\hat{j} + \cancel{a_2b_2\hat{j}\times\hat{j}} + a_3b_2\hat{k}\times\hat{j}}
-                    + \textcolor{brown}{a_1b_3\hat{i}\times\hat{k} + a_2b_3\hat{j}\times\hat{k} + \cancel{a_3b_3\hat{k}\times\hat{k}}}\\
-                    &= -a_2b_1\hat{k} + a_3b_1\hat{j} + a_1b_2\hat{k} - a_3b_2\hat{i} - a_1b_3\hat{j} + a_2b_3\hat{i}\\
-                    &= (a_2b_3 - a_3b_2)\hat{i} - (a_1b_3 - a_3b_1)\hat{j} + (a_1b_2 - a_2b_1)\hat{k}\\
+                    \vec{a} \times \vec{b} &= \Wrap{a_1\hati + a_2\hatj + a_3\hatk} \times \Wrap{b_1\hati + b_2\hatj + b_3\hatk}\\
+                    &= \textcolor{blue}{\Wrap{a_1\hati + a_2\hatj + a_3\hatk} \times \Wrap{b_1\hati}}
+                    + \textcolor{red}{\Wrap{a_1\hati + a_2\hatj + a_3\hatk} \times \Wrap{b_2\hatj}}
+                    + \textcolor{brown}{\Wrap{a_1\hati + a_2\hatj + a_3\hatk} \times \Wrap{b_3\hatk}}\\
+                    &= \textcolor{blue}{\cancel{a_1b_1\hati\times\hati} + a_2b_1\hatj\times\hati + a_3b_1\hatk\times\hati}
+                    + \textcolor{red}{a_1b_2\hati\times\hatj + \cancel{a_2b_2\hatj\times\hatj} + a_3b_2\hatk\times\hatj}
+                    + \textcolor{brown}{a_1b_3\hati\times\hatk + a_2b_3\hatj\times\hatk + \cancel{a_3b_3\hatk\times\hatk}}\\
+                    &= -a_2b_1\hatk + a_3b_1\hatj + a_1b_2\hatk - a_3b_2\hati - a_1b_3\hatj + a_2b_3\hati\\
+                    &= (a_2b_3 - a_3b_2)\hati - (a_1b_3 - a_3b_1)\hatj + (a_1b_2 - a_2b_1)\hatk\\
                     &= \begin{vmatrix}
                         a_2 & a_3\\
                         b_2 & b_3
-                    \end{vmatrix}\hat{i} - 
+                    \end{vmatrix}\hati - 
                     \begin{vmatrix}
                         a_1 & a_3\\
                         b_1 & b_3
-                    \end{vmatrix}\hat{j} + 
+                    \end{vmatrix}\hatj + 
                     \begin{vmatrix}
                         a_1 & a_2\\
                         b_1 & b_2
-                    \end{vmatrix}\hat{k}\\
+                    \end{vmatrix}\hatk\\
                     &= \begin{vmatrix}
-                        \hat{i} & \hat{j} & \hat{k}\\
+                        \hati & \hatj & \hatk\\
                         a_1 & a_2 & a_3\\
                         b_1 & b_2 & b_3
                     \end{vmatrix}
@@ -1824,30 +1881,30 @@
             A pesar de que es un teorema que es independiente del producto cruz, lo usaremos para demostrarla.
             
             \begin{figure}[H]
-            	\centering
-            	\includegraphics[scale=1.2]{sines.png}
+                \centering
+                \includegraphics[scale=1.2]{sines.png}
             \end{figure}
             
             Sean $\vec{a}$, $\vec{b}$ y $\vec{c}$ los vectores de desplazamiento que representan a los lados. Es decir, $\lVec{BC}=\vec{a}$, $\lVec{CA}=\vec{b}$ y $\lVec{AB}=\vec{c}$. De la figura se ve que $\vec{a}+\vec{b}+\vec{c}=\vec{0}$, pues es cerrada.
             
             Hacemos el producto cruz con $\vec{a}$ en ambos lados:
             \begin{align}
-	            \Wrap{\vec{a}+\vec{b}+\vec{c}} \times \vec{a} = \vec{0} \times \vec{a} \implies \vec{b} \times \vec{a} + \vec{c} \times \vec{a} = \vec{0} \implies \vec{a} \times \vec{b} = \vec{c} \times \vec{a}
+                \Wrap{\vec{a}+\vec{b}+\vec{c}} \times \vec{a} = \vec{0} \times \vec{a} \implies \vec{b} \times \vec{a} + \vec{c} \times \vec{a} = \vec{0} \implies \vec{a} \times \vec{b} = \vec{c} \times \vec{a}
             \end{align}
             
             Ahora hacemos el producto cruz con $\vec{b}$ en ambos lados:
             \begin{align}
-	            \Wrap{\vec{a}+\vec{b}+\vec{c}} \times \vec{b} = \vec{0} \times \vec{b} \implies \vec{a} \times \vec{b} + \vec{c} \times \vec{b} = \vec{0} \implies \vec{a} \times \vec{b} = \vec{b} \times \vec{c}
+                \Wrap{\vec{a}+\vec{b}+\vec{c}} \times \vec{b} = \vec{0} \times \vec{b} \implies \vec{a} \times \vec{b} + \vec{c} \times \vec{b} = \vec{0} \implies \vec{a} \times \vec{b} = \vec{b} \times \vec{c}
             \end{align}
             
             Combinamos las dos ecuaciones anteriores y obtenemos que $\vec{a} \times \vec{b} = \vec{b} \times \vec{c} = \vec{c} \times \vec{a}$. Tomamos magnitud y obtenemos:
             \begin{align}
-	            \Abs{\vec{a}} \Abs{\vec{b}} \sen C = \Abs{\vec{b}} \Abs{\vec{c}} \sen A = \Abs{\vec{c}} \Abs{\vec{a}} \sen B
+                \Abs{\vec{a}} \Abs{\vec{b}} \sen C = \Abs{\vec{b}} \Abs{\vec{c}} \sen A = \Abs{\vec{c}} \Abs{\vec{a}} \sen B
             \end{align}
             
             Reacomodamos y terminamos:
             \begin{align}
-	            \dfrac{\Abs{\vec{a}}}{\sen A} = \dfrac{\Abs{\vec{b}}}{\sen B} = \dfrac{\Abs{\vec{c}}}{\sen C} \label{sinesLaw}
+                \dfrac{\Abs{\vec{a}}}{\sen A} = \dfrac{\Abs{\vec{b}}}{\sen B} = \dfrac{\Abs{\vec{c}}}{\sen C} \label{sinesLaw}
             \end{align}
             
         % =========================================================
@@ -1906,7 +1963,7 @@
             Antes de terminar con esta parte, veamos un último teorema:
             
             \begin{Theorem}
-                Sean $\vec{a}=a_1\hat{i}+a_2\hat{j}+a_3\hat{k}$, $\vec{b}=b_1\hat{i}+b_2\hat{j}+b_3\hat{k}$ y $\vec{c}=c_1\hat{i}+c_2\hat{j}+c_3\hat{k}$. Entonces:
+                Sean $\vec{a}=a_1\hati+a_2\hatj+a_3\hatk$, $\vec{b}=b_1\hati+b_2\hatj+b_3\hatk$ y $\vec{c}=c_1\hati+c_2\hatj+c_3\hatk$. Entonces:
                 \begin{align}
                     \vec{a} \dotP \Wrap{\vec{b} \times \vec{c}} &= \begin{vmatrix}
                         a_1 & a_2 & a_3\\
@@ -1927,125 +1984,125 @@
         
         \section{Identidades de productos}
         Existen bastantes identidades que involucran a los productos de vectores. Aquí te muestro algunas e ideas para sus demostraciones, con el fin de que seas capaz de desarrollar las tuyas propias.
-		
-		\begin{enumerate}\setlength\itemsep{0em}
-			\item $\Abs{\vec{a} \times \vec{b}}^2 + \Wrap{\vec{a} \dotP \vec{b}}^2 = \Abs{\vec{a}}^2 \Abs{\vec{b}}^2$
-			
-			\begin{SmallIndentation}[1em]
-				\textbf{Demostración:} Usamos las definiciones geométricas del producto punto y cruz:
-				\begin{align*}
-					\Abs{\vec{a} \times \vec{b}}^2 + \Wrap{\vec{a} \dotP \vec{b}}^2 &= \Wrap{\Abs{\vec{a}} \Abs{\vec{b}} \sen \theta}^2 + \Wrap{\Abs{\vec{a}} \Abs{\vec{b}} \cos \theta}^2 &&\Remember{Definición geométrica} \\
-					&= \Abs{\vec{a}}^2 \Abs{\vec{b}}^2 \Wrap{\sen^2 \theta + \cos^2 \theta} &&\Remember{Factorizamos} \\
-					&= \Abs{\vec{a}}^2 \Abs{\vec{b}}^2 &&\Remember{Identidad trigonométrica}
-				\end{align*}
-			\end{SmallIndentation}
-		
-		
-			\item $\abs{\Abs{\vec{a}} - \Abs{\vec{b}}} \leq \Abs{\vec{a} - \vec{b}}$
-			
-			\begin{SmallIndentation}[1em]
-				\textbf{Demostración:} A esta desigualdad se le conoce como la \emph{desigualdad de triángulo en reversa}. Apliquemos la desigualdad del triángulo a los vectores $\vec{a}$ y $\vec{b}-\vec{a}$:
-				\begin{align*}
-					&\Abs{\vec{a} + \Wrap{\vec{b}-\vec{a}}} \leq \Abs{\vec{a}} + \Abs{\vec{b}-\vec{a}} \implies \Abs{\vec{b}} \leq \Abs{\vec{a}} + \Abs{\vec{b}-\vec{a}} \implies \Abs{\vec{b}} - \Abs{\vec{a}} \leq \Abs{\vec{b}-\vec{a}} \\
-					&\implies -\Abs{\vec{b}-\vec{a}} \leq \Abs{\vec{a}} - \Abs{\vec{b}}
-				\end{align*}
-				
-				Ahora a los vectores $\vec{b}$ y $\vec{a}-\vec{b}$:
-				\begin{align*}
-					&\Abs{\vec{b} + \Wrap{\vec{a}-\vec{b}}} \leq \Abs{\vec{b}} + \Abs{\vec{a}-\vec{b}} \implies \Abs{\vec{a}} \leq \Abs{\vec{b}} + \Abs{\vec{a}-\vec{b}} \implies \Abs{\vec{a}} - \Abs{\vec{b}} \leq \Abs{\vec{a}-\vec{b}}
-				\end{align*}
-				
-				Pero $\Abs{\vec{b}-\vec{a}} = \Abs{\vec{a}-\vec{b}}$, entonces podemos combinar las dos desigualdades anteriores como $-\Abs{\vec{a}-\vec{b}} \leq \Abs{\vec{a}} - \Abs{\vec{b}} \leq \Abs{\vec{a}-\vec{b}}$, y por definición de valor absoluto en los reales, la conclusión se sigue.
-				
-			\end{SmallIndentation}
-			
-			
-			\item $\vec{a} \times \Wrap{\vec{b} \times \vec{c}} = \Wrap{\vec{a} \dotP \vec{c}}\vec{b} - \Wrap{\vec{a} \dotP \vec{b}}\vec{c}$
-			
-			\begin{SmallIndentation}[1em]
-				\textbf{Demostración:} Para esta identidad usaremos algunas propiedades del plano, las cuales puedes consultar en el capítulo que sigue. Sea $\vec{n}=\vec{b} \times \vec{c}$ el vector normal al plano que generan los vectores $\vec{b}$ y $\vec{c}$. Luego, $\vec{v} = \vec{a} \times \vec{n}$ será perpendicular al vector normal $\vec{n}$, por lo que también pertenecerá al plano.
-				
-				Entonces, podemos escribir a $\vec{v}$ como una combinación lineal de $\vec{b}$ y $\vec{c}$, es decir, existen $r, s \in \Reals$ tales que $\vec{v} = r\vec{b} + s\vec{c}$. Aplicamos producto punto con $\vec{a}$ a ambos lados:
-				\begin{align*}
-					\vec{a} \dotP \vec{v} &= \vec{a} \dotP \Wrap{r\vec{b} + s\vec{c}} &&\Remember{Sabemos que} \\
-					0 &= r\Wrap{\vec{a} \dotP \vec{b}} + s\Wrap{\vec{a} \dotP \vec{c}} &&\Remember{$\vec{a}$ es perpendicular a $\vec{v}$}\\
-					\dfrac{r}{s} &= -\dfrac{\vec{a} \dotP \vec{c}}{\vec{a} \dotP \vec{b}} &&\Remember{Reacomodamos}
-				\end{align*}
-				
-				Proponemos que $r = m\Wrap{\vec{a} \dotP \vec{c}}$ y $s = -m\Wrap{\vec{a} \dotP \vec{b}}$, donde $m \in \Reals$ es la constante de proporcionalidad. De esta forma la ecuación anterior siempre se cumple y ahora solo tenemos una variable. Por lo tanto:
-				\begin{align*}
-					\vec{v} &= m\Wrap{\vec{a} \dotP \vec{c}} \vec{b} - m\Wrap{\vec{a} \dotP \vec{b}} \vec{c} &&\Remember{Sustituimos} \\
-					\vec{a} \times \Wrap{\vec{b} \times \vec{c}} &= m\Wrap{\Wrap{\vec{a} \dotP \vec{c}} \vec{b} - \Wrap{\vec{a} \dotP \vec{b}} \vec{c}} &&\Remember{Recuerda que $\vec{v}=\vec{a} \times \vec{n}$ y $\vec{n} = \vec{b} \times \vec{c}$}
-				\end{align*}
-				
-				Ya solo nos queda hallar $m$. Como la ecuación anterior se cumple para todos los vectores $\vec{a}, \vec{b}, \vec{c}$, podemos sustituir $\vec{a}=\hat{j}$, $\vec{b}=\hat{i}$, $\vec{c}=\hat{j}$ de tal forma que el lado izquierdo no sea el cero vector. Obtenemos:
-				\begin{align*}
-					\hat{j} \times \Wrap{\hat{i} \times \hat{j}} &= m\Wrap{\Wrap{\hat{j} \dotP \hat{j}}\hat{i} - \cancel{\Wrap{\hat{j} \dotP \hat{i}}\hat{j}}} &&\Remember{Sustituimos}\\
-					\hat{j} \times \hat{k} &= m\hat{i} &&\Remember{Recuerda los productos punto y cruz entre vectores canónicos} \\
-					\hat{i} &= m\hat{i} \\
-					m &= 1
-				\end{align*}
-				
-				Finalmente, concluimos que $\vec{a} \times \Wrap{\vec{b} \times \vec{c}} = \Wrap{\vec{a} \dotP \vec{c}}\vec{b} - \Wrap{\vec{a} \dotP \vec{b}}\vec{c}$.
-			\end{SmallIndentation}
-			
-			
-			\item $\Wrap{\vec{a} \times \vec{b}} \times \Wrap{\vec{a} \times \vec{c}} = \Wrap{\vec{a} \dotP \Wrap{\vec{b} \times \vec{c}}}\vec{a}$
-			
-			\begin{SmallIndentation}[1em]
-				\textbf{Demostración:} Usamos la propiedad anterior:
-				\begin{align*}
-					\textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}} \times \Wrap{\textcolor{red}{\vec{a}} \times \vec{c}} &= \Wrap{\textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}} \dotP \vec{c}} \textcolor{red}{\vec{a}} - \cancel{\Wrap{\textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}} \dotP \textcolor{red}{\vec{a}}} \vec{c}} &&\Remember{Sustituimos con cuidado}\\
-					&= \Wrap{\Wrap{\vec{a} \times \vec{b}} \dotP \vec{c}} \vec{a} &&\Remember{$\vec{a}$ es perpendicular a $\vec{a} \times \vec{b}$}\\
-					&= \Wrap{\vec{c} \dotP \Wrap{\vec{a} \times \vec{b}}} \vec{a} &&\Remember{Conmutativa}\\
-					&= \Wrap{\vec{a} \dotP \Wrap{\vec{b} \times \vec{c}}} \vec{a} &&\Remember{Permutación circular}
-				\end{align*}
-			\end{SmallIndentation}
-			
-			
-			\item $\Wrap{\vec{a} \times \vec{b}} \dotP \Wrap{\vec{c} \times \vec{d}} = \Wrap{\vec{a} \dotP \vec{c}} \Wrap{\vec{b} \dotP \vec{d}} - \Wrap{\vec{a} \dotP \vec{d}} \Wrap{\vec{b} \dotP \vec{c}}$
-			
-			\begin{SmallIndentation}[1em]
-				\textbf{Demostración:}
-				\begin{align*}
-					\textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}} \dotP \Wrap{\textcolor{red}{\vec{c}} \times \vec{d}} &= \textcolor{red}{\vec{c}} \dotP \Wrap{\vec{d} \times \textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}}} &&\Remember{Permutación circular}\\
-					&= \vec{c} \dotP \Wrap{\Wrap{\vec{d} \dotP \vec{b}}\vec{a} - \Wrap{\vec{d} \dotP \vec{a}}\vec{b}} &&\Remember{Propiedad 3}\\
-					&= \vec{c} \dotP \Wrap{\Wrap{\vec{d} \dotP \vec{b}}\vec{a}} - \vec{c} \dotP \Wrap{\Wrap{\vec{d} \dotP \vec{a}}\vec{b}} &&\Remember{Distributiva}\\
-					&= \Wrap{\vec{d} \dotP \vec{b}} \Wrap{\vec{c} \dotP \vec{a}} - \Wrap{\vec{d} \dotP \vec{a}} \Wrap{\vec{c} \dotP \vec{b}} &&\Remember{Sacamos el escalar del producto punto (linearidad)}\\
-					&= \Wrap{\vec{a} \dotP \vec{c}} \Wrap{\vec{b} \dotP \vec{d}} - \Wrap{\vec{a} \dotP \vec{d}} \Wrap{\vec{b} \dotP \vec{c}} &&\Remember{Conmutativa}
-				\end{align*}
-			\end{SmallIndentation}
-			
-			
-			\item $\Wrap{\vec{a} \times \vec{b}} \dotP \Wrap{\vec{c} \times \vec{d}} + \Wrap{\vec{b} \times \vec{c}} \dotP \Wrap{\vec{a} \times \vec{d}} + \Wrap{\vec{c} \times \vec{a}} \dotP \Wrap{\vec{b} \times \vec{d}} = 0$
-			
-			\begin{SmallIndentation}[1em]
-				\textbf{Demostración:} Usamos la propiedad anterior:
-				
-				\begin{tabular}{crcl}
-					& $\Wrap{\vec{a} \times \vec{b}} \dotP \Wrap{\vec{c} \times \vec{d}}$ & $=$ & $\quad \textcolor{blue}{\cancel{\Wrap{\vec{a} \dotP \vec{c}} \Wrap{\vec{b} \dotP \vec{d}}}} - \textcolor{red}{\cancel{\Wrap{\vec{a} \dotP \vec{d}} \Wrap{\vec{b} \dotP \vec{c}}}}$\\
-					$+$ & $\Wrap{\vec{b} \times \vec{c}} \dotP \Wrap{\vec{a} \times \vec{d}}$ & $=$ & $+\cancel{\Wrap{\vec{b} \dotP \vec{a}} \Wrap{\vec{c} \dotP \vec{d}}} - \textcolor{blue}{\cancel{\Wrap{\vec{b} \dotP \vec{d}} \Wrap{\vec{c} \dotP \vec{a}}}}$\\
-					$+$ & $\Wrap{\vec{c} \times \vec{a}} \dotP \Wrap{\vec{b} \times \vec{d}}$ & $=$ & $+\textcolor{red}{\cancel{\Wrap{\vec{c} \dotP \vec{b}} \Wrap{\vec{a} \dotP \vec{d}}}} - \cancel{\Wrap{\vec{c} \dotP \vec{d}} \Wrap{\vec{a} \dotP \vec{b}}}$\\
-					\hline
-					& & $=$ & $0$
-				\end{tabular}
-			\end{SmallIndentation}
-			
-			\item $\vec{a} \times \Wrap{\vec{b} \times \vec{c}} + \vec{b} \times \Wrap{\vec{c} \times \vec{a}} + \vec{c} \times \Wrap{\vec{a} \times \vec{b}} = \vec{0}$
-			
-			\begin{SmallIndentation}[1em]
-				\textbf{Demostración:} Usamos la propiedad 3:
-				
-				\begin{tabular}{crcl}
-					& $\vec{a} \times \Wrap{\vec{b} \times \vec{c}}$ & $=$ & $\quad \textcolor{blue}{\cancel{\Wrap{\vec{a} \dotP \vec{c}}\vec{b}}} - \textcolor{red}{\cancel{\Wrap{\vec{a} \dotP \vec{b}}\vec{c}}}$\\
-					$+$ & $\vec{b} \times \Wrap{\vec{c} \times \vec{a}}$ & $=$ & $+\textcolor{red}{\cancel{\Wrap{\vec{b} \dotP \vec{a}}\vec{c}}} - \cancel{\Wrap{\vec{b} \dotP \vec{c}}\vec{a}}$\\
-					$+$ & $\vec{c} \times \Wrap{\vec{a} \times \vec{b}}$ & $=$ & $+\cancel{\Wrap{\vec{c} \dotP \vec{b}}\vec{a}} - \textcolor{blue}{\cancel{\Wrap{\vec{c} \dotP \vec{a}}\vec{b}}}$\\
-					\hline
-					& & $=$ & $\vec{0}$
-				\end{tabular}
-			\end{SmallIndentation}
-		
-		\end{enumerate}
+        
+        \begin{enumerate}\setlength\itemsep{0em}
+            \item $\Abs{\vec{a} \times \vec{b}}^2 + \Wrap{\vec{a} \dotP \vec{b}}^2 = \Abs{\vec{a}}^2 \Abs{\vec{b}}^2$
+            
+            \begin{SmallIndentation}[1em]
+                \textbf{Demostración:} Usamos las definiciones geométricas del producto punto y cruz:
+                \begin{align*}
+                    \Abs{\vec{a} \times \vec{b}}^2 + \Wrap{\vec{a} \dotP \vec{b}}^2 &= \Wrap{\Abs{\vec{a}} \Abs{\vec{b}} \sen \theta}^2 + \Wrap{\Abs{\vec{a}} \Abs{\vec{b}} \cos \theta}^2 &&\Remember{Definición geométrica} \\
+                    &= \Abs{\vec{a}}^2 \Abs{\vec{b}}^2 \Wrap{\sen^2 \theta + \cos^2 \theta} &&\Remember{Factorizamos} \\
+                    &= \Abs{\vec{a}}^2 \Abs{\vec{b}}^2 &&\Remember{Identidad trigonométrica}
+                \end{align*}
+            \end{SmallIndentation}
+        
+        
+            \item $\abs{\Abs{\vec{a}} - \Abs{\vec{b}}} \leq \Abs{\vec{a} - \vec{b}}$
+            
+            \begin{SmallIndentation}[1em]
+                \textbf{Demostración:} A esta desigualdad se le conoce como la \emph{desigualdad de triángulo en reversa}. Apliquemos la desigualdad del triángulo a los vectores $\vec{a}$ y $\vec{b}-\vec{a}$:
+                \begin{align*}
+                    &\Abs{\vec{a} + \Wrap{\vec{b}-\vec{a}}} \leq \Abs{\vec{a}} + \Abs{\vec{b}-\vec{a}} \implies \Abs{\vec{b}} \leq \Abs{\vec{a}} + \Abs{\vec{b}-\vec{a}} \implies \Abs{\vec{b}} - \Abs{\vec{a}} \leq \Abs{\vec{b}-\vec{a}} \\
+                    &\implies -\Abs{\vec{b}-\vec{a}} \leq \Abs{\vec{a}} - \Abs{\vec{b}}
+                \end{align*}
+                
+                Ahora a los vectores $\vec{b}$ y $\vec{a}-\vec{b}$:
+                \begin{align*}
+                    &\Abs{\vec{b} + \Wrap{\vec{a}-\vec{b}}} \leq \Abs{\vec{b}} + \Abs{\vec{a}-\vec{b}} \implies \Abs{\vec{a}} \leq \Abs{\vec{b}} + \Abs{\vec{a}-\vec{b}} \implies \Abs{\vec{a}} - \Abs{\vec{b}} \leq \Abs{\vec{a}-\vec{b}}
+                \end{align*}
+                
+                Pero $\Abs{\vec{b}-\vec{a}} = \Abs{\vec{a}-\vec{b}}$, entonces podemos combinar las dos desigualdades anteriores como $-\Abs{\vec{a}-\vec{b}} \leq \Abs{\vec{a}} - \Abs{\vec{b}} \leq \Abs{\vec{a}-\vec{b}}$, y por definición de valor absoluto en los reales, la conclusión se sigue.
+                
+            \end{SmallIndentation}
+            
+            
+            \item $\vec{a} \times \Wrap{\vec{b} \times \vec{c}} = \Wrap{\vec{a} \dotP \vec{c}}\vec{b} - \Wrap{\vec{a} \dotP \vec{b}}\vec{c}$
+            
+            \begin{SmallIndentation}[1em]
+                \textbf{Demostración:} Para esta identidad usaremos algunas propiedades del plano, las cuales puedes consultar en el capítulo que sigue. Sea $\vec{n}=\vec{b} \times \vec{c}$ el vector normal al plano que generan los vectores $\vec{b}$ y $\vec{c}$. Luego, $\vec{v} = \vec{a} \times \vec{n}$ será perpendicular al vector normal $\vec{n}$, por lo que también pertenecerá al plano.
+                
+                Entonces, podemos escribir a $\vec{v}$ como una combinación lineal de $\vec{b}$ y $\vec{c}$, es decir, existen $r, s \in \Reals$ tales que $\vec{v} = r\vec{b} + s\vec{c}$. Aplicamos producto punto con $\vec{a}$ a ambos lados:
+                \begin{align*}
+                    \vec{a} \dotP \vec{v} &= \vec{a} \dotP \Wrap{r\vec{b} + s\vec{c}} &&\Remember{Sabemos que} \\
+                    0 &= r\Wrap{\vec{a} \dotP \vec{b}} + s\Wrap{\vec{a} \dotP \vec{c}} &&\Remember{$\vec{a}$ es perpendicular a $\vec{v}$}\\
+                    \dfrac{r}{s} &= -\dfrac{\vec{a} \dotP \vec{c}}{\vec{a} \dotP \vec{b}} &&\Remember{Reacomodamos}
+                \end{align*}
+                
+                Proponemos que $r = m\Wrap{\vec{a} \dotP \vec{c}}$ y $s = -m\Wrap{\vec{a} \dotP \vec{b}}$, donde $m \in \Reals$ es la constante de proporcionalidad. De esta forma la ecuación anterior siempre se cumple y ahora solo tenemos una variable. Por lo tanto:
+                \begin{align*}
+                    \vec{v} &= m\Wrap{\vec{a} \dotP \vec{c}} \vec{b} - m\Wrap{\vec{a} \dotP \vec{b}} \vec{c} &&\Remember{Sustituimos} \\
+                    \vec{a} \times \Wrap{\vec{b} \times \vec{c}} &= m\Wrap{\Wrap{\vec{a} \dotP \vec{c}} \vec{b} - \Wrap{\vec{a} \dotP \vec{b}} \vec{c}} &&\Remember{Recuerda que $\vec{v}=\vec{a} \times \vec{n}$ y $\vec{n} = \vec{b} \times \vec{c}$}
+                \end{align*}
+                
+                Ya solo nos queda hallar $m$. Como la ecuación anterior se cumple para todos los vectores $\vec{a}, \vec{b}, \vec{c}$, podemos sustituir $\vec{a}=\hatj$, $\vec{b}=\hati$, $\vec{c}=\hatj$ de tal forma que el lado izquierdo no sea el cero vector. Obtenemos:
+                \begin{align*}
+                    \hatj \times \Wrap{\hati \times \hatj} &= m\Wrap{\Wrap{\hatj \dotP \hatj}\hati - \cancel{\Wrap{\hatj \dotP \hati}\hatj}} &&\Remember{Sustituimos}\\
+                    \hatj \times \hatk &= m\hati &&\Remember{Recuerda los productos punto y cruz entre vectores canónicos} \\
+                    \hati &= m\hati \\
+                    m &= 1
+                \end{align*}
+                
+                Finalmente, concluimos que $\vec{a} \times \Wrap{\vec{b} \times \vec{c}} = \Wrap{\vec{a} \dotP \vec{c}}\vec{b} - \Wrap{\vec{a} \dotP \vec{b}}\vec{c}$.
+            \end{SmallIndentation}
+            
+            
+            \item $\Wrap{\vec{a} \times \vec{b}} \times \Wrap{\vec{a} \times \vec{c}} = \Wrap{\vec{a} \dotP \Wrap{\vec{b} \times \vec{c}}}\vec{a}$
+            
+            \begin{SmallIndentation}[1em]
+                \textbf{Demostración:} Usamos la propiedad anterior:
+                \begin{align*}
+                    \textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}} \times \Wrap{\textcolor{red}{\vec{a}} \times \vec{c}} &= \Wrap{\textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}} \dotP \vec{c}} \textcolor{red}{\vec{a}} - \cancel{\Wrap{\textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}} \dotP \textcolor{red}{\vec{a}}} \vec{c}} &&\Remember{Sustituimos con cuidado}\\
+                    &= \Wrap{\Wrap{\vec{a} \times \vec{b}} \dotP \vec{c}} \vec{a} &&\Remember{$\vec{a}$ es perpendicular a $\vec{a} \times \vec{b}$}\\
+                    &= \Wrap{\vec{c} \dotP \Wrap{\vec{a} \times \vec{b}}} \vec{a} &&\Remember{Conmutativa}\\
+                    &= \Wrap{\vec{a} \dotP \Wrap{\vec{b} \times \vec{c}}} \vec{a} &&\Remember{Permutación circular}
+                \end{align*}
+            \end{SmallIndentation}
+            
+            
+            \item $\Wrap{\vec{a} \times \vec{b}} \dotP \Wrap{\vec{c} \times \vec{d}} = \Wrap{\vec{a} \dotP \vec{c}} \Wrap{\vec{b} \dotP \vec{d}} - \Wrap{\vec{a} \dotP \vec{d}} \Wrap{\vec{b} \dotP \vec{c}}$
+            
+            \begin{SmallIndentation}[1em]
+                \textbf{Demostración:}
+                \begin{align*}
+                    \textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}} \dotP \Wrap{\textcolor{red}{\vec{c}} \times \vec{d}} &= \textcolor{red}{\vec{c}} \dotP \Wrap{\vec{d} \times \textcolor{blue}{\Wrap{\vec{a} \times \vec{b}}}} &&\Remember{Permutación circular}\\
+                    &= \vec{c} \dotP \Wrap{\Wrap{\vec{d} \dotP \vec{b}}\vec{a} - \Wrap{\vec{d} \dotP \vec{a}}\vec{b}} &&\Remember{Propiedad 3}\\
+                    &= \vec{c} \dotP \Wrap{\Wrap{\vec{d} \dotP \vec{b}}\vec{a}} - \vec{c} \dotP \Wrap{\Wrap{\vec{d} \dotP \vec{a}}\vec{b}} &&\Remember{Distributiva}\\
+                    &= \Wrap{\vec{d} \dotP \vec{b}} \Wrap{\vec{c} \dotP \vec{a}} - \Wrap{\vec{d} \dotP \vec{a}} \Wrap{\vec{c} \dotP \vec{b}} &&\Remember{Sacamos el escalar del producto punto (linearidad)}\\
+                    &= \Wrap{\vec{a} \dotP \vec{c}} \Wrap{\vec{b} \dotP \vec{d}} - \Wrap{\vec{a} \dotP \vec{d}} \Wrap{\vec{b} \dotP \vec{c}} &&\Remember{Conmutativa}
+                \end{align*}
+            \end{SmallIndentation}
+            
+            
+            \item $\Wrap{\vec{a} \times \vec{b}} \dotP \Wrap{\vec{c} \times \vec{d}} + \Wrap{\vec{b} \times \vec{c}} \dotP \Wrap{\vec{a} \times \vec{d}} + \Wrap{\vec{c} \times \vec{a}} \dotP \Wrap{\vec{b} \times \vec{d}} = 0$
+            
+            \begin{SmallIndentation}[1em]
+                \textbf{Demostración:} Usamos la propiedad anterior:
+                
+                \begin{tabular}{crcl}
+                    & $\Wrap{\vec{a} \times \vec{b}} \dotP \Wrap{\vec{c} \times \vec{d}}$ & $=$ & $\quad \textcolor{blue}{\cancel{\Wrap{\vec{a} \dotP \vec{c}} \Wrap{\vec{b} \dotP \vec{d}}}} - \textcolor{red}{\cancel{\Wrap{\vec{a} \dotP \vec{d}} \Wrap{\vec{b} \dotP \vec{c}}}}$\\
+                    $+$ & $\Wrap{\vec{b} \times \vec{c}} \dotP \Wrap{\vec{a} \times \vec{d}}$ & $=$ & $+\cancel{\Wrap{\vec{b} \dotP \vec{a}} \Wrap{\vec{c} \dotP \vec{d}}} - \textcolor{blue}{\cancel{\Wrap{\vec{b} \dotP \vec{d}} \Wrap{\vec{c} \dotP \vec{a}}}}$\\
+                    $+$ & $\Wrap{\vec{c} \times \vec{a}} \dotP \Wrap{\vec{b} \times \vec{d}}$ & $=$ & $+\textcolor{red}{\cancel{\Wrap{\vec{c} \dotP \vec{b}} \Wrap{\vec{a} \dotP \vec{d}}}} - \cancel{\Wrap{\vec{c} \dotP \vec{d}} \Wrap{\vec{a} \dotP \vec{b}}}$\\
+                    \hline
+                    & & $=$ & $0$
+                \end{tabular}
+            \end{SmallIndentation}
+            
+            \item $\vec{a} \times \Wrap{\vec{b} \times \vec{c}} + \vec{b} \times \Wrap{\vec{c} \times \vec{a}} + \vec{c} \times \Wrap{\vec{a} \times \vec{b}} = \vec{0}$
+            
+            \begin{SmallIndentation}[1em]
+                \textbf{Demostración:} Usamos la propiedad 3:
+                
+                \begin{tabular}{crcl}
+                    & $\vec{a} \times \Wrap{\vec{b} \times \vec{c}}$ & $=$ & $\quad \textcolor{blue}{\cancel{\Wrap{\vec{a} \dotP \vec{c}}\vec{b}}} - \textcolor{red}{\cancel{\Wrap{\vec{a} \dotP \vec{b}}\vec{c}}}$\\
+                    $+$ & $\vec{b} \times \Wrap{\vec{c} \times \vec{a}}$ & $=$ & $+\textcolor{red}{\cancel{\Wrap{\vec{b} \dotP \vec{a}}\vec{c}}} - \cancel{\Wrap{\vec{b} \dotP \vec{c}}\vec{a}}$\\
+                    $+$ & $\vec{c} \times \Wrap{\vec{a} \times \vec{b}}$ & $=$ & $+\cancel{\Wrap{\vec{c} \dotP \vec{b}}\vec{a}} - \textcolor{blue}{\cancel{\Wrap{\vec{c} \dotP \vec{a}}\vec{b}}}$\\
+                    \hline
+                    & & $=$ & $\vec{0}$
+                \end{tabular}
+            \end{SmallIndentation}
+        
+        \end{enumerate}
 
 
 
@@ -2231,19 +2288,19 @@
         La esfera es el conjunto de puntos en el espacio que están a la misma distancia de un punto llamado centro. Es la generalización del círculo en dos dimensiones. Aquí también llamaremos radio a la distancia del centro.
         
         \begin{figure}[H]
-        	\centering
-        	\includegraphics[scale=0.85]{sphere.png}
+            \centering
+            \includegraphics[scale=0.85]{sphere.png}
         \end{figure}
         
         Sea $R$ el radio de la esfera y $\vec{C}=(x_0, y_0, z_0)$ el centro. Sea $\vec{P}=(x,y,z)$ el vector de posición que va a barrer toda la esfera. Entonces requerimos que la distancia entre $\vec{P}$ y $\vec{C}$ sea siempre igual al radio $R$, es decir:
         \begin{align}
-	        \Abs{\vec{P} - \vec{C}} &= R \label{sphereEquation}
+            \Abs{\vec{P} - \vec{C}} &= R \label{sphereEquation}
         \end{align}
         
         Si reemplazamos cada vector por sus componentes, entonces:
         \begin{align}
-	        &\Abs{(x-x_0, y-y_0, z-z_0)} = R \nonumber \\
-	        &\implies (x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2 = R^2 \label{sphereEquation2}
+            &\Abs{(x-x_0, y-y_0, z-z_0)} = R \nonumber \\
+            &\implies (x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2 = R^2 \label{sphereEquation2}
         \end{align}
         
         Esta ecuación es muy parecida a la del círculo, simplemente incluimos la componente en $\mathbf{z}$.
@@ -2256,132 +2313,132 @@
             
         \section{Distancia punto-recta}
         
-        	Supongamos que tenemos una línea en su forma paramétrica $\vec{r} = \lVec{a_0} + t\vec{v}$ y un punto $\vec{P}$. Queremos saber la mínima distancia que hay entre $\vec{P}$ y la línea.
+            Supongamos que tenemos una línea en su forma paramétrica $\vec{r} = \lVec{a_0} + t\vec{v}$ y un punto $\vec{P}$. Queremos saber la mínima distancia que hay entre $\vec{P}$ y la línea.
         
-	        \subsection{Método 1}
-	        ¿Recuerdas la definición \ref{vectorProjection} de la proyección de un vector sobre otro? La retomaremos aquí.
-	        
-	        \begin{figure}[H]
-	        	\centering
-	        	\includegraphics[scale=1.65]{distancePointLine.png}
-	        \end{figure}
-	    
-	    	De la figura vemos que el vector $\vec{P}-\lVec{a_0}$ tiene el mismo origen que el vector paralelo a la línea, que es $\vec{v}$. Por definición de distancia punto-línea, queremos la más corta, es decir, la longitud del segmento que resulta de proyectar ortogonalmente el vector $\vec{P}-\lVec{a_0}$ sobre la línea.
-	    	
-	    	Y ya tenemos la fórmula para eso. Sea $\vec{d}$ el vector resultado de dicha proyección, entonces, por la ecuación \ref{defProj2}, tenemos que:
-	    	\begin{align}
-		    	\vec{d} &= \Wrap{\vec{P} - \lVec{a_0}} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} \label{distancePointLine}
-	    	\end{align}
-	    	
-	    	De esa forma, la distancia que queremos es justamente la magnitud de $\vec{d}$:
-	    	\begin{align}
-		    	&\Abs{\vec{d}} = \Abs{\Wrap{\vec{P} - \lVec{a_0}} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}}\\
-		    	&\Abs{\vec{d}} = \Abs{\Wrap{\vec{P} - \lVec{a_0}} - \dfrac{\Wrap{\vec{P} - \lVec{a_0}} \dotP \vec{v}}{\Abs{\vec{v}}^2} \vec{v}} \label{distancePointLine1}
-	    	\end{align}
-	    	
-	    	\subsection{Método 2}
-	    	Ahora usaremos un poco de trigonometría y el producto cruz. Retomemos la figura anterior:
-	    	
-	    	\begin{figure}[H]
-	    		\centering
-	    		\includegraphics[scale=1.65]{distancePointLine2.png}
-	    	\end{figure}
-    	
-    		Sea $\theta$ el ángulo que forman los vectores $\vec{v}$ y $\vec{P} - \lVec{a_0}$. Entonces, por definición del seno en el triángulo rectángulo formado tenemos que:
-    		\begin{align}
-	    		\Abs{\vec{d}} = {\Abs{\vec{P} - \lVec{a_0}}} \sen \theta
-    		\end{align}
-    		
-    		Y por la ecuación \ref{angleBetweenVectorsCross} sabemos que:
-    		\begin{align}
-	    		\sen \theta = \dfrac{\Abs{\vec{v} \times \Wrap{\vec{P} - \lVec{a_0}}}}{\Abs{\vec{v}} \Abs{\vec{P} - \lVec{a_0}}}
-    		\end{align}
-    		
-    		Entonces:
-    		\begin{align}
-	    		\Abs{\vec{d}} = {\cancel{\Abs{\vec{P} - \lVec{a_0}}}} \dfrac{\Abs{\vec{v} \times \Wrap{\vec{P} - \lVec{a_0}}}}{\Abs{\vec{v}} \cancel{\Abs{\vec{P} - \lVec{a_0}}}} = \dfrac{\Abs{\vec{v} \times \Wrap{\vec{P} - \lVec{a_0}}}}{\Abs{\vec{v}}} \label{distancePointLine2}
-    		\end{align}
-    		
-    			\subsubsection{Caso particular: línea en el plano xy}
-    			Supongamos que tenemos una línea en el plano xy cuya ecuación es $ax+by=c$, y un punto $P$ cuyo vector de posición es $\vec{P}=(x_0, y_0)$. Para hallar la distancia entre este punto y la recta, primero tenemos que parametrizarla.
-    			
-    			Vemos que $y=-\dfrac{a}{b}x+\dfrac{c}{b}$, por lo tanto $\vec{r} = (x, y) = \Wrap{x, -\dfrac{a}{b}x+\dfrac{c}{b}} = \Wrap{0, \dfrac{c}{b}} + x\Wrap{1, -\dfrac{a}{b}}$. De esa forma $\lVec{a_0}=\Wrap{0, \dfrac{c}{b}}$ y $\vec{v}=\Wrap{1, -\dfrac{a}{b}}$.
-    			
-    			Sustituimos en la ecuación \ref{distancePointLine2} y obtenemos:
-    			\begin{align}
-	    			&\Abs{\vec{d}} = \dfrac{\Abs{\Wrap{1, -\dfrac{a}{b}} \times \Wrap{x_0, y_0 - \dfrac{c}{b}}}}{\Abs{\Wrap{1, -\dfrac{a}{b}}}} = \dfrac{\abs{y_0 - \dfrac{c}{b} + \dfrac{a}{b}x_0}}{\sqrt{1 + \Wrap{\dfrac{a}{b}}^2}} \nonumber \\
-	    			&\implies \Abs{\vec{d}} = \dfrac{\abs{ax_0 + by_0 - c}}{\sqrt{a^2 + b^2}} \label{distancePointLine3}
-    			\end{align}
-    		
-    		\clearpage
-    		
-    		\subsection{Extra: reflexión de un punto sobre una recta}
-    		Ahora supongamos que la línea es un espejo y queremos hallar un punto $\vec{P'}$ tal que esté del otro lado de la línea y tenga la misma distancia a la línea que el punto original $\vec{P}$.
-    		
-    		\begin{figure}[H]
-    			\centering
-    			\includegraphics[scale=1.65]{reflection.png}
-    		\end{figure}
-    	
-    		Vemos que necesitamos otra vez el vector $\vec{d}$ que ya hemos calculado en la ecuación \ref{distancePointLine}. Y obtener $\vec{P'}$ es muy sencillo, simplemente a $\vec{P}$ le sumamos dos veces el desplazamiento que indica el vector $\vec{d}$ en dirección hacia $\vec{P'}$. Pero como $\vec{d}$ va en dirección contraria a la que queremos, le invertimos el sentido y dicha suma se convierte en una resta de dos veces el vector $\vec{d}$:
-    		\begin{align}
-	    		\vec{P'} = \vec{P} - 2\vec{d}
-    		\end{align}
-    		
-    		Finalmente sustituimos la ecuación \ref{distancePointLine}:
-    		\begin{align}
-	    		&\vec{P'} = \vec{P} - 2 \Brackets{\Wrap{\vec{P} - \lVec{a_0}} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}} \nonumber \\
-	    		&\implies \vec{P'} = 2\lVec{a_0} - \vec{P} + 2\Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} \label{reflectionPointLine}
-    		\end{align}
-    		
-    		Por supuesto que no te recomiendo que te memorices todas las fórmulas anteriores (yo nunca me las aprendí), sino que cuentes con las herramientas adecuadas para poder deducirlas y aplicarlas correctamente en los problemas.
-    		
-    	% =========================================================
-    	% =============     DISTANCIA PUNTO-PLANO   ===============
-    	% =========================================================
-    	
-    	\clearpage
+            \subsection{Método 1}
+            ¿Recuerdas la definición \ref{vectorProjection} de la proyección de un vector sobre otro? La retomaremos aquí.
+            
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=1.65]{distancePointLine.png}
+            \end{figure}
+        
+            De la figura vemos que el vector $\vec{P}-\lVec{a_0}$ tiene el mismo origen que el vector paralelo a la línea, que es $\vec{v}$. Por definición de distancia punto-línea, queremos la más corta, es decir, la longitud del segmento que resulta de proyectar ortogonalmente el vector $\vec{P}-\lVec{a_0}$ sobre la línea.
+            
+            Y ya tenemos la fórmula para eso. Sea $\vec{d}$ el vector resultado de dicha proyección, entonces, por la ecuación \ref{defProj2}, tenemos que:
+            \begin{align}
+                \vec{d} &= \Wrap{\vec{P} - \lVec{a_0}} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} \label{distancePointLine}
+            \end{align}
+            
+            De esa forma, la distancia que queremos es justamente la magnitud de $\vec{d}$:
+            \begin{align}
+                &\Abs{\vec{d}} = \Abs{\Wrap{\vec{P} - \lVec{a_0}} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}}\\
+                &\Abs{\vec{d}} = \Abs{\Wrap{\vec{P} - \lVec{a_0}} - \dfrac{\Wrap{\vec{P} - \lVec{a_0}} \dotP \vec{v}}{\Abs{\vec{v}}^2} \vec{v}} \label{distancePointLine1}
+            \end{align}
+            
+            \subsection{Método 2}
+            Ahora usaremos un poco de trigonometría y el producto cruz. Retomemos la figura anterior:
+            
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=1.65]{distancePointLine2.png}
+            \end{figure}
+        
+            Sea $\theta$ el ángulo que forman los vectores $\vec{v}$ y $\vec{P} - \lVec{a_0}$. Entonces, por definición del seno en el triángulo rectángulo formado tenemos que:
+            \begin{align}
+                \Abs{\vec{d}} = {\Abs{\vec{P} - \lVec{a_0}}} \sen \theta
+            \end{align}
+            
+            Y por la ecuación \ref{angleBetweenVectorsCross} sabemos que:
+            \begin{align}
+                \sen \theta = \dfrac{\Abs{\vec{v} \times \Wrap{\vec{P} - \lVec{a_0}}}}{\Abs{\vec{v}} \Abs{\vec{P} - \lVec{a_0}}}
+            \end{align}
+            
+            Entonces:
+            \begin{align}
+                \Abs{\vec{d}} = {\cancel{\Abs{\vec{P} - \lVec{a_0}}}} \dfrac{\Abs{\vec{v} \times \Wrap{\vec{P} - \lVec{a_0}}}}{\Abs{\vec{v}} \cancel{\Abs{\vec{P} - \lVec{a_0}}}} = \dfrac{\Abs{\vec{v} \times \Wrap{\vec{P} - \lVec{a_0}}}}{\Abs{\vec{v}}} \label{distancePointLine2}
+            \end{align}
+            
+                \subsubsection{Caso particular: línea en el plano xy}
+                Supongamos que tenemos una línea en el plano xy cuya ecuación es $ax+by=c$, y un punto $P$ cuyo vector de posición es $\vec{P}=(x_0, y_0)$. Para hallar la distancia entre este punto y la recta, primero tenemos que parametrizarla.
+                
+                Vemos que $y=-\dfrac{a}{b}x+\dfrac{c}{b}$, por lo tanto $\vec{r} = (x, y) = \Wrap{x, -\dfrac{a}{b}x+\dfrac{c}{b}} = \Wrap{0, \dfrac{c}{b}} + x\Wrap{1, -\dfrac{a}{b}}$. De esa forma $\lVec{a_0}=\Wrap{0, \dfrac{c}{b}}$ y $\vec{v}=\Wrap{1, -\dfrac{a}{b}}$.
+                
+                Sustituimos en la ecuación \ref{distancePointLine2} y obtenemos:
+                \begin{align}
+                    &\Abs{\vec{d}} = \dfrac{\Abs{\Wrap{1, -\dfrac{a}{b}} \times \Wrap{x_0, y_0 - \dfrac{c}{b}}}}{\Abs{\Wrap{1, -\dfrac{a}{b}}}} = \dfrac{\abs{y_0 - \dfrac{c}{b} + \dfrac{a}{b}x_0}}{\sqrt{1 + \Wrap{\dfrac{a}{b}}^2}} \nonumber \\
+                    &\implies \Abs{\vec{d}} = \dfrac{\abs{ax_0 + by_0 - c}}{\sqrt{a^2 + b^2}} \label{distancePointLine3}
+                \end{align}
+            
+            \clearpage
+            
+            \subsection{Extra: reflexión de un punto sobre una recta}
+            Ahora supongamos que la línea es un espejo y queremos hallar un punto $\vec{P'}$ tal que esté del otro lado de la línea y tenga la misma distancia a la línea que el punto original $\vec{P}$.
+            
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=1.65]{reflection.png}
+            \end{figure}
+        
+            Vemos que necesitamos otra vez el vector $\vec{d}$ que ya hemos calculado en la ecuación \ref{distancePointLine}. Y obtener $\vec{P'}$ es muy sencillo, simplemente a $\vec{P}$ le sumamos dos veces el desplazamiento que indica el vector $\vec{d}$ en dirección hacia $\vec{P'}$. Pero como $\vec{d}$ va en dirección contraria a la que queremos, le invertimos el sentido y dicha suma se convierte en una resta de dos veces el vector $\vec{d}$:
+            \begin{align}
+                \vec{P'} = \vec{P} - 2\vec{d}
+            \end{align}
+            
+            Finalmente sustituimos la ecuación \ref{distancePointLine}:
+            \begin{align}
+                &\vec{P'} = \vec{P} - 2 \Brackets{\Wrap{\vec{P} - \lVec{a_0}} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}} \nonumber \\
+                &\implies \vec{P'} = 2\lVec{a_0} - \vec{P} + 2\Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} \label{reflectionPointLine}
+            \end{align}
+            
+            Por supuesto que no te recomiendo que te memorices todas las fórmulas anteriores (yo nunca me las aprendí), sino que cuentes con las herramientas adecuadas para poder deducirlas y aplicarlas correctamente en los problemas.
+            
+        % =========================================================
+        % =============     DISTANCIA PUNTO-PLANO   ===============
+        % =========================================================
+        
+        \clearpage
         
         \section{Distancia punto-plano}
         Usaremos ideas similares a las anteriores. Supongamos que tenemos un plano descrito por la ecuación $\vec{n} \dotP \Wrap{\vec{r} - \lVec{a_0}}=0$, es decir, su vector normal es $\vec{n}$, pasa por el punto $\lVec{a_0}$ y su vector de posición que lo dibuja es $\vec{r}$. Queremos hallar la mínima distancia entre un punto $\vec{P}$ y el plano.
         
         \begin{figure}[H]
-        	\centering
-        	\includegraphics[scale=0.8]{distancePointPlane.png}
+            \centering
+            \includegraphics[scale=0.8]{distancePointPlane.png}
         \end{figure}
         
         Proyectamos ortogonalmente el punto $\vec{P}$ sobre la superficie del plano y llamemos $\vec{d}$ al vector resultante. Claramente vemos que la dirección de $\vec{d}$ es la misma que la del vector normal $\vec{n}$, entonces podemos escribir:
         \begin{align}
-	        \vec{d} = \Abs{\vec{d}} \hat{n}
+            \vec{d} = \Abs{\vec{d}} \hat{n}
         \end{align}
         
         Como el punto descrito por el vector de posición $\vec{P}+\vec{d}\;$ pertenece al plano, debe satisfacer la ecuación del plano. Por lo tanto, sustituimos $\vec{r}$ por $\vec{P}+\vec{d}$:
         \begin{align}
-	        \vec{n} \dotP \Wrap{\vec{P}+\vec{d} - \lVec{a_0}} &= 0 \nonumber \\
-	        \hat{n} \dotP \Wrap{\vec{P}+\Abs{\vec{d}} \hat{n} - \lVec{a_0}} &= 0 &&\Remember{Dividimos entre $\Abs{\vec{n}}$ y sustituímos $\vec{d}$} \nonumber \\
-	        \hat{n} \dotP \Wrap{\vec{P} - \lVec{a_0}} + \Abs{\vec{d}} &= 0 &&\Remember{Expandimos el producto punto} \nonumber \\
-	        \Abs{\vec{d}} &= -\hat{n} \dotP \Wrap{\vec{P} - \lVec{a_0}} &&\Remember{Despejamos} \nonumber \\
-	        \Abs{\vec{d}} &= \abs{\hat{n} \dotP \Wrap{\vec{P} - \lVec{a_0}}} &&\Remember{Sacamos valor absoluto por si el producto punto es negativo} \nonumber \\
-	        \Abs{\vec{d}} &= \dfrac{\abs{\vec{n} \dotP \Wrap{\vec{P} - \lVec{a_0}}}}{\Abs{\vec{n}}} &&\Remember{Recuerda que $\hat{n}=\dfrac{\vec{n}}{\Abs{\vec{n}}}$} \label{distancePointPlane}
+            \vec{n} \dotP \Wrap{\vec{P}+\vec{d} - \lVec{a_0}} &= 0 \nonumber \\
+            \hat{n} \dotP \Wrap{\vec{P}+\Abs{\vec{d}} \hat{n} - \lVec{a_0}} &= 0 &&\Remember{Dividimos entre $\Abs{\vec{n}}$ y sustituímos $\vec{d}$} \nonumber \\
+            \hat{n} \dotP \Wrap{\vec{P} - \lVec{a_0}} + \Abs{\vec{d}} &= 0 &&\Remember{Expandimos el producto punto} \nonumber \\
+            \Abs{\vec{d}} &= -\hat{n} \dotP \Wrap{\vec{P} - \lVec{a_0}} &&\Remember{Despejamos} \nonumber \\
+            \Abs{\vec{d}} &= \abs{\hat{n} \dotP \Wrap{\vec{P} - \lVec{a_0}}} &&\Remember{Sacamos valor absoluto por si el producto punto es negativo} \nonumber \\
+            \Abs{\vec{d}} &= \dfrac{\abs{\vec{n} \dotP \Wrap{\vec{P} - \lVec{a_0}}}}{\Abs{\vec{n}}} &&\Remember{Recuerda que $\hat{n}=\dfrac{\vec{n}}{\Abs{\vec{n}}}$} \label{distancePointPlane}
         \end{align}
         
         Observa que la ecuación anterior no es más que la longitud de la proyección del vector $\vec{P} - \lVec{a_0}$ sobre el vector normal $\vec{n}$. ¿Podrías explicar por qué?
         
-	        \subsubsection{Caso particular: fórmula en forma cartesiana}
-	        
-	        Si descomponemos los vectores en coordenadas, es decir, $\vec{n}=(a,b,c)$, $\vec{P}=(x_1, y_1, z_1)$ y $\lVec{a_0}=(x_0, y_0, z_0)$, entonces obtenemos la fórmula en forma cartesiana:
-	        \begin{align}
-		        &\Abs{\vec{d}} = \dfrac{\abs{a(x_1 - x_0) + b(y_1 - y_0) + c(z_1 - z_0)}}{\sqrt{a^2+b^2+c^2}} \nonumber \\
-		        &\Abs{\vec{d}} = \dfrac{\abs{ax_1 + by_1 + cz_1 - (ax_0 + by_0 + cz_0)}}{\sqrt{a^2+b^2+c^2}} \nonumber \\
-		        &\Abs{\vec{d}} = \dfrac{\abs{ax_1 + by_1 + cz_1 - d}}{\sqrt{a^2+b^2+c^2}}
-	        \end{align}
-	        Donde recuerda que la ecuación del plano en forma cartesiana es $ax+by+cz=d$ (no confundas las d's).
-	        
-	    \clearpage
-	    
-	    % =========================================================
-	    % ============     ROTACIONES EN EL ESPACIO   =============
-	    % =========================================================
+            \subsubsection{Caso particular: fórmula en forma cartesiana}
+            
+            Si descomponemos los vectores en coordenadas, es decir, $\vec{n}=(a,b,c)$, $\vec{P}=(x_1, y_1, z_1)$ y $\lVec{a_0}=(x_0, y_0, z_0)$, entonces obtenemos la fórmula en forma cartesiana:
+            \begin{align}
+                &\Abs{\vec{d}} = \dfrac{\abs{a(x_1 - x_0) + b(y_1 - y_0) + c(z_1 - z_0)}}{\sqrt{a^2+b^2+c^2}} \nonumber \\
+                &\Abs{\vec{d}} = \dfrac{\abs{ax_1 + by_1 + cz_1 - (ax_0 + by_0 + cz_0)}}{\sqrt{a^2+b^2+c^2}} \nonumber \\
+                &\Abs{\vec{d}} = \dfrac{\abs{ax_1 + by_1 + cz_1 - d}}{\sqrt{a^2+b^2+c^2}}
+            \end{align}
+            Donde recuerda que la ecuación del plano en forma cartesiana es $ax+by+cz=d$ (no confundas las d's).
+            
+        \clearpage
+        
+        % =========================================================
+        % ============     ROTACIONES EN EL ESPACIO   =============
+        % =========================================================
         
         \section{Rotaciones en el espacio}
         
@@ -2391,79 +2448,79 @@
         
         Observa con cuidado la siguiente figura:
         \begin{figure}[H]
-        	\centering
-        	\includegraphics[scale=0.8]{rotation.png}
+            \centering
+            \includegraphics[scale=0.8]{rotation.png}
         \end{figure}
     
-    	Veamos todos los elementos con los que vamos a trabajar:
-    	\begin{itemize}\setlength\itemsep{0em}
-    		\item El eje de rotación estará dado por la ecuación de la línea $\vec{r} = \lVec{a_0} + t\hat{v}$. Supondremos que el vector paralelo $\hat{v}$ será unitario para simplificar.
-    		\item El punto a rotar $P$ está indicado por su vector de posición $\vec{P}$.
-    		\item Obtendremos el nuevo punto $\vec{P'}$ al rotar $\vec{P}$ sobre el eje con un ángulo de rotación $\theta$.
-    	\end{itemize}
+        Veamos todos los elementos con los que vamos a trabajar:
+        \begin{itemize}\setlength\itemsep{0em}
+            \item El eje de rotación estará dado por la ecuación de la línea $\vec{r} = \lVec{a_0} + t\hat{v}$. Supondremos que el vector paralelo $\hat{v}$ será unitario para simplificar.
+            \item El punto a rotar $P$ está indicado por su vector de posición $\vec{P}$.
+            \item Obtendremos el nuevo punto $\vec{P'}$ al rotar $\vec{P}$ sobre el eje con un ángulo de rotación $\theta$.
+        \end{itemize}
     
-    	Primero vamos a proyectar el vector $\vec{P} - \lVec{a_0}$ sobre el eje. Llamaremos $\vec{u}$ a la proyección y $\vec{n}$ a la componente normal. Ya sabemos cómo calcularlos:
-    	\begin{align}
-    		\vec{u} &= \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} \\
-    		\vec{n} &= \vec{P} - \lVec{a_0} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}
-    	\end{align}
-    	
-    	De esa forma descompusimos al vector $\vec{P} - \lVec{a_0}$ tal que $\vec{P} - \lVec{a_0} = \vec{u} + \vec{n}$. Suena razonable suponer que el nuevo vector $\vec{P'} - \lVec{a_0}$ también será la suma de dos vectores, y lo es, porque vemos que al girar el punto $\vec{P}$ el vector $\vec{u}$ no cambia pues es paralelo al eje, mientras que el vector $\vec{n}$ gira el mismo ángulo. Llamemos $\vec{n'}$ a este nuevo vector, entonces:
-    	\begin{align}
-	    	\vec{P'} - \lVec{a_0} &= \vec{u} + \vec{n'} \implies \vec{P'} = \lVec{a_0} + \vec{u} + \vec{n'} \label{rotatedPoint}
-    	\end{align}
-    	
-    	Ahora el problema es obtener $\vec{n'}$. Para ello nos conviene definir un plano en donde la rotación se va a llevar a cabo. Un vector normal a él que apunta hacia afuera es justamente $\hat{v}$.
-    	
-    	Nota que al girar la punta de $\vec{n}$ hasta la punta de $\vec{n'}$ estamos dibujando un círculo contenido en el plano, cuyo centro es la punta del vector $\vec{u}$ y su radio es $\Abs{\vec{n}}$.
+        Primero vamos a proyectar el vector $\vec{P} - \lVec{a_0}$ sobre el eje. Llamaremos $\vec{u}$ a la proyección y $\vec{n}$ a la componente normal. Ya sabemos cómo calcularlos:
+        \begin{align}
+            \vec{u} &= \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} \\
+            \vec{n} &= \vec{P} - \lVec{a_0} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}
+        \end{align}
+        
+        De esa forma descompusimos al vector $\vec{P} - \lVec{a_0}$ tal que $\vec{P} - \lVec{a_0} = \vec{u} + \vec{n}$. Suena razonable suponer que el nuevo vector $\vec{P'} - \lVec{a_0}$ también será la suma de dos vectores, y lo es, porque vemos que al girar el punto $\vec{P}$ el vector $\vec{u}$ no cambia pues es paralelo al eje, mientras que el vector $\vec{n}$ gira el mismo ángulo. Llamemos $\vec{n'}$ a este nuevo vector, entonces:
+        \begin{align}
+            \vec{P'} - \lVec{a_0} &= \vec{u} + \vec{n'} \implies \vec{P'} = \lVec{a_0} + \vec{u} + \vec{n'} \label{rotatedPoint}
+        \end{align}
+        
+        Ahora el problema es obtener $\vec{n'}$. Para ello nos conviene definir un plano en donde la rotación se va a llevar a cabo. Un vector normal a él que apunta hacia afuera es justamente $\hat{v}$.
+        
+        Nota que al girar la punta de $\vec{n}$ hasta la punta de $\vec{n'}$ estamos dibujando un círculo contenido en el plano, cuyo centro es la punta del vector $\vec{u}$ y su radio es $\Abs{\vec{n}}$.
         
         Para hallar la ecuación de ese círculo, aparte de necesitar los dos vectores paralelos al plano, requerimos que estos sean ortogonales y sean unitarios para que se dibuje correctamente el círculo (es decir, barriendo la misma longitud en ambas direcciones conforme $\theta$ aumenta). Llamémoslos $\hat{e_1}$ y $\hat{e_2}$.
         
         $\hat{e_1}$ va en la dirección de $\vec{n}$, por lo tanto:
         \begin{align}
-	        \hat{e_1} &= \dfrac{\vec{n}}{\Abs{\vec{n}}}
+            \hat{e_1} &= \dfrac{\vec{n}}{\Abs{\vec{n}}}
         \end{align}
         
         $\hat{e_2}$ es perpendicular a $\hat{v}$ y a $\vec{n}$, y por la regla de mano derecha, debemos de hacer producto cruz de $\hat{v}$ con $\vec{n}$. De esa forma tenemos:
         \begin{align}
-	        \hat{e_2} &= \dfrac{\hat{v} \times \vec{n}}{\Abs{\hat{v} \times \vec{n}}} \nonumber \\
-	        &= \dfrac{\hat{v} \times \Brackets{\vec{P} - \lVec{a_0} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}}}{\Abs{\hat{v}} \Abs{\vec{n}} \sen 90^\circ} \nonumber \\
-	        &= \dfrac{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}{\Abs{\vec{n}}}
+            \hat{e_2} &= \dfrac{\hat{v} \times \vec{n}}{\Abs{\hat{v} \times \vec{n}}} \nonumber \\
+            &= \dfrac{\hat{v} \times \Brackets{\vec{P} - \lVec{a_0} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}}}{\Abs{\hat{v}} \Abs{\vec{n}} \sen 90^\circ} \nonumber \\
+            &= \dfrac{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}{\Abs{\vec{n}}}
         \end{align}
         
         Por lo tanto, el círculo, que está dibujado por la punta de $\vec{n'}$, es:
         \begin{align}
-	        \vec{n'} &= \Abs{\vec{n}} \Wrap{\cos \theta \hat{e_1} + \sen \theta \hat{e_2}} = \Wrap{\cos \theta} \vec{n} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}
+            \vec{n'} &= \Abs{\vec{n}} \Wrap{\cos \theta \hat{e_1} + \sen \theta \hat{e_2}} = \Wrap{\cos \theta} \vec{n} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}
         \end{align}
         
         Finalmente, el punto $\vec{P'}$ corresponde con un específico ángulo de $\theta$, por lo tanto, sustituyendo todo en la ecuación \ref{rotatedPoint}:
         \small
         \begin{align*}
-	        \vec{P'} &= \lVec{a_0} + \vec{u} + \Wrap{\cos \theta} \vec{n} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}} \\
-	        &= \lVec{a_0} + \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} + \Wrap{\cos \theta} \Brackets{\vec{P} - \lVec{a_0} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}} \\
-	        &= \lVec{a_0} + \Wrap{\cos \theta} \Wrap{\vec{P} - \lVec{a_0}} + \Wrap{1 - \cos \theta} \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}
+            \vec{P'} &= \lVec{a_0} + \vec{u} + \Wrap{\cos \theta} \vec{n} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}} \\
+            &= \lVec{a_0} + \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} + \Wrap{\cos \theta} \Brackets{\vec{P} - \lVec{a_0} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}} \\
+            &= \lVec{a_0} + \Wrap{\cos \theta} \Wrap{\vec{P} - \lVec{a_0}} + \Wrap{1 - \cos \theta} \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}
         \end{align*}
         \normalsize
         
         Si hacemos que $\vec{q} = \vec{P} - \lVec{a_0}$, tenemos la fórmula un poco más simple:
         \begin{align}
-	        \vec{P'} &= \lVec{a_0} + \Wrap{\cos \theta} \vec{q} + \Wrap{1 - \cos \theta} \Wrap{\vec{q} \dotP \hat{v}} \hat{v} + \Wrap{\sen \theta} \Wrap{\hat{v} \times \vec{q}} \label{formulaRotation3D}
+            \vec{P'} &= \lVec{a_0} + \Wrap{\cos \theta} \vec{q} + \Wrap{1 - \cos \theta} \Wrap{\vec{q} \dotP \hat{v}} \hat{v} + \Wrap{\sen \theta} \Wrap{\hat{v} \times \vec{q}} \label{formulaRotation3D}
         \end{align}
         
-        	\subsection{Caso particular: rotación en el plano xy}
-        	Si queremos rotar un punto $\vec{P} = x\hat{i} + y\hat{j}$ respecto al origen del plano xy un ángulo $\theta$, vemos que el eje de rotación es el eje $\mathbf{z}$, es decir, $\hat{v} = \hat{k}$; también vemos que $\lVec{a_0}=\vec{0}$. Entonces, sustituimos en la ecuación anterior:
-        	\small
-        	\begin{align}
-	        	\vec{P'} &= \vec{0} + \Wrap{\cos \theta} \Wrap{x\hat{i} + y\hat{j}} + \cancel{\Wrap{1 - \cos \theta} \Wrap{\Wrap{x\hat{i} + y\hat{j}} \dotP \hat{k}} \hat{k}} + \Wrap{\sen \theta} \Wrap{\hat{k} \times \Wrap{x\hat{i} + y\hat{j}}} \nonumber \\
-	        	&= \Wrap{\cos \theta} \Wrap{x\hat{i} + y\hat{j}} + \Wrap{\sen \theta} \Wrap{x\hat{j} - y\hat{i}} \nonumber\\
-	        	&= \Wrap{x \cos \theta - y \sen \theta}\hat{i} + \Wrap{x \sen \theta + y \cos \theta}\hat{j}
-        	\end{align}
-        	\normalsize
-        	
-        	Probablemente ya conocías la ecuación anterior, y en forma matricial se ve más bonita, donde $\vec{P'}=(x', y')$:
-        	\begin{align}
-	        	\pVector{x' \\ y'} &= \pVector{\cos \theta && -\sen \theta \\ \sen \theta && \cos \theta} \pVector{x \\ y}
-        	\end{align}
+            \subsection{Caso particular: rotación en el plano xy}
+            Si queremos rotar un punto $\vec{P} = x\hati + y\hatj$ respecto al origen del plano xy un ángulo $\theta$, vemos que el eje de rotación es el eje $\mathbf{z}$, es decir, $\hat{v} = \hatk$; también vemos que $\lVec{a_0}=\vec{0}$. Entonces, sustituimos en la ecuación anterior:
+            \small
+            \begin{align}
+                \vec{P'} &= \vec{0} + \Wrap{\cos \theta} \Wrap{x\hati + y\hatj} + \cancel{\Wrap{1 - \cos \theta} \Wrap{\Wrap{x\hati + y\hatj} \dotP \hatk} \hatk} + \Wrap{\sen \theta} \Wrap{\hatk \times \Wrap{x\hati + y\hatj}} \nonumber \\
+                &= \Wrap{\cos \theta} \Wrap{x\hati + y\hatj} + \Wrap{\sen \theta} \Wrap{x\hatj - y\hati} \nonumber\\
+                &= \Wrap{x \cos \theta - y \sen \theta}\hati + \Wrap{x \sen \theta + y \cos \theta}\hatj
+            \end{align}
+            \normalsize
+            
+            Probablemente ya conocías la ecuación anterior, y en forma matricial se ve más bonita, donde $\vec{P'}=(x', y')$:
+            \begin{align}
+                \pVector{x' \\ y'} &= \pVector{\cos \theta && -\sen \theta \\ \sen \theta && \cos \theta} \pVector{x \\ y}
+            \end{align}
         
         \clearpage
         
@@ -2475,17 +2532,17 @@
         
         Muchas demostraciones en geometría se pueden simplificar y llevar a cabo usando vectores de forma más elegante. Algunas propiedades que podemos aprovechar son:
         \begin{itemize}\setlength\itemsep{0em}
-        	\item Expresar cada segmento de la figura con vectores de desplazamiento de una forma conveniente.
-        	\item También podemos expresar los vértices como vectores de posición.
-        	\item Para probar que dos segmentos son paralelos, probamos que los vectores que los representan tienen la misma dirección, o equivalentemente, que uno es múltiplo escalar del otro.
-        	\item Para probar que dos segmentos tienen la misma longitud, probamos que los vectores que los representan tienen la misma magnitud.
-        	\item En algunos casos podemos escoger algunos vectores como base y expresar a otros como combinación lineal de los primeros.
-        	\item Para hallar razones entre longitudes de segmentos, podemos usar ideas de dependencia e independencia lineal.
-        	\item En la mayoría de los casos no es necesario descomponer los vectores en sus componentes.
-        	\item El producto punto puede servir para probar perperndicularidad y en algunos casos simplificar expresiones que involucren magnitudes.
+            \item Expresar cada segmento de la figura con vectores de desplazamiento de una forma conveniente.
+            \item También podemos expresar los vértices como vectores de posición.
+            \item Para probar que dos segmentos son paralelos, probamos que los vectores que los representan tienen la misma dirección, o equivalentemente, que uno es múltiplo escalar del otro.
+            \item Para probar que dos segmentos tienen la misma longitud, probamos que los vectores que los representan tienen la misma magnitud.
+            \item En algunos casos podemos escoger algunos vectores como base y expresar a otros como combinación lineal de los primeros.
+            \item Para hallar razones entre longitudes de segmentos, podemos usar ideas de dependencia e independencia lineal.
+            \item En la mayoría de los casos no es necesario descomponer los vectores en sus componentes.
+            \item El producto punto puede servir para probar perperndicularidad y en algunos casos simplificar expresiones que involucren magnitudes.
         \end{itemize}
     
-    	Así que, veamos muchos ejemplos:
+        Así que, veamos muchos ejemplos:
 
 
 \part{Cálculo diferencial vectorial}
