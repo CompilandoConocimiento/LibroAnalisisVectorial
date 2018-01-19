@@ -1108,11 +1108,6 @@
 
 
 
-
-
-
-
-
     % ===============================================================================
     % ===================         PRODUCTO ENTRE VECTORES      ======================
     % ===============================================================================
@@ -1474,11 +1469,13 @@
                         Definimos a la \textbf{Proyección de $\vec{a}$ sobre $\hat{v}$} como:
                         \begin{align}
                             proy_{\hat{v}}(\vec{a}) := \Wrap{\vec{a} \dotP \hat{v}} \hat{v}
+                            \label{vectorProjection}
                         \end{align}
                         
                         Y a la \textbf{componente normal de $\vec{a}$ sobre $\hat{v}$} como:
                         \begin{align}
                             \vec{n} := \vec{a} - \Wrap{\vec{a} \dotP \hat{v}} \hat{v}
+                            \label{vectorProjection2}
                         \end{align}
 
                     \end{Definition}
@@ -2357,15 +2354,6 @@
             \end{itemize}
 
 
-
-    
-
-
-
-
-
-
-
     
     % ===============================================================================
     % ==============            APLICACIONES A LA GEOMETRIA         =================
@@ -2374,552 +2362,916 @@
 
 
 
-        \section{Aplicaciones con el Producto Cruz}
+        % =========================================================
+        % ============   APLICACIONES CON PRODUCTO CRUZ    ========
+        % =========================================================
+        \clearpage
+        \section{Aplicaciones con el P. Cruz}
 
             % =========================================================
-            % ===========    DEFINICION ALGEBRAICA   ==================
+            % ===========    AREA DE UN TRIANGULO    ==================
             % =========================================================
-            \subsection{Área de un triángulo}
+            \subsection{Área de un Triángulo}
             
-            Si tenemos un triángulo con vértices $A$, $B$ y $C$, podemos calcular su área de una forma muy sencilla usando el producto cruz.
+                Si tenemos un triángulo con vértices $A$, $B$ y $C$, podemos calcular su área de una forma muy
+                sencilla usando el producto cruz.
+                
+                Escogemos de forma arbitraria un vértice y calculamos los dos vectores de desplazamiento a los
+                otros dos puntos. El área simplemente será la mitad de la magnitud del producto punto entre
+                estos dos vectores, pues dos triángulos forman un paralelogramo.
+
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.55\textwidth]{triangle}
+                \end{figure}
+                
+                Por ejemplo: supongamos que los vectores de posición del triángulo son $\vec{A}$, $\vec{B}$ y $\vec{C}$.
+                Escogemos como referencia el vértice $\vec{A}$, de esta forma los vectores de desplazamiento son
+                $\vec{b} = \vec{B}-\vec{A}$ y $\vec{c} = \vec{C}-\vec{A}$.
+
+                Entonces el área será igual a $\dfrac{1}{2}\Abs{\vec{b} \times \vec{c}}$.
             
-            Escogemos de forma arbitraria un vértice y calculamos los dos vectores de desplazamiento a los otros dos puntos. El área simplemente será la mitad de la magnitud del producto punto entre estos dos vectores, pues dos triángulos forman un paralelogramo.
-            
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale=1.3]{triangle.png}
-            \end{figure}
-            
-            Por ejemplo: supongamos que los vectores de posición del triángulo son $\vec{A}$, $\vec{B}$ y $\vec{C}$. Escogemos como referencia el vértice $\vec{A}$, de esta forma los vectores de desplazamiento son $\vec{b}=\vec{B}-\vec{A}$ y $\vec{c}=\vec{C}-\vec{A}$. Entonces el área será igual a $\dfrac{1}{2}\Abs{\vec{b} \times \vec{c}}$.
-            
+            % =========================================================
+            % ===========    AREA DE UN PARALELOGRAMO    ==============
+            % =========================================================
             \clearpage
+            \subsection{Área de un Paralelogramo en términos de sus Diagonales}
             
-            \subsection{Área de un paralelogramo en términos de sus diagonales}
-            
-            Sean $\vec{a}, \vec{b} \in \Reals^3$. Queremos hallar el área del paparelogramo que forman, pero no en términos de ellos, sino de las dos diagonales.
-            
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale=1.3]{parallelogram2.png}
-            \end{figure}
-            
-            De la figura vemos que $\vec{d_1}=\vec{a}+\vec{b}$ y que $\vec{d_2}=\vec{b}-\vec{a}$, entonces hallemos $\vec{a}$ y $\vec{b}$ en términos de $\vec{d_1}$ y $\vec{d_2}$:
-            \begin{align*}
-                \vec{a} &= \dfrac{1}{2}\Wrap{\vec{d_1}-\vec{d_2}}\\
-                \vec{b} &= \dfrac{1}{2}\Wrap{\vec{d_1}+\vec{d_2}}
-            \end{align*}
-            
-            Por lo tanto, el área es:
-            \begin{align*}
-                \Abs{\vec{a} \times \vec{b}} &= \Abs{\Wrap{\dfrac{1}{2}\Wrap{\vec{d_1}-\vec{d_2}}} \times \Wrap{\dfrac{1}{2}\Wrap{\vec{d_1}+\vec{d_2}}}} = \dfrac{1}{4} \Abs{\Wrap{\vec{d_1}-\vec{d_2}} \times \Wrap{\vec{d_1}+\vec{d_2}}}\\
-                &= \dfrac{1}{4}\Abs{\cancel{\vec{d_1} \times \vec{d_1}} + \vec{d_1} \times \vec{d_2} - \vec{d_2} \times \vec{d_1} - \cancel{\vec{d_2} \times \vec{d_2}}}\\
-                &= \dfrac{1}{4}\Abs{\vec{d_1} \times \vec{d_2} + \vec{d_1} \times \vec{d_2}}\\
-                &= \dfrac{1}{4}\Abs{2\Wrap{\vec{d_1} \times \vec{d_2}}}\\
-                &= \dfrac{1}{2}\Abs{\vec{d_1} \times \vec{d_2}}
-            \end{align*}
-            
+                Sean $\vec{a}, \vec{b} \in \Reals^3$.
+                Queremos hallar el área del paparelogramo que forman, pero no en términos de ellos, sino de las dos diagonales.
+                
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.55\textwidth]{parallelogram2}
+                \end{figure}
+                
+                De la figura vemos que $\vec{d_1} = \vec{a}+\vec{b}$ y que $\vec{d_2} = \vec{b}-\vec{a}$,
+                entonces hallemos $\vec{a}$ y $\vec{b}$ en términos de $\vec{d_1}$ y $\vec{d_2}$:
+                \begin{align*}
+                    \vec{a} &= \dfrac{1}{2}\Wrap{\vec{d_1} - \vec{d_2}}     \\
+                    \vec{b} &= \dfrac{1}{2}\Wrap{\vec{d_1} + \vec{d_2}}
+                \end{align*}
+                
+                Por lo tanto, el área es:
+                \begin{align*}
+                    \Abs{\vec{a} \times \vec{b}} 
+                        &= \Abs{\Wrap{\dfrac{1}{2}\Wrap{\vec{d_1}-\vec{d_2}}} 
+                                \times 
+                                \Wrap{\dfrac{1}{2}\Wrap{\vec{d_1}+\vec{d_2}}}
+                            }                                                                                                           \\
+                        &= \dfrac{1}{4}\Abs{\Wrap{\vec{d_1}-\vec{d_2}} \times \Wrap{\vec{d_1}+\vec{d_2}}}                               \\
+                        &= \dfrac{1}{4}\Abs{
+                              \cancel{\vec{d_1} \times \vec{d_1}}
+                            + \vec{d_1} \times \vec{d_2} 
+                            - \vec{d_2} \times \vec{d_1}
+                            - \cancel{\vec{d_2} \times \vec{d_2}}
+                        }                                                                                                               \\
+                        &= \dfrac{1}{4}\Abs{\vec{d_1} \times \vec{d_2} + \vec{d_1} \times \vec{d_2}}                                    \\
+                        &= \dfrac{1}{4}\Abs{2\Wrap{\vec{d_1} \times \vec{d_2}}}                                                         \\
+                        &= \dfrac{1}{2}\Abs{\vec{d_1} \times \vec{d_2}}
+                \end{align*}
+                
+
+            % =========================================================
+            % ===========    DEMOSTRACION DE LEY DE SENOS     =========
+            % =========================================================
             \clearpage
-            
-            \subsection{Demostración de la ley de senos}
-            A pesar de que es un teorema que es independiente del producto cruz, lo usaremos para demostrarla.
-            
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale=1.2]{sines.png}
-            \end{figure}
-            
-            Sean $\vec{a}$, $\vec{b}$ y $\vec{c}$ los vectores de desplazamiento que representan a los lados. Es decir, $\lVec{BC}=\vec{a}$, $\lVec{CA}=\vec{b}$ y $\lVec{AB}=\vec{c}$. De la figura se ve que $\vec{a}+\vec{b}+\vec{c}=\vec{0}$, pues es cerrada.
-            
-            Hacemos el producto cruz con $\vec{a}$ en ambos lados:
-            \begin{align}
-                \Wrap{\vec{a}+\vec{b}+\vec{c}} \times \vec{a} = \vec{0} \times \vec{a} \implies \vec{b} \times \vec{a} + \vec{c} \times \vec{a} = \vec{0} \implies \vec{a} \times \vec{b} = \vec{c} \times \vec{a}
-            \end{align}
-            
-            Ahora hacemos el producto cruz con $\vec{b}$ en ambos lados:
-            \begin{align}
-                \Wrap{\vec{a}+\vec{b}+\vec{c}} \times \vec{b} = \vec{0} \times \vec{b} \implies \vec{a} \times \vec{b} + \vec{c} \times \vec{b} = \vec{0} \implies \vec{a} \times \vec{b} = \vec{b} \times \vec{c}
-            \end{align}
-            
-            Combinamos las dos ecuaciones anteriores y obtenemos que $\vec{a} \times \vec{b} = \vec{b} \times \vec{c} = \vec{c} \times \vec{a}$. Tomamos magnitud y obtenemos:
-            \begin{align}
-                \Abs{\vec{a}} \Abs{\vec{b}} \sin C = \Abs{\vec{b}} \Abs{\vec{c}} \sin A = \Abs{\vec{c}} \Abs{\vec{a}} \sin B
-            \end{align}
-            
-            Reacomodamos y terminamos:
-            \begin{align}
-                \dfrac{\Abs{\vec{a}}}{\sin A} = \dfrac{\Abs{\vec{b}}}{\sin B} = \dfrac{\Abs{\vec{c}}}{\sin C} \label{sinesLaw}
-            \end{align}
+            \subsection{Demostración de la Ley de Senos}
+                
+                A pesar de que es un teorema que es independiente del producto cruz,
+                lo usaremos para demostrarla.
+                
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.45\textwidth]{sines}
+                \end{figure}
+                
+                Sean $\vec{a}$, $\vec{b}$ y $\vec{c}$ los vectores de desplazamiento que
+                representan a los lados. 
+                Es decir, $\lVec{BC} = \vec{a}$, $\lVec{CA} = \vec{b}$ y $\lVec{AB} = \vec{c}$.
+                De la figura se ve que $\vec{a} + \vec{b} + \vec{c} = \vec{0}$, pues es cerrada.
+                
+                Hacemos el producto cruz con $\vec{a}$ en ambos lados:
+                \begin{align*}
+                    \Wrap{\vec{a} + \vec{b} + \vec{c}} \times \vec{a} = \vec{0} \times \vec{a}  \\
+                        &\implies
+                    \vec{b} \times \vec{a} + \vec{c} \times \vec{a} = \vec{0}                   \\
+                        &\implies
+                    \vec{a} \times \vec{b} = \vec{c} \times \vec{a}
+                \end{align*}
+                
+                Ahora hacemos el producto cruz con $\vec{b}$ en ambos lados:
+                \begin{align*}
+                    \Wrap{\vec{a}+\vec{b}+\vec{c}} \times \vec{b} = \vec{0} \times \vec{b}      \\
+                        &\implies
+                    \vec{a} \times \vec{b} + \vec{c} \times \vec{b} = \vec{0}                   \\
+                        &\implies
+                    \vec{a} \times \vec{b} = \vec{b} \times \vec{c}
+                \end{align*}
+                
+                Combinamos las dos ecuaciones anteriores y obtenemos que 
+                $\vec{a} \times \vec{b} = \vec{b} \times \vec{c} = \vec{c} \times \vec{a}$.
 
-
-
-
-
-        \section{Aplicaciones con el Producto Caja}
-            \clearpage
-        
-            \subsection{Volumen de un paralelepípedo}
-        
-            Supongamos que queremos hallar el volumen del paralelepípedo formado por los vectores $\vec{a}, \vec{b}$ y $\vec{c}$:
-        
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale=0.8]{parallelepiped.png}
-            \end{figure}
-        
-            Recordemos que el volumen está dado por $V=\Wrap{\text{área de la base}}\Wrap{\text{altura}}$.
-            
-            Vemos que el área de la base es simplemente el área del paralelogramo formado por $\vec{a}$ y $\vec{b}$, es decir, $\Abs{\vec{a} \times \vec{b}}$.
-            
-            Sea $\phi$ el ángulo que forma el vector $\vec{a} \times \vec{b}$ con $\vec{c}$. Entonces, usando la definición de coseno vemos que la altura está dada por $\Abs{\vec{c}} \abs{\cos \phi}$. Usamos el valor absoluto en el coseno porque $\phi$ puede ser mayor a $90^\circ$, causando que $\cos \phi < 0$.
-            
-            De esa forma, el volumen es $V=\Abs{\vec{a} \times \vec{b}} \Abs{\vec{c}} \abs{\cos \phi}=\abs{\Abs{\vec{a} \times \vec{b}} \Abs{\vec{c}} \cos \phi}=\abs{\vec{c} \dotP \Wrap{\vec{a} \times \vec{b}}}$, que es justamente el valor absoluto del producto triple de los vectores que definen al paralelepípedo.
-            
-            ¿Qué significado tendrá el hecho de que $\vec{a} \dotP \Wrap{\vec{b} \times \vec{c}}=0$? Quiere decir que el paralelepípedo no tiene volumen, es decir, que los tres vectores \textbf{están en el mismo plano}. Veremos más adelante las propiedades del plano.
-            
-            La expresión \emph{producto triple} puede hacer referencia a otras combinaciones donde estén involucrados tres vectores y sus productos, como $\vec{a} \times \Wrap{\vec{b} \times \vec{c}}$, $\Wrap{\vec{a} \dotP \vec{b}}\vec{c}$, etc.
-            
-            
-
-
-
-
-
-
-
+                Tomamos magnitud y obtenemos:
+                \begin{align*}
+                          \Abs{\vec{a}} \Abs{\vec{b}} \sin C 
+                        = \Abs{\vec{b}} \Abs{\vec{c}} \sin A 
+                        = \Abs{\vec{c}} \Abs{\vec{a}} \sin B
+                \end{align*}
+                
+                Reacomodamos y terminamos:
+                \begin{align}
+                      \dfrac{\Abs{\vec{a}}}{\sin A} 
+                    = \dfrac{\Abs{\vec{b}}}{\sin B} 
+                    = \dfrac{\Abs{\vec{c}}}{\sin C}
+                    \label{sinesLaw}
+                \end{align}
 
 
 
         % =========================================================
-        % ====================     PLANOS   =======================
+        % ============   APLICACIONES CON PRODUCTO CAJA    ========
         % =========================================================
+        \clearpage
+        \section{Aplicaciones con el P. Caja}
         
-        \section{Ecuación del plano}
+            % =========================================================
+            % ============   VOLUMEN DE UN PARALELEPIPEDO      ========
+            % =========================================================
+            \subsection{Volumen de un Paralelepípedo}
         
-        El plano es un objeto bidimensional que contiene infinitos puntos y rectas. Usualmente se les denota con la letra griega $\Pi$. Para definirlo, podemos contar con la siguiente información: \begin{itemize}\setlength\itemsep{0em}
-            \item Un punto por el que pasa y un vector normal a toda su superficie.
-            \item Tres puntos no colineales (que no estén en la misma recta) por los que pasa.
-            \item Un punto por el que pasa y dos vectores paralelos al plano.
-        \end{itemize}
-    
-        Aunque existen muchas más combinaciones que nos pueden determinar de forma única un plano.
-    
-            % =========================================================
-            % =============     PUNTO Y VECTOR NORMAL   ===============
-            % =========================================================
-    
-            \clearpage
-    
-            \subsection{Punto y vector normal}
+                Supongamos que queremos hallar el volumen del paralelepípedo formado por los
+                vectores $\vec{a}, \vec{b}$ y $\vec{c}$:
             
-            Supongamos que el plano pasa por el punto $P$ y el vector normal a su superficie es $\vec{n}$. Queremos hallar un vector $\vec{r}$ tal que su flecha dibuje todo el plano.
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.55\textwidth]{parallelepiped}
+                \end{figure}
             
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale=0.65]{plane.png}
-            \end{figure}
-            
-            De la figura vemos que $\vec{r} - \vec{P}$ siempre está contenido en el plano, y por ser así, será perpendicular a $\vec{n}$, por lo que:
-            \begin{align}
-                \vec{n} \dotP \Wrap{\vec{r} - \vec{P}} &= 0 \label{planeEquationGeneral}
-            \end{align}
-            
-            Como $\vec{r}$ se está moviendo, usemos las tres variables genéricas para representar sus coordenadas. De esa forma, supongamos que $\vec{r}=(x,y,z)$, $\vec{n}=(a,b,c)$ y $\vec{P}=(x_0, y_0, z_0)$. Entonces podemos reescribir la ecuación:
-            \begin{align}
-                &(a,b,c) \dotP \Wrap{x-x_0, y-y_0, z-z_0} = 0 \nonumber \\
-                &\implies a(x-x_0) + b(y-y_0) + c(z-z_0) = 0 \\
-                &\implies ax+by+cz = d \label{planeEquation1}
-            \end{align}
-            
-            Donde $d=ax_0 + by_0 + cz_0$. Como puedes ver, la ecuación del plano es muy sencilla en forma cartesiana, y podemos identificar rápidamente al vector normal con tan solo fijarnos en los coeficientes. Además ten en cuenta un mismo plano puede tener más de una ecuación que lo represente (infinitas de hecho), pues cualquier múltiplo escalar del vector normal es válido.
-            
-            % =========================================================
-            % =================     TRES PUNTOS   =====================
-            % =========================================================
-            
-            \subsection{Tres puntos}
-            
-            De forma similar a como calculábamos el área de un triángulo, vamos a escoger uno de los tres puntos y hallar los vectores de desplazamiento de él hacia los otros dos:
-            
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale=0.65]{plane2.png}
-            \end{figure}
-        
-            Por ejemplo, escojamos el punto $\vec{A}$ y a partir de ahí calculemos los vectores de desplazamiento $\vec{b}=\vec{B}-\vec{A}$ y $\vec{c}=\vec{C}-\vec{A}$. Vemos que tanto $\vec{b}$ como $\vec{c}$ están contenidos totalmente en el plano, lo que nos falta es hallar el vector normal, que debe ser perpendicular a ellos dos. Por definición del producto cruz, ese vector es simplemente $\vec{n}=\vec{b} \times \vec{c}$. Finalmente, escogemos cualquiera de los tres puntos y la ecuación del plano será:
-            \begin{align}
-                &\vec{n} \dotP \Wrap{\vec{r} - \vec{A}} = 0 \nonumber \\
-                &\implies \Wrap{\vec{b} \times \vec{c}} \dotP \Wrap{\vec{r} - \vec{A}} = 0 \label{planeEquation2}
-            \end{align}
-            
-            La forma difícil de calcular la ecuación del plano dados tres puntos, es sustituir cada uno en la ecuación general $ax+by+cz=d$ y formar un sistema de ecuaciones para hallar $a,b,c,d$. Sin embargo, es más tardado y al hacerlo así no entendemos realmente la geometría del problema.
-            
-            % =========================================================
-            % ========     PUNTO Y DOS VECTORES PARALELOS   ===========
-            % =========================================================
-            
-            \subsection{Punto y dos vectores paralelos}
-            
-            Similar a la situación anterior, solo que ahora nos dan un punto por el que pasa ($\vec{A}$) y los dos vectores paralelos, que ahora llamaremos $\lVec{e_1}$ y $\lVec{e_2}$. Veremos que podemos escribir la ecuación del plano de otra manera:
-            
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale=0.65]{plane3.png}
-            \end{figure}
-        
-            Como el plano tiene dos dimensiones, intuitivamente podemos decir que tenemos dos \Quote{grados de libertad} de movimiento, es decir, que podemos movernos lo que queramos en la dirección de $\lVec{e_1}$ y lo que queramos en la dirección de $\lVec{e_2}$. El efecto de \Quote{movernos} no es más que multiplicar a esos vectores por un escalar. Lo que significa que cualquier punto en el plano puede ser expresado como la combinación lineal de $\lVec{e_1}$ y $\lVec{e_2}$ más el vector $\vec{A}$:
-            \begin{align}
-                \vec{r} &= \vec{A} + s\lVec{e_1} + t\lVec{e_2} \label{planeEquation3}
-            \end{align}
-            
-            Donde $s, t \in \Reals$, es decir, abarcan todos los números reales para \Quote{barrer} todo el plano. Le sumamos el vector $\vec{A}$ para forzar que el plano pase por ahí. Esta forma de escribir la ecuación del plano se conoce como \emph{ecuación paramétrica}, que estudiaremos más adelante.
-            
-            \textbf{Nota:} es muy importante que $\lVec{e_1}$ y $\lVec{e_2}$ sean linealmente independientes para poder definir un plano. ¿Qué pasaría si fueran linealmente dependientes? Pista: uno sería múltiplo escalar del otro, así que...
-            
+                Recordemos que el volumen está dado por $V = \Wrap{\text{Área de la base}}\Wrap{\text{Altura}}$.
+                
+                Vemos que el área de la base es simplemente el área del paralelogramo formado por $\vec{a}$ y
+                $\vec{b}$, es decir, $\Abs{\vec{a} \times \vec{b}}$.
+                
+                Sea $\phi$ el ángulo que forma el vector $\vec{a} \times \vec{b}$ con $\vec{c}$.
+                Entonces, usando la definición de coseno vemos que la altura está dada por
+                $\Abs{\vec{c}} \abs{\cos \phi}$. Usamos el valor absoluto en el coseno porque
+                $\phi$ puede ser mayor a $90^\circ$, causando que $\cos \phi < 0$.
+                
+                De esa forma, el volumen es $V = \Abs{\vec{a} \times \vec{b}} \Abs{\vec{c}} \abs{\cos \phi}
+                = \abs{\Abs{\vec{a} \times \vec{b}} \Abs{\vec{c}} \cos \phi} = \abs{\vec{c} \dotP \Wrap{\vec{a} \times \vec{b}}}$,
+                que es justamente el valor absoluto del producto triple de los vectores que definen al paralelepípedo.
+                
+                ¿Qué significado tendrá el hecho de que $\vec{a} \dotP \Wrap{\vec{b} \times \vec{c}} = 0$?
+                Quiere decir que el paralelepípedo no tiene volumen, es decir, que los tres vectores \textbf{estánen el mismo plano}.
+                Veremos más adelante las propiedades del plano.
+                
+                La expresión \emph{producto triple} puede hacer referencia a otras combinaciones donde estén involucrados
+                tres vectores y sus productos, como: 
+                $\vec{a} \times \Wrap{\vec{b} \times \vec{c}}$, $\Wrap{\vec{a} \dotP \vec{b}}\vec{c}$, etc.
+                
+
+
         % =========================================================
         % ====================     RECTAS   =======================
         % =========================================================
-        
         \clearpage
-            
-        \section{Ecuación de la recta}
+        \section{Ecuación de la Recta}
         
-        Una recta es el conjunto de puntos que se mueven en una dirección determinada, y de forma indefinida en sus ambos extremos. Existen dos formas principales de definirlas: \begin{itemize}\setlength\itemsep{0em}
-            \item Mediante un punto por el que pasa y un vector paralelo a ella.
-            \item Mediante dos puntos por los que pasa.
-        \end{itemize}
+            Una recta es el conjunto de puntos que se mueven en una dirección determinada,
+            y de forma indefinida en sus ambos extremos.
+            Existen dos formas principales de definirlas:
+            \begin{itemize}
+                \item Mediante un punto por el que pasa y un vector paralelo a ella.
+                \item Mediante dos puntos por los que pasa.
+            \end{itemize}
     
+
             % =========================================================
             % ============     PUNTO Y VECTOR PARALELO   ==============
             % =========================================================
-            
             \clearpage
-    
-            \subsection{Punto y vector paralelo}
+            \subsection{Ecuación de la Recta: Punto y Vector Paralelo}
+
+                \begin{wrapfigure}{r}{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=0.43\textwidth]{line}
+                \end{wrapfigure}
             
-            Supongamos que la recta pasa por el punto $P$ y un vector paralelo a ella es $\vec{v}$. Vemos que la tarea de $\vec{v}$ es básicamente darle la dirección a la recta:
-            
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale=1.2]{line.png}
-            \end{figure}
-        
-            Sea $\vec{r}$ el vector de posición de cada uno de los puntos de la línea, es decir, su flecha va a barrer a toda la línea. En este caso solo podemos movernos en la dirección de $\vec{v}$, por lo que cualquier múltiplo escalar de $\vec{v}$ estará sobre la línea, sumándole el punto $\vec{P}$. Entonces:
-            \begin{align}
-                \vec{r} &= \vec{P} + t\vec{v} \label{lineEquationGeneral}
-            \end{align}
-            
-            Donde $t \in \Reals$. La ecuación anterior es conocida como la \emph{ecuación paramétrica de la recta}, de forma similar a la del plano. Si $\vec{r}=(x,y,z)$, $\vec{v}=(a,b,c)$ y $\vec{P}=(x_0,y_0,z_0)$, entonces podemos reescribirla como:
-            \begin{align*}
-                (x, y, z) &= (x_0 + ta, y_0 + tb, z_0 + tc)
-            \end{align*}
-            
-            Comparamos componente a componente y despejamos $t$ en cada caso:
-            \begin{align*}
-                x &= x_0 + ta &\implies t = \dfrac{x - x_0}{a} \\
-                y &= y_0 + tb &\implies t = \dfrac{y - y_0}{b} \\
-                z &= z_0 + tc &\implies t = \dfrac{z - z_0}{c}
-            \end{align*}
-            
-            Igualamos y obtenemos la forma cartesiana de la ecuación de la recta:
-            \begin{align}
-                \dfrac{x - x_0}{a} = \dfrac{y - y_0}{b} = \dfrac{z - z_0}{c} \label{lineEquation1}
-            \end{align}
-            
-            Nota que una misma línea puede tener varias ecuaciones, pues cualquier múltiplo escalar de $\vec{v}$ funciona. Además, para usar la forma cartesiana requerimos que $a,b,c\neq 0$, mientras que en la forma paramétrica no hay restricción.
-            
+                Supongamos que la recta pasa por el punto $P$ y un vector paralelo a ella es $\vec{v}$.
+                Vemos que la tarea de $\vec{v}$ es básicamente darle la dirección a la recta:
+
+                Sea $\vec{r}$ el vector de posición de cada uno de los puntos de la línea, es decir, su
+                flecha va a barrer a toda la línea.
+
+                En este caso solo podemos movernos en la dirección de
+                $\vec{v}$, por lo que cualquier múltiplo escalar de $\vec{v}$ estará sobre la línea,
+                sumándole el punto $\vec{P}$.
+
+                Entonces:
+                \begin{align}
+                    \vec{r} &= \vec{P} + t\vec{v} \label{lineEquationGeneral}
+                \end{align}
+
+                \vspace{3em}
+                
+                Donde $t \in \Reals$. La ecuación anterior es conocida como la \textbf{ecuación paramétrica
+                de la recta}, de forma similar a la del plano. Si $\vec{r} = (x, y, z)$, $\vec{v} = (a, b, c)$ y
+                $\vec{P} = (x_0, y_0, z_0)$, entonces podemos reescribirla como:
+                \begin{align*}
+                    (x, y, z) &= \Wrap{x_0 + ta, y_0 + tb, z_0 + tc}
+                \end{align*}
+                
+                Comparamos componente a componente y despejamos $t$ en cada caso:
+                \begin{align*}
+                    x = x_0 + ta \Space \implies \Space t = \dfrac{x - x_0}{a}  \\
+                    y = y_0 + tb \Space \implies \Space t = \dfrac{y - y_0}{b}  \\
+                    z = z_0 + tc \Space \implies \Space t = \dfrac{z - z_0}{c}
+                \end{align*}
+                
+                Igualamos y obtenemos la forma cartesiana de la ecuación de la recta:
+                \begin{align}
+                      \dfrac{x - x_0}{a} 
+                    = \dfrac{y - y_0}{b}
+                    = \dfrac{z - z_0}{c} \label{lineEquation1}
+                \end{align}
+                
+                Nota que una misma línea puede tener varias ecuaciones, pues cualquier múltiplo
+                escalar de $\vec{v}$ funciona. Además, para usar la forma cartesiana requerimos
+                que $a, b, c\neq 0$, mientras que en la forma paramétrica no hay restricción.
+                
+
+
             % =========================================================
-            % ==================     DOS PUNTOS   =====================
+            % ==================     DOS PUNTOS     ===================
             % =========================================================
+            \subsection{Ecuación de la Recta: Dos Puntos}
             
-            \subsection{Dos puntos}
+                Ahora supongamos que nos dan dos puntos $\vec{A}$ y $\vec{B}$, y queremos hallar
+                la ecuación de la recta que pasa por ellos:
+                
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.55\textwidth]{line2}
+                \end{figure}
             
-            Ahora supongamos que nos dan dos puntos $\vec{A}$ y $\vec{B}$, y queremos hallar la ecuación de la recta que pasa por ellos:
-            
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale=1.2]{line2.png}
-            \end{figure}
+                De la figura vemos que $\vec{A}+\vec{v}=\vec{B}$, entonces el vector paralelo es
+                simplemente $\vec{v} = \vec{B} - \vec{A}$.
+
+                Por lo tanto, la ecuación de la recta paramétrica queda como:
+                \begin{align}
+                    \vec{r} &= \vec{A} + t\Wrap{\vec{B} - \vec{A}} = (1 - t)\vec{A} + t\vec{B}
+                    \label{lineEquation2}
+                \end{align}
+                
+                Nota que también podemos usar el punto $\vec{B}$ como punto inicial.
+                
+                Ahora, si $\vec{A} = (x_1, y_1, z_1)$ y $\vec{B} = (x_2, y_2, z_2)$, siguiendo
+                una deducción similar a la de la sección anterior, la ecuación en forma cartesiana
+                queda como:
+                \begin{align}
+                      \dfrac{x - x_1}{x_2 - x_1}
+                    = \dfrac{y - y_1}{y_2 - y_1}
+                    = \dfrac{z - z_1}{z_2 - z_1}
+                    \label{lineEquation3}
+                \end{align}
+                
+                Nota su parecido con la ecuación de la recta en dos dimensiones que probablemente
+                conozcas de geometría analítica.
+
+
+
+        % =========================================================
+        % ==========        ECUACION DEL PLANO       ==============
+        % =========================================================
+        \clearpage
+        \section{Ecuación del Plano}
         
-            De la figura vemos que $\vec{A}+\vec{v}=\vec{B}$, entonces el vector paralelo es simplemente $\vec{v}=\vec{B}-\vec{A}$. Por lo tanto, la ecuación de la recta paramétrica queda como:
-            \begin{align}
-                \vec{r} &= \vec{A} + t\Wrap{\vec{B}-\vec{A}} = (1-t)\vec{A}+t\vec{B} \label{lineEquation2}
-            \end{align}
-            
-            Nota que también podemos usar el punto $\vec{B}$ como punto inicial.
-            
-            Ahora, si $\vec{A}=(x_1, y_1, z_1)$ y $\vec{B}=(x_2, y_2, z_2)$, siguiendo una deducción similar a la de la sección anterior, la ecuación en forma cartesiana queda como:
-            \begin{align}
-                \dfrac{x - x_1}{x_2 - x_1} = \dfrac{y - y_1}{y_2 - y_1} = \dfrac{z - z_1}{z_2 - z_1} \label{lineEquation3}
-            \end{align}
-            
-            Nota su parecido con la ecuación de la recta en dos dimensiones que probablemente conozcas de geometría analítica.
-            
+            El plano es un objeto bidimensional que contiene infinitos puntos y rectas.
+            Usualmente se les denota con la letra griega $\Pi$.
+
+            Para definirlo, podemos contar con la siguiente información:
+            \begin{itemize}
+                \item Un punto por el que pasa y un vector normal a toda su superficie.
+                \item Tres puntos no colineales (que no estén en la misma recta) por los que pasa.
+                \item Un punto por el que pasa y dos vectores paralelos al plano.
+            \end{itemize}
+        
+            Aunque existen muchas más combinaciones que nos pueden determinar de forma única un plano.
+
+
+                % =========================================================
+                % =============     PUNTO Y VECTOR NORMAL   ===============
+                % =========================================================
+                \clearpage
+                \subsection{Punto y Vector Normal}
+                
+                    Supongamos que el plano pasa por el punto $P$ y el vector normal a su superficie
+                    es $\vec{n}$.
+                    Queremos hallar un vector $\vec{r}$ tal que su flecha dibuje todo el plano.
+                    
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[width=0.55\textwidth]{plane}
+                    \end{figure}
+                    
+                    De la figura vemos que $\vec{r} - \vec{P}$ siempre está contenido en el plano,
+                    y por ser así, será perpendicular a $\vec{n}$, por lo que:
+                    \begin{align}
+                        \vec{n} \dotP \Wrap{\vec{r} - \vec{P}} &= 0 \label{planeEquationGeneral}
+                    \end{align}
+                    
+                    Como $\vec{r}$ se está moviendo, usemos las tres variables genéricas para representar
+                    sus coordenadas.
+                    De esa forma, supongamos que
+                    $\vec{r} = (x, y, z)$, $\vec{n} = (a, b, c)$ y $\vec{P} = (x_0, y_0, z_0)$.
+
+                    Entonces podemos reescribir la ecuación:
+                    \begin{MultiLineEquation}{3}
+                        &(a,b,c) \dotP \Wrap{x - x_0, y - y_0, z - z_0} = 0         \\
+                        &\implies a(x - x_0) + b(y - y_0) + c(z - z_0) = 0          \\
+                        &\implies ax + by + cz = d
+                    \label{planeEquation1}
+                    \end{MultiLineEquation}
+                    
+                    Donde $d = ax_0 + by_0 + cz_0$.
+
+                    Como puedes ver, la ecuación del plano es muy sencilla en forma cartesiana,
+                    y podemos identificar rápidamente al vector normal con tan solo fijarnos en
+                    los coeficientes.
+
+                    Además ten en cuenta un mismo plano puede tener más de una ecuación que lo
+                    represente (infinitas de hecho), pues cualquier múltiplo escalar del vector
+                    normal es válido.
+                
+                % =========================================================
+                % =================     TRES PUNTOS   =====================
+                % =========================================================
+                \clearpage
+                \subsection{Tres Puntos}
+                
+                    De forma similar a como calculábamos el área de un triángulo, vamos a escoger
+                    uno de los tres puntos y hallar los vectores de desplazamiento de él hacia
+                    los otros dos:
+                    
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[width=0.65\textwidth]{plane2}
+                    \end{figure}
+                
+                    Por ejemplo, escojamos el punto $\vec{A}$ y a partir de ahí calculemos los vectores
+                    de desplazamiento $\vec{b} = \vec{B} - \vec{A}$ y $\vec{c} = \vec{C} - \vec{A}$.
+
+                    Vemos que tanto $\vec{b}$ como $\vec{c}$ están contenidos totalmente en el plano,
+                    lo que nos falta es hallar el vector normal, que debe ser perpendicular a ellos dos.
+
+                    Por definición del producto cruz, ese vector es simplemente $\vec{n} = \vec{b} \times \vec{c}$.
+
+                    Finalmente, escogemos cualquiera de los tres puntos y la ecuación del plano será:
+                    \begin{MultiLineEquation}{3}
+                        &\vec{n} \dotP \Wrap{\vec{r} - \vec{A}} = 0                                          \\
+                        &\implies \Wrap{\vec{b} \times \vec{c}} \dotP \Wrap{\vec{r} - \vec{A}} = 0
+                    \label{planeEquation2}
+                    \end{MultiLineEquation}
+                    
+                    La forma difícil de calcular la ecuación del plano dados tres puntos, es sustituir
+                    cada uno en la ecuación general $ax + by + cz = d$ y formar un sistema de ecuaciones
+                    para hallar $a, b, c, d$.
+
+                    Sin embargo, es más tardado y al hacerlo así no entendemos realmente la geometría del problema.
+                    
+
+
+                % =========================================================
+                % ========     PUNTO Y DOS VECTORES PARALELOS   ===========
+                % =========================================================
+                \clearpage
+                \subsection{Punto y 2 Vectores Paralelos}
+                    
+                    Similar a la situación anterior, solo que ahora nos dan un punto por el que pasa ($\vec{A}$)
+                    y los dos vectores paralelos, que ahora llamaremos $\lVec{e_1}$ y $\lVec{e_2}$.
+
+                    Veremos que podemos escribir la ecuación del plano de otra manera:
+                    
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[width=0.55\textwidth]{plane3}
+                    \end{figure}
+                
+                    Como el plano tiene dos dimensiones, intuitivamente podemos decir que tenemos dos 
+                    \Quote{grados de libertad} de movimiento, es decir, que podemos movernos lo que
+                    queramos en la dirección de $\lVec{e_1}$ y lo que queramos en la dirección de $\lVec{e_2}$.
+
+                    El efecto de \Quote{movernos} no es más que multiplicar a esos vectores por un escalar.
+                    Lo que significa que cualquier punto en el plano puede ser expresado como la combinación
+                    lineal de $\lVec{e_1}$ y $\lVec{e_2}$ más el vector $\vec{A}$:
+                    \begin{align}
+                        \vec{r} &= \vec{A} + s\lVec{e_1} + t\lVec{e_2} \label{planeEquation3}
+                    \end{align}
+                    
+                    Donde $s, t \in \Reals$, es decir, abarcan todos los números reales para \Quote{barrer} todo el plano.
+                    Le sumamos el vector $\vec{A}$ para forzar que el plano pase por ahí.
+
+                    Esta forma de escribir la ecuación del plano se conoce como \emph{ecuación paramétrica}, que
+                    estudiaremos más adelante.
+                    
+                    \textbf{Nota:}
+                    Es muy importante que $\lVec{e_1}$ y $\lVec{e_2}$ sean linealmente independientes
+                    para poder definir un plano. ¿Qué pasaría si fueran linealmente dependientes? 
+                    Pista: Uno sería múltiplo escalar del otro, así que... ;)
+                    
+
+
         % =========================================================
         % =============     ECUACION DE LA ESFERA   ===============
         % =========================================================
-        
-        \section{Ecuación de la esfera}
-        La esfera es el conjunto de puntos en el espacio que están a la misma distancia de un punto llamado centro. Es la generalización del círculo en dos dimensiones. Aquí también llamaremos radio a la distancia del centro.
-        
-        \begin{figure}[H]
-            \centering
-            \includegraphics[scale=0.85]{sphere.png}
-        \end{figure}
-        
-        Sea $R$ el radio de la esfera y $\vec{C}=(x_0, y_0, z_0)$ el centro. Sea $\vec{P}=(x,y,z)$ el vector de posición que va a barrer toda la esfera. Entonces requerimos que la distancia entre $\vec{P}$ y $\vec{C}$ sea siempre igual al radio $R$, es decir:
-        \begin{align}
-            \Abs{\vec{P} - \vec{C}} &= R \label{sphereEquation}
-        \end{align}
-        
-        Si reemplazamos cada vector por sus componentes, entonces:
-        \begin{align}
-            &\Abs{(x-x_0, y-y_0, z-z_0)} = R \nonumber \\
-            &\implies (x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2 = R^2 \label{sphereEquation2}
-        \end{align}
-        
-        Esta ecuación es muy parecida a la del círculo, simplemente incluimos la componente en $\mathbf{z}$.
-        
+        \clearpage
+        \section{Ecuación de la Esfera}
+            
+            La esfera es el conjunto de puntos en el espacio que están a la misma distancia
+            de un punto llamado centro. Es la generalización del círculo en dos dimensiones.
+            Aquí también llamaremos radio a la distancia del centro.
+            
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.55\textwidth]{sphere}
+            \end{figure}
+            
+            Sea $R$ el radio de la esfera y $\vec{C} = (x_0, y_0, z_0)$ el centro.
+            Sea $\vec{P} = (x, y, z)$ el vector de posición que va a barrer toda la esfera.
+            Entonces requerimos que la distancia entre $\vec{P}$ y $\vec{C}$ sea siempre
+            igual al radio $R$, es decir:
+            \begin{align}
+                \Abs{\vec{P} - \vec{C}} &= R \label{sphereEquation}
+            \end{align}
+            
+            Si reemplazamos cada vector por sus componentes, entonces:
+            \begin{MultiLineEquation*}{3}
+                &\Abs{(x-x_0, y-y_0, z-z_0)} = R                            \\
+                &\implies (x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2 = R^2 
+            \label{sphereEquation2}
+            \end{MultiLineEquation*}
+                
+            Esta ecuación es muy parecida a la del círculo, simplemente incluimos
+            la componente en $\mathbf{z}$.
+            
+
+
         % =========================================================
         % =============     DISTANCIA PUNTO-RECTA   ===============
         % =========================================================
-            
         \clearpage    
-            
-        \section{Distancia punto-recta}
+        \section{Distancia Punto - Recta}
         
-            Supongamos que tenemos una línea en su forma paramétrica $\vec{r} = \lVec{a_0} + t\vec{v}$ y un punto $\vec{P}$. Queremos saber la mínima distancia que hay entre $\vec{P}$ y la línea.
+            Supongamos que tenemos una línea en su forma paramétrica $\vec{r} = \lVec{a_0} + t\vec{v}$
+            y un punto $\vec{P}$. Queremos saber la mínima distancia que hay entre $\vec{P}$ y la línea.
         
+
+            % =========================================================
+            % =============            METODO 1         ===============
+            % =========================================================
             \subsection{Método 1}
-            ¿Recuerdas la definición \ref{vectorProjection} de la proyección de un vector sobre otro? La retomaremos aquí.
-            
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale=1.65]{distancePointLine.png}
-            \end{figure}
-        
-            De la figura vemos que el vector $\vec{P}-\lVec{a_0}$ tiene el mismo origen que el vector paralelo a la línea, que es $\vec{v}$. Por definición de distancia punto-línea, queremos la más corta, es decir, la longitud del segmento que resulta de proyectar ortogonalmente el vector $\vec{P}-\lVec{a_0}$ sobre la línea.
-            
-            Y ya tenemos la fórmula para eso. Sea $\vec{d}$ el vector resultado de dicha proyección, entonces, por la ecuación \ref{defProj2}, tenemos que:
-            \begin{align}
-                \vec{d} &= \Wrap{\vec{P} - \lVec{a_0}} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} \label{distancePointLine}
-            \end{align}
-            
-            De esa forma, la distancia que queremos es justamente la magnitud de $\vec{d}$:
-            \begin{align}
-                &\Abs{\vec{d}} = \Abs{\Wrap{\vec{P} - \lVec{a_0}} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}}\\
-                &\Abs{\vec{d}} = \Abs{\Wrap{\vec{P} - \lVec{a_0}} - \dfrac{\Wrap{\vec{P} - \lVec{a_0}} \dotP \vec{v}}{\Abs{\vec{v}}^2} \vec{v}} \label{distancePointLine1}
-            \end{align}
-            
-            \subsection{Método 2}
-            Ahora usaremos un poco de trigonometría y el producto cruz. Retomemos la figura anterior:
-            
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale=1.65]{distancePointLine2.png}
-            \end{figure}
-        
-            Sea $\theta$ el ángulo que forman los vectores $\vec{v}$ y $\vec{P} - \lVec{a_0}$. Entonces, por definición del seno en el triángulo rectángulo formado tenemos que:
-            \begin{align}
-                \Abs{\vec{d}} = {\Abs{\vec{P} - \lVec{a_0}}} \sen \theta
-            \end{align}
-            
-            Y por la ecuación \ref{angleBetweenVectorsCross} sabemos que:
-            \begin{align}
-                \sen \theta = \dfrac{\Abs{\vec{v} \times \Wrap{\vec{P} - \lVec{a_0}}}}{\Abs{\vec{v}} \Abs{\vec{P} - \lVec{a_0}}}
-            \end{align}
-            
-            Entonces:
-            \begin{align}
-                \Abs{\vec{d}} = {\cancel{\Abs{\vec{P} - \lVec{a_0}}}} \dfrac{\Abs{\vec{v} \times \Wrap{\vec{P} - \lVec{a_0}}}}{\Abs{\vec{v}} \cancel{\Abs{\vec{P} - \lVec{a_0}}}} = \dfrac{\Abs{\vec{v} \times \Wrap{\vec{P} - \lVec{a_0}}}}{\Abs{\vec{v}}} \label{distancePointLine2}
-            \end{align}
-            
-                \subsubsection{Caso particular: línea en el plano xy}
-                Supongamos que tenemos una línea en el plano xy cuya ecuación es $ax+by=c$, y un punto $P$ cuyo vector de posición es $\vec{P}=(x_0, y_0)$. Para hallar la distancia entre este punto y la recta, primero tenemos que parametrizarla.
                 
-                Vemos que $y=-\dfrac{a}{b}x+\dfrac{c}{b}$, por lo tanto $\vec{r} = (x, y) = \Wrap{x, -\dfrac{a}{b}x+\dfrac{c}{b}} = \Wrap{0, \dfrac{c}{b}} + x\Wrap{1, -\dfrac{a}{b}}$. De esa forma $\lVec{a_0}=\Wrap{0, \dfrac{c}{b}}$ y $\vec{v}=\Wrap{1, -\dfrac{a}{b}}$.
+                ¿Recuerdas la definición \ref{vectorProjection} de la proyección de un vector sobre otro?
+                La retomaremos aquí.
                 
-                Sustituimos en la ecuación \ref{distancePointLine2} y obtenemos:
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.40\textwidth]{distancePointLine}
+                \end{figure}
+            
+                De la figura vemos que el vector $\vec{P} - \lVec{a_0}$ tiene el mismo origen que el
+                vector paralelo a la línea, que es $\vec{v}$. Por definición de distancia punto-línea,
+                queremos la más corta, es decir, la longitud del segmento que resulta de proyectar
+                ortogonalmente el vector $\vec{P} - \lVec{a_0}$ sobre la línea.
+                
+                Y ya tenemos la fórmula para eso. Sea $\vec{d}$ el vector resultado de dicha proyección,
+                entonces, por la ecuación \ref{vectorProjection2}, tenemos que:
                 \begin{align}
-                    &\Abs{\vec{d}} = \dfrac{\Abs{\Wrap{1, -\dfrac{a}{b}} \times \Wrap{x_0, y_0 - \dfrac{c}{b}}}}{\Abs{\Wrap{1, -\dfrac{a}{b}}}} = \dfrac{\abs{y_0 - \dfrac{c}{b} + \dfrac{a}{b}x_0}}{\sqrt{1 + \Wrap{\dfrac{a}{b}}^2}} \nonumber \\
-                    &\implies \Abs{\vec{d}} = \dfrac{\abs{ax_0 + by_0 - c}}{\sqrt{a^2 + b^2}} \label{distancePointLine3}
+                    \vec{d} 
+                        &= \Wrap{\vec{P} - \lVec{a_0}} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}
+                    \label{distancePointLine}
                 \end{align}
+                
+                De esa forma, la distancia que queremos es justamente la magnitud de $\vec{d}$:
+                \begin{align*}
+                    \Abs{\vec{d}} 
+                        &= \Abs{
+                                \Wrap{\vec{P} - \lVec{a_0}}
+                                - 
+                                \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}
+                            }                                                                       \\
+                        &= \Abs{
+                                \Wrap{\vec{P} - \lVec{a_0}}
+                                -
+                                \dfrac{\Wrap{\vec{P} - \lVec{a_0}} \dotP \vec{v}}{\Abs{\vec{v}}^2} \vec{v}} 
+                    \label{distancePointLine1}
+                \end{align*}
+
+
+
+            % =========================================================
+            % =============            METODO 2         ===============
+            % =========================================================
+            \subsection{Método 2}
+                
+                Ahora usaremos un poco de trigonometría y el producto cruz. Retomemos la figura anterior:
+                
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.45\textwidth]{distancePointLine2}
+                \end{figure}
             
+                Sea $\theta$ el ángulo que forman los vectores $\vec{v}$ y $\vec{P} - \lVec{a_0}$.
+                Entonces, por definición del seno en el triángulo rectángulo formado tenemos que:
+                \begin{align}
+                    \Abs{\vec{d}} = {\Abs{\vec{P} - \lVec{a_0}}} \sen \theta
+                \end{align}
+                
+                Y por la ecuación \ref{angleBetweenVectorsCross} sabemos que:
+                \begin{align}
+                    \sen \theta = \dfrac
+                                    {\Abs{\vec{v} \times \Wrap{\vec{P} - \lVec{a_0}}}   }
+                                    {\Abs{\vec{v}} \Abs{\vec{P} - \lVec{a_0}}           }
+                \end{align}
+                
+                Entonces:
+                \begin{align}
+                    \Abs{\vec{d}} 
+                        &= \cancel{\Abs{\vec{P} - \lVec{a_0}}} 
+                            \dfrac{\Abs{\vec{v} \times \Wrap{\vec{P} - \lVec{a_0}}}}{\Abs{\vec{v}}
+                            \cancel{\Abs{\vec{P} - \lVec{a_0}}}} 
+                        &= \dfrac{\Abs{\vec{v} \times \Wrap{\vec{P} - \lVec{a_0}}}}{\Abs{\vec{v}}} 
+                    \label{distancePointLine2}
+                \end{align}
+
+
+                % =========================================================
+                % =============            METODO 2         ===============
+                % =========================================================
+                \clearpage
+                \subsubsection{Caso Particular: Línea en el Plano XY}
+
+                    Supongamos que tenemos una línea en el plano xy cuya ecuación es $ax + by = c$,
+                    y un punto $P$ cuyo vector de posición es $\vec{P} = (x_0, y_0)$.
+                    Para hallar la distancia entre este punto y la recta, primero tenemos que parametrizarla.
+                    
+                    Vemos que $y = -\dfrac{a}{b}x+\dfrac{c}{b}$, por lo tanto: 
+                    $\vec{r} 
+                        = (x, y) = \Wrap{x, -\dfrac{a}{b}x+\dfrac{c}{b}}
+                        = \Wrap{0, \dfrac{c}{b}} + x\Wrap{1, -\dfrac{a}{b}}$
+
+                    De esa forma $\lVec{a_0} = \Wrap{0, \dfrac{c}{b}}$ y $\vec{v} = \Wrap{1, -\dfrac{a}{b}}$
+                    
+                    Sustituimos en la ecuación \ref{distancePointLine2} y obtenemos:
+                    \begin{MultiLineEquation*}{3}
+                        &\Abs{\vec{d}} 
+                            = \dfrac{\Abs{\Wrap{1, -\dfrac{a}{b}} \times \Wrap{x_0, y_0 - \dfrac{c}{b}}}}
+                                    {\Abs{\Wrap{1, -\dfrac{a}{b}}}} 
+                            = \dfrac{\abs{y_0 - \dfrac{c}{b} + \dfrac{a}{b}x_0}}{\sqrt{1 + \Wrap{\dfrac{a}{b}}^2}}                          \\
+                        &\implies \Abs{\vec{d}} = \dfrac{\abs{ax_0 + by_0 - c}}{\sqrt{a^2 + b^2}}
+                    \label{distancePointLine3}
+                    \end{MultiLineEquation*}
+                
+
+
+            % =========================================================
+            % === ===    REFLEXION DE UN PUNTO SOBRE RECTA      =======
+            % =========================================================
             \clearpage
+            \subsection{Extra: Reflexión de un Punto sobre una Recta}
+               
+                Ahora supongamos que la línea es un espejo y queremos hallar un punto $\vec{P'}$ tal
+                que esté del otro lado de la línea y tenga la misma distancia a la línea que el punto original $\vec{P}$.
+                
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.55\textwidth]{reflection}
+                \end{figure}
             
-            \subsection{Extra: reflexión de un punto sobre una recta}
-            Ahora supongamos que la línea es un espejo y queremos hallar un punto $\vec{P'}$ tal que esté del otro lado de la línea y tenga la misma distancia a la línea que el punto original $\vec{P}$.
-            
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale=1.65]{reflection.png}
-            \end{figure}
-        
-            Vemos que necesitamos otra vez el vector $\vec{d}$ que ya hemos calculado en la ecuación \ref{distancePointLine}. Y obtener $\vec{P'}$ es muy sencillo, simplemente a $\vec{P}$ le sumamos dos veces el desplazamiento que indica el vector $\vec{d}$ en dirección hacia $\vec{P'}$. Pero como $\vec{d}$ va en dirección contraria a la que queremos, le invertimos el sentido y dicha suma se convierte en una resta de dos veces el vector $\vec{d}$:
-            \begin{align}
-                \vec{P'} = \vec{P} - 2\vec{d}
-            \end{align}
-            
-            Finalmente sustituimos la ecuación \ref{distancePointLine}:
-            \begin{align}
-                &\vec{P'} = \vec{P} - 2 \Brackets{\Wrap{\vec{P} - \lVec{a_0}} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}} \nonumber \\
-                &\implies \vec{P'} = 2\lVec{a_0} - \vec{P} + 2\Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} \label{reflectionPointLine}
-            \end{align}
-            
-            Por supuesto que no te recomiendo que te memorices todas las fórmulas anteriores (yo nunca me las aprendí), sino que cuentes con las herramientas adecuadas para poder deducirlas y aplicarlas correctamente en los problemas.
-            
+                Vemos que necesitamos otra vez el vector $\vec{d}$ que ya hemos calculado en la ecuación \ref{distancePointLine}.
+                Y obtener $\vec{P'}$ es muy sencillo, simplemente a $\vec{P}$ le sumamos dos veces el desplazamiento que
+                indica el vector $\vec{d}$ en dirección hacia $\vec{P'}$.
+
+                Pero como $\vec{d}$ va en dirección contraria a la que queremos, le invertimos el sentido y dicha suma
+                se convierte en una resta de dos veces el vector $\vec{d}$:
+                \begin{align*}
+                    \vec{P'} = \vec{P} - 2\vec{d}
+                \end{align*}
+                
+                Finalmente sustituimos la ecuación \ref{distancePointLine}:
+                \begin{MultiLineEquation}{3}
+                    &\vec{P'} 
+                        = \vec{P} - 2 \Brackets{
+                            \Wrap{\vec{P} - \lVec{a_0}}
+                            -
+                            \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}
+                        }                                                               \\
+                    &\implies \vec{P'} = 2\lVec{a_0} - \vec{P} + 2\Wrap{
+                            \Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}
+                        } \hat{v}
+                    \label{reflectionPointLine}
+                \end{MultiLineEquation}
+                    
+                Por supuesto que no te recomiendo que te memorices todas las fórmulas anteriores (yo nunca me las
+                aprendí), sino que cuentes con las herramientas adecuadas para poder deducirlas y aplicarlas correctamente
+                en los problemas.
+              
+
+
+
         % =========================================================
         % =============     DISTANCIA PUNTO-PLANO   ===============
         % =========================================================
-        
         \clearpage
-        
-        \section{Distancia punto-plano}
-        Usaremos ideas similares a las anteriores. Supongamos que tenemos un plano descrito por la ecuación $\vec{n} \dotP \Wrap{\vec{r} - \lVec{a_0}}=0$, es decir, su vector normal es $\vec{n}$, pasa por el punto $\lVec{a_0}$ y su vector de posición que lo dibuja es $\vec{r}$. Queremos hallar la mínima distancia entre un punto $\vec{P}$ y el plano.
-        
-        \begin{figure}[H]
-            \centering
-            \includegraphics[scale=0.8]{distancePointPlane.png}
-        \end{figure}
-        
-        Proyectamos ortogonalmente el punto $\vec{P}$ sobre la superficie del plano y llamemos $\vec{d}$ al vector resultante. Claramente vemos que la dirección de $\vec{d}$ es la misma que la del vector normal $\vec{n}$, entonces podemos escribir:
-        \begin{align}
-            \vec{d} = \Abs{\vec{d}} \hat{n}
-        \end{align}
-        
-        Como el punto descrito por el vector de posición $\vec{P}+\vec{d}\;$ pertenece al plano, debe satisfacer la ecuación del plano. Por lo tanto, sustituimos $\vec{r}$ por $\vec{P}+\vec{d}$:
-        \begin{align}
-            \vec{n} \dotP \Wrap{\vec{P}+\vec{d} - \lVec{a_0}} &= 0 \nonumber \\
-            \hat{n} \dotP \Wrap{\vec{P}+\Abs{\vec{d}} \hat{n} - \lVec{a_0}} &= 0 &&\Remember{Dividimos entre $\Abs{\vec{n}}$ y sustituímos $\vec{d}$} \nonumber \\
-            \hat{n} \dotP \Wrap{\vec{P} - \lVec{a_0}} + \Abs{\vec{d}} &= 0 &&\Remember{Expandimos el producto punto} \nonumber \\
-            \Abs{\vec{d}} &= -\hat{n} \dotP \Wrap{\vec{P} - \lVec{a_0}} &&\Remember{Despejamos} \nonumber \\
-            \Abs{\vec{d}} &= \abs{\hat{n} \dotP \Wrap{\vec{P} - \lVec{a_0}}} &&\Remember{Sacamos valor absoluto por si el producto punto es negativo} \nonumber \\
-            \Abs{\vec{d}} &= \dfrac{\abs{\vec{n} \dotP \Wrap{\vec{P} - \lVec{a_0}}}}{\Abs{\vec{n}}} &&\Remember{Recuerda que $\hat{n}=\dfrac{\vec{n}}{\Abs{\vec{n}}}$} \label{distancePointPlane}
-        \end{align}
-        
-        Observa que la ecuación anterior no es más que la longitud de la proyección del vector $\vec{P} - \lVec{a_0}$ sobre el vector normal $\vec{n}$. ¿Podrías explicar por qué?
-        
-            \subsubsection{Caso particular: fórmula en forma cartesiana}
+        \section{Distancia Punto - Plano}
+
+
+            Usaremos ideas similares a las anteriores.
+            Supongamos que tenemos un plano descrito por la ecuación $\vec{n} \dotP \Wrap{\vec{r} - \lVec{a_0}} = 0$, es decir,
+            su vector normal es $\vec{n}$, pasa por el punto $\lVec{a_0}$ y su vector de posición que lo dibuja es $\vec{r}$.
+
+            Queremos hallar la mínima distancia entre un punto $\vec{P}$ y el plano.
             
-            Si descomponemos los vectores en coordenadas, es decir, $\vec{n}=(a,b,c)$, $\vec{P}=(x_1, y_1, z_1)$ y $\lVec{a_0}=(x_0, y_0, z_0)$, entonces obtenemos la fórmula en forma cartesiana:
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.55\textwidth]{distancePointPlane}
+            \end{figure}
+            
+            Proyectamos ortogonalmente el punto $\vec{P}$ sobre la superficie del plano y llamemos $\vec{d}$ al vector resultante.
+            Claramente vemos que la dirección de $\vec{d}$ es la misma que la del vector normal $\vec{n}$, entonces podemos escribir:
             \begin{align}
-                &\Abs{\vec{d}} = \dfrac{\abs{a(x_1 - x_0) + b(y_1 - y_0) + c(z_1 - z_0)}}{\sqrt{a^2+b^2+c^2}} \nonumber \\
-                &\Abs{\vec{d}} = \dfrac{\abs{ax_1 + by_1 + cz_1 - (ax_0 + by_0 + cz_0)}}{\sqrt{a^2+b^2+c^2}} \nonumber \\
-                &\Abs{\vec{d}} = \dfrac{\abs{ax_1 + by_1 + cz_1 - d}}{\sqrt{a^2+b^2+c^2}}
+                \vec{d} = \Abs{\vec{d}} \hat{n}
             \end{align}
-            Donde recuerda que la ecuación del plano en forma cartesiana es $ax+by+cz=d$ (no confundas las d's).
             
-        \clearpage
-        
+            \clearpage
+
+            Como el punto descrito por el vector de posición $\vec{P} + \vec{d}\;$ pertenece al plano, debe satisfacer la ecuación del
+            plano. Por lo tanto, sustituimos $\vec{r}$ por $\vec{P} + \vec{d}$:
+            \begin{MultiLineEquation*}{3}
+                \vec{n} \dotP \Wrap{\vec{P}+\vec{d} - \lVec{a_0}} 
+                    &= 0                                                                            \\
+                \hat{n} \dotP \Wrap{\vec{P}+\Abs{\vec{d}} \hat{n} - \lVec{a_0}} 
+                    &= 0
+                        &&\Remember{Dividimos entre $\Abs{\vec{n}}$ y sustituímos $\vec{d}$}        \\
+                \hat{n} \dotP \Wrap{\vec{P} - \lVec{a_0}} + \Abs{\vec{d}} 
+                    &= 0
+                        &&\Remember{Expandimos el producto punto}                                   \\
+                \Abs{\vec{d}} 
+                    &= -\hat{n} \dotP \Wrap{\vec{P} - \lVec{a_0}} 
+                        &&\Remember{Despejamos}                                                     \\
+                \Abs{\vec{d}} 
+                    &= \abs{\hat{n} \dotP \Wrap{\vec{P} - \lVec{a_0}}}
+                        &&\Remember{Sacamos valor absoluto por si el producto punto es negativo}    \\
+                \Abs{\vec{d}}
+                    &= \dfrac{\abs{\vec{n} \dotP \Wrap{\vec{P} - \lVec{a_0}}}}{\Abs{\vec{n}}}
+                        &&\Remember{Recuerda que $\hat{n}=\dfrac{\vec{n}}{\Abs{\vec{n}}}$} 
+                \label{distancePointPlane}
+            \end{MultiLineEquation*}
+            
+            Observa que la ecuación anterior no es más que la longitud de la proyección del vector 
+            $\vec{P} - \lVec{a_0}$ sobre el vector normal $\vec{n}$. ¿Podrías explicar por qué?
+            
+            
+            % =========================================================
+            % =============     CASO PARTICULAR         ===============
+            % =========================================================
+            \vspace{2em}
+            \subsection{Caso Particular: Fórmula en Forma Cartesiana}
+                
+                Si descomponemos los vectores en coordenadas, es decir, 
+                $\vec{n} = (a,b,c)$, $\vec{P} = (x_1, y_1, z_1)$ y $\lVec{a_0}=(x_0, y_0, z_0)$,
+                entonces obtenemos la fórmula en forma cartesiana:
+                \begin{MultiLineEquation*}{3}
+                    \abs{\vec{d}}
+                        &= \dfrac{\abs{a(x_1 - x_0) + b(y_1 - y_0) + c(z_1 - z_0)}}{\sqrt{a^2+b^2+c^2}} \\
+                        &= \dfrac{\abs{ax_1 + by_1 + cz_1 - (ax_0 + by_0 + cz_0)}}{\sqrt{a^2+b^2+c^2}}  \\
+                        &= \dfrac{\abs{ax_1 + by_1 + cz_1 - d}}{\sqrt{a^2+b^2+c^2}}
+                \end{MultiLineEquation*}
+
+                Donde recuerda que la ecuación del plano en forma cartesiana es 
+                $ax + by + cz = d$ (no confundas las d's).
+                
+
+
         % =========================================================
         % ============     ROTACIONES EN EL ESPACIO   =============
         % =========================================================
-        
-        \section{Rotaciones en el espacio}
-        
-        Este es una aplicación muy interesante y padre a la vez. Supongamos que tenemos una línea en el espacio y un punto, nuestro objetivo será rotarlo usando a la línea como eje mediante un ángulo determinado en sentido antihorario.
-        
-        Usaremos lo aprendido de ecuación de la línea en forma paramétrica, ecuación del plano dados dos vectores paralelos a él y proyecciones ortogonales.
-        
-        Observa con cuidado la siguiente figura:
-        \begin{figure}[H]
-            \centering
-            \includegraphics[scale=0.8]{rotation.png}
-        \end{figure}
-    
-        Veamos todos los elementos con los que vamos a trabajar:
-        \begin{itemize}\setlength\itemsep{0em}
-            \item El eje de rotación estará dado por la ecuación de la línea $\vec{r} = \lVec{a_0} + t\hat{v}$. Supondremos que el vector paralelo $\hat{v}$ será unitario para simplificar.
-            \item El punto a rotar $P$ está indicado por su vector de posición $\vec{P}$.
-            \item Obtendremos el nuevo punto $\vec{P'}$ al rotar $\vec{P}$ sobre el eje con un ángulo de rotación $\theta$.
-        \end{itemize}
-    
-        Primero vamos a proyectar el vector $\vec{P} - \lVec{a_0}$ sobre el eje. Llamaremos $\vec{u}$ a la proyección y $\vec{n}$ a la componente normal. Ya sabemos cómo calcularlos:
-        \begin{align}
-            \vec{u} &= \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} \\
-            \vec{n} &= \vec{P} - \lVec{a_0} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}
-        \end{align}
-        
-        De esa forma descompusimos al vector $\vec{P} - \lVec{a_0}$ tal que $\vec{P} - \lVec{a_0} = \vec{u} + \vec{n}$. Suena razonable suponer que el nuevo vector $\vec{P'} - \lVec{a_0}$ también será la suma de dos vectores, y lo es, porque vemos que al girar el punto $\vec{P}$ el vector $\vec{u}$ no cambia pues es paralelo al eje, mientras que el vector $\vec{n}$ gira el mismo ángulo. Llamemos $\vec{n'}$ a este nuevo vector, entonces:
-        \begin{align}
-            \vec{P'} - \lVec{a_0} &= \vec{u} + \vec{n'} \implies \vec{P'} = \lVec{a_0} + \vec{u} + \vec{n'} \label{rotatedPoint}
-        \end{align}
-        
-        Ahora el problema es obtener $\vec{n'}$. Para ello nos conviene definir un plano en donde la rotación se va a llevar a cabo. Un vector normal a él que apunta hacia afuera es justamente $\hat{v}$.
-        
-        Nota que al girar la punta de $\vec{n}$ hasta la punta de $\vec{n'}$ estamos dibujando un círculo contenido en el plano, cuyo centro es la punta del vector $\vec{u}$ y su radio es $\Abs{\vec{n}}$.
-        
-        Para hallar la ecuación de ese círculo, aparte de necesitar los dos vectores paralelos al plano, requerimos que estos sean ortogonales y sean unitarios para que se dibuje correctamente el círculo (es decir, barriendo la misma longitud en ambas direcciones conforme $\theta$ aumenta). Llamémoslos $\hat{e_1}$ y $\hat{e_2}$.
-        
-        $\hat{e_1}$ va en la dirección de $\vec{n}$, por lo tanto:
-        \begin{align}
-            \hat{e_1} &= \dfrac{\vec{n}}{\Abs{\vec{n}}}
-        \end{align}
-        
-        $\hat{e_2}$ es perpendicular a $\hat{v}$ y a $\vec{n}$, y por la regla de mano derecha, debemos de hacer producto cruz de $\hat{v}$ con $\vec{n}$. De esa forma tenemos:
-        \begin{align}
-            \hat{e_2} &= \dfrac{\hat{v} \times \vec{n}}{\Abs{\hat{v} \times \vec{n}}} \nonumber \\
-            &= \dfrac{\hat{v} \times \Brackets{\vec{P} - \lVec{a_0} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}}}{\Abs{\hat{v}} \Abs{\vec{n}} \sen 90^\circ} \nonumber \\
-            &= \dfrac{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}{\Abs{\vec{n}}}
-        \end{align}
-        
-        Por lo tanto, el círculo, que está dibujado por la punta de $\vec{n'}$, es:
-        \begin{align}
-            \vec{n'} &= \Abs{\vec{n}} \Wrap{\cos \theta \hat{e_1} + \sen \theta \hat{e_2}} = \Wrap{\cos \theta} \vec{n} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}
-        \end{align}
-        
-        Finalmente, el punto $\vec{P'}$ corresponde con un específico ángulo de $\theta$, por lo tanto, sustituyendo todo en la ecuación \ref{rotatedPoint}:
-        \small
-        \begin{align*}
-            \vec{P'} &= \lVec{a_0} + \vec{u} + \Wrap{\cos \theta} \vec{n} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}} \\
-            &= \lVec{a_0} + \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} + \Wrap{\cos \theta} \Brackets{\vec{P} - \lVec{a_0} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}} \\
-            &= \lVec{a_0} + \Wrap{\cos \theta} \Wrap{\vec{P} - \lVec{a_0}} + \Wrap{1 - \cos \theta} \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}
-        \end{align*}
-        \normalsize
-        
-        Si hacemos que $\vec{q} = \vec{P} - \lVec{a_0}$, tenemos la fórmula un poco más simple:
-        \begin{align}
-            \vec{P'} &= \lVec{a_0} + \Wrap{\cos \theta} \vec{q} + \Wrap{1 - \cos \theta} \Wrap{\vec{q} \dotP \hat{v}} \hat{v} + \Wrap{\sen \theta} \Wrap{\hat{v} \times \vec{q}} \label{formulaRotation3D}
-        \end{align}
-        
-            \subsection{Caso particular: rotación en el plano xy}
-            Si queremos rotar un punto $\vec{P} = x\hati + y\hatj$ respecto al origen del plano xy un ángulo $\theta$, vemos que el eje de rotación es el eje $\mathbf{z}$, es decir, $\hat{v} = \hatk$; también vemos que $\lVec{a_0}=\vec{0}$. Entonces, sustituimos en la ecuación anterior:
-            \small
-            \begin{align}
-                \vec{P'} &= \vec{0} + \Wrap{\cos \theta} \Wrap{x\hati + y\hatj} + \cancel{\Wrap{1 - \cos \theta} \Wrap{\Wrap{x\hati + y\hatj} \dotP \hatk} \hatk} + \Wrap{\sen \theta} \Wrap{\hatk \times \Wrap{x\hati + y\hatj}} \nonumber \\
-                &= \Wrap{\cos \theta} \Wrap{x\hati + y\hatj} + \Wrap{\sen \theta} \Wrap{x\hatj - y\hati} \nonumber\\
-                &= \Wrap{x \cos \theta - y \sen \theta}\hati + \Wrap{x \sen \theta + y \cos \theta}\hatj
-            \end{align}
-            \normalsize
-            
-            Probablemente ya conocías la ecuación anterior, y en forma matricial se ve más bonita, donde $\vec{P'}=(x', y')$:
-            \begin{align}
-                \pVector{x' \\ y'} &= \pVector{\cos \theta && -\sen \theta \\ \sen \theta && \cos \theta} \pVector{x \\ y}
-            \end{align}
-        
         \clearpage
+        \section{Rotaciones en el Espacio}
+            
+            Este es una aplicación muy interesante y padre a la vez.
+            Supongamos que tenemos una línea en el espacio y un punto, nuestro objetivo será rotarlo
+            usando a la línea como eje mediante un ángulo determinado en sentido antihorario.
+            
+            Usaremos lo aprendido de ecuación de la línea en forma paramétrica, ecuación del plano dados
+            dos vectores paralelos a él y proyecciones ortogonales.
+            
+            Observa con cuidado la siguiente figura:
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.55\textwidth]{rotation}
+            \end{figure}
         
+            Veamos todos los elementos con los que vamos a trabajar:
+            \begin{itemize}
+                \item El eje de rotación estará dado por la ecuación de la línea $\vec{r} = \lVec{a_0} + t\hat{v}$.
+                      Supondremos que el vector paralelo $\hat{v}$ será unitario para simplificar.
+                \item El punto a rotar $P$ está indicado por su vector de posición $\vec{P}$.
+                \item Obtendremos el nuevo punto $\vec{P'}$ al rotar $\vec{P}$ sobre el eje con un ángulo de rotación $\theta$.
+            \end{itemize}
+        
+            Primero vamos a proyectar el vector $\vec{P} - \lVec{a_0}$ sobre el eje.
+            Llamaremos $\vec{u}$ a la proyección y $\vec{n}$ a la componente normal. Ya sabemos cómo calcularlos:
+            \begin{align*}
+                \vec{u} &= \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}                         \\
+                \vec{n} &= \vec{P} - \lVec{a_0} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}
+            \end{align*}
+            
+            \clearpage
+
+            De esa forma descompusimos al vector $\vec{P} - \lVec{a_0}$ tal que $\vec{P} - \lVec{a_0} = \vec{u} + \vec{n}$.
+
+            Suena razonable suponer que el nuevo vector $\vec{P'} - \lVec{a_0}$ también será la suma de dos vectores,
+            y lo es, porque vemos que al girar el punto $\vec{P}$ el vector $\vec{u}$ no cambia pues es paralelo al eje,
+            mientras que el vector $\vec{n}$ gira el mismo ángulo. Llamemos $\vec{n'}$ a este nuevo vector, entonces:
+            \begin{align}
+                \vec{P'} - \lVec{a_0} &= \vec{u} + \vec{n'} \implies \vec{P'} = \lVec{a_0} + \vec{u} + \vec{n'}
+                \label{rotatedPoint}
+            \end{align}
+            
+            Ahora el problema es obtener $\vec{n'}$.
+
+            Para ello nos conviene definir un plano en donde la rotación se va a llevar a cabo. Un vector normal a
+            él que apunta hacia afuera es justamente $\hat{v}$.
+            
+            Nota que al girar la punta de $\vec{n}$ hasta la punta de $\vec{n'}$ estamos dibujando un círculo contenido
+            en el plano, cuyo centro es la punta del vector $\vec{u}$ y su radio es $\Abs{\vec{n}}$.
+            
+            Para hallar la ecuación de ese círculo, aparte de necesitar los dos vectores paralelos al plano, requerimos
+            que estos sean ortogonales y sean unitarios para que se dibuje correctamente el círculo (es decir, barriendo
+            la misma longitud en ambas direcciones conforme $\theta$ aumenta). Llamémoslos $\hat{e_1}$ y $\hat{e_2}$.
+            
+            $\hat{e_1}$ va en la dirección de $\vec{n}$, por lo tanto:
+            \begin{align*}
+                \hat{e_1} &= \dfrac{\vec{n}}{\Abs{\vec{n}}}
+            \end{align*}
+            
+            $\hat{e_2}$ es perpendicular a $\hat{v}$ y a $\vec{n}$, y por la regla de mano derecha, debemos de hacer
+            producto cruz de $\hat{v}$ con $\vec{n}$.
+            De esa forma tenemos:
+            \begin{MultiLineEquation}{3}
+                \hat{e_2} 
+                    &= \dfrac{\hat{v} \times \vec{n}}{\Abs{\hat{v} \times \vec{n}}}                         \\
+                    &= \dfrac{\hat{v} \times \Brackets{
+                                            \vec{P}
+                                            - \lVec{a_0}
+                                            - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}}}
+                             {\Abs{\hat{v}} \Abs{\vec{n}} \sen 90^\circ}                                    \\
+                    &= \dfrac{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}{\Abs{\vec{n}}}
+            \end{MultiLineEquation}
+                
+            \clearpage
+
+            Por lo tanto, el círculo, que está dibujado por la punta de $\vec{n'}$, es:
+            \begin{align}
+                \vec{n'} 
+                    &= \Abs{\vec{n}} \Wrap{\cos \theta \hat{e_1} + \sen \theta \hat{e_2}} 
+                    &= \Wrap{\cos \theta} \vec{n} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}
+            \end{align}
+            
+            Finalmente, el punto $\vec{P'}$ corresponde con un específico ángulo de $\theta$, por lo tanto,
+            sustituyendo todo en la ecuación \ref{rotatedPoint}:
+            \begin{SmallIndentation}[1em]
+                \begin{align*}
+                    \vec{P'} 
+                        &=   
+                            \lVec{a_0} 
+                            + \vec{u}
+                            + \Wrap{\cos \theta} \vec{n}
+                            + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}      \\
+                        &= 
+                            \lVec{a_0} 
+                            + \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} 
+                            + \Wrap{\cos \theta} \Brackets{\vec{P} - \lVec{a_0} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}} 
+                            + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}                                      \\
+                        &= 
+                            \lVec{a_0}
+                            + \Wrap{\cos \theta} \Wrap{\vec{P} - \lVec{a_0}} 
+                            + \Wrap{1 - \cos \theta} \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v} 
+                            + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}
+                \end{align*}              
+            \end{SmallIndentation}
+                
+            Si hacemos que $\vec{q} = \vec{P} - \lVec{a_0}$, tenemos la fórmula un poco más simple:
+            \begin{align}
+                \vec{P'} 
+                    &= 
+                        \lVec{a_0} 
+                        + \Wrap{\cos \theta} \vec{q} 
+                        + \Wrap{1 - \cos \theta} \Wrap{\vec{q} \dotP \hat{v}} \hat{v} 
+                        + \Wrap{\sen \theta} \Wrap{\hat{v} \times \vec{q}} 
+                \label{formulaRotation3D}
+            \end{align}
+            
+
+
+            % =========================================================
+            % ============     ROTACIONES EN EL ESPACIO   =============
+            % =========================================================
+            \vspace{1em}
+            \subsection{Caso Particular: Rotación en el Plano XY}
+                
+                Si queremos rotar un punto $\vec{P} = x\hati + y\hatj$ respecto al origen del plano xy un
+                ángulo $\theta$, vemos que el eje de rotación es el eje $\mathbf{z}$, es decir, $\hat{v} = \hatk$;
+                también vemos que $\lVec{a_0}=\vec{0}$.
+
+                Entonces, sustituimos en la ecuación anterior:
+                \begin{SmallIndentation}[1em]
+                    \begin{MultiLineEquation*}{3}
+                        \vec{P'} 
+                            &= 
+                                \vec{0} 
+                                + \Wrap{\cos \theta} \Wrap{x\hati + y\hatj} 
+                                + \cancel{\Wrap{1 - \cos \theta} \Wrap{\Wrap{x\hati + y\hatj} \dotP \hatk} \hatk} 
+                                + \Wrap{\sen \theta} \Wrap{\hatk \times \Wrap{x\hati + y\hatj}}                         \\
+                            &= \Wrap{\cos \theta} \Wrap{x\hati + y\hatj} + \Wrap{\sen \theta} \Wrap{x\hatj - y\hati}    \\
+                            &= \Wrap{x \cos \theta - y \sen \theta}\hati + \Wrap{x \sen \theta + y \cos \theta}\hatj
+                    \end{MultiLineEquation*}
+                \end{SmallIndentation}
+                    
+                \small
+                
+                \normalsize
+                
+                Probablemente ya conocías la ecuación anterior, y en forma matricial se ve más bonita, donde $\vec{P'}=(x', y')$:
+                \begin{align}
+                    \pVector{x' \\ y'} 
+                        &= 
+                            \pVector{\cos \theta && -\sen \theta \\ \sen \theta && \cos \theta}
+                            \pVector{x \\ y}
+                \end{align}
+        
+        
+
+
         % =========================================================
         % ============    DEMOSTRACIONES GEOMETRICAS   ============
         % =========================================================
+        \clearpage
+        \section{Demostraciones Geométricas}
         
-        \section{Demostraciones geométricas mediante vectores}
+            Muchas demostraciones en geometría se pueden simplificar y llevar a cabo usando
+            vectores de forma más elegante.
+
+            Algunas propiedades que podemos aprovechar son:
+            \begin{itemize}
+                \item 
+                    Expresar cada segmento de la figura con vectores de desplazamiento de una forma conveniente.
+                \item
+                    También podemos expresar los vértices como vectores de posición.
+                \item
+                    Para probar que dos segmentos son paralelos, probamos que los vectores que los representan
+                    tienen la misma dirección, o equivalentemente, que uno es múltiplo escalar del otro.
+                \item 
+                    Para probar que dos segmentos tienen la misma longitud, probamos que los vectores que
+                    los representan tienen la misma magnitud.
+                \item
+                    En algunos casos podemos escoger algunos vectores como base y expresar a otros como
+                    combinación lineal de los primeros.
+                \item
+                    Para hallar razones entre longitudes de segmentos, podemos usar ideas de dependencia
+                    e independencia lineal.
+                \item
+                    En la mayoría de los casos no es necesario descomponer los vectores en sus componentes.
+                \item
+                    El producto punto puede servir para probar perperndicularidad y en algunos casos
+                    simplificar expresiones que involucren magnitudes.
+            \end{itemize}
         
-        Muchas demostraciones en geometría se pueden simplificar y llevar a cabo usando vectores de forma más elegante. Algunas propiedades que podemos aprovechar son:
-        \begin{itemize}\setlength\itemsep{0em}
-            \item Expresar cada segmento de la figura con vectores de desplazamiento de una forma conveniente.
-            \item También podemos expresar los vértices como vectores de posición.
-            \item Para probar que dos segmentos son paralelos, probamos que los vectores que los representan tienen la misma dirección, o equivalentemente, que uno es múltiplo escalar del otro.
-            \item Para probar que dos segmentos tienen la misma longitud, probamos que los vectores que los representan tienen la misma magnitud.
-            \item En algunos casos podemos escoger algunos vectores como base y expresar a otros como combinación lineal de los primeros.
-            \item Para hallar razones entre longitudes de segmentos, podemos usar ideas de dependencia e independencia lineal.
-            \item En la mayoría de los casos no es necesario descomponer los vectores en sus componentes.
-            \item El producto punto puede servir para probar perperndicularidad y en algunos casos simplificar expresiones que involucren magnitudes.
-        \end{itemize}
-    
-        Así que, veamos muchos ejemplos:
+            Así que, veamos muchos ejemplos:
 
 
-\part{Cálculo diferencial vectorial}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% //////////////////////////////////////////////////////////////////////////////////////////////////////////
+% ////////////////////////////////         CALCULO DIFERENCIAL VECTORIAL     ///////////////////////////////
+% //////////////////////////////////////////////////////////////////////////////////////////////////////////
+\part{Cálculo Diferencial Vectorial}
 
     \chapter{Funciones de varias variables}
     
