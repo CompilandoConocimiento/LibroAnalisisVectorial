@@ -639,7 +639,7 @@
                     k\vec{a} := (ka_1, ka_2, ka_3)
                 \end{align}
 
-                \textbf{Geométricamente}, multiplicar un vector por un escalar es de agrandarlo o RedMDucirlo pero
+                \textbf{Geométricamente}, multiplicar un vector por un escalar es de agrandarlo o reducirlo pero
                 sin cambiar su dirección (su sentido se invierte si $k < 0$, se queda igual si $k > 0$ y
                 obtenemos el cero vector si $k = 0$).
 
@@ -654,7 +654,7 @@
         
             Las operaciones anteriores cumplen con las siguientes propiedades, donde
             $\vec{a},\vec{b}, \vec{c} \in \Reals^3$ y $\alpha, \beta \in \Reals$.
-            Vemos que todas se heRedMDan de las ya conocidas propiedades de los números reales:
+            Vemos que todas se heredan de las ya conocidas propiedades de los números reales:
 
             \begin{itemize}
                 
@@ -1108,6 +1108,11 @@
 
 
 
+
+
+
+
+
     % ===============================================================================
     % ===================         PRODUCTO ENTRE VECTORES      ======================
     % ===============================================================================
@@ -1131,7 +1136,7 @@
                     Sean $\vec{a}=(a_1,a_2,a_3)$ y $\vec{b}=(b_1,b_2,b_3)$.
                     Definimos al \textbf{producto punto} o \textbf{producto escalar} de $\vec{a}$ con $\vec{b}$ como:
                     \begin{align}
-                        \vec{a} \dotP \vec{b} &:= a_1b_1 + a_2b_2 + a_3b_3
+                        \vec{a} \dotP \vec{b} &:= a_1b_1 + a_2b_2 + a_3b_3 \label{defDot}
                     \end{align} 
                 \end{Definition}
             
@@ -1142,7 +1147,7 @@
                 productos de las coordenadas correspondientes como si fuera una suma.
 
                 También nota que no está definido el producto escalar de un vector con un escalar, es decir,
-                la expresión $\Wrap{\vec{a} \dotP \vec{b}} \dotP \vec{c}$ no tiene sentido.
+                la expresión $\Wrap{\vec{a} \dotP \vec{b}} \dotP \vec{c}$ no tiene sentido; y mucho menos podemos hablar de asociatividad aquí.
                 
                 El hecho de que esté definido así es para que cumpla varias propiedades padres y útiles que veremos
                 a continuación.
@@ -1153,7 +1158,7 @@
             % =====      PROPIEDADES DE PRODUCTO INTERNO     ==========
             % =========================================================
             \clearpage
-            \subsection{Propiedades de Producto Interno}
+            \subsection{Propiedades de Producto Punto}
 
                 Tenemos las siguientes propiedades, donde $\vec{c} = (c_1, c_2, c_3)$ y $\alpha, \beta \in \Reals$:
                 \begin{itemize}
@@ -1165,7 +1170,7 @@
                         \begin{SmallIndentation}[1em]
                             \textbf{Demostración}:
                             
-                            Esta es fácil, también se heRedMDa de la propiedad conmutativa definida los números reales:
+                            Esta es fácil, también se hereda de la propiedad conmutativa definida los números reales:
                             \begin{align*}
                                 \vec{a} \dotP \vec{b} 
                                     &= a_1b_1 + a_2b_2 + a_3b_3         \\
@@ -1242,7 +1247,6 @@
                 
 
 
-
             % =========================================================
             % ====    PROPIEDADES EXTRA DEL PRODUCTO INTERNO      =====
             % =========================================================
@@ -1287,7 +1291,7 @@
                             Si $\vec{v}$ es un vector particular únicamente, el teorema no es válido.
                         \end{SmallIndentation}
 
-                    \item Podemos RedMDefinir (o dar una definición alterna) a la magnitud de un vector como:
+                    \item Podemos redefinir (o dar una definición alterna) a la magnitud de un vector como:
                         $\Abs{\vec{a}} = \sqrt{\vec{a} \dotP \vec{a}}$
 
                         % ======== DEMOSTRACION ========
@@ -1300,12 +1304,13 @@
                                 \end{equation*}
                         
                         \end{SmallIndentation}
-                            
+                        
                         En muchas demostraciones, usaremos dicha definición como $\Abs{\vec{a}}^2 = \vec{a} \dotP \vec{a}$.    
+                            
 
                 \end{itemize}
 
-   
+    
 
             % =========================================================
             % =============     ANGULO ENTRE VECTORES   ===============
@@ -1322,13 +1327,12 @@
                 \begin{figure}[h]
                     \centering
                     \includegraphics[width=0.45\textwidth]{angleBetweenVectors}
-                    \caption{Ángulo entre Vectores}
                 \end{figure}
 
                 % ======== DEMOSTRACION ========
                 \begin{SmallIndentation}[1em]
                     
-                    Ve la foto, y vamos a ver que pasa:
+                    Ve la figura, y vamos a ver qué pasa:
                     \begin{MultiLineEquation*}{3}
                         \Abs{\vec a - \vec b}^2 
                             &= \Abs{\vec a }^2 + \Abs{\vec b}^2 - 2 \Abs{\vec a } \Abs{\vec b } \cos\theta
@@ -1341,19 +1345,19 @@
                                 && \Remember{Aplicamos la propiedad de linearidad}                                          \\
                         \vec a \dotP \vec a - 2\vec a \dotP \vec b + \vec b \dotP \vec b 
                             &= \vec a \dotP \vec a + \vec b \dotP \vec b - 2\Abs{\vec a}\Abs{\vec b}\cos\theta        
-                                && \Remember{Aplicamos la propiedad de conmutativa}                                         \\
+                                && \Remember{Aplicamos la propiedad de linearidad y conmutativa}                            \\
                         - 2\vec a \dotP \vec b 
                             &= - 2\Abs{\vec a}\Abs{\vec b}\cos\theta
                                 && \Remember{Cancelamos términos comunes}                                                        
                     \end{MultiLineEquation*}
 
-                    \begin{Definition}[Definición Alterna del Producto Punto con Magnitud]
-                        \begin{equation}
-                            \vec a \dotP \vec b = \Abs{\vec a} \Abs{\vec b} \cos\theta
-                        \end{equation}
-                    \end{Definition}
-
                 \end{SmallIndentation}
+            
+            	\begin{Definition}[Definición Alterna del Producto Punto con Magnitud]
+            		\begin{align}
+            			\vec a \dotP \vec b = \Abs{\vec a} \Abs{\vec b} \cos\theta \label{defDot2}
+            		\end{align}
+            	\end{Definition}
 
                 La ecuación anterior es una de las más importantes que involucran al producto punto,
                 pues ahora lo relaciona con las magnitudes de los vectores y el ángulo entre ellos.
@@ -1362,7 +1366,6 @@
                 y la que nosotros propusimos como consecuencia, ambas formas son correctas, pero
                 creemos que es más fácil definirla de forma algebráica y luego deducir la forma
                 geométrica}.
-
 
 
                     
@@ -1378,8 +1381,9 @@
                     \cos \theta &= \dfrac{\vec a \dotP \vec b}{\Abs{\vec a} \Abs{\vec b}}
                 \end{align}
                 
-                Como el rango de $\arccos$ va de $0$ a $\pi$, usando esta fórmula siempre obtendremos
-                el ángulo correcto.
+                Como el rango de $\arccos x$ va de $0$ a $\pi$, usando esta fórmula siempre obtendremos
+                el ángulo correcto. Además siempre haremos que el ángulo entre dos vectores caiga en
+                este rango, \textbf{siempre}.
 
                 Más aún, si $\theta = 90^\circ$, entonces $\vec a \dotP \vec b = 0$.
                 Esto nos motiva a definir lo siguiente, pues estos vectores recibirán un nombre especial:
@@ -1387,10 +1391,10 @@
                 \begin{Definition}[Vectores ortogonales]
                     \ForceNewLine
                     Sean $\vec{a}, \vec{b} \in \Reals^3$. Decimos que $\vec{a}$ y $\vec{b}$ son 
-                    \textbf{ortogonales} si y solo si $\vec{a} \cdot \vec{b} = 0$.
+                    \textbf{ortogonales} si y solo si $\vec{a} \dotP \vec{b} = 0$.
                 \end{Definition}
 
-                Nota que el cero vector $\vec{0}$ es ortogonal a cualquier otro vector.
+				Nota que el cero vector $\vec{0}$ es ortogonal a cualquier otro vector.
 
 
 
@@ -1402,10 +1406,10 @@
             
                 Ahora consideremos la siguiente situación:
 
-                \begin{wrapfigure}{r}{0.45\textwidth}
+                \begin{figure}[H]
                     \centering
-                    \includegraphics[width=0.42\textwidth]{vectorProyection}
-                \end{wrapfigure}
+                    \includegraphics[scale=1]{vectorProyection}
+                \end{figure}
 
                 Tenemos un vector cualquiera $\vec{a}$ y un vector unitario $\hat{v}$ que forman
                 entre ellos un ángulo $\theta$.
@@ -1456,26 +1460,22 @@
 
 
 
-                
                 % =========================================================
                 % =================     DEFINICION   ======================
                 % =========================================================
-                \clearpage
 
-                    \begin{Definition}[Proyección de Vectores]
+                    \begin{Definition}[Proyección de Vectores] \label{vectorProjection}
                         \ForceNewLine
                         Sean $\vec{a}, \hat{v} \in \Reals^3$ con $\hat{v}$ unitario.
                         
                         Definimos a la \textbf{Proyección de $\vec{a}$ sobre $\hat{v}$} como:
                         \begin{align}
-                            proy_{\hat{v}}(\vec{a}) := \Wrap{\vec{a} \dotP \hat{v}} \hat{v}
-                            \label{vectorProjection}
+                            proy_{\hat{v}}(\vec{a}) := \Wrap{\vec{a} \dotP \hat{v}} \hat{v} \label{defProj1}
                         \end{align}
                         
                         Y a la \textbf{componente normal de $\vec{a}$ sobre $\hat{v}$} como:
                         \begin{align}
-                            \vec{n} := \vec{a} - \Wrap{\vec{a} \dotP \hat{v}} \hat{v}
-                            \label{vectorProjection2}
+                            \vec{n} := \vec{a} - \Wrap{\vec{a} \dotP \hat{v}} \hat{v} \label{defProj2}
                         \end{align}
 
                     \end{Definition}
@@ -1487,7 +1487,6 @@
                     \begin{align}
                         proy_{\vec{v}}(\vec{a}) := \dfrac{\Wrap{\vec{a} \dotP \vec{v}}\vec{v}}{\Abs{\vec{v}}^2}
                     \end{align}
-
 
 
 
@@ -1517,19 +1516,21 @@
                 \end{align}
                 
                 De esta forma, podemos escribir al vector unitario de $\vec{a}$ como:
-                \begin{equation*}
+                \begin{equation}
                     \hat{a} = (\cos \alpha)\hati + (\cos \beta)\hatj + (\cos \gamma)\hatk
-                \end{equation*}
+                \end{equation}
+                
+                Por eso el nombre de cosenos directores, porque determinan la dirección de $\vec{a}$.
 
                 Se queda como ejercicio que demuestres que $\hat{a}$ es realmente unitario :p
                 
-        
 
 
             % =========================================================
             % ================     CAUCHY-SCHWARZ   ===================
             % =========================================================
             \clearpage
+
             \subsection{Desigualdad de Cauchy-Schwarz}
             
                 Esta es una de las desigualdades más poderosas, tanto que es muy usada en álgebra lineal.
@@ -1541,10 +1542,9 @@
                         \abs{\vec{a} \dotP \vec{b}} \leq \Abs{\vec{a}} \Abs{\vec{b}} \label{CS-Inequality}
                     \end{align}
                 \end{Theorem}
-
-                Es decir, el valor absoluto del producto punto de dos vectores siempre será menor o igual al producto
-                de sus magnitudes.
-
+            
+            	Es decir, el valor absoluto del producto punto de dos vectores siempre será menor o igual al producto de sus magnitudes.
+            
                 % ======== DEMOSTRACION ========
                 \begin{SmallIndentation}[1em]
                     \textbf{Demostración}:
@@ -1559,21 +1559,20 @@
                     Sea $\theta$ el ángulo que forman $\vec{a}$ y $\vec{b}$. De trigonometría sabemos que 
                     $-1 \leq \cos \theta \leq 1$, entonces $\abs{\cos \theta} \leq 1$.
 
-                    Pero anteriormente deducimos que $\cos \theta = \frac{\vec{a} \cdot \vec{b}}{\Abs{\vec{a}} \Abs{\vec{b}}}$,
-                    entonces $\abs{\frac{\vec{a} \cdot \vec{b}}{\Abs{\vec{a}} \Abs{\vec{b}}}} \leq 1$, lo que implica que
+                    Pero anteriormente deducimos que $\cos \theta = \frac{\vec{a} \dotP \vec{b}}{\Abs{\vec{a}} \Abs{\vec{b}}}$,
+                    entonces $\abs{\frac{\vec{a} \dotP \vec{b}}{\Abs{\vec{a}} \Abs{\vec{b}}}} \leq 1$, lo que implica que
                     $\Abs{\vec{a} \dotP \vec{b}} \leq \Abs{\vec{a}} \Abs{\vec{b}}$.
-
-                    Una forma alternativa de esta desigualdad es usando la definición de valor absoluto
-                    (similar al coseno anteriormente):
-                    \begin{equation*}
-                        -\Abs{\vec{a}} \Abs{\vec{b}} 
-                            \leq 
-                                \vec{a} \dotP \vec{b}
-                                    \leq
-                                        \Abs{\vec{a}} \Abs{\vec{b}}   
-                    \end{equation*}
                 
                 \end{SmallIndentation}
+            
+            	Una forma alternativa de esta desigualdad es usando la definición de valor absoluto (similar al coseno anteriormente):
+            	\begin{equation*}
+	            	-\Abs{\vec{a}} \Abs{\vec{b}} 
+	            	\leq 
+	            	\vec{a} \dotP \vec{b}
+	            	\leq
+	            	\Abs{\vec{a}} \Abs{\vec{b}}   
+            	\end{equation*}
 
 
 
@@ -1583,12 +1582,6 @@
             \clearpage
             \subsection{Desigualdad del Triángulo}
 
-                \begin{wrapfigure}{r}{0.30\textwidth}
-                    \centering
-                    \includegraphics[width=0.25\textwidth]{triangleInequality.png}
-                    \label{Con dibujitos :3}
-                \end{wrapfigure}
-            
                 Es muy intuitiva de comprender, dice que la magnitud de la suma de dos vectores es menor o
                 igual a la suma de sus magnitudes. Formalmente:
                 
@@ -1600,6 +1593,11 @@
                     \end{align*}
                 \end{Theorem}
             
+            	\begin{figure}[H]
+            		\centering
+            		\includegraphics[scale=1]{triangleInequality.png}
+            	\end{figure}
+            
                 Vemos que la distancia más corta entre el origen $O$ y el punto $B$ tiene que ser
                 un segmento de recta, justamente $\Abs{\vec{a} + \vec{b}}$.
 
@@ -1607,7 +1605,8 @@
                 recorrido una mayor distancia, que es $\Abs{\vec{a}} + \Abs{\vec{b}}$
 
                 Pero claro, eso no es una demostración formal. Aquí viene la chida:
-
+                
+                
                 % ======== DEMOSTRACION ========
                 \begin{SmallIndentation}[1em]
                     \textbf{Demostración:}
@@ -1642,12 +1641,22 @@
 
                 \end{SmallIndentation}
             
+
+
+
+
+
+
+
+
         
         % =========================================================
         % =================     PRODUCTO CRUZ   ===================
         % =========================================================
         \clearpage
-        \section{Producto Cruz}
+        \section{Producto cruz}
+        
+        	\subsection{Definición e ideas}
         
             Es el segundo tipo de producto que existe entre los vectores.
 
@@ -1697,8 +1706,7 @@
                     en dirección de $\vec{b}$, tu pulgar apuntará en la dirección de $\hat{c}$.
                 \end{minipage}
         
-
-            % =========================================================
+             % =========================================================
             % ===========    VECTORES UNITARIOS    ====================
             % =========================================================
             \clearpage
@@ -1744,7 +1752,7 @@
                 \textbf{Creando Vectores Cero}
                     \begin{align*}
                         \textcolor{RedMD}
-                            {\hat{0}}
+                            {\vec{0}}
                             \;
                         \textcolor{Teal700MD}
                             { = \hati \times \hati}
@@ -1759,7 +1767,7 @@
                 % ==================================================
                 % ===========      COSAS RARAS      ================
                 % ==================================================
-                \textbf{Cosas Raras}
+                \textbf{Multiplicando al revés}
                     \begin{align*}
                         \textcolor{Teal700MD}
                         {-\hati = \hatk \times \hatj}
@@ -1770,9 +1778,7 @@
                         \textcolor{Amber900MD}
                         {-\hatk = \hatj \times \hati}
                     \end{align*}
-                    
-
-
+            
             % =========================================================
             % ===========    PROPIEDADES GENERALES   ==================
             % =========================================================
@@ -1817,9 +1823,7 @@
                             
                             \end{SmallIndentation}
                                 
-                    
-                    \item \textbf{Distributiva por la Izquierda:} 
-                        $\vec{a} \times \Wrap{\vec{b}+\vec{c}} = \vec{a} \times \vec{b} + \vec{a} \times \vec{c}$
+                    \item $\vec{a} \times \vec{a} = \vec{0} \times \vec{a} = \vec{0}$
 
                         % ======== DEMOSTRACION ========
                         \begin{SmallIndentation}[1em]
@@ -1834,6 +1838,20 @@
                             por lo tanto $\vec{0} \times \vec{a} = \vec{0}$.
                         
                         \end{SmallIndentation}
+                    
+
+                    \item \textbf{Distributiva por la Izquierda:} 
+                        $\vec{a} \times \Wrap{\vec{b}+\vec{c}} = \vec{a} \times \vec{b} + \vec{a} \times \vec{c}$
+
+                        % ======== DEMOSTRACION ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Demostración}:
+                            
+                            A pesar de su simplicidad para entender, la demostración no es tan sencilla,
+                            pues involucra el uso de planos y proyecciones en ellos. Supongamos que
+                            $\vec{a} \neq \vec{0}$, pues si lo fuera la igualdad se cumple trivialmente. Pendiente :v
+                        
+                        \end{SmallIndentation}
                             
                     
                     \item \textbf{Distributiva por la Derecha:}
@@ -1843,11 +1861,17 @@
                         \begin{SmallIndentation}[1em]
                             \textbf{Demostración}:
                             
-                            A pesar de su simplicidad para entender, la demostración no es tan sencilla,
-                            pues involucra el uso de planos y proyecciones en ellos. Supongamos que
-                            $\vec{a} \neq \vec{0}$, pues si lo fuera la igualdad se cumple trivialmente.
+                            Tenemos que:
+                            \begin{align*}
+                                \Wrap{\vec{a} + \vec{b}} \times \vec{c}
+                                    &= -\vec{c} \times \Wrap{\vec{a} + \vec{b}}                 && \Remember{Anticonmutatividad}            \\
+                                    &= -\Wrap{\vec{c} \times \vec{a} + \vec{c} \times \vec{b}}  && \Remember{Distributiva por la izquierda} \\
+                                    &= -\Wrap{-\vec{a} \times \vec{c} - \vec{b} \times \vec{c}} && \Remember{Anticonmutatividad}           \\
+                                    &= \vec{a} \times \vec{c} + \vec{b} \times \vec{c}
+                            \end{align*}
                         
                         \end{SmallIndentation}
+                        
 
                     \clearpage
                     
@@ -1897,8 +1921,6 @@
                             Se queda como ejercicio ver que $k\Wrap{\vec{a} \times \vec{b}} = \vec{a} \times \Wrap{k \vec{b}}$
                                 
                         \end{SmallIndentation}
-                    
-                    \item $\vec{a} \times \vec{a} = \vec{0}$
 
                 \end{itemize}
             
@@ -1906,11 +1928,7 @@
                 es decir, $\vec{a} \times \Wrap{\vec{b} \times \vec{c}} \neq \Wrap{\vec{a} \times \Vector{b}} \times \vec{c}$;
                 por lo tanto, la expresión $\vec{a} \times \vec{b} \times \vec{c}$ es ambigua si no se especifica en qué orden
                 se deben evaluar.
-                
-
-
-
-
+            
             % =========================================================
             % ===========    DEFINICION ALGEBRAICA   ==================
             % =========================================================
@@ -1987,11 +2005,9 @@
                 Lo ideal es simplemente memorizar la definición con el determinante, ya que las coordenadas de forma
                 explícita no están muy sencillas. ¿Y ya viste por qué fue mejor comenzar con la definición geométrica?
                 Haber definido al producto cruz por medio de sus coordenadas no hubiera sido nada intuitivo.
-
-
-
+            
             % =========================================================
-            % ===========    DEFINICION ALGEBRAICA   ==================
+            % ===========    ANGULO PRODUCTO CRUZ   ===================
             % =========================================================
             \clearpage
             \subsection{Usando Producto Cruz para Ángulo}
@@ -2002,20 +2018,22 @@
                         &= \dfrac{\Abs{\vec{a} \times \vec{b}}}{\Abs{\vec{a}} \Abs{\vec{b}}} \label{angleBetweenVectorsCross}
                 \end{align}
                 
-                Sin embargo, puede que no obtengamos el ángulo correcto, porque el rango de $arcsin(\theta)$ cuando
-                su argumento es positivo es de $0$ a $\frac{\pi}{2}$. Por eso es un poco más conveniente usar
+                Sin embargo, puede que no obtengamos el ángulo correcto, porque el rango de $\arcsin x$, cuando
+                su argumento es positivo, es de $0$ a $\frac{\pi}{2}$. Por eso es un poco más conveniente usar
                 el producto punto para esto.
                 
                 Aunque podemos decir que $\vec{a} \times \vec{b} = \vec{0}$ si y solo si $\vec{a}$ es paralelo
-                a $\Vector{b}$, es decir, forman un ángulo de $0^\circ$.
-
-
-
+                a $\Vector{b}$, es decir, forman un ángulo de $0^\circ$. Nota que el cero vector $\vec{0}$ es
+                paralelo a cualquier vector.
+        
+            \clearpage
+        
+            
         % =========================================================
         % =================     PRODUCTO TRIPLE   =================
         % =========================================================
         \clearpage
-        \section{Producto Triple}
+        \section{Producto triple}
         
             Este no es un nuevo producto, sino más bien una combinación de los dos anteriores, te lo digo
             antes de que te asustes.
@@ -2029,7 +2047,7 @@
 
                 También se suele usar la notación: $[\vec{a}, \vec{b}, \vec{c}] = \vec{a} \dotP (\vec{b} \times \vec{c})$.
             \end{Definition}
-
+        
             % =========================================================
             % =================     PROPIEDADES       =================
             % =========================================================
@@ -2079,13 +2097,13 @@
 
                     \item 
                         $\vec{a} \dotP \Wrap{\vec{b} \times \vec{c}} 
-                            = \bVector{a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3 \\ c_1 & c_2 & c_3}$
+                            = \lVector{a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3 \\ c_1 & c_2 & c_3}$
 
                             % ======== DEMOSTRACION ========
                             \begin{SmallIndentation}[1em]
                                 \textbf{Demostración}:
                                 
-                                Esto nos facilita mucho el cálculo del producto triple escalar, pues se RedMDuce a
+                                Esto nos facilita mucho el cálculo del producto triple escalar, pues se reduce a
                                 que calculemos un determinante de dimensión 3, el cual es muy sencillo.
                                 
                                 Para la demostración simplemente calcula ambos lados de la ecuación y comprueba que sean iguales.
@@ -2094,11 +2112,8 @@
                             \end{SmallIndentation}
 
                 \end{itemize}
-                            
-
-
-
-
+        
+        
         % =========================================================
         % =================     IDENTIDADES   =====================
         % =========================================================
@@ -2131,6 +2146,7 @@
                                     &&\Remember{Identidad trigonométrica}
                         \end{align*}
                     \end{SmallIndentation}
+
             
                 \item
                     $\abs{\abs{\vec{a}} - \abs{\vec{b}}} \leq \Abs{\vec{a} - \vec{b}}$
@@ -2350,19 +2366,43 @@
                         & $\vec{0}$
                     \end{tabular}
                 \end{SmallIndentation}
+            
+            \clearpage
+            
+            \item \textbf{Propiedad de \Quote{cancelación}}: Si $\vec{a} \dotP \vec{v} = \vec{b} \dotP \vec{v} \quad$ y
+            $\quad \vec{a} \times \vec{v} = \vec{b} \times \vec{v}$, donde $\vec{v} \neq \vec{0}$, entonces $\vec{a} = \vec{b}$.
+            
+            % ======== DEMOSTRACION ========
+            \begin{SmallIndentation}[1em]
+            	\textbf{Demostración:}
+            	
+            	La única forma en la que podemos \Quote{cancelar} el vector $\vec{v}$ es asegurarnos de que las
+            	dos ecuaciones anteriores se cumplan. Veamos por qué. El truco está en aplicar producto cruz
+            	a ambos lados de la segunda condición:
+            	\begin{align*}
+	            	\vec{v} \times \BigWrap{\vec{a} \times \vec{v}} &= \vec{v} \times \Wrap{\vec{b} \times \vec{v}} &&\Remember{Sabemos}\\
+	            	\BigWrap{\vec{v} \dotP \vec{v}} \vec{a} - \BigWrap{\vec{v} \dotP \vec{a}} \vec{v} &= \BigWrap{\vec{v} \dotP \vec{v}} \vec{b} - \Wrap{\vec{v} \dotP \vec{b}} \vec{v} &&\Remember{Propiedad que ya vimos, en ambos lados}\\
+	            	\BigWrap{\vec{v} \dotP \vec{v}} \vec{a} - \BigWrap{\vec{a} \dotP \vec{v}} \vec{v} &= \BigWrap{\vec{v} \dotP \vec{v}} \vec{b} - \Wrap{\vec{b} \dotP \vec{v}} \vec{v} &&\Remember{Conmutativa}\\
+	            	\BigWrap{\vec{v} \dotP \vec{v}} \vec{a} - \cancel{\BigWrap{\vec{a} \dotP \vec{v}} \vec{v}} &= \BigWrap{\vec{v} \dotP \vec{v}} \vec{b} - \cancel{\Wrap{\vec{b} \dotP \vec{v}} \vec{v}} &&\Remember{Usamos la primera condición y cancelamos}\\
+	            	\cancel{\BigWrap{\vec{v} \dotP \vec{v}}} \vec{a} &= \cancel{\BigWrap{\vec{v} \dotP \vec{v}}} \vec{b} &&\Remember{Como $\vec{v} \neq \vec{0}$, entonces $\vec{v} \dotP \vec{v} \neq 0$}\\
+	            	\vec{a} &= \vec{b} &&\Remember{Triunfó el mal}
+            	\end{align*}
+            \end{SmallIndentation}
 
             \end{itemize}
 
 
+
+    
     
     % ===============================================================================
     % ==============            APLICACIONES A LA GEOMETRIA         =================
     % ===============================================================================        
-    \chapter{Aplicaciones a la Geometría}
+            
+            
+    \chapter{Aplicaciones a la geometría}
 
-
-
-        % =========================================================
+         % =========================================================
         % ============   APLICACIONES CON PRODUCTO CRUZ    ========
         % =========================================================
         \clearpage
@@ -2382,7 +2422,7 @@
 
                 \begin{figure}[H]
                     \centering
-                    \includegraphics[width=0.55\textwidth]{triangle}
+                    \includegraphics[width=0.75\textwidth]{triangle}
                 \end{figure}
                 
                 Por ejemplo: supongamos que los vectores de posición del triángulo son $\vec{A}$, $\vec{B}$ y $\vec{C}$.
@@ -2402,7 +2442,7 @@
                 
                 \begin{figure}[H]
                     \centering
-                    \includegraphics[width=0.55\textwidth]{parallelogram2}
+                    \includegraphics[width=0.75\textwidth]{parallelogram2}
                 \end{figure}
                 
                 De la figura vemos que $\vec{d_1} = \vec{a}+\vec{b}$ y que $\vec{d_2} = \vec{b}-\vec{a}$,
@@ -2493,7 +2533,7 @@
         % ============   APLICACIONES CON PRODUCTO CAJA    ========
         % =========================================================
         \clearpage
-        \section{Aplicaciones con el P. Caja}
+        \section{Aplicaciones con el P. Triple}
         
             % =========================================================
             % ============   VOLUMEN DE UN PARALELEPIPEDO      ========
@@ -2505,7 +2545,7 @@
             
                 \begin{figure}[H]
                     \centering
-                    \includegraphics[width=0.55\textwidth]{parallelepiped}
+                    \includegraphics[width=0.75\textwidth]{parallelepiped}
                 \end{figure}
             
                 Recordemos que el volumen está dado por $V = \Wrap{\text{Área de la base}}\Wrap{\text{Altura}}$.
@@ -2529,9 +2569,7 @@
                 La expresión \emph{producto triple} puede hacer referencia a otras combinaciones donde estén involucrados
                 tres vectores y sus productos, como: 
                 $\vec{a} \times \Wrap{\vec{b} \times \vec{c}}$, $\Wrap{\vec{a} \dotP \vec{b}}\vec{c}$, etc.
-                
-
-
+    
         % =========================================================
         % ====================     RECTAS   =======================
         % =========================================================
@@ -2576,8 +2614,9 @@
                 \vspace{3em}
                 
                 Donde $t \in \Reals$. La ecuación anterior es conocida como la \textbf{ecuación paramétrica
-                de la recta}, de forma similar a la del plano. Si $\vec{r} = (x, y, z)$, $\vec{v} = (a, b, c)$ y
-                $\vec{P} = (x_0, y_0, z_0)$, entonces podemos reescribirla como:
+                de la recta}. Como $\vec{r}$ se está moviendo, usemos las tres variables genéricas para representar
+            sus coordenadas. De esa forma, si $\vec{r} = (x, y, z)$, $\vec{v} = (a, b, c)$ y
+                $\vec{P} = (x_0, y_0, z_0)$, entonces podemos reescribir la ecuación de la recta como:
                 \begin{align*}
                     (x, y, z) &= \Wrap{x_0 + ta, y_0 + tb, z_0 + tc}
                 \end{align*}
@@ -2672,7 +2711,7 @@
                     
                     \begin{figure}[H]
                         \centering
-                        \includegraphics[width=0.55\textwidth]{plane}
+                        \includegraphics[width=0.75\textwidth]{plane}
                     \end{figure}
                     
                     De la figura vemos que $\vec{r} - \vec{P}$ siempre está contenido en el plano,
@@ -2681,12 +2720,10 @@
                         \vec{n} \dotP \Wrap{\vec{r} - \vec{P}} &= 0 \label{planeEquationGeneral}
                     \end{align}
                     
-                    Como $\vec{r}$ se está moviendo, usemos las tres variables genéricas para representar
-                    sus coordenadas.
-                    De esa forma, supongamos que
+                    Supongamos que
                     $\vec{r} = (x, y, z)$, $\vec{n} = (a, b, c)$ y $\vec{P} = (x_0, y_0, z_0)$.
 
-                    Entonces podemos reescribir la ecuación:
+                    Entonces podemos reescribir la ecuación como:
                     \begin{MultiLineEquation}{3}
                         &(a,b,c) \dotP \Wrap{x - x_0, y - y_0, z - z_0} = 0         \\
                         &\implies a(x - x_0) + b(y - y_0) + c(z - z_0) = 0          \\
@@ -2772,8 +2809,7 @@
                     Donde $s, t \in \Reals$, es decir, abarcan todos los números reales para \Quote{barrer} todo el plano.
                     Le sumamos el vector $\vec{A}$ para forzar que el plano pase por ahí.
 
-                    Esta forma de escribir la ecuación del plano se conoce como \emph{ecuación paramétrica}, que
-                    estudiaremos más adelante.
+                    Esta forma de escribir la ecuación del plano se conoce como \emph{ecuación paramétrica}, que a diferencia que la de la línea, ahora usamos dos parámetros en vez de uno.
                     
                     \textbf{Nota:}
                     Es muy importante que $\lVec{e_1}$ y $\lVec{e_2}$ sean linealmente independientes
@@ -2794,7 +2830,7 @@
             
             \begin{figure}[H]
                 \centering
-                \includegraphics[width=0.55\textwidth]{sphere}
+                \includegraphics[width=0.75\textwidth]{sphere}
             \end{figure}
             
             Sea $R$ el radio de la esfera y $\vec{C} = (x_0, y_0, z_0)$ el centro.
@@ -2837,7 +2873,7 @@
                 
                 \begin{figure}[H]
                     \centering
-                    \includegraphics[width=0.40\textwidth]{distancePointLine}
+                    \includegraphics[width=0.5\textwidth]{distancePointLine}
                 \end{figure}
             
                 De la figura vemos que el vector $\vec{P} - \lVec{a_0}$ tiene el mismo origen que el
@@ -2846,7 +2882,7 @@
                 ortogonalmente el vector $\vec{P} - \lVec{a_0}$ sobre la línea.
                 
                 Y ya tenemos la fórmula para eso. Sea $\vec{d}$ el vector resultado de dicha proyección,
-                entonces, por la ecuación \ref{vectorProjection2}, tenemos que:
+                entonces, por la ecuación \ref{defProj2}, tenemos que:
                 \begin{align}
                     \vec{d} 
                         &= \Wrap{\vec{P} - \lVec{a_0}} - \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}
@@ -2854,19 +2890,19 @@
                 \end{align}
                 
                 De esa forma, la distancia que queremos es justamente la magnitud de $\vec{d}$:
-                \begin{align*}
+                \begin{align}
                     \Abs{\vec{d}} 
                         &= \Abs{
                                 \Wrap{\vec{P} - \lVec{a_0}}
                                 - 
                                 \Wrap{\Wrap{\vec{P} - \lVec{a_0}} \dotP \hat{v}} \hat{v}
-                            }                                                                       \\
+                            }  \nonumber                                                                     \\
                         &= \Abs{
                                 \Wrap{\vec{P} - \lVec{a_0}}
                                 -
                                 \dfrac{\Wrap{\vec{P} - \lVec{a_0}} \dotP \vec{v}}{\Abs{\vec{v}}^2} \vec{v}} 
                     \label{distancePointLine1}
-                \end{align*}
+                \end{align}
 
 
 
@@ -2879,7 +2915,7 @@
                 
                 \begin{figure}[H]
                     \centering
-                    \includegraphics[width=0.45\textwidth]{distancePointLine2}
+                    \includegraphics[width=0.6\textwidth]{distancePointLine2}
                 \end{figure}
             
                 Sea $\theta$ el ángulo que forman los vectores $\vec{v}$ y $\vec{P} - \lVec{a_0}$.
@@ -2900,7 +2936,7 @@
                     \Abs{\vec{d}} 
                         &= \cancel{\Abs{\vec{P} - \lVec{a_0}}} 
                             \dfrac{\Abs{\vec{v} \times \Wrap{\vec{P} - \lVec{a_0}}}}{\Abs{\vec{v}}
-                            \cancel{\Abs{\vec{P} - \lVec{a_0}}}} 
+                            \cancel{\Abs{\vec{P} - \lVec{a_0}}}} \nonumber \\
                         &= \dfrac{\Abs{\vec{v} \times \Wrap{\vec{P} - \lVec{a_0}}}}{\Abs{\vec{v}}} 
                     \label{distancePointLine2}
                 \end{align}
@@ -2946,7 +2982,7 @@
                 
                 \begin{figure}[H]
                     \centering
-                    \includegraphics[width=0.55\textwidth]{reflection}
+                    \includegraphics[width=0.65\textwidth]{reflection}
                 \end{figure}
             
                 Vemos que necesitamos otra vez el vector $\vec{d}$ que ya hemos calculado en la ecuación \ref{distancePointLine}.
@@ -2955,11 +2991,11 @@
 
                 Pero como $\vec{d}$ va en dirección contraria a la que queremos, le invertimos el sentido y dicha suma
                 se convierte en una resta de dos veces el vector $\vec{d}$:
-                \begin{align*}
+                \begin{align}
                     \vec{P'} = \vec{P} - 2\vec{d}
-                \end{align*}
+                \end{align}
                 
-                Finalmente sustituimos la ecuación \ref{distancePointLine}:
+                Finalmente sustituimos la ecuación \ref{distancePointLine} en la ecuación anterior:
                 \begin{MultiLineEquation}{3}
                     &\vec{P'} 
                         = \vec{P} - 2 \Brackets{
@@ -2995,7 +3031,7 @@
             
             \begin{figure}[H]
                 \centering
-                \includegraphics[width=0.55\textwidth]{distancePointPlane}
+                \includegraphics[width=0.7\textwidth]{distancePointPlane}
             \end{figure}
             
             Proyectamos ortogonalmente el punto $\vec{P}$ sobre la superficie del plano y llamemos $\vec{d}$ al vector resultante.
@@ -3008,7 +3044,7 @@
 
             Como el punto descrito por el vector de posición $\vec{P} + \vec{d}\;$ pertenece al plano, debe satisfacer la ecuación del
             plano. Por lo tanto, sustituimos $\vec{r}$ por $\vec{P} + \vec{d}$:
-            \begin{MultiLineEquation*}{3}
+            \begin{MultiLineEquation}{3}
                 \vec{n} \dotP \Wrap{\vec{P}+\vec{d} - \lVec{a_0}} 
                     &= 0                                                                            \\
                 \hat{n} \dotP \Wrap{\vec{P}+\Abs{\vec{d}} \hat{n} - \lVec{a_0}} 
@@ -3027,7 +3063,7 @@
                     &= \dfrac{\abs{\vec{n} \dotP \Wrap{\vec{P} - \lVec{a_0}}}}{\Abs{\vec{n}}}
                         &&\Remember{Recuerda que $\hat{n}=\dfrac{\vec{n}}{\Abs{\vec{n}}}$} 
                 \label{distancePointPlane}
-            \end{MultiLineEquation*}
+            \end{MultiLineEquation}
             
             Observa que la ecuación anterior no es más que la longitud de la proyección del vector 
             $\vec{P} - \lVec{a_0}$ sobre el vector normal $\vec{n}$. ¿Podrías explicar por qué?
@@ -3042,12 +3078,13 @@
                 Si descomponemos los vectores en coordenadas, es decir, 
                 $\vec{n} = (a,b,c)$, $\vec{P} = (x_1, y_1, z_1)$ y $\lVec{a_0}=(x_0, y_0, z_0)$,
                 entonces obtenemos la fórmula en forma cartesiana:
-                \begin{MultiLineEquation*}{3}
+                \begin{MultiLineEquation}{3}
                     \abs{\vec{d}}
                         &= \dfrac{\abs{a(x_1 - x_0) + b(y_1 - y_0) + c(z_1 - z_0)}}{\sqrt{a^2+b^2+c^2}} \\
                         &= \dfrac{\abs{ax_1 + by_1 + cz_1 - (ax_0 + by_0 + cz_0)}}{\sqrt{a^2+b^2+c^2}}  \\
                         &= \dfrac{\abs{ax_1 + by_1 + cz_1 - d}}{\sqrt{a^2+b^2+c^2}}
-                \end{MultiLineEquation*}
+                        \label{distancePointPlane2}
+                \end{MultiLineEquation}
 
                 Donde recuerda que la ecuación del plano en forma cartesiana es 
                 $ax + by + cz = d$ (no confundas las d's).
@@ -3065,12 +3102,12 @@
             usando a la línea como eje mediante un ángulo determinado en sentido antihorario.
             
             Usaremos lo aprendido de ecuación de la línea en forma paramétrica, ecuación del plano dados
-            dos vectores paralelos a él y proyecciones ortogonales.
+            dos vectores paralelos a él, proyecciones ortogonales; y por supuesto, producto punto y cruz.
             
             Observa con cuidado la siguiente figura:
             \begin{figure}[H]
                 \centering
-                \includegraphics[width=0.55\textwidth]{rotation}
+                \includegraphics[width=0.75\textwidth]{rotation}
             \end{figure}
         
             Veamos todos los elementos con los que vamos a trabajar:
@@ -3137,7 +3174,7 @@
             \begin{align}
                 \vec{n'} 
                     &= \Abs{\vec{n}} \Wrap{\cos \theta \hat{e_1} + \sen \theta \hat{e_2}} 
-                    &= \Wrap{\cos \theta} \vec{n} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}
+                    = \Wrap{\cos \theta} \vec{n} + \Wrap{\sen \theta} \Brackets{\hat{v} \times \Wrap{\vec{P} - \lVec{a_0}}}
             \end{align}
             
             Finalmente, el punto $\vec{P'}$ corresponde con un específico ángulo de $\theta$, por lo tanto,
@@ -3252,26 +3289,7 @@
             Así que, veamos muchos ejemplos:
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-% //////////////////////////////////////////////////////////////////////////////////////////////////////////
-% ////////////////////////////////         CALCULO DIFERENCIAL VECTORIAL     ///////////////////////////////
-% //////////////////////////////////////////////////////////////////////////////////////////////////////////
-\part{Cálculo Diferencial Vectorial}
+\part{Cálculo diferencial vectorial}
 
     \chapter{Funciones de varias variables}
     
