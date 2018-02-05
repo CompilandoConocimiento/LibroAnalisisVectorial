@@ -1353,11 +1353,11 @@
 
                 \end{SmallIndentation}
             
-            	\begin{Definition}[Definición Alterna del Producto Punto con Magnitud]
-            		\begin{align}
-            			\vec a \dotP \vec b = \Abs{\vec a} \Abs{\vec b} \cos\theta \label{defDot2}
-            		\end{align}
-            	\end{Definition}
+                \begin{Definition}[Definición Alterna del Producto Punto con Magnitud]
+                    \begin{align}
+                        \vec a \dotP \vec b = \Abs{\vec a} \Abs{\vec b} \cos\theta \label{defDot2}
+                    \end{align}
+                \end{Definition}
 
                 La ecuación anterior es una de las más importantes que involucran al producto punto,
                 pues ahora lo relaciona con las magnitudes de los vectores y el ángulo entre ellos.
@@ -1394,7 +1394,7 @@
                     \textbf{ortogonales} si y solo si $\vec{a} \dotP \vec{b} = 0$.
                 \end{Definition}
 
-				Nota que el cero vector $\vec{0}$ es ortogonal a cualquier otro vector.
+                Nota que el cero vector $\vec{0}$ es ortogonal a cualquier otro vector.
 
 
 
@@ -1543,7 +1543,7 @@
                     \end{align}
                 \end{Theorem}
             
-            	Es decir, el valor absoluto del producto punto de dos vectores siempre será menor o igual al producto de sus magnitudes.
+                Es decir, el valor absoluto del producto punto de dos vectores siempre será menor o igual al producto de sus magnitudes.
             
                 % ======== DEMOSTRACION ========
                 \begin{SmallIndentation}[1em]
@@ -1565,14 +1565,14 @@
                 
                 \end{SmallIndentation}
             
-            	Una forma alternativa de esta desigualdad es usando la definición de valor absoluto (similar al coseno anteriormente):
-            	\begin{equation*}
-	            	-\Abs{\vec{a}} \Abs{\vec{b}} 
-	            	\leq 
-	            	\vec{a} \dotP \vec{b}
-	            	\leq
-	            	\Abs{\vec{a}} \Abs{\vec{b}}   
-            	\end{equation*}
+                Una forma alternativa de esta desigualdad es usando la definición de valor absoluto (similar al coseno anteriormente):
+                \begin{equation*}
+                    -\Abs{\vec{a}} \Abs{\vec{b}} 
+                    \leq 
+                    \vec{a} \dotP \vec{b}
+                    \leq
+                    \Abs{\vec{a}} \Abs{\vec{b}}   
+                \end{equation*}
 
 
 
@@ -1593,10 +1593,10 @@
                     \end{align*}
                 \end{Theorem}
             
-            	\begin{figure}[H]
-            		\centering
-            		\includegraphics[scale=1]{triangleInequality.png}
-            	\end{figure}
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[scale=1]{triangleInequality.png}
+                \end{figure}
             
                 Vemos que la distancia más corta entre el origen $O$ y el punto $B$ tiene que ser
                 un segmento de recta, justamente $\Abs{\vec{a} + \vec{b}}$.
@@ -1656,7 +1656,7 @@
         \clearpage
         \section{Producto cruz}
         
-        	\subsection{Definición e ideas}
+            \subsection{Definición e ideas}
         
             Es el segundo tipo de producto que existe entre los vectores.
 
@@ -2374,19 +2374,19 @@
             
             % ======== DEMOSTRACION ========
             \begin{SmallIndentation}[1em]
-            	\textbf{Demostración:}
-            	
-            	La única forma en la que podemos \Quote{cancelar} el vector $\vec{v}$ es asegurarnos de que las
-            	dos ecuaciones anteriores se cumplan. Veamos por qué. El truco está en aplicar producto cruz
-            	a ambos lados de la segunda condición:
-            	\begin{align*}
-	            	\vec{v} \times \BigWrap{\vec{a} \times \vec{v}} &= \vec{v} \times \Wrap{\vec{b} \times \vec{v}} &&\Remember{Sabemos}\\
-	            	\BigWrap{\vec{v} \dotP \vec{v}} \vec{a} - \BigWrap{\vec{v} \dotP \vec{a}} \vec{v} &= \BigWrap{\vec{v} \dotP \vec{v}} \vec{b} - \Wrap{\vec{v} \dotP \vec{b}} \vec{v} &&\Remember{Propiedad que ya vimos, en ambos lados}\\
-	            	\BigWrap{\vec{v} \dotP \vec{v}} \vec{a} - \BigWrap{\vec{a} \dotP \vec{v}} \vec{v} &= \BigWrap{\vec{v} \dotP \vec{v}} \vec{b} - \Wrap{\vec{b} \dotP \vec{v}} \vec{v} &&\Remember{Conmutativa}\\
-	            	\BigWrap{\vec{v} \dotP \vec{v}} \vec{a} - \cancel{\BigWrap{\vec{a} \dotP \vec{v}} \vec{v}} &= \BigWrap{\vec{v} \dotP \vec{v}} \vec{b} - \cancel{\Wrap{\vec{b} \dotP \vec{v}} \vec{v}} &&\Remember{Usamos la primera condición y cancelamos}\\
-	            	\cancel{\BigWrap{\vec{v} \dotP \vec{v}}} \vec{a} &= \cancel{\BigWrap{\vec{v} \dotP \vec{v}}} \vec{b} &&\Remember{Como $\vec{v} \neq \vec{0}$, entonces $\vec{v} \dotP \vec{v} \neq 0$}\\
-	            	\vec{a} &= \vec{b} &&\Remember{Triunfó el mal}
-            	\end{align*}
+                \textbf{Demostración:}
+                
+                La única forma en la que podemos \Quote{cancelar} el vector $\vec{v}$ es asegurarnos de que las
+                dos ecuaciones anteriores se cumplan. Veamos por qué. El truco está en aplicar producto cruz
+                a ambos lados de la segunda condición:
+                \begin{align*}
+                    \vec{v} \times \BigWrap{\vec{a} \times \vec{v}} &= \vec{v} \times \Wrap{\vec{b} \times \vec{v}} &&\Remember{Sabemos}\\
+                    \BigWrap{\vec{v} \dotP \vec{v}} \vec{a} - \BigWrap{\vec{v} \dotP \vec{a}} \vec{v} &= \BigWrap{\vec{v} \dotP \vec{v}} \vec{b} - \Wrap{\vec{v} \dotP \vec{b}} \vec{v} &&\Remember{Propiedad que ya vimos, en ambos lados}\\
+                    \BigWrap{\vec{v} \dotP \vec{v}} \vec{a} - \BigWrap{\vec{a} \dotP \vec{v}} \vec{v} &= \BigWrap{\vec{v} \dotP \vec{v}} \vec{b} - \Wrap{\vec{b} \dotP \vec{v}} \vec{v} &&\Remember{Conmutativa}\\
+                    \BigWrap{\vec{v} \dotP \vec{v}} \vec{a} - \cancel{\BigWrap{\vec{a} \dotP \vec{v}} \vec{v}} &= \BigWrap{\vec{v} \dotP \vec{v}} \vec{b} - \cancel{\Wrap{\vec{b} \dotP \vec{v}} \vec{v}} &&\Remember{Usamos la primera condición y cancelamos}\\
+                    \cancel{\BigWrap{\vec{v} \dotP \vec{v}}} \vec{a} &= \cancel{\BigWrap{\vec{v} \dotP \vec{v}}} \vec{b} &&\Remember{Como $\vec{v} \neq \vec{0}$, entonces $\vec{v} \dotP \vec{v} \neq 0$}\\
+                    \vec{a} &= \vec{b} &&\Remember{Triunfó el mal}
+                \end{align*}
             \end{SmallIndentation}
 
             \end{itemize}
