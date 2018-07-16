@@ -6,19 +6,24 @@
 % =======================================================
 % =======         HEADER FOR DOCUMENT        ============
 % =======================================================
+    
+    % *********   HEADERS AND FOOTERS ********
+    \def\ProjectAuthorLink{https://github.com/SoyOscarRH}           %Just to keep it in line
+    \def\ProjectNameLink{\ProjectAuthorLink/Proyect}                %Link to Proyect
+
     % *********   DOCUMENT ITSELF   **************
     \documentclass[12pt, fleqn]{report}                             %Type of docuemtn and size of font and left eq
-    \usepackage[margin=1.2in]{geometry}                             %Margins and Geometry pacakge
+    \usepackage[spanish]{babel}                                     %Please use spanish
+    \usepackage[utf8]{inputenc}                                     %Please use spanish - UFT
+    \usepackage[margin = 1.2in]{geometry}                           %Margins and Geometry pacakge
     \usepackage{ifthen}                                             %Allow simple programming
     \usepackage{hyperref}                                           %Create MetaData for a PDF and LINKS!
     \usepackage{pdfpages}                                           %Create MetaData for a PDF and LINKS!
-    \hypersetup{pageanchor=false}                                   %Solve 'double page 1' warnings in build
+    \hypersetup{pageanchor = false}                                 %Solve 'double page 1' warnings in build
     \setlength{\parindent}{0pt}                                     %Eliminate ugly indentation
-    \author{Oscar Rosas y Alan Ontiveros}                           %Who I am
+    \author{Oscar Andrés Rosas}                                     %Who I am
 
-    % *********   LANGUAJE AND UFT-8   *********
-    \usepackage[spanish]{babel}                                     %Please use spanish
-    \usepackage[utf8]{inputenc}                                     %Please use spanish - UFT
+    % *********   LANGUAJE    *****************
     \usepackage[T1]{fontenc}                                        %Please use spanish
     \usepackage{textcmds}                                           %Allow us to use quoutes
     \usepackage{changepage}                                         %Allow us to use identate paragraphs
@@ -47,10 +52,9 @@
     \usepackage{multirow}                                           %Lets make tables awesome
     \usepackage{multicol}                                           %Create multicolumns
 
-    % *********   HEADERS AND FOOTERS ********
-    \def\ProjectAuthorLink                                          %Just to keep it in line
-        {https://github.com/CompilandoConocimiento}                 %Just to keep it in line
-    \def\ProjectNameLink{\ProjectAuthorLink/LibroAnalisisVectorial} %Link to Proyect
+    % *********   REMOVE SOME ERRORS **********
+    \hbadness=10000                                                 %Ignore \vbox and \hbox warings
+    \hfuzz=\maxdimen\newdimen\hfuzz                                 %Ignore \vbox and \hbox warings
 
     % *********   HEADERS AND FOOTERS ********
     \usepackage{fancyhdr}                                           %Lets make awesome headers/footers
@@ -73,9 +77,9 @@
 
     \fancyfoot[L]{                                                  %Algoritm for a changing footer
         \ifthenelse{\isodd{\value{page}}}                           %IF ODD PAGE:
-            {\href{https://compilandoconocimiento.com/nosotros/}    %DO THIS:
+            {\href{https://SoyOscarRH.github.io/}                   %DO THIS:
                 {\footnotesize                                      %Send the page
-                    {\textsc{Oscar Rosas y Alan Ontiveros}}}}       %Send the page
+                    {\textsc{Oscar Andrés Rosas}}}}                 %Send the page
             {\href{https://compilandoconocimiento.com}              %ELSE DO THIS: 
                 {\footnotesize                                      %Send the author
                     {\textsc{Compilando Conocimiento}}}}            %Send the author
@@ -83,9 +87,9 @@
     
     
     
-% ========================================
-% ===========   COMMANDS    ==============
-% ========================================
+% =======================================================
+% ===================   COMMANDS    =====================
+% =======================================================
 
     % =========================================
     % =======   NEW ENVIRONMENTS   ============
@@ -113,6 +117,7 @@
     \newcommand \Quote {\qq}                                        %Use: \Quote to use quotes
     \newcommand \Over {\overline}                                   %Use: \Bar to use just for short
     \newcommand \ForceNewLine {$\Space$\\}                          %Use it in theorems for example
+    \newcommand \ForceColumnBreak {\vfill\null\columnbreak}         %Use only in multicols
 
     % =====  SPACES  ====================
     \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
@@ -132,8 +137,8 @@
     \theoremstyle{break}                                            %THEOREMS START 1 SPACE AFTER
 
     % =====  LOGIC  =====================
-    \newcommand \lIff {\leftrightarrow}                             %Use: \lIff for logic iff
-    \newcommand \lEqual {\MiniSpace \Leftrightarrow \MiniSpace}     %Use: \lEqual for a logic double arrow
+    \newcommand \lIff    {\leftrightarrow}                          %Use: \lIff for logic iff
+    \newcommand \lEqual  {\MiniSpace \Leftrightarrow \MiniSpace}    %Use: \lEqual for a logic double arrow
     \newcommand \lInfire {\MiniSpace \Rightarrow \MiniSpace}        %Use: \lInfire for a logic infire
     \newcommand \lLongTo {\longrightarrow}                          %Use: \lLongTo for a long arrow
 
@@ -145,26 +150,37 @@
     \DeclareMathOperator \Reals        {\mathbb{R}}                 %Use: \Reals por Notation
     \DeclareMathOperator \Complexs     {\mathbb{C}}                 %Use: \Complex por Notation
     \DeclareMathOperator \GenericField {\mathbb{F}}                 %Use: \GenericField por Notation
+    \DeclareMathOperator \VectorSet    {\mathbb{V}}                 %Use: \VectorSet por Notation
+    \DeclareMathOperator \SubVectorSet {\mathbb{W}}                 %Use: \SubVectorSet por Notation
+    \DeclareMathOperator \Polynomials  {\mathbb{P}}                 %Use: \Polynomials por Notation
+    \DeclareMathOperator \VectorSpace  {\VectorSet_{\GenericField}} %Use: \VectorSpace por Notation
+    \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
+    \DeclareMathOperator \LinTrans {\mathcal{T}}                    %Use: \LinTrans for a cool T
+    \DeclareMathOperator \Laplace {\mathcal{L}}                     %Use: \LinTrans for a cool T
 
     % =====  CONTAINERS   ===============
-    \newcommand{\Set}[1]{\left\{ \; #1 \; \right\}}                 %Use: \Set {Info} for INTELLIGENT space 
-    \newcommand{\bigSet}[1]{\big\{ \; #1 \; \big\}}                 %Use: \bigSet  {Info} for space 
-    \newcommand{\BigSet}[1]{\Big\{ \; #1 \; \Big\}}                 %Use: \BigSet  {Info} for space 
+    \newcommand{\Set}[1]    {\left\{ \; #1 \; \right\}}             %Use: \Set {Info} for INTELLIGENT space 
+    \newcommand{\bigSet}[1] {\big\{  \; #1 \; \big\}}               %Use: \bigSet  {Info} for space 
+    \newcommand{\BigSet}[1] {\Big\{  \; #1 \; \Big\}}               %Use: \BigSet  {Info} for space 
     \newcommand{\biggSet}[1]{\bigg\{ \; #1 \; \bigg\}}              %Use: \biggSet {Info} for space 
     \newcommand{\BiggSet}[1]{\Bigg\{ \; #1 \; \Bigg\}}              %Use: \BiggSet {Info} for space 
     
-    \newcommand{\Brackets}[1]{\left[ #1 \right]}                    %Use: \Brackets {Info} for INTELLIGENT space
-    \newcommand{\bigBrackets}[1]{\big[ \; #1 \; \big]}              %Use: \bigBrackets  {Info} for space 
-    \newcommand{\BigBrackets}[1]{\Big[ \; #1 \; \Big]}              %Use: \BigBrackets  {Info} for space 
+    \newcommand{\Brackets}[1]    {\left[ #1 \right]}                %Use: \Brackets {Info} for INTELLIGENT space
+    \newcommand{\bigBrackets}[1] {\big[ \; #1 \; \big]}             %Use: \bigBrackets  {Info} for space 
+    \newcommand{\BigBrackets}[1] {\Big[ \; #1 \; \Big]}             %Use: \BigBrackets  {Info} for space 
     \newcommand{\biggBrackets}[1]{\bigg[ \; #1 \; \bigg]}           %Use: \biggBrackets {Info} for space 
     \newcommand{\BiggBrackets}[1]{\Bigg[ \; #1 \; \Bigg]}           %Use: \BiggBrackets {Info} for space 
     
-    \newcommand{\Wrap}[1]{\left( #1 \right)}                        %Use: \Wrap {Info} for INTELLIGENT space
-    \newcommand{\bigWrap}[1]{\big( \; #1 \; \big)}                  %Use: \bigBrackets  {Info} for space 
-    \newcommand{\BigWrap}[1]{\Big( \; #1 \; \Big)}                  %Use: \BigBrackets  {Info} for space 
+    \newcommand{\Wrap}[1]    {\left( #1 \right)}                    %Use: \Wrap {Info} for INTELLIGENT space
+    \newcommand{\bigWrap}[1] {\big( \; #1 \; \big)}                 %Use: \bigBrackets  {Info} for space 
+    \newcommand{\BigWrap}[1] {\Big( \; #1 \; \Big)}                 %Use: \BigBrackets  {Info} for space 
     \newcommand{\biggWrap}[1]{\bigg( \; #1 \; \bigg)}               %Use: \biggBrackets {Info} for space 
     \newcommand{\BiggWrap}[1]{\Bigg( \; #1 \; \Bigg)}               %Use: \BiggBrackets {Info} for space 
-
+    
+    \newcommand{\Generate}[1]{\left\langle #1 \right\rangle}        %Use: \Generate {Info} <>
+    \newcommand{\Floor}[1]{\left \lfloor #1 \right \rfloor}         %Use: \Floor {Info} for floor 
+    \newcommand{\Ceil}[1]{\left \lceil #1 \right \rceil }           %Use: \Ceil {Info} for ceil
+    
     % =====  BETTERS MATH COMMANDS   =====
     \newcommand{\pfrac}[2]{\Wrap{\dfrac{#1}{#2}}}                   %Use: Put fractions in parentesis
 
@@ -177,12 +193,16 @@
     \newcommand{\hatj} {\hat{\jmath}}                               %Use: \hatj for unit vector    
     \newcommand{\hatk} {\hat{k}}                                    %Use: \hatk for unit vector
 
+    % ===== FN LINEAL TRANSFORMATION  ====
+    \newcommand{\FnLinTrans}[1]{\mathcal{T}\Wrap{#1}}               %Use: \FnLinTrans for a cool T
+    \newcommand{\VecLinTrans}[1]{\mathcal{T}\pVector{#1}}           %Use: \LinTrans for a cool T
+    \newcommand{\FnLinealTransformation}[1]{\mathcal{T}\Wrap{#1}}   %Use: \FnLinealTransformation
+
     % ===== MAGNITUDE  ===================
     \newcommand{\abs}[1]{\left\lvert #1 \right\lvert}               %Use: \abs{expression} for |x|
     \newcommand{\Abs}[1]{\left\lVert #1 \right\lVert}               %Use: \Abs{expression} for ||x||
     \newcommand{\Mag}[1]{\left| #1 \right|}                         %Use: \Mag {Info} 
     
-    \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
     \newcommand{\bVec}[1]{\mathbf{#1}}                              %Use for bold type of vector
     \newcommand{\lVec}[1]{\overrightarrow{#1}}                      %Use for a long arrow over a vector
     \newcommand{\uVec}[1]{\mathbf{\hat{#1}}}                        %Use: Unitary Vector Example: $\uVec{i}
@@ -219,13 +239,13 @@
     % =========================================
 
     % == TRIGONOMETRIC FUNCTIONS  ====
-    \newcommand{\Cos}[1]{\cos\Wrap{#1}}                             %Simple wrappers
-    \newcommand{\Sin}[1]{\sin\Wrap{#1}}                             %Simple wrappers
-    \newcommand{\Tan}[1]{tan\Wrap{#1}}                              %Simple wrappers
+    \newcommand{\Cos}[1] {\cos\Wrap{#1}}                            %Simple wrappers
+    \newcommand{\Sin}[1] {\sin\Wrap{#1}}                            %Simple wrappers
+    \newcommand{\Tan}[1] {tan\Wrap{#1}}                             %Simple wrappers
     
-    \newcommand{\Sec}[1]{sec\Wrap{#1}}                              %Simple wrappers
-    \newcommand{\Csc}[1]{csc\Wrap{#1}}                              %Simple wrappers
-    \newcommand{\Cot}[1]{cot\Wrap{#1}}                              %Simple wrappers
+    \newcommand{\Sec}[1] {sec\Wrap{#1}}                             %Simple wrappers
+    \newcommand{\Csc}[1] {csc\Wrap{#1}}                             %Simple wrappers
+    \newcommand{\Cot}[1] {cot\Wrap{#1}}                             %Simple wrappers
 
     % === COMPLEX ANALYSIS TRIG ======
     \newcommand \Cis[1]  {\Cos{#1} + i \Sin{#1}}                    %Use: \Cis for cos(x) + i sin(x)
@@ -256,6 +276,10 @@
 
     \DeclareMathOperator \Evaluate  {\Big|}                         %Use: \Evaluate por Notation
 
+    % ====== INTEGRALS ============
+    \newcommand{\inftyInt} {\int_{-\infty}^{\infty}}                %Use: \inftyInt for simple integrants
+    
+    
     % =========================================
     % ========    GENERAL STYLE     ===========
     % =========================================
@@ -323,33 +347,53 @@
 
     \definecolor{DeepPurpleMD}{HTML}{673AB7}                        %Use: Color :D
 
+    \newcommand{\Color}[2]{\textcolor{#1}{#2}}                      %Simple color environment
     \newenvironment{ColorText}[1]                                   %Use: \begin{ColorText}
         { \leavevmode\color{#1}\ignorespaces }                      %That's is!
 
     % =====  CODE EDITOR =============
     \lstdefinestyle{CompilandoStyle} {                              %This is Code Style
-        backgroundcolor=\color{BlueGrey800MD},                      %Background Color  
-        basicstyle=\tiny\color{white},                              %Font color
-        commentstyle=\color{BlueGrey200MD},                         %Comment color
-        stringstyle=\color{Green300MD},                             %String color
-        keywordstyle=\color{Blue300MD},                             %keywords color
-        numberstyle=\tiny\color{TealMD},                            %Size of a number
-        frame=shadowbox,                                            %Adds a frame around the code
-        breakatwhitespace=true,                                     %Style   
-        showstringspaces=false,                                     %Hate those spaces                  
-        breaklines=true,                                            %Style                   
-        keepspaces=true,                                            %Style                   
-        numbers=left,                                               %Style                   
-        numbersep=10pt,                                             %Style 
-        xleftmargin=\parindent,                                     %Style 
-        tabsize=4,                                                  %Style
-        inputencoding=utf8/latin1                                   %Allow me to use special chars
+        backgroundcolor     = \color{BlueGrey900MD},                %Background Color  
+        basicstyle          = \tiny\color{white},                   %Style of text
+        commentstyle        = \color{BlueGrey200MD},                %Comment style
+        stringstyle         = \color{Green300MD},                   %String style
+        keywordstyle        = \color{Blue300MD},                    %keywords style
+        numberstyle         = \tiny\color{TealMD},                  %Size of a number
+        frame               = shadowbox,                            %Adds a frame around the code
+        breakatwhitespace   = true,                                 %Style   
+        breaklines          = true,                                 %Style   
+        showstringspaces    = false,                                %Hate those spaces                  
+        breaklines          = true,                                 %Style                   
+        keepspaces          = true,                                 %Style                   
+        numbers             = left,                                 %Style                   
+        numbersep           = 10pt,                                 %Style 
+        xleftmargin         = \parindent,                           %Style 
+        tabsize             = 4,                                    %Style
+        inputencoding       = utf8/latin1                           %Allow me to use special chars
+    }
+
+    % =====  CODE EDITOR =============
+    \lstdefinestyle{CompilandoStylePurity} {                        %This is Code Style
+        backgroundcolor     = \color{white},                        %Background Color  
+        basicstyle          = \tiny\color{BlueGrey900MD},           %Style of text
+        commentstyle        = \color{Green300MD},                   %Comment style
+        stringstyle         = \color{Teal700MD},                    %String style
+        keywordstyle        = \color{Blue700MD},                    %keywords style
+        numberstyle         = \tiny\color{TealMD},                  %Size of a number
+        frame               = none,                                 %Adds a frame around the code
+        breakatwhitespace   = true,                                 %Style   
+        breaklines          = true,                                 %Style   
+        showstringspaces    = false,                                %Hate those spaces                  
+        breaklines          = true,                                 %Style                   
+        keepspaces          = true,                                 %Style                   
+        numbers             = left,                                 %Style                   
+        numbersep           = 11pt,                                 %Style 
+        xleftmargin         = \parindent,                           %Style 
+        tabsize             = 4,                                    %Style
+        inputencoding       = utf8/latin1                           %Allow me to use special chars
     }
  
-    \lstset{style=CompilandoStyle}                                  %Use this style
-
-
-
+    \lstset{style = CompilandoStyle}                                %Use this style
 
 % =====================================================
 % ============        COVER PAGE       ================
@@ -386,6 +430,9 @@
     % ============ NAME OF THE AUTHOR  =============
     \href{https://github.com/alaneos777}                            %Link to Author
     {\LARGE \textsf{Alan Enrique Ontiveros Salazar}}                %Author
+
+    \href{https://github.com/abiisnn}                               %Link to Author
+    {\LARGE \textsf{Abigail Nicolás Sayago }}                       %Author
 
     % ===== MAKE SOME SPACE =========
     \vspace                                                         %Give some space
@@ -424,7 +471,6 @@
 
 
 
-
     % ===============================================================================
     % ===================            CONCEPTOS BASICOS         ======================
     % ===============================================================================
@@ -436,6 +482,11 @@
         % =========================================================
         \clearpage
         \section{Definición de Escalar}
+
+            Nosotros ya sabemos que existen ciertas cantidades que se pueden describir
+            totalmente con un solo número, como por ejemplo la masa, densidad
+            e incluso el tiempo, sin embargo también existen otras que deben tener una
+            dirección como el desplazamiento o la velocidad por mencionar solo algunas.
 
             Definiremos a los escalares como elementos de $\Reals$, es decir, cualquier número de
             la recta real.
@@ -456,6 +507,39 @@
             Probablemente el concepto de vector es el que más definiciones tiene dependiendo de qué
             punto de vista se estudien.
 
+            En pocas y reducidas palabras un vector es un ente matem\'atico que \textsl{vive} 
+            en un espacio vectorial. 
+
+            % =========================================================
+            % ======     EJEMPLOS DE TIPOS DE VECTORES      ===========
+            % =========================================================
+            \subsection{Ejemplos de Vectores}
+                Así es, existen diferentes tipos de vectores, ahora veamos algunos 
+                vectores que muy probablemente tú ya habías visto pero no sabías
+                que era un vector.
+
+                \begin{itemize}
+                    
+                    \item 
+                        $
+                        \vec{A} = \bVector{
+                            a & h & g           \\
+                            h & b & f           \\
+                            g & f & c}
+                        $
+
+                    \item
+                        $
+                        \vec{P} = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a     
+                        $
+                    
+                    \item
+                        $
+                        \vec{x} = (x_1, x_2, \dots, x_n)
+                        $
+
+                \end{itemize}
+  
             \textbf{Aquí solo veremos cómo definirlos sobre el plano de $\Reals^2$ y el espacio de $\Reals^3$}.
 
             También existen muchas formas de escribirlos, aquí usaremos de manera general una flecha
@@ -502,7 +586,8 @@
         \section{Relaciones entre Puntos y Vectores}
         
             En esencia un vector y un punto son lo mismo, pero un punto solo indica una posición
-            en el espacio, mientras que un vector indica un \textbf{desplazamiento} entre dos puntos, además de que podemos hacer más operaciones con un vector que con un punto.
+            en el espacio, mientras que un vector indica un \textbf{desplazamiento} entre dos puntos, además
+            de que podemos hacer más operaciones con un vector que con un punto.
             Lo veremos a continuación.
             
             % ========================================
@@ -511,7 +596,9 @@
             \subsection{Vector Posición}
             
                 Dado un punto $P$, definimos al vector posición de $P$ respecto de un origen $O$ como
-                el vector $\lVec{OP}$, que tendrá las mismas coordenadas del punto $P$. Por simplicidad, también podemos representar a este vector como $\vec{P}$, es decir, simplemente le ponemos la flecha a la letra del punto.
+                el vector $\lVec{OP}$, que tendrá las mismas coordenadas del punto $P$. Por simplicidad, también
+                podemos representar a este vector como $\vec{P}$, es decir, simplemente le ponemos la flecha a
+                la letra del punto.
             
             % ========================================
             % =======  VECTOR DESPLAZAMIENTO    ======
@@ -564,7 +651,7 @@
 
                 \begin{Definition}[Igualdad de 2 Vectores]
                     \label{DefIgualdadVectores}
-                    Decimos que dos vectores son iguales si y solo si sus componentes
+                    D que dos vectores son iguales si y solo si sus componentes
                     correspondientes son iguales.
                 \end{Definition}
 
