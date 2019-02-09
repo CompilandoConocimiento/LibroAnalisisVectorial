@@ -3533,6 +3533,58 @@
         \section{Integrales iteradas}
         
         \section{Integrales dobles}
+
+            \clearpage
+            \subsection{Ejemplo}
+
+                Sea un campo $G(x, y) = \dfrac{25}{x^2+y^2}(x a_x + ya_y)$ encontremos la doble integral
+                en el plano $y = 7$.
+
+                % ======== DEMOSTRACION ========
+                \begin{SmallIndentation}[0em]
+                    \textbf{Demostración}:
+                    
+                    \begin{MultiLineEquation*}{3}
+                        \int_0^4 \int_0^2 G(x, y) \dotP a_y \; dz \; dx
+                            &= \int_0^4 \int_0^2 G(x, y) \dotP a_y \; dz \; dx  \\
+                            &= \int_0^4 \Wrap{\int_0^2 G(x, y) \dotP a_y \; dz} dx
+                                && \Remember{Hay que poner los parentesis para ver bien} \\
+                            &= \int_0^4 \Wrap{\int_0^2 \Brackets{\dfrac{25}{x^2+y^2}(x a_x + ya_y)} \dotP a_y \; dz} dx
+                                && \Remember{Que es G exactamente} \\
+                            &= \int_0^4 \Wrap{\int_0^2 \Brackets{\dfrac{25(x a_x + ya_y)}{x^2+y^2}} \dotP (0a_x + 1a_y) \; dz} dx
+                                && \Remember{$G$ regresa un vector y $(0a_x + 1a_y)$ es uno} \\
+                            &= \int_0^4 \Wrap{\int_0^2 \Brackets{\dfrac{25}{x^2+y^2}(y)} (1) \; dz} dx
+                                && \Remember{Piensa: $((bla)a_x + (bla)a_y) \dotP (0a_x + 1a_y) = bla$} \\
+                            &= \int_0^4 \Wrap{\int_0^2 f(x, y) \; dz} dx
+                                && \Remember{Claridad, sea $f(x, y) = \dfrac{25}{x^2+y^2}(y)$} \\
+                            &= \int_0^4 f(x, y) \Wrap{\int_0^2 dz} dx
+                                && \Remember{Como integramos sobre z $f(x, y)$ es una constante} \\
+                            &= \int_0^4 f(x, y) \Wrap{z \Evaluate_0^2} dx
+                                && \Remember{Integral de las bonitas y sencillas} \\
+                            &= \int_0^4 f(x, y) (2) dx
+                                && \Remember{:v} \\
+                            &= 2 \int_0^4 f(x, y) dx
+                                && \Remember{Ahora si preparate para lo bueno} \\
+                            &= 2 \int_0^4 \dfrac{25}{x^2+y^2}(y) dx
+                                && \Remember{Recuerda que era nuestra función} \\
+                            &= 50 * 7 \int_0^4 \dfrac{1}{x^2+7^2} dx
+                                && \Remember{Pero recuerda que $y = 7$} \\
+                            &= 50 * 7 \frac{1}{7} arctan(\frac{x}{7}) \Evaluate_0^4
+                                && \Remember{$\int \dfrac{du}{u^2 + a^2} = \frac{1}{a} arctan(\frac{u}{a})$} \\
+                            &= 50 arctan(\frac{x}{7}) \Evaluate_0^4
+                                && \Remember{Ahora evaluamos} \\
+                            &= 50 arctan(\frac{4}{7}) - 50 arctan(\frac{0}{7})
+                                && \Remember{Ahora $arctan(0) = 0$} \\
+                            &= 50 arctan(\frac{4}{7})
+                                && \Remember{Metelo a la calculadora, es $25.95730$}
+                    \end{MultiLineEquation*}
+                    
+                
+                \end{SmallIndentation}
+
+                
+                
+
             
             \subsection{Integración sobre regiones arbitrarias}
             
